@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5734C8651CAB67820031B000"
-               BuildableName = "CumlusFBO.app"
-               BlueprintName = "CumlusFBO"
-               ReferencedContainer = "container:CumlusFBO.xcodeproj">
+               BuildableName = "CumulusFBO.app"
+               BlueprintName = "CumulusFBO"
+               ReferencedContainer = "container:CumulusFBO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5734C8651CAB67820031B000"
-            BuildableName = "CumlusFBO.app"
-            BlueprintName = "CumlusFBO"
-            ReferencedContainer = "container:CumlusFBO.xcodeproj">
+            BuildableName = "CumulusFBO.app"
+            BlueprintName = "CumulusFBO"
+            ReferencedContainer = "container:CumulusFBO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5734C8651CAB67820031B000"
-            BuildableName = "CumlusFBO.app"
-            BlueprintName = "CumlusFBO"
-            ReferencedContainer = "container:CumlusFBO.xcodeproj">
+            BuildableName = "CumulusFBO.app"
+            BlueprintName = "CumulusFBO"
+            ReferencedContainer = "container:CumulusFBO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5734C8651CAB67820031B000"
-            BuildableName = "CumlusFBO.app"
-            BlueprintName = "CumlusFBO"
-            ReferencedContainer = "container:CumlusFBO.xcodeproj">
+            BuildableName = "CumulusFBO.app"
+            BlueprintName = "CumulusFBO"
+            ReferencedContainer = "container:CumulusFBO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
