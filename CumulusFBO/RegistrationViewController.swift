@@ -25,8 +25,4 @@ class RegistrationViewController: UIViewController {
         ReservationsManager.sharedManager.activeReservation.homeBase = homeBase.text
         ReservationsManager.sharedManager.activeReservation.operatedUnder = operatedUnder.text
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
 }

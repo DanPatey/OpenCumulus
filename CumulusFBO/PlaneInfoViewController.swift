@@ -21,6 +21,6 @@ class PlaneInfoViewController: UIViewController {
         ReservationsManager.sharedManager.activeReservation.tailNumber = tailNumber.text
 //        ReservationsManager.sharedManager.activeReservation.fuelType = fuelType.text
 //        ReservationsManager.sharedManager.activeReservation.fuelUnits = fuelUnits.text
-// ???        ReservationsManager.sharedManager.activeReservation.passengers = numberOfPassengers.integer ???
+//        ReservationsManager.sharedManager.activeReservation.passengers = numberOfPassengers.integer
     }
 }

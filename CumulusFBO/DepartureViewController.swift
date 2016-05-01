@@ -23,9 +23,4 @@ class DepartureViewController: UIViewController {
         ReservationsManager.sharedManager.activeReservation.departureDate = departureDate.text
         ReservationsManager.sharedManager.activeReservation.departureTime = departureTime.text
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-        
 }

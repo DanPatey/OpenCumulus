@@ -59,15 +59,13 @@ class ReservationsModel {
     var arrivingCarRental: Bool = false
     var arrivingHotel: Bool = false
     
-
-    // aircraftInfo is giving me problems because it's too complex
-    // trying to break these up, fuel units is giving me issues because it's not unwrapped
+    
     func departureSummary() -> String {
         let registrationInfo = "Name: \(self.name ?? "")\nPrimary Contact: \(primaryContact ?? "")\nHome Base: \(self.homeBase ?? "")\nOperated Under: \(self.operatedUnder ?? "")"
         let departureInfo = "\nDeparture Airport: \(self.departureAirport ?? "")\nDeparture Date: \(self.departureDate ?? "")\nDeparture Time: \(self.departureTime ?? "")"
         let aircraftInfo = "\nAircraft Type: \(self.aircraftType ?? "")\nTail Number: \(self.tailNumber ?? "")"
 //        let passengersInfo = "\n Passengers: \(self.passengers ?? "")"
-//        let fuelInfo = "\nFuel Type: \(self.fuelType ? self.fuelType.rawValue : "")\nFuel Units: \(self.fuelUnits ? self.fuelUnits.rawValue : "")"
+//        let fuelInfo = "\nFuel Type: \(self.fuelType ? self.fuelType!.rawValue : "")\nFuel Units: \(self.fuelUnits ? self.fuelUnits.rawValue : "")"
         return registrationInfo + departureInfo + aircraftInfo
     }
     

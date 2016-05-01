@@ -9,8 +9,6 @@
 import Foundation
 
 class ReservationsManager {
-    
     static let sharedManager = ReservationsManager()
     let activeReservation = ReservationsModel()
-    
 }
