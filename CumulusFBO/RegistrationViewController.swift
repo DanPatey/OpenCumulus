@@ -14,6 +14,11 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var primaryContact: UITextField!
     @IBOutlet weak var homeBase: UITextField!
     @IBOutlet weak var operatedUnder: UITextField!
+    @IBOutlet weak var textFieldsContainerView: UIView! {
+        didSet {
+            self.textFieldsContainerView.layer.cornerRadius = 5.0
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
