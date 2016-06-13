@@ -299,7 +299,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Iz-T0-bEq">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ll-wi-IqO" userLabel="Text Fields Container">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ll-wi-IqO" userLabel="Text Fields Container">
                                         <rect key="frame" x="20" y="130" width="560" height="120"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Airport" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P3j-Zn-hsa">
@@ -343,22 +343,29 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="rnv-t2-XKI">
-                                        <rect key="frame" x="20" y="10" width="540" height="100"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="rz3-Uz-ez1">
+                                        <rect key="frame" x="20" y="10" width="560" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="OXL-B1-Emh"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="o9h-1o-KnH"/>
+                                            <constraint firstAttribute="height" constant="100" id="wdv-Mh-Ovt"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="o9h-1o-KnH"/>
+                                            </mask>
+                                        </variation>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="rnv-t2-XKI" firstAttribute="leading" secondItem="8Iz-T0-bEq" secondAttribute="leadingMargin" constant="20" id="CFf-up-vYM"/>
-                                    <constraint firstAttribute="bottom" secondItem="0Ll-wi-IqO" secondAttribute="bottom" constant="20" id="UM6-4b-sZ3"/>
-                                    <constraint firstItem="rnv-t2-XKI" firstAttribute="top" secondItem="8Iz-T0-bEq" secondAttribute="topMargin" constant="10" id="bfM-n4-4tg"/>
-                                    <constraint firstItem="0Ll-wi-IqO" firstAttribute="leading" secondItem="8Iz-T0-bEq" secondAttribute="leading" constant="20" id="eJc-7Y-PX2"/>
-                                    <constraint firstItem="0Ll-wi-IqO" firstAttribute="top" secondItem="rnv-t2-XKI" secondAttribute="bottom" constant="20" id="hdv-zy-TUD"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="rnv-t2-XKI" secondAttribute="trailing" constant="20" id="upc-QV-OpH"/>
-                                    <constraint firstAttribute="trailing" secondItem="0Ll-wi-IqO" secondAttribute="trailing" id="vy0-rc-C0d"/>
+                                    <constraint firstItem="0Ll-wi-IqO" firstAttribute="leading" secondItem="8Iz-T0-bEq" secondAttribute="leading" constant="20" id="2Bo-cy-u7X"/>
+                                    <constraint firstItem="0Ll-wi-IqO" firstAttribute="top" secondItem="rz3-Uz-ez1" secondAttribute="bottom" constant="20" id="2L5-PD-Gxq"/>
+                                    <constraint firstItem="rz3-Uz-ez1" firstAttribute="top" secondItem="8Iz-T0-bEq" secondAttribute="top" constant="10" id="87q-2C-qFh"/>
+                                    <constraint firstAttribute="bottom" secondItem="0Ll-wi-IqO" secondAttribute="bottom" constant="10" id="DYx-yf-O1K"/>
+                                    <constraint firstItem="0Ll-wi-IqO" firstAttribute="top" secondItem="rz3-Uz-ez1" secondAttribute="bottom" constant="20" id="HOA-Do-2GJ"/>
+                                    <constraint firstItem="rz3-Uz-ez1" firstAttribute="leading" secondItem="8Iz-T0-bEq" secondAttribute="leading" constant="20" id="Wn2-gH-dhi"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Ll-wi-IqO" secondAttribute="trailing" constant="20" id="odb-Mc-el9"/>
+                                    <constraint firstAttribute="trailing" secondItem="rz3-Uz-ez1" secondAttribute="trailing" constant="20" id="q4s-j8-ErG"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
