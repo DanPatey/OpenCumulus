@@ -12,12 +12,12 @@ class SummaryViewController: UIViewController {
     
     @IBOutlet weak var departureSummary: UITextView! {
         didSet {
-            self.departureSummary.text = ReservationsManager.sharedManager.activeReservation.departureSummary()
+            self.departureSummary.text = ReservationsManager.sharedManager.activeReservation.departureSummary() + ReservationsManager.sharedManager.activeReservation.departureServicesSummary()
         }
     }
     @IBOutlet weak var arrivalSummary: UITextView! {
         didSet {
-            self.arrivalSummary.text = ReservationsManager.sharedManager.activeReservation.arrivalSummary()
+            self.arrivalSummary.text = ReservationsManager.sharedManager.activeReservation.arrivalSummary() + ReservationsManager.sharedManager.activeReservation.arrivalServicesSummary()
         }
     }
     

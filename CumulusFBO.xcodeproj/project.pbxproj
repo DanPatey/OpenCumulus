@@ -80,8 +80,8 @@
 				5734C8851CAB766A0031B000 /* SummaryViewController.swift */,
 				572828851CC44B470005A6EA /* ReservationsManager.swift */,
 				572828831CC43F170005A6EA /* ReservationsModel.swift */,
-				5734C86D1CAB67820031B000 /* Main.storyboard */,
 				5734C8701CAB67820031B000 /* Assets.xcassets */,
+				5734C86D1CAB67820031B000 /* Main.storyboard */,
 				5734C8721CAB67820031B000 /* LaunchScreen.storyboard */,
 				5734C8751CAB67820031B000 /* Info.plist */,
 			);

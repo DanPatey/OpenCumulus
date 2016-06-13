@@ -19,8 +19,8 @@ class PlaneInfoViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         ReservationsManager.sharedManager.activeReservation.aircraftType = aircraftType.text
         ReservationsManager.sharedManager.activeReservation.tailNumber = tailNumber.text
-//        ReservationsManager.sharedManager.activeReservation.fuelType = fuelType.text
-//        ReservationsManager.sharedManager.activeReservation.fuelUnits = fuelUnits.text
-//        ReservationsManager.sharedManager.activeReservation.passengers = numberOfPassengers.integer
+        ReservationsManager.sharedManager.activeReservation.fuelType = fuelType.text
+        ReservationsManager.sharedManager.activeReservation.fuelUnits = fuelUnits.text
+        ReservationsManager.sharedManager.activeReservation.passengers = numberOfPassengers.text
     }
 }
