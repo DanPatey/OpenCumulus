@@ -298,6 +298,17 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wsf-jJ-5yk" userLabel="airportCodeTextField">
+                                        <rect key="frame" x="22" y="121" width="179" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Departure Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alh-7c-oOX" userLabel="dateOfDepartureLabel">
+                                        <rect key="frame" x="22" y="291" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvj-KH-fZI" userLabel="tailNumberTextField">
                                         <rect key="frame" x="22" y="48" width="179" height="30"/>
                                         <constraints>
@@ -316,50 +327,57 @@
                                             </mask>
                                         </variation>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wsf-jJ-5yk" userLabel="airportCodeTextField">
-                                        <rect key="frame" x="22" y="121" width="179" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZP-JY-RDs" userLabel="arrivalTimeTextField">
+                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="OJx-2M-F59"/>
+                                            <constraint firstAttribute="width" constant="150" id="nai-Nl-6Be"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="OJx-2M-F59"/>
+                                                <exclude reference="nai-Nl-6Be"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="OJx-2M-F59"/>
+                                                <include reference="nai-Nl-6Be"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lt9-Zu-UKP" userLabel="selectArrivalTimeButton">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Select Time"/>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9f-h8-ZxQ" userLabel="selectDepartureTimeTextField">
+                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-37-RGL">
-                                        <rect key="frame" x="-160" y="-108" width="320" height="216"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="489750806.82571602">
-                                            <!--2016-07-09 09:53:26 +0000-->
-                                        </date>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="104" y="165" width="153" height="63"/>
-                                        </variation>
-                                    </datePicker>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-Aa-eW4">
-                                        <rect key="frame" x="-160" y="-108" width="320" height="216"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="489750824.55042601">
-                                            <!--2016-07-09 09:53:44 +0000-->
-                                        </date>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="104" y="272" width="153" height="69"/>
-                                        </variation>
-                                    </datePicker>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Departure Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alh-7c-oOX" userLabel="dateOfDepartureLabel">
-                                        <rect key="frame" x="22" y="291" width="41" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="120" y="243" width="120" height="21"/>
-                                        </variation>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqL-Du-POE" userLabel="selectDepartureTimeButton">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Select Time"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.37254901959999998" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="qvj-KH-fZI" firstAttribute="centerX" secondItem="lEo-bg-59S" secondAttribute="centerX" id="0z2-V9-kQc"/>
                                     <constraint firstItem="Hn6-qx-8RI" firstAttribute="centerX" secondItem="lEo-bg-59S" secondAttribute="centerX" id="3Ne-XA-Plg"/>
                                     <constraint firstItem="qKW-5v-L6Q" firstAttribute="top" secondItem="qvj-KH-fZI" secondAttribute="bottom" constant="5" id="40r-bL-SjD"/>
+                                    <constraint firstItem="Lt9-Zu-UKP" firstAttribute="leading" secondItem="yZP-JY-RDs" secondAttribute="trailing" constant="20" id="4b9-aR-55M"/>
+                                    <constraint firstItem="A9f-h8-ZxQ" firstAttribute="height" secondItem="yZP-JY-RDs" secondAttribute="height" id="9cJ-q9-yGJ"/>
+                                    <constraint firstItem="A9f-h8-ZxQ" firstAttribute="top" secondItem="alh-7c-oOX" secondAttribute="bottom" constant="5" id="Ajm-QQ-78k"/>
                                     <constraint firstItem="qvj-KH-fZI" firstAttribute="top" secondItem="Hn6-qx-8RI" secondAttribute="bottom" constant="5" id="BCC-Ls-E8K"/>
                                     <constraint firstItem="Hn6-qx-8RI" firstAttribute="centerX" secondItem="lEo-bg-59S" secondAttribute="centerX" id="MSX-4C-bpt"/>
+                                    <constraint firstItem="A9f-h8-ZxQ" firstAttribute="width" secondItem="yZP-JY-RDs" secondAttribute="width" id="MpG-v4-Y1p"/>
                                     <constraint firstItem="alh-7c-oOX" firstAttribute="centerX" secondItem="lEo-bg-59S" secondAttribute="centerX" id="NXE-bE-ZDD"/>
                                     <constraint firstItem="6Ez-3g-HdX" firstAttribute="top" secondItem="Wsf-jJ-5yk" secondAttribute="bottom" constant="15" id="Nmk-ut-Pel">
                                         <variation key="widthClass=compact" constant="7"/>
                                     </constraint>
+                                    <constraint firstItem="eqL-Du-POE" firstAttribute="top" secondItem="alh-7c-oOX" secondAttribute="bottom" constant="5" id="OvW-7M-Fgd"/>
                                     <constraint firstItem="qKW-5v-L6Q" firstAttribute="centerX" secondItem="lEo-bg-59S" secondAttribute="centerX" id="S4V-vE-Vzl"/>
                                     <constraint firstItem="qvj-KH-fZI" firstAttribute="leading" secondItem="lEo-bg-59S" secondAttribute="leading" constant="10" id="TOw-tC-rJV">
                                         <variation key="widthClass=compact" constant="40"/>
@@ -368,22 +386,29 @@
                                     <constraint firstItem="qKW-5v-L6Q" firstAttribute="top" secondItem="qvj-KH-fZI" secondAttribute="bottom" constant="5" id="TyY-PN-MGh">
                                         <variation key="widthClass=compact" constant="7"/>
                                     </constraint>
-                                    <constraint firstItem="alh-7c-oOX" firstAttribute="top" secondItem="vO9-37-RGL" secondAttribute="bottom" constant="5" id="XH3-hP-w1n"/>
+                                    <constraint firstItem="Lt9-Zu-UKP" firstAttribute="top" secondItem="6Ez-3g-HdX" secondAttribute="bottom" constant="5" id="aB7-4G-97d"/>
                                     <constraint firstItem="Wsf-jJ-5yk" firstAttribute="width" secondItem="qvj-KH-fZI" secondAttribute="width" id="bRU-4A-tu8"/>
                                     <constraint firstItem="Wsf-jJ-5yk" firstAttribute="centerX" secondItem="lEo-bg-59S" secondAttribute="centerX" id="cjL-69-vGu"/>
                                     <constraint firstItem="qvj-KH-fZI" firstAttribute="top" secondItem="Hn6-qx-8RI" secondAttribute="bottom" constant="5" id="ckF-bh-CXe"/>
+                                    <constraint firstItem="alh-7c-oOX" firstAttribute="top" secondItem="yZP-JY-RDs" secondAttribute="bottom" constant="5" id="gIQ-xU-Ta5"/>
                                     <constraint firstItem="6Ez-3g-HdX" firstAttribute="centerX" secondItem="lEo-bg-59S" secondAttribute="centerX" id="gn3-To-8IE"/>
+                                    <constraint firstItem="yZP-JY-RDs" firstAttribute="leading" secondItem="lEo-bg-59S" secondAttribute="leading" constant="40" id="icS-v5-55W"/>
+                                    <constraint firstItem="yZP-JY-RDs" firstAttribute="top" secondItem="6Ez-3g-HdX" secondAttribute="bottom" constant="5" id="jFW-Bz-R8k"/>
                                     <constraint firstAttribute="trailing" secondItem="qvj-KH-fZI" secondAttribute="trailing" constant="10" id="p2H-0U-2dQ">
                                         <variation key="widthClass=compact" constant="40"/>
                                     </constraint>
+                                    <constraint firstItem="A9f-h8-ZxQ" firstAttribute="leading" secondItem="lEo-bg-59S" secondAttribute="leading" constant="40" id="spv-4k-4ka"/>
                                     <constraint firstItem="Hn6-qx-8RI" firstAttribute="top" secondItem="lEo-bg-59S" secondAttribute="top" constant="5" id="vsw-p5-wOF">
                                         <variation key="widthClass=compact" constant="10"/>
                                     </constraint>
+                                    <constraint firstItem="eqL-Du-POE" firstAttribute="leading" secondItem="A9f-h8-ZxQ" secondAttribute="trailing" constant="20" id="yC9-Rk-wy4"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="vO9-37-RGL"/>
-                                        <exclude reference="dbc-Aa-eW4"/>
+                                        <exclude reference="yZP-JY-RDs"/>
+                                        <exclude reference="Lt9-Zu-UKP"/>
+                                        <exclude reference="A9f-h8-ZxQ"/>
+                                        <exclude reference="eqL-Du-POE"/>
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="0z2-V9-kQc"/>
@@ -400,16 +425,28 @@
                                         <exclude reference="40r-bL-SjD"/>
                                         <exclude reference="S4V-vE-Vzl"/>
                                         <exclude reference="TyY-PN-MGh"/>
+                                        <exclude reference="icS-v5-55W"/>
+                                        <exclude reference="jFW-Bz-R8k"/>
                                         <exclude reference="Nmk-ut-Pel"/>
                                         <exclude reference="gn3-To-8IE"/>
                                         <exclude reference="NXE-bE-ZDD"/>
-                                        <exclude reference="XH3-hP-w1n"/>
+                                        <exclude reference="gIQ-xU-Ta5"/>
+                                        <exclude reference="4b9-aR-55M"/>
+                                        <exclude reference="aB7-4G-97d"/>
+                                        <exclude reference="9cJ-q9-yGJ"/>
+                                        <exclude reference="Ajm-QQ-78k"/>
+                                        <exclude reference="MpG-v4-Y1p"/>
+                                        <exclude reference="spv-4k-4ka"/>
+                                        <exclude reference="OvW-7M-Fgd"/>
+                                        <exclude reference="yC9-Rk-wy4"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
-                                        <include reference="vO9-37-RGL"/>
-                                        <include reference="dbc-Aa-eW4"/>
+                                        <include reference="yZP-JY-RDs"/>
+                                        <include reference="Lt9-Zu-UKP"/>
+                                        <include reference="A9f-h8-ZxQ"/>
+                                        <include reference="eqL-Du-POE"/>
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="0z2-V9-kQc"/>
@@ -426,10 +463,20 @@
                                         <exclude reference="40r-bL-SjD"/>
                                         <include reference="S4V-vE-Vzl"/>
                                         <include reference="TyY-PN-MGh"/>
+                                        <include reference="icS-v5-55W"/>
+                                        <include reference="jFW-Bz-R8k"/>
                                         <include reference="Nmk-ut-Pel"/>
                                         <include reference="gn3-To-8IE"/>
                                         <include reference="NXE-bE-ZDD"/>
-                                        <include reference="XH3-hP-w1n"/>
+                                        <include reference="gIQ-xU-Ta5"/>
+                                        <include reference="4b9-aR-55M"/>
+                                        <include reference="aB7-4G-97d"/>
+                                        <include reference="9cJ-q9-yGJ"/>
+                                        <include reference="Ajm-QQ-78k"/>
+                                        <include reference="MpG-v4-Y1p"/>
+                                        <include reference="spv-4k-4ka"/>
+                                        <include reference="OvW-7M-Fgd"/>
+                                        <include reference="yC9-Rk-wy4"/>
                                     </mask>
                                 </variation>
                             </view>
