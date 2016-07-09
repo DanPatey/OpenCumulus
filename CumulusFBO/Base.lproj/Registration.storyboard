@@ -10,15 +10,11 @@
         <scene sceneID="75H-kV-QAZ">
             <objects>
                 <viewController id="TPv-rZ-1V0" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cab-UT-0ov"/>
-                        <viewControllerLayoutGuide type="bottom" id="jmL-6Z-gNL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="FhK-xK-Xa9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RTR-DB-hD2">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                    </tableView>
                     <tabBarItem key="tabBarItem" title="Schedule" id="FUU-re-bp1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ucg-3U-AuH" userLabel="First Responder" sceneMemberID="firstResponder"/>
