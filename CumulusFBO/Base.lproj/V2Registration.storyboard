@@ -298,31 +298,22 @@
                                             <rect key="frame" x="122" y="73" width="99" height="21"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date of Arrival" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ez-3g-HdX" userLabel="dateOfArrivalLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Arrival Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ez-3g-HdX" userLabel="dateOfArrivalLabel">
                                         <rect key="frame" x="22" y="159" width="73" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="40" y="167" width="109" height="21"/>
+                                            <rect key="frame" x="125" y="137" width="92" height="21"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date of Departure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alh-7c-oOX" userLabel="dateOfDepartureLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Departure Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alh-7c-oOX" userLabel="dateOfDepartureLabel">
                                         <rect key="frame" x="22" y="291" width="41" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="40" y="261" width="138" height="21"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time of Departure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ej-cG-8VH" userLabel="timeOfDepartureLabel">
-                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="180" y="261" width="140" height="21"/>
+                                            <rect key="frame" x="111" y="243" width="120" height="21"/>
                                         </variation>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvj-KH-fZI" userLabel="tailNumberTextField">
@@ -348,22 +339,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time of Arrival" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfS-mL-882" userLabel="timeOfArrivalLabel">
-                                        <rect key="frame" x="22" y="226" width="115" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="209" y="167" width="111" height="21"/>
-                                        </variation>
-                                    </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vO9-37-RGL">
                                         <rect key="frame" x="-160" y="-108" width="320" height="216"/>
                                         <date key="date" timeIntervalSinceReferenceDate="489750806.82571602">
                                             <!--2016-07-09 09:53:26 +0000-->
                                         </date>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="18" y="190" width="153" height="63"/>
+                                            <rect key="frame" x="95" y="166" width="153" height="63"/>
                                         </variation>
                                     </datePicker>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="dbc-Aa-eW4">
@@ -372,7 +354,7 @@
                                             <!--2016-07-09 09:53:44 +0000-->
                                         </date>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="18" y="293" width="153" height="69"/>
+                                            <rect key="frame" x="95" y="272" width="153" height="69"/>
                                         </variation>
                                     </datePicker>
                                 </subviews>
@@ -398,7 +380,6 @@
                                     <constraint firstItem="Wsf-jJ-5yk" firstAttribute="width" secondItem="qvj-KH-fZI" secondAttribute="width" id="bRU-4A-tu8"/>
                                     <constraint firstItem="Wsf-jJ-5yk" firstAttribute="centerX" secondItem="lEo-bg-59S" secondAttribute="centerX" id="cjL-69-vGu"/>
                                     <constraint firstItem="qvj-KH-fZI" firstAttribute="top" secondItem="Hn6-qx-8RI" secondAttribute="bottom" constant="5" id="ckF-bh-CXe"/>
-                                    <constraint firstItem="FfS-mL-882" firstAttribute="centerX" secondItem="lEo-bg-59S" secondAttribute="centerX" id="gk3-Sr-Ng5"/>
                                     <constraint firstItem="6Ez-3g-HdX" firstAttribute="centerX" secondItem="lEo-bg-59S" secondAttribute="centerX" id="gn3-To-8IE"/>
                                     <constraint firstAttribute="trailing" secondItem="qvj-KH-fZI" secondAttribute="trailing" constant="10" id="p2H-0U-2dQ">
                                         <variation key="widthClass=compact" constant="40"/>
@@ -409,7 +390,6 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="5ej-cG-8VH"/>
                                         <exclude reference="vO9-37-RGL"/>
                                         <exclude reference="dbc-Aa-eW4"/>
                                     </mask>
@@ -430,13 +410,11 @@
                                         <exclude reference="cjL-69-vGu"/>
                                         <exclude reference="Nmk-ut-Pel"/>
                                         <exclude reference="gn3-To-8IE"/>
-                                        <exclude reference="gk3-Sr-Ng5"/>
                                         <exclude reference="NXE-bE-ZDD"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
                                     <mask key="subviews">
-                                        <include reference="5ej-cG-8VH"/>
                                         <include reference="vO9-37-RGL"/>
                                         <include reference="dbc-Aa-eW4"/>
                                     </mask>
@@ -457,7 +435,6 @@
                                         <include reference="cjL-69-vGu"/>
                                         <include reference="Nmk-ut-Pel"/>
                                         <include reference="gn3-To-8IE"/>
-                                        <include reference="gk3-Sr-Ng5"/>
                                         <include reference="NXE-bE-ZDD"/>
                                     </mask>
                                 </variation>
