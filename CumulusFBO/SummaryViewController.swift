@@ -10,14 +10,9 @@ import UIKit
 
 class SummaryViewController: UIViewController {
     
-    @IBOutlet weak var departureSummary: UITextView! {
+    @IBOutlet weak var summary: UITextView! {
         didSet {
-            self.departureSummary.text = ReservationsManager.sharedManager.activeReservation.departureSummary() + ReservationsManager.sharedManager.activeReservation.departureServicesSummary()
-        }
-    }
-    @IBOutlet weak var arrivalSummary: UITextView! {
-        didSet {
-            self.arrivalSummary.text = ReservationsManager.sharedManager.activeReservation.arrivalSummary() + ReservationsManager.sharedManager.activeReservation.arrivalServicesSummary()
+            self.summary.text = ReservationsManager.sharedManager.activeReservation.generateSummary()
         }
     }
     

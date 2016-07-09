@@ -28,7 +28,7 @@
         <!--Registration-->
         <scene sceneID="2PW-XG-PhD">
             <objects>
-                <viewController id="S3b-Cq-sFI" sceneMemberID="viewController">
+                <viewController id="S3b-Cq-sFI" customClass="RegistrationViewController" customModule="CumulusFBO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Dwp-nM-cPG"/>
                         <viewControllerLayoutGuide type="bottom" id="VVu-Gx-fvw"/>
@@ -257,6 +257,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="company" destination="4wS-7f-VSH" id="Gxa-MO-yfF"/>
+                        <outlet property="email" destination="bVU-SS-DeY" id="4at-7e-K2C"/>
+                        <outlet property="firstName" destination="rwO-75-BKo" id="CkI-mQ-hun"/>
+                        <outlet property="lastName" destination="JoT-n5-KEh" id="JDI-EB-YJt"/>
+                        <outlet property="phoneNumber" destination="c7J-ch-CJr" id="EBE-D1-PG0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MF-Jr-xPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,7 +272,7 @@
         <!--Flight Information-->
         <scene sceneID="kIL-YQ-RPa">
             <objects>
-                <viewController id="r2y-nL-16a" sceneMemberID="viewController">
+                <viewController id="r2y-nL-16a" customClass="FlightInformationViewController" customModule="CumulusFBO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NRl-IT-pzd"/>
                         <viewControllerLayoutGuide type="bottom" id="riX-AQ-PgI"/>
@@ -282,29 +289,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tail Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hn6-qx-8RI" userLabel="tailNumberLabel">
                                         <rect key="frame" x="22" y="14" width="83" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Airport Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKW-5v-L6Q" userLabel="airportCodeLabel">
-                                        <rect key="frame" x="22" y="92" width="82" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Arrival Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ez-3g-HdX" userLabel="dateOfArrivalLabel">
-                                        <rect key="frame" x="22" y="159" width="73" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wsf-jJ-5yk" userLabel="airportCodeTextField">
-                                        <rect key="frame" x="22" y="121" width="179" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Departure Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alh-7c-oOX" userLabel="dateOfDepartureLabel">
-                                        <rect key="frame" x="22" y="291" width="41" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -327,6 +311,23 @@
                                             </mask>
                                         </variation>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Airport Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKW-5v-L6Q" userLabel="airportCodeLabel">
+                                        <rect key="frame" x="22" y="92" width="82" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wsf-jJ-5yk" userLabel="airportCodeTextField">
+                                        <rect key="frame" x="22" y="121" width="179" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Arrival Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ez-3g-HdX" userLabel="dateOfArrivalLabel">
+                                        <rect key="frame" x="22" y="159" width="73" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZP-JY-RDs" userLabel="arrivalTimeTextField">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <constraints>
@@ -352,6 +353,12 @@
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <state key="normal" title="Select Time"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Departure Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alh-7c-oOX" userLabel="dateOfDepartureLabel">
+                                        <rect key="frame" x="22" y="291" width="41" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9f-h8-ZxQ" userLabel="selectDepartureTimeTextField">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -516,6 +523,14 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="airportCode" destination="Wsf-jJ-5yk" id="cLL-XJ-xip"/>
+                        <outlet property="arrivalTime" destination="yZP-JY-RDs" id="sXM-Zt-W6y"/>
+                        <outlet property="departureTime" destination="A9f-h8-ZxQ" id="uXs-tY-QMA"/>
+                        <outlet property="selectArrivalTime" destination="Lt9-Zu-UKP" id="IHC-tS-4yC"/>
+                        <outlet property="selectDepartureTime" destination="eqL-Du-POE" id="42g-ph-huT"/>
+                        <outlet property="tailNumber" destination="qvj-KH-fZI" id="gb6-ox-VTV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePV-ZA-VtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -524,7 +539,7 @@
         <!--Summary-->
         <scene sceneID="A3a-bQ-vD8">
             <objects>
-                <viewController id="FSp-Bm-Shc" sceneMemberID="viewController">
+                <viewController id="FSp-Bm-Shc" customClass="SummaryViewController" customModule="CumulusFBO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oJ0-Kh-M96"/>
                         <viewControllerLayoutGuide type="bottom" id="oAi-Ib-VCn"/>
@@ -645,6 +660,9 @@
                     <navigationItem key="navigationItem" title="Summary" id="kcZ-vK-JXp">
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="jBh-g9-OCI"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="summary" destination="yrq-JI-fCC" id="1Pe-Li-qcd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2G-fh-oke" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

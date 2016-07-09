@@ -10,24 +10,21 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
     
-    @IBOutlet weak var nameOutlet: UITextField!
-    @IBOutlet weak var primaryContact: UITextField!
-    @IBOutlet weak var homeBase: UITextField!
-    @IBOutlet weak var operatedUnder: UITextField!
-    @IBOutlet weak var textFieldsContainerView: UIView! {
-        didSet {
-            self.textFieldsContainerView.layer.cornerRadius = 5.0
-        }
-    }
+    @IBOutlet weak var firstName: UITextField!
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var company: UITextField!
+    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var email: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        ReservationsManager.sharedManager.activeReservation.name = nameOutlet.text
-        ReservationsManager.sharedManager.activeReservation.primaryContact = primaryContact.text
-        ReservationsManager.sharedManager.activeReservation.homeBase = homeBase.text
-        ReservationsManager.sharedManager.activeReservation.operatedUnder = operatedUnder.text
+        ReservationsManager.sharedManager.activeReservation.firstName = firstName.text
+        ReservationsManager.sharedManager.activeReservation.lastName = lastName.text
+        ReservationsManager.sharedManager.activeReservation.company = company.text
+        ReservationsManager.sharedManager.activeReservation.phoneNumber = phoneNumber.text
+        ReservationsManager.sharedManager.activeReservation.email = email.text
     }
 }

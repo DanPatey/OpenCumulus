@@ -21,6 +21,7 @@
 		5734C8841CAB76540031B000 /* ArrivalServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C8831CAB76540031B000 /* ArrivalServicesViewController.swift */; };
 		5734C8861CAB766A0031B000 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C8851CAB766A0031B000 /* SummaryViewController.swift */; };
 		5794E2341D30E66C00AE124E /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5794E2321D30E66C00AE124E /* Registration.storyboard */; };
+		57CDA7081D31BACE005DD618 /* FlightInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		5734C8831CAB76540031B000 /* ArrivalServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ArrivalServicesViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5734C8851CAB766A0031B000 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		5794E2331D30E66C00AE124E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CumulusFBO/Base.lproj/Registration.storyboard; sourceTree = "<group>"; };
+		57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,19 +76,20 @@
 			children = (
 				5734C8691CAB67820031B000 /* AppDelegate.swift */,
 				5734C86B1CAB67820031B000 /* RegistrationViewController.swift */,
+				57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */,
+				5734C8851CAB766A0031B000 /* SummaryViewController.swift */,
 				5734C87B1CAB6BA40031B000 /* DepartureViewController.swift */,
 				5734C87D1CAB75CB0031B000 /* ArrivialViewController.swift */,
 				5734C87F1CAB75FC0031B000 /* PlaneInfoViewController.swift */,
 				5734C8811CAB763B0031B000 /* DepartureServicesViewController.swift */,
 				5734C8831CAB76540031B000 /* ArrivalServicesViewController.swift */,
-				5734C8851CAB766A0031B000 /* SummaryViewController.swift */,
 				572828851CC44B470005A6EA /* ReservationsManager.swift */,
 				572828831CC43F170005A6EA /* ReservationsModel.swift */,
 				5734C8701CAB67820031B000 /* Assets.xcassets */,
-				5734C86D1CAB67820031B000 /* V1Registration.storyboard */,
 				5794E2321D30E66C00AE124E /* Registration.storyboard */,
 				5734C8721CAB67820031B000 /* LaunchScreen.storyboard */,
 				5734C8751CAB67820031B000 /* Info.plist */,
+				5734C86D1CAB67820031B000 /* V1Registration.storyboard */,
 			);
 			name = CumlusFBO;
 			path = CumulusFBO;
@@ -167,6 +170,7 @@
 			files = (
 				572828841CC43F170005A6EA /* ReservationsModel.swift in Sources */,
 				5734C8801CAB75FC0031B000 /* PlaneInfoViewController.swift in Sources */,
+				57CDA7081D31BACE005DD618 /* FlightInformationViewController.swift in Sources */,
 				5734C87E1CAB75CB0031B000 /* ArrivialViewController.swift in Sources */,
 				5734C8841CAB76540031B000 /* ArrivalServicesViewController.swift in Sources */,
 				572828861CC44B470005A6EA /* ReservationsManager.swift in Sources */,
