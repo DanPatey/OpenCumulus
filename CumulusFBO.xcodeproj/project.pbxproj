@@ -20,7 +20,7 @@
 		5734C8821CAB763B0031B000 /* DepartureServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C8811CAB763B0031B000 /* DepartureServicesViewController.swift */; };
 		5734C8841CAB76540031B000 /* ArrivalServicesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C8831CAB76540031B000 /* ArrivalServicesViewController.swift */; };
 		5734C8861CAB766A0031B000 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C8851CAB766A0031B000 /* SummaryViewController.swift */; };
-		5794E2341D30E66C00AE124E /* V2Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5794E2321D30E66C00AE124E /* V2Registration.storyboard */; };
+		5794E2341D30E66C00AE124E /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5794E2321D30E66C00AE124E /* Registration.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,7 @@
 		5734C8811CAB763B0031B000 /* DepartureServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartureServicesViewController.swift; sourceTree = "<group>"; };
 		5734C8831CAB76540031B000 /* ArrivalServicesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ArrivalServicesViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5734C8851CAB766A0031B000 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
-		5794E2331D30E66C00AE124E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CumulusFBO/Base.lproj/V2Registration.storyboard; sourceTree = "<group>"; };
+		5794E2331D30E66C00AE124E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CumulusFBO/Base.lproj/Registration.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 				572828831CC43F170005A6EA /* ReservationsModel.swift */,
 				5734C8701CAB67820031B000 /* Assets.xcassets */,
 				5734C86D1CAB67820031B000 /* V1Registration.storyboard */,
-				5794E2321D30E66C00AE124E /* V2Registration.storyboard */,
+				5794E2321D30E66C00AE124E /* Registration.storyboard */,
 				5734C8721CAB67820031B000 /* LaunchScreen.storyboard */,
 				5734C8751CAB67820031B000 /* Info.plist */,
 			);
@@ -154,7 +154,7 @@
 				5734C8741CAB67820031B000 /* LaunchScreen.storyboard in Resources */,
 				5734C8711CAB67820031B000 /* Assets.xcassets in Resources */,
 				5734C86F1CAB67820031B000 /* V1Registration.storyboard in Resources */,
-				5794E2341D30E66C00AE124E /* V2Registration.storyboard in Resources */,
+				5794E2341D30E66C00AE124E /* Registration.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,12 +197,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		5794E2321D30E66C00AE124E /* V2Registration.storyboard */ = {
+		5794E2321D30E66C00AE124E /* Registration.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5794E2331D30E66C00AE124E /* Base */,
 			);
-			name = V2Registration.storyboard;
+			name = Registration.storyboard;
 			path = ..;
 			sourceTree = "<group>";
 		};
