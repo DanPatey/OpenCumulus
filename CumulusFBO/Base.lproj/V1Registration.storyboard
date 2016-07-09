@@ -446,16 +446,8 @@
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Fuel Units" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jb8-Ds-6Mr">
                                                 <rect key="frame" x="290" y="120" width="250" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="FVm-Uo-6QU"/>
-                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <variation key="default">
-                                                    <mask key="constraints">
-                                                        <exclude reference="FVm-Uo-6QU"/>
-                                                    </mask>
-                                                </variation>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of PAX" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fjy-gK-rx2">
                                                 <rect key="frame" x="20" y="170" width="520" height="30"/>
@@ -506,6 +498,7 @@
                                             <constraint firstItem="fiK-FJ-zcl" firstAttribute="trailing" secondItem="Jb8-Ds-6Mr" secondAttribute="trailing" id="NBs-Qt-bKk"/>
                                             <constraint firstItem="DCS-eY-WzH" firstAttribute="baseline" secondItem="Jb8-Ds-6Mr" secondAttribute="baseline" id="O4k-3k-PvL"/>
                                             <constraint firstItem="xNp-sX-edn" firstAttribute="leading" secondItem="2He-8G-UJe" secondAttribute="leading" constant="20" id="R2M-eW-VMg"/>
+                                            <constraint firstItem="Jb8-Ds-6Mr" firstAttribute="width" secondItem="DCS-eY-WzH" secondAttribute="width" id="RJO-ey-cZN"/>
                                             <constraint firstItem="Jb8-Ds-6Mr" firstAttribute="leading" secondItem="DCS-eY-WzH" secondAttribute="trailing" constant="20" id="TjK-U9-LIu"/>
                                             <constraint firstItem="xNp-sX-edn" firstAttribute="top" secondItem="2He-8G-UJe" secondAttribute="top" constant="20" id="ZQP-6u-BhW"/>
                                             <constraint firstItem="xNp-sX-edn" firstAttribute="leading" secondItem="fiK-FJ-zcl" secondAttribute="leading" id="Zml-VB-lyn"/>
@@ -515,6 +508,11 @@
                                             <constraint firstItem="Jb8-Ds-6Mr" firstAttribute="trailing" secondItem="Fjy-gK-rx2" secondAttribute="trailing" id="qwp-80-HZP"/>
                                             <constraint firstItem="fiK-FJ-zcl" firstAttribute="leading" secondItem="DCS-eY-WzH" secondAttribute="leading" id="sgH-lx-dcb"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="RJO-ey-cZN"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="0Re-Pg-fCx">
                                         <rect key="frame" x="20" y="10" width="560" height="100"/>
