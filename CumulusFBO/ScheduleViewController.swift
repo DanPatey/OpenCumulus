@@ -9,5 +9,18 @@
 import UIKit
 
 class ScheduleViewController: UITableViewController {
+    var reservationStore: ReservationStore!
     
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return reservationStore.allReservations.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
+        let item = reservationStore.allReservations[indexPath.row]
+        
+        cell.textLabel?.text = item.tailNumber
+        
+        return cell
+    }
 }

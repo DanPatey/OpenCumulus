@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Schedule: NSObject {
+class Reservation: NSObject {
     var tailNumber: String
     var aircraftType: String
     var arrivalTime: String
@@ -19,5 +19,18 @@ class Schedule: NSObject {
         self.aircraftType = aircraftType
         self.arrivalTime = arrivalTime
         self.eta = eta
+        
+        super.init()
+    }
+    
+    convenience init(random: Bool = false) {
+        if random {
+            let tailNumbers = ["N53440", "N73262", "N796SP"]
+            let aircraftTypes = ["172S", "Citation", "Hawker"]
+            let arrivalTimes = ["07-06-2016 12:00PM", "10-12-2016 07:00AM", "04-05-2016 06:00PM"]
+            let etas = ["2:00", "1:49", "1:22"]
+            
+            // Implement the rest of this randomizer
+        }
     }
 }
