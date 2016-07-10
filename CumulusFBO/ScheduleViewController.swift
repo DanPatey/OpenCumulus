@@ -23,4 +23,14 @@ class ScheduleViewController: UITableViewController {
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let reservationStore = ReservationStore()
+        
+        let tabController = segue.destinationViewController as! UITabBarController
+        let reservationController = tabController.viewControllers![1] as! ScheduleViewController
+        
+        reservationController.reservationStore = reservationStore
+    }
+    
 }

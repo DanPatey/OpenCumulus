@@ -13,10 +13,10 @@ class ReservationStore {
     var allReservations = [Reservation]()
     
     func createReservation() -> Reservation {
-        let newReservation = Reservation()
+        let newReservation = Reservation(tailNumber: "N53440", aircraftType: "C172S", arrivalTime: "07-06-2016 07:00am", eta: "1:58")
         
         allReservations.append(newReservation)
         
-        return allReservations
+        return newReservation
     }
 }
