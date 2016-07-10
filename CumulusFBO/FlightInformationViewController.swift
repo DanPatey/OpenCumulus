@@ -47,9 +47,9 @@ class FlightInformationViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        ReservationsManager.sharedManager.activeReservation.tailNumber = tailNumber.text
-        ReservationsManager.sharedManager.activeReservation.airportCode = airportCode.text
-        ReservationsManager.sharedManager.activeReservation.arrivalTime = arrivalTime.text
-        ReservationsManager.sharedManager.activeReservation.departureTime = departureTime.text
+        RegistrationsManager.sharedManager.activeReservation.tailNumber = tailNumber.text
+        RegistrationsManager.sharedManager.activeReservation.airportCode = airportCode.text
+        RegistrationsManager.sharedManager.activeReservation.arrivalTime = arrivalTime.text
+        RegistrationsManager.sharedManager.activeReservation.departureTime = departureTime.text
     }
 }

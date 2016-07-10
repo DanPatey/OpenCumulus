@@ -21,10 +21,10 @@ class RegistrationViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        ReservationsManager.sharedManager.activeReservation.firstName = firstName.text
-        ReservationsManager.sharedManager.activeReservation.lastName = lastName.text
-        ReservationsManager.sharedManager.activeReservation.company = company.text
-        ReservationsManager.sharedManager.activeReservation.phoneNumber = phoneNumber.text
-        ReservationsManager.sharedManager.activeReservation.email = email.text
+        RegistrationsManager.sharedManager.activeReservation.firstName = firstName.text
+        RegistrationsManager.sharedManager.activeReservation.lastName = lastName.text
+        RegistrationsManager.sharedManager.activeReservation.company = company.text
+        RegistrationsManager.sharedManager.activeReservation.phoneNumber = phoneNumber.text
+        RegistrationsManager.sharedManager.activeReservation.email = email.text
     }
 }

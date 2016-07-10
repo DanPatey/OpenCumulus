@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ReservationsModel {
+class RegistrationsModel {
 
 //    enum FuelType: String {
 //        case LL = "100LL"

@@ -12,7 +12,7 @@ class SummaryViewController: UIViewController {
     
     @IBOutlet weak var summary: UITextView! {
         didSet {
-            self.summary.text = ReservationsManager.sharedManager.activeReservation.generateSummary()
+            self.summary.text = RegistrationsManager.sharedManager.activeReservation.generateSummary()
         }
     }
     
