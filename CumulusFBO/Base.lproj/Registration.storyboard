@@ -333,6 +333,9 @@
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="departureTimeDatePicker:" destination="r2y-nL-16a" eventType="editingDidBegin" id="KXv-7N-Vxf"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yZP-JY-RDs" userLabel="arrivalTimeTextField">
                                         <rect key="frame" x="-25" y="-30" width="97" height="30"/>
@@ -355,7 +358,7 @@
                                             </mask>
                                         </variation>
                                         <connections>
-                                            <action selector="arrivalTimeDatePicker:" destination="r2y-nL-16a" eventType="editingDidEnd" id="BnR-lb-5K8"/>
+                                            <action selector="arrivalTimeDatePicker:" destination="r2y-nL-16a" eventType="editingDidBegin" id="kPF-eG-OzC"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -510,7 +513,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="airportCode" destination="Wsf-jJ-5yk" id="cLL-XJ-xip"/>
-                        <outlet property="arrivalTime" destination="yZP-JY-RDs" id="KDZ-Fc-f9u"/>
+                        <outlet property="arrivalTime" destination="yZP-JY-RDs" id="Onj-hV-5ph"/>
                         <outlet property="departureTime" destination="A9f-h8-ZxQ" id="uXs-tY-QMA"/>
                         <outlet property="tailNumber" destination="qvj-KH-fZI" id="gb6-ox-VTV"/>
                     </connections>

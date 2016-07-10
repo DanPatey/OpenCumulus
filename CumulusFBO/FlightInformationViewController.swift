@@ -17,17 +17,30 @@ class FlightInformationViewController: UIViewController {
     @IBAction func arrivalTimeDatePicker(sender: UITextField) {
         let datePickerView : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
+        datePickerView.addTarget(self, action: #selector(FlightInformationViewController.handleArrivalDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
         sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: #selector(FlightInformationViewController.handleDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
     }
     
-    func handleDatePicker(sender: UIDatePicker) {
+    func handleArrivalDatePicker(sender: UIDatePicker) {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MMMM dd yyyy hh:mmZZ"
         arrivalTime.text = dateFormatter.stringFromDate(sender.date)
     }
+
     
     @IBOutlet weak var departureTime: UITextField!
+    @IBAction func departureTimeDatePicker(sender: UITextField) {
+        let datePickerView : UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
+        datePickerView.addTarget(self, action: #selector(FlightInformationViewController.handleDepartureDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        sender.inputView = datePickerView
+    }
+    
+    func handleDepartureDatePicker(sender: UIDatePicker) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMMM dd yyyy hh:mmZZ"
+        departureTime.text = dateFormatter.stringFromDate(sender.date)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
