@@ -12,10 +12,22 @@ class FlightInformationViewController: UIViewController {
     
     @IBOutlet weak var tailNumber: UITextField!
     @IBOutlet weak var airportCode: UITextField!
+    
     @IBOutlet weak var arrivalTime: UITextField!
-    @IBOutlet weak var selectArrivalTime: UIButton!
+    @IBAction func arrivalTimeDatePicker(sender: UITextField) {
+        let datePickerView : UIDatePicker = UIDatePicker()
+        datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
+        sender.inputView = datePickerView
+        datePickerView.addTarget(self, action: #selector(FlightInformationViewController.handleDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+    }
+    
+    func handleDatePicker(sender: UIDatePicker) {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MMMM dd yyyy hh:mmZZ"
+        arrivalTime.text = dateFormatter.stringFromDate(sender.date)
+    }
+    
     @IBOutlet weak var departureTime: UITextField!
-    @IBOutlet weak var selectDepartureTime: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
