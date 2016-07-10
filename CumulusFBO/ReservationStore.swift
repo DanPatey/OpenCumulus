@@ -19,4 +19,8 @@ class ReservationStore {
         
         return newReservation
     }
+    
+    init() {
+        createReservation()
+    }
 }
