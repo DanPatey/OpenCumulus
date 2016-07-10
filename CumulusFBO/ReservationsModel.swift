@@ -67,7 +67,7 @@ class ReservationsModel {
     
     func generateSummary() -> String {
         let registrationInfo = "First Name: \(self.firstName ?? "")\nLast Name: \(self.lastName ?? "")\nCompany: \(self.company ?? "")\nPhone Number: \(self.phoneNumber ?? "")\nEmail: \(self.email ?? "")"
-        let flightInfo = "\nTail Number: \(self.tailNumber ?? "")\nAirport Code: \(self.airportCode ?? "")\nArrival Time: \(self.arrivalTime ?? "")\ndepartureTime: \(self.departureTime ?? "")"
+        let flightInfo = "\nTail Number: \(self.tailNumber ?? "")\nAirport Code: \(self.airportCode ?? "")\nArrival Time: \(self.arrivalTime ?? "")\nDeparture Time: \(self.departureTime ?? "")"
 //        let aircraftInfo = "\nAircraft Type: \(self.aircraftType ?? "")\nTail Number: \(self.tailNumber ?? "")"
 //        let passengersInfo = "\nPassengers: \(self.passengers ?? "")"
 //        let fuelInfo = "\nFuel Type: \(self.fuelType ?? "")\nFuel Units: \(self.fuelUnits ?? "")"
