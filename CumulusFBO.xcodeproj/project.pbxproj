@@ -78,6 +78,10 @@
 				5734C86B1CAB67820031B000 /* RegistrationViewController.swift */,
 				57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */,
 				5734C8851CAB766A0031B000 /* SummaryViewController.swift */,
+				5734C8701CAB67820031B000 /* Assets.xcassets */,
+				5794E2321D30E66C00AE124E /* Registration.storyboard */,
+				5734C8721CAB67820031B000 /* LaunchScreen.storyboard */,
+				5734C8751CAB67820031B000 /* Info.plist */,
 				5734C87B1CAB6BA40031B000 /* DepartureViewController.swift */,
 				5734C87D1CAB75CB0031B000 /* ArrivialViewController.swift */,
 				5734C87F1CAB75FC0031B000 /* PlaneInfoViewController.swift */,
@@ -85,10 +89,6 @@
 				5734C8831CAB76540031B000 /* ArrivalServicesViewController.swift */,
 				572828851CC44B470005A6EA /* ReservationsManager.swift */,
 				572828831CC43F170005A6EA /* ReservationsModel.swift */,
-				5734C8701CAB67820031B000 /* Assets.xcassets */,
-				5794E2321D30E66C00AE124E /* Registration.storyboard */,
-				5734C8721CAB67820031B000 /* LaunchScreen.storyboard */,
-				5734C8751CAB67820031B000 /* Info.plist */,
 				5734C86D1CAB67820031B000 /* V1Registration.storyboard */,
 			);
 			name = CumlusFBO;
