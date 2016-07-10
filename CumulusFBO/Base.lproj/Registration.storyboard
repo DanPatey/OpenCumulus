@@ -108,7 +108,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" red="0.37254901959999998" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.51372549020000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="eq9-IB-C0W" firstAttribute="top" secondItem="JoT-n5-KEh" secondAttribute="bottom" constant="15" id="2Tm-Tu-o4H">
                                         <variation key="widthClass=compact" constant="7"/>
@@ -218,8 +218,7 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.1137254902" green="0.41568627450000001" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.1137254902" green="0.41568627450000001" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.14901960780000001" green="0.28627450980000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="H03-7A-oul" firstAttribute="top" secondItem="Dwp-nM-cPG" secondAttribute="bottom" constant="25" id="6aa-aG-q3o"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JgN-eu-7Mu" secondAttribute="trailing" id="Cxm-yB-k8u"/>
@@ -360,7 +359,7 @@
                                         </connections>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" red="0.37254901959999998" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.51372549020000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="yZP-JY-RDs" firstAttribute="width" secondItem="Wsf-jJ-5yk" secondAttribute="width" id="0w0-EU-jrm"/>
                                     <constraint firstItem="qvj-KH-fZI" firstAttribute="centerX" secondItem="lEo-bg-59S" secondAttribute="centerX" id="0z2-V9-kQc"/>
@@ -475,8 +474,7 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.1137254902" green="0.41568627450000001" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.1137254902" green="0.41568627450000001" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.15686274510000001" green="0.29411764709999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="lEo-bg-59S" firstAttribute="bottom" secondItem="riX-AQ-PgI" secondAttribute="top" id="84l-8b-r2N">
                                 <variation key="widthClass=compact" constant="20"/>
@@ -570,7 +568,7 @@
                                         </variation>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.37254901959999998" green="0.72941176470000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.25098039220000001" green="0.51372549020000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="LaJ-oL-J4V" firstAttribute="centerX" secondItem="4Jg-e6-vcH" secondAttribute="centerX" id="4GK-xf-aye"/>
                                     <constraint firstItem="yrq-JI-fCC" firstAttribute="leading" secondItem="4Jg-e6-vcH" secondAttribute="leading" constant="60" id="7lF-xs-2Qd"/>
@@ -614,8 +612,7 @@
                                 </variation>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.1137254902" green="0.41568627450000001" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.1137254902" green="0.41568627450000001" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.15686274510000001" green="0.29411764709999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0me-Pk-VLY" firstAttribute="leading" secondItem="9uu-qH-bDA" secondAttribute="leadingMargin" constant="20" id="0He-V5-oXS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0me-Pk-VLY" secondAttribute="trailing" constant="20" id="4T1-qW-QGW"/>
