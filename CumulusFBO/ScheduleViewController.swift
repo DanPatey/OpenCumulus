@@ -22,5 +22,5 @@ class ScheduleViewController: UITableViewController {
         cell.textLabel?.text = item.tailNumber
         
         return cell
-    }    
+    }
 }

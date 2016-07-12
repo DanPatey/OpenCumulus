@@ -12,13 +12,13 @@ class Reservation: NSObject {
     var tailNumber: String
     var aircraftType: String
     var arrivalTime: String
-    var eta: String
+//    var eta: String
     
-    init(tailNumber: String, aircraftType: String, arrivalTime: String, eta: String) {
+    init(tailNumber: String, aircraftType: String, arrivalTime: String /*eta: String*/) {
         self.tailNumber = tailNumber
         self.aircraftType = aircraftType
         self.arrivalTime = arrivalTime
-        self.eta = eta
+//        self.eta = eta
         
         super.init()
     }

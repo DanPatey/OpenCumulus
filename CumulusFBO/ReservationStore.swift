@@ -11,16 +11,13 @@ import UIKit
 class ReservationStore {
     // Store all our schedules
     var allReservations = [Reservation]()
-    
-    func createReservation() -> Reservation {
-        let newReservation = Reservation(tailNumber: "N53440", aircraftType: "C172S", arrivalTime: "07-06-2016 07:00am", eta: "1:58")
+        
+    func createReservation(tailNumber: String, aircraftType: String, arrivalTime: String) -> Reservation {
+        
+        let newReservation = Reservation(tailNumber: tailNumber, aircraftType: aircraftType, arrivalTime: arrivalTime)
         
         allReservations.append(newReservation)
         
         return newReservation
-    }
-    
-    init() {
-        createReservation()
-    }
+    }    
 }
