@@ -30,8 +30,20 @@ class ScheduleViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             let reservation = reservationStore.allReservations[indexPath.row]
-            reservationStore.removeReservation(reservation)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            
+            let title = "Remove \(reservation.tailNumber) from schedule?"
+            let message = "Are you sure you want to delete this item?"
+            let ac = UIAlertController(title: title, message: message, preferredStyle: .ActionSheet)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+            ac.addAction(cancelAction)
+            let deleteAction = UIAlertAction(title: "Remove", style: .Destructive, handler: { (action) -> Void in
+                reservationStore.removeReservation(reservation)
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            })
+            ac.addAction(deleteAction)
+            
+            presentViewController(ac, animated: true, completion: nil)
         }
     }
 }
