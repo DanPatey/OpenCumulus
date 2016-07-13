@@ -8,6 +8,8 @@
 
 import UIKit
 
+let reservationStore = ReservationStore()
+
 class SummaryViewController: UIViewController {
     
     @IBOutlet weak var summary: UITextView! {
@@ -23,7 +25,6 @@ class SummaryViewController: UIViewController {
         let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
 //        let eta = the flightaware API call on tailnumber
         
-        let reservationStore = ReservationStore()
         reservationStore.createReservation(tailNumber!, aircraftType: airportCode!, arrivalTime: arrivalTime!)
         dump(reservationStore.allReservations)
     }
