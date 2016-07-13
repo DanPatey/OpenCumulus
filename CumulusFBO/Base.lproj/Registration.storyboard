@@ -13,7 +13,46 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RTR-DB-hD2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.14901960780000001" green="0.28627450980000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="1Ka-fq-mKt">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="JoO-MQ-Ksh">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <color key="backgroundColor" red="0.14901960780000001" green="0.28627450980000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.14901960780000001" green="0.28627450980000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="JoO-MQ-Ksh" firstAttribute="top" secondItem="1Ka-fq-mKt" secondAttribute="top" id="9El-5t-mNx"/>
+                                <constraint firstAttribute="bottom" secondItem="JoO-MQ-Ksh" secondAttribute="bottom" id="AY3-2W-blD"/>
+                                <constraint firstAttribute="trailing" secondItem="JoO-MQ-Ksh" secondAttribute="trailing" constant="10" id="czG-m0-UQP"/>
+                                <constraint firstItem="JoO-MQ-Ksh" firstAttribute="leading" secondItem="1Ka-fq-mKt" secondAttribute="leading" constant="10" id="qWG-af-S4z"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="JoO-MQ-Ksh"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <exclude reference="9El-5t-mNx"/>
+                                    <exclude reference="AY3-2W-blD"/>
+                                    <exclude reference="czG-m0-UQP"/>
+                                    <exclude reference="qWG-af-S4z"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="subviews">
+                                    <include reference="JoO-MQ-Ksh"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <include reference="9El-5t-mNx"/>
+                                    <include reference="AY3-2W-blD"/>
+                                    <include reference="czG-m0-UQP"/>
+                                    <include reference="qWG-af-S4z"/>
+                                </mask>
+                            </variation>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UITableViewCell" textLabel="04G-uX-G33" detailTextLabel="DIv-cS-CNs" style="IBUITableViewCellStyleValue1" id="Hrr-Sp-exV">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -43,6 +82,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                     </tableView>

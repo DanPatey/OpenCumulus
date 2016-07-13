@@ -8,17 +8,9 @@
 
 import UIKit
 
-class ScheduleViewController: UITableViewController {
-    
+class ScheduleViewController: UITableViewController {    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Get the height of the status bar
-        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-        
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,5 +25,13 @@ class ScheduleViewController: UITableViewController {
         cell.detailTextLabel?.text = item.aircraftType
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let reservation = reservationStore.allReservations[indexPath.row]
+            reservationStore.removeReservation(reservation)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
     }
 }

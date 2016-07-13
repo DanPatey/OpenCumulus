@@ -19,5 +19,11 @@ class ReservationStore {
         allReservations.append(newReservation)
         
         return newReservation
-    }    
+    }
+    
+    func removeReservation(reservation: Reservation) {
+        if let index = allReservations.indexOf(reservation) {
+            allReservations.removeAtIndex(index)
+        }
+    }
 }
