@@ -136,7 +136,7 @@
                                             <include reference="Chy-7N-gYG"/>
                                             <include reference="uux-Mw-QNb"/>
                                             <include reference="2Jw-is-iBN"/>
-                                            <include reference="a2j-Q8-OPs"/>
+                                            <exclude reference="a2j-Q8-OPs"/>
                                             <include reference="efy-SM-rtD"/>
                                             <include reference="omc-Ky-Cix"/>
                                         </mask>
