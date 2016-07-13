@@ -11,6 +11,7 @@ import UIKit
 class FlightInformationViewController: UIViewController {
     
     @IBOutlet weak var tailNumber: UITextField!
+    @IBOutlet weak var aircraftType: UITextField!
     @IBOutlet weak var airportCode: UITextField!
     
     @IBOutlet weak var arrivalTime: UITextField!
@@ -48,6 +49,7 @@ class FlightInformationViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         RegistrationsManager.sharedManager.activeReservation.tailNumber = tailNumber.text
+        RegistrationsManager.sharedManager.activeReservation.aircraftType = aircraftType.text
         RegistrationsManager.sharedManager.activeReservation.airportCode = airportCode.text
         RegistrationsManager.sharedManager.activeReservation.arrivalTime = arrivalTime.text
         RegistrationsManager.sharedManager.activeReservation.departureTime = departureTime.text

@@ -19,7 +19,8 @@ class ScheduleViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
         let item = reservationStore.allReservations[indexPath.row]
         
-        cell.textLabel?.text = item.tailNumber
+        cell.textLabel?.text = item.aircraftType
+        cell.detailTextLabel?.text = item.tailNumber
         
         return cell
     }
