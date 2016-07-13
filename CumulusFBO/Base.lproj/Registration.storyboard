@@ -54,35 +54,100 @@
                             </variation>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UITableViewCell" textLabel="04G-uX-G33" detailTextLabel="DIv-cS-CNs" style="IBUITableViewCellStyleValue1" id="Hrr-Sp-exV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReservationCell" rowHeight="65" id="Hrr-Sp-exV" customClass="ReservationCell" customModule="CumulusFBO" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hrr-Sp-exV" id="M8v-Yg-YtP">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="04G-uX-G33">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tail #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLN-r0-vfG" userLabel="tailNumber">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact">
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            </variation>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DIv-cS-CNs">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-et-9IX" userLabel="arrivalTime">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
-                                            <variation key="widthClass=compact">
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AC TYPE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDD-ge-f9e" userLabel="aircraftType">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eC6-Tj-t21" userLabel="ETA">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="eaX-et-9IX" firstAttribute="top" secondItem="NLN-r0-vfG" secondAttribute="bottom" constant="8" id="1Wb-ts-fuz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="vDD-ge-f9e" secondAttribute="trailing" constant="5" id="2Jw-is-iBN"/>
+                                        <constraint firstItem="NLN-r0-vfG" firstAttribute="leading" secondItem="M8v-Yg-YtP" secondAttribute="leadingMargin" constant="5" id="3IO-il-gZk"/>
+                                        <constraint firstItem="NLN-r0-vfG" firstAttribute="top" secondItem="M8v-Yg-YtP" secondAttribute="topMargin" id="8e4-7Z-AAL"/>
+                                        <constraint firstItem="eC6-Tj-t21" firstAttribute="centerY" secondItem="M8v-Yg-YtP" secondAttribute="centerY" id="Chy-7N-gYG"/>
+                                        <constraint firstItem="eaX-et-9IX" firstAttribute="leading" secondItem="M8v-Yg-YtP" secondAttribute="leadingMargin" constant="5" id="Nwi-Ns-8vB"/>
+                                        <constraint firstItem="vDD-ge-f9e" firstAttribute="leading" secondItem="eC6-Tj-t21" secondAttribute="trailing" constant="123" id="a2j-Q8-OPs"/>
+                                        <constraint firstItem="vDD-ge-f9e" firstAttribute="top" secondItem="M8v-Yg-YtP" secondAttribute="topMargin" constant="15" id="efy-SM-rtD"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="eaX-et-9IX" secondAttribute="bottom" constant="-1.5" id="hY9-DH-VFL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="vDD-ge-f9e" secondAttribute="bottom" constant="13.5" id="omc-Ky-Cix"/>
+                                        <constraint firstItem="eC6-Tj-t21" firstAttribute="centerX" secondItem="M8v-Yg-YtP" secondAttribute="centerX" id="uux-Mw-QNb"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="NLN-r0-vfG"/>
+                                            <exclude reference="eaX-et-9IX"/>
+                                            <exclude reference="vDD-ge-f9e"/>
+                                            <exclude reference="eC6-Tj-t21"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="3IO-il-gZk"/>
+                                            <exclude reference="8e4-7Z-AAL"/>
+                                            <exclude reference="1Wb-ts-fuz"/>
+                                            <exclude reference="Nwi-Ns-8vB"/>
+                                            <exclude reference="hY9-DH-VFL"/>
+                                            <exclude reference="Chy-7N-gYG"/>
+                                            <exclude reference="uux-Mw-QNb"/>
+                                            <exclude reference="2Jw-is-iBN"/>
+                                            <exclude reference="a2j-Q8-OPs"/>
+                                            <exclude reference="efy-SM-rtD"/>
+                                            <exclude reference="omc-Ky-Cix"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="NLN-r0-vfG"/>
+                                            <include reference="eaX-et-9IX"/>
+                                            <include reference="vDD-ge-f9e"/>
+                                            <include reference="eC6-Tj-t21"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="3IO-il-gZk"/>
+                                            <include reference="8e4-7Z-AAL"/>
+                                            <include reference="1Wb-ts-fuz"/>
+                                            <include reference="Nwi-Ns-8vB"/>
+                                            <include reference="hY9-DH-VFL"/>
+                                            <include reference="Chy-7N-gYG"/>
+                                            <include reference="uux-Mw-QNb"/>
+                                            <include reference="2Jw-is-iBN"/>
+                                            <include reference="a2j-Q8-OPs"/>
+                                            <include reference="efy-SM-rtD"/>
+                                            <include reference="omc-Ky-Cix"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="aircraftTypeLabel" destination="vDD-ge-f9e" id="EFK-HO-vgf"/>
+                                    <outlet property="arrivalTimeLabel" destination="eaX-et-9IX" id="P3y-MK-PaQ"/>
+                                    <outlet property="tailNumberLabel" destination="NLN-r0-vfG" id="1sX-aU-7Kz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>

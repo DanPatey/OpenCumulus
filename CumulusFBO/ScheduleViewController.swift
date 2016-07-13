@@ -8,9 +8,12 @@
 
 import UIKit
 
-class ScheduleViewController: UITableViewController {    
+class ScheduleViewController: UITableViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = 65
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -18,11 +21,12 @@ class ScheduleViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
-        let item = reservationStore.allReservations[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("ReservationCell", forIndexPath: indexPath) as! ReservationCell
+        let reservation = reservationStore.allReservations[indexPath.row]
         
-        cell.textLabel?.text = item.tailNumber
-        cell.detailTextLabel?.text = item.aircraftType
+        cell.tailNumberLabel.text = reservation.tailNumber
+        cell.aircraftTypeLabel.text = reservation.aircraftType
+        cell.arrivalTimeLabel.text = reservation.arrivalTime
         
         return cell
     }
