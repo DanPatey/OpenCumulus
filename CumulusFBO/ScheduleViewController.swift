@@ -10,6 +10,17 @@ import UIKit
 
 class ScheduleViewController: UITableViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Get the height of the status bar
+        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+        
+        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = insets
+        tableView.scrollIndicatorInsets = insets
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reservationStore.allReservations.count
     }
@@ -18,8 +29,8 @@ class ScheduleViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
         let item = reservationStore.allReservations[indexPath.row]
         
-        cell.textLabel?.text = item.aircraftType
-        cell.detailTextLabel?.text = item.tailNumber
+        cell.textLabel?.text = item.tailNumber
+        cell.detailTextLabel?.text = item.aircraftType
         
         return cell
     }

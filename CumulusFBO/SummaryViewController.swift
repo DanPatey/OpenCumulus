@@ -20,11 +20,11 @@ class SummaryViewController: UIViewController {
     
     @IBAction func SaveRegistration(sender: UIBarButtonItem) {
         let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
-        let airportCode = RegistrationsManager.sharedManager.activeReservation.airportCode
+        let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
         let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
 //        let eta = the flightaware API call on tailnumber
         
-        reservationStore.createReservation(tailNumber!, aircraftType: airportCode!, arrivalTime: arrivalTime!)
+        reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
         dump(reservationStore.allReservations)
     }
     
