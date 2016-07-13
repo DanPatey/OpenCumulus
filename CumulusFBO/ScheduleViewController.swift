@@ -9,7 +9,6 @@
 import UIKit
 
 class ScheduleViewController: UITableViewController {
-    var reservationStore = ReservationStore()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reservationStore.allReservations.count

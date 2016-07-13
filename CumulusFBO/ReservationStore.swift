@@ -9,11 +9,11 @@
 import UIKit
 
 class ReservationStore {
+    
     // Store all our schedules
     var allReservations = [Reservation]()
         
     func createReservation(tailNumber: String, aircraftType: String, arrivalTime: String) -> Reservation {
-        
         let newReservation = Reservation(tailNumber: tailNumber, aircraftType: aircraftType, arrivalTime: arrivalTime)
         
         allReservations.append(newReservation)

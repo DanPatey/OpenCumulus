@@ -9,6 +9,7 @@
 import UIKit
 
 class Reservation: NSObject {
+    
     var tailNumber: String
     var aircraftType: String
     var arrivalTime: String

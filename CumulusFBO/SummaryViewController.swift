@@ -18,7 +18,6 @@ class SummaryViewController: UIViewController {
         }
     }
     
-    
     @IBAction func SaveRegistration(sender: UIBarButtonItem) {
         let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
         let airportCode = RegistrationsManager.sharedManager.activeReservation.airportCode

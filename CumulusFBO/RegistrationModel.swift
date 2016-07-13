@@ -25,6 +25,7 @@ class RegistrationsModel {
     var departureTime: String?
     
     func generateSummary() -> String {
+        
         let registrationInfo = "First Name: \(self.firstName ?? "")\nLast Name: \(self.lastName ?? "")\nCompany: \(self.company ?? "")\nPhone Number: \(self.phoneNumber ?? "")\nEmail: \(self.email ?? "")"
         let flightInfo = "\nTail Number: \(self.tailNumber ?? "")\nAircraft Type: \(self.aircraftType ?? "")\nAirport Code: \(self.airportCode ?? "")\nArrival Time: \(self.arrivalTime ?? "")\nDeparture Time: \(self.departureTime ?? "")"
         return registrationInfo + flightInfo
