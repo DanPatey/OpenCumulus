@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FlightInformationViewController: UIViewController {
+class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tailNumber: UITextField!
     @IBOutlet weak var aircraftType: UITextField!
@@ -45,6 +45,11 @@ class FlightInformationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
