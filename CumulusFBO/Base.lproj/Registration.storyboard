@@ -176,7 +176,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-cc-MVV">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JgN-eu-7Mu">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JgN-eu-7Mu">
                                         <rect key="frame" x="20" y="97" width="560" height="390"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehq-aM-dmi" userLabel="firstNameLabel">
@@ -209,7 +209,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rwO-75-BKo" userLabel="firstNameTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rwO-75-BKo" userLabel="firstNameTextField">
                                                 <rect key="frame" x="22" y="48" width="179" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="219" id="YWy-pr-UXS"/>
@@ -410,6 +410,7 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.28627450980000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="H03-7A-oul" firstAttribute="top" secondItem="Dwp-nM-cPG" secondAttribute="bottom" constant="25" id="6aa-aG-q3o"/>
                             <constraint firstAttribute="trailingMargin" secondItem="H03-7A-oul" secondAttribute="trailing" constant="20" id="MtH-eG-hHG"/>
@@ -443,6 +444,9 @@
                                 <include reference="zzO-1i-eNG"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="THQ-Dn-6IS" appends="YES" id="o0g-W0-Xxs"/>
+                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Registration" id="tSW-CF-3hd">
@@ -461,6 +465,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MF-Jr-xPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="THQ-Dn-6IS">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="S3b-Cq-sFI" id="Snq-uF-vX6"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1257" y="-423"/>
         </scene>
@@ -482,7 +491,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cht-un-w3x">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lEo-bg-59S">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lEo-bg-59S">
                                         <rect key="frame" x="20" y="97" width="560" height="390"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tail Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hn6-qx-8RI" userLabel="tailNumberLabel">
@@ -491,7 +500,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvj-KH-fZI" userLabel="tailNumberTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qvj-KH-fZI" userLabel="tailNumberTextField">
                                                 <rect key="frame" x="22" y="48" width="179" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="219" id="Ott-fC-GMt"/>
@@ -765,6 +774,7 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.15686274510000001" green="0.29411764709999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="cQb-f7-HcK" secondAttribute="trailing" constant="20" id="Btm-Om-19m"/>
                             <constraint firstItem="Cht-un-w3x" firstAttribute="top" secondItem="cQb-f7-HcK" secondAttribute="bottom" constant="20" id="Exm-Fj-oIA"/>
@@ -796,6 +806,9 @@
                                 <include reference="dBs-nx-FcQ"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="aPI-pA-AQS" appends="YES" id="oJp-kl-4Rj"/>
+                        </connections>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Flight Information" id="LvF-fe-IML">
@@ -814,6 +827,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePV-ZA-VtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aPI-pA-AQS">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="r2y-nL-16a" id="8j9-QJ-vbw"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1954.5" y="-423"/>
         </scene>

@@ -16,13 +16,19 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var email: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // Dismiss keyboard on tap
+    @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
+        view.endEditing(true)
     }
     
+    // Dismiss keyboard on pressing return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
