@@ -9,15 +9,15 @@
 import Foundation
 
 enum Method: String {
-    case inFlightWeather = "InFlightInfo?ident=AAL1726"
+    case InFlightInfo = "InFlightInfo?ident=AAL1726"
 }
 
 struct FlightAwareAPI {
     static let baseURLString = "https://danpatey:267d3e98c57a47c3b35dce1b17ce649da42ae225@flightxml.flightaware.com/json/FlightXML2"
     private static let username = "danpatey"
     private static let apiKey = "267d3e98c57a47c3b35dce1b17ce649da42ae225"
-
-    private static func flightAwareAPI(method method: Method, parameters: [String:String]?) -> NSURL {
+    
+    private static func flightAwareURL(method method: Method, parameters: [String:String]?) -> NSURL {
         let components = NSURLComponents(string: baseURLString)!
         var queryItems = [NSURLQueryItem]()
         
@@ -37,5 +37,9 @@ struct FlightAwareAPI {
         components.queryItems = queryItems
         
         return components.URL!
+    }
+    
+    static func inFlightInfoURL() -> NSURL {
+        return flightAwareURL(method: .InFlightInfo, parameters: ["extras": "url_h,date_taken"])
     }
 }
