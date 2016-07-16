@@ -12,6 +12,7 @@ class ReservationStore {
     
     // Store all our schedules
     var allReservations = [Reservation]()
+    
     let session: NSURLSession = {
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         return NSURLSession(configuration: config)

@@ -15,15 +15,11 @@ class ScheduleViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        store.retrieveInFlightInfo()     // Testing FlightAware API
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
     }
-    
-    // Testing FlightAware API
-    override func viewDidAppear(animated: Bool) {
-        store.retrieveInFlightInfo()
-    }
-    
+        
     override func viewWillAppear(animated: Bool) {
         self.tableView.reloadData()
     }
