@@ -9,15 +9,15 @@
 import UIKit
 
 class ReservationStore {
-    
+
     // Store all our schedules
     var allReservations = [Reservation]()
-    
+
     let session: NSURLSession = {
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         return NSURLSession(configuration: config)
     }()
-        
+
     func createReservation(tailNumber: String, aircraftType: String, arrivalTime: String) -> Reservation {
         let newReservation = Reservation(tailNumber: tailNumber, aircraftType: aircraftType, arrivalTime: arrivalTime)
         
@@ -25,7 +25,7 @@ class ReservationStore {
         
         return newReservation
     }
-    
+
     func removeReservation(reservation: Reservation) {
         if let index = allReservations.indexOf(reservation) {
             allReservations.removeAtIndex(index)
