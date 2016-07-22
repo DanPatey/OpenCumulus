@@ -10,13 +10,20 @@ import UIKit
 
 class ScheduleViewController: UITableViewController {
     
+    var store: ReservationStore!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let barViewControllers = self.tabBarController?.viewControllers
+        let svc = barViewControllers![1] as! ScheduleViewController
+        svc.store = ReservationStore()
+        
+        store.retrieveInFlightInfo()     // Testing FlightAware API
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
     }
-    
+        
     override func viewWillAppear(animated: Bool) {
         self.tableView.reloadData()
     }
