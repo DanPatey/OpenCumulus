@@ -853,15 +853,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Jg-e6-vcH">
                                 <rect key="frame" x="20" y="97" width="560" height="390"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-oL-J4V" userLabel="tailNumberLabel">
-                                        <rect key="frame" x="22" y="14" width="83" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="83" id="Sf5-IQ-It5"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yrq-JI-fCC">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -888,6 +879,15 @@
                                             </mask>
                                         </variation>
                                     </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-oL-J4V" userLabel="tailNumberLabel">
+                                        <rect key="frame" x="22" y="14" width="83" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="83" id="Sf5-IQ-It5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.51372549020000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -930,6 +930,8 @@
                                         <exclude reference="urU-8J-o7x"/>
                                         <include reference="4GK-xf-aye"/>
                                         <include reference="NWr-3a-ESx"/>
+                                        <exclude reference="OzJ-G0-AoE"/>
+                                        <exclude reference="hGc-eJ-Ekp"/>
                                         <exclude reference="lR3-6H-LzV"/>
                                     </mask>
                                 </variation>
@@ -961,7 +963,7 @@
                         <variation key="widthClass=compact">
                             <mask key="constraints">
                                 <exclude reference="IKB-oo-WuV"/>
-                                <include reference="wiz-S4-Kxs"/>
+                                <exclude reference="wiz-S4-Kxs"/>
                             </mask>
                         </variation>
                     </view>

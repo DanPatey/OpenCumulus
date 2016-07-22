@@ -856,86 +856,49 @@
                                 <rect key="frame" x="40" y="25" width="520" height="52"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rrf-8P-2zZ">
-                                <rect key="frame" x="20" y="97" width="560" height="390"/>
+                                <rect key="frame" x="20" y="97" width="560" height="370"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqf-r5-j6x" userLabel="tailNumberLabel">
-                                        <rect key="frame" x="22" y="14" width="83" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="83" id="Y9f-KU-3Sp"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqf-r5-j6x" userLabel="tripSummaryLabel">
+                                        <rect key="frame" x="22" y="14" width="107" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JSP-rH-VoG">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bhm-hq-Pnc">
+                                        <rect key="frame" x="80" y="60" width="400" height="230"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="400" id="kF0-wj-X6Z">
-                                                <variation key="widthClass=compact" constant="200"/>
-                                            </constraint>
-                                            <constraint firstAttribute="width" constant="240" id="vha-T1-9Eh">
-                                                <variation key="widthClass=compact" constant="280"/>
-                                            </constraint>
-                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="kF0-wj-X6Z"/>
-                                                <exclude reference="vha-T1-9Eh"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="widthClass=compact">
-                                            <mask key="constraints">
-                                                <include reference="kF0-wj-X6Z"/>
-                                                <include reference="vha-T1-9Eh"/>
-                                            </mask>
-                                        </variation>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.25098039220000001" green="0.51372549020000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="Bhm-hq-Pnc" firstAttribute="top" secondItem="Rrf-8P-2zZ" secondAttribute="top" constant="60" id="Ah1-jK-5wt"/>
                                     <constraint firstItem="Hqf-r5-j6x" firstAttribute="centerX" secondItem="Rrf-8P-2zZ" secondAttribute="centerX" id="C8t-Yv-Jge"/>
                                     <constraint firstItem="Hqf-r5-j6x" firstAttribute="top" secondItem="Rrf-8P-2zZ" secondAttribute="top" constant="5" id="DaQ-rx-lc5">
                                         <variation key="widthClass=compact" constant="10"/>
                                     </constraint>
-                                    <constraint firstItem="JSP-rH-VoG" firstAttribute="centerX" secondItem="Rrf-8P-2zZ" secondAttribute="centerX" id="Edx-Rr-XMn"/>
+                                    <constraint firstItem="Bhm-hq-Pnc" firstAttribute="leading" secondItem="Rrf-8P-2zZ" secondAttribute="leading" constant="80" id="I7i-N8-SKa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bhm-hq-Pnc" secondAttribute="trailing" constant="80" id="RbF-sf-F6g"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bhm-hq-Pnc" secondAttribute="bottom" constant="80" id="TXY-PT-QEv"/>
+                                    <constraint firstItem="Bhm-hq-Pnc" firstAttribute="centerX" secondItem="Rrf-8P-2zZ" secondAttribute="centerX" id="XpO-7W-ZAK"/>
                                     <constraint firstItem="Hqf-r5-j6x" firstAttribute="leading" secondItem="Rrf-8P-2zZ" secondAttribute="leading" constant="22" id="Y0b-Zm-fHB"/>
-                                    <constraint firstAttribute="trailing" secondItem="JSP-rH-VoG" secondAttribute="trailing" constant="60" id="jao-WO-IqL"/>
-                                    <constraint firstItem="JSP-rH-VoG" firstAttribute="leading" secondItem="Rrf-8P-2zZ" secondAttribute="leading" constant="60" id="kQK-ZL-8nw"/>
                                     <constraint firstItem="Hqf-r5-j6x" firstAttribute="centerX" secondItem="Rrf-8P-2zZ" secondAttribute="centerX" id="lK9-KV-Gfk"/>
-                                    <constraint firstItem="JSP-rH-VoG" firstAttribute="top" secondItem="Hqf-r5-j6x" secondAttribute="bottom" constant="5" id="p0n-xa-th0">
-                                        <variation key="widthClass=compact" constant="15"/>
-                                    </constraint>
                                     <constraint firstItem="Hqf-r5-j6x" firstAttribute="top" secondItem="Rrf-8P-2zZ" secondAttribute="top" constant="14" id="wOt-48-bfg"/>
                                 </constraints>
                                 <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="JSP-rH-VoG"/>
-                                    </mask>
                                     <mask key="constraints">
-                                        <exclude reference="kQK-ZL-8nw"/>
-                                        <exclude reference="p0n-xa-th0"/>
-                                        <exclude reference="Edx-Rr-XMn"/>
-                                        <exclude reference="jao-WO-IqL"/>
-                                        <exclude reference="lK9-KV-Gfk"/>
-                                        <exclude reference="DaQ-rx-lc5"/>
                                         <exclude reference="C8t-Yv-Jge"/>
+                                        <exclude reference="DaQ-rx-lc5"/>
+                                        <exclude reference="lK9-KV-Gfk"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact">
-                                    <mask key="subviews">
-                                        <include reference="JSP-rH-VoG"/>
-                                    </mask>
                                     <mask key="constraints">
-                                        <exclude reference="kQK-ZL-8nw"/>
-                                        <include reference="p0n-xa-th0"/>
-                                        <include reference="Edx-Rr-XMn"/>
-                                        <exclude reference="jao-WO-IqL"/>
-                                        <include reference="lK9-KV-Gfk"/>
-                                        <include reference="DaQ-rx-lc5"/>
                                         <exclude reference="C8t-Yv-Jge"/>
+                                        <include reference="DaQ-rx-lc5"/>
+                                        <include reference="lK9-KV-Gfk"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
@@ -955,7 +918,7 @@
                             <constraint firstItem="Rrf-8P-2zZ" firstAttribute="leading" secondItem="G7S-qt-U84" secondAttribute="leadingMargin" id="UgO-qE-ueP"/>
                             <constraint firstItem="Rrf-8P-2zZ" firstAttribute="top" secondItem="ZGf-0W-hgd" secondAttribute="bottom" constant="20" id="e38-x0-sbh"/>
                             <constraint firstItem="ZGf-0W-hgd" firstAttribute="leading" secondItem="G7S-qt-U84" secondAttribute="leadingMargin" constant="20" id="nTy-fc-t50"/>
-                            <constraint firstItem="Rrf-8P-2zZ" firstAttribute="bottom" secondItem="bFs-L2-P0c" secondAttribute="top" id="uNX-v3-u5U"/>
+                            <constraint firstItem="Rrf-8P-2zZ" firstAttribute="bottom" secondItem="bFs-L2-P0c" secondAttribute="top" constant="-20" id="uNX-v3-u5U"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -974,17 +937,17 @@
                     <navigationItem key="navigationItem" title="Summary" id="oYz-3S-LRj">
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="qpR-b3-bcI">
                             <connections>
-                                <action selector="SaveRegistration:" destination="Dde-ui-la1" id="2oO-vm-CkN"/>
+                                <action selector="SaveRegistration:" destination="Dde-ui-la1" id="eEU-BH-hU7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="summary" destination="JSP-rH-VoG" id="0kt-9i-neo"/>
+                        <outlet property="summary" destination="Bhm-hq-Pnc" id="mZB-v2-vLi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hmg-6C-Ia5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2644.5" y="-423"/>
+            <point key="canvasLocation" x="2644" y="-423"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sTN-oi-jXf">
