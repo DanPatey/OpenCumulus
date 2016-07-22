@@ -170,7 +170,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="H03-7A-oul">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="H03-7A-oul">
                                 <rect key="frame" x="40" y="25" width="520" height="52"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oa1-cc-MVV">
@@ -485,7 +485,7 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-f7-HcK">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="cQb-f7-HcK">
                                 <rect key="frame" x="40" y="25" width="520" height="52"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cht-un-w3x">
@@ -850,11 +850,14 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="0me-Pk-VLY">
                                 <rect key="frame" x="40" y="25" width="520" height="52"/>
                             </imageView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Jg-e6-vcH">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Jg-e6-vcH">
                                 <rect key="frame" x="20" y="97" width="560" height="390"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Trip Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-oL-J4V" userLabel="tailNumberLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaJ-oL-J4V" userLabel="tailNumberLabel">
                                         <rect key="frame" x="22" y="14" width="83" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="83" id="Sf5-IQ-It5"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -896,6 +899,8 @@
                                     <constraint firstItem="LaJ-oL-J4V" firstAttribute="top" secondItem="4Jg-e6-vcH" secondAttribute="top" constant="5" id="NWr-3a-ESx">
                                         <variation key="widthClass=compact" constant="10"/>
                                     </constraint>
+                                    <constraint firstItem="LaJ-oL-J4V" firstAttribute="leading" secondItem="4Jg-e6-vcH" secondAttribute="leading" constant="22" id="OzJ-G0-AoE"/>
+                                    <constraint firstItem="LaJ-oL-J4V" firstAttribute="top" secondItem="4Jg-e6-vcH" secondAttribute="top" constant="14" id="hGc-eJ-Ekp"/>
                                     <constraint firstItem="LaJ-oL-J4V" firstAttribute="centerX" secondItem="4Jg-e6-vcH" secondAttribute="centerX" id="lR3-6H-LzV"/>
                                     <constraint firstItem="yrq-JI-fCC" firstAttribute="centerX" secondItem="4Jg-e6-vcH" secondAttribute="centerX" id="mIc-cu-zao"/>
                                     <constraint firstAttribute="trailing" secondItem="yrq-JI-fCC" secondAttribute="trailing" constant="60" id="urU-8J-o7x"/>
@@ -942,6 +947,7 @@
                             <constraint firstItem="4Jg-e6-vcH" firstAttribute="bottom" secondItem="oAi-Ib-VCn" secondAttribute="top" id="IKB-oo-WuV">
                                 <variation key="widthClass=compact" constant="20"/>
                             </constraint>
+                            <constraint firstItem="4Jg-e6-vcH" firstAttribute="bottom" secondItem="oAi-Ib-VCn" secondAttribute="top" id="bY3-WF-jda"/>
                             <constraint firstItem="0me-Pk-VLY" firstAttribute="top" secondItem="oJ0-Kh-M96" secondAttribute="bottom" constant="25" id="fJ7-OJ-lhN"/>
                             <constraint firstItem="4Jg-e6-vcH" firstAttribute="leading" secondItem="9uu-qH-bDA" secondAttribute="leadingMargin" id="mjg-so-Cfl"/>
                             <constraint firstItem="oAi-Ib-VCn" firstAttribute="top" secondItem="4Jg-e6-vcH" secondAttribute="bottom" constant="20" id="wiz-S4-Kxs"/>
