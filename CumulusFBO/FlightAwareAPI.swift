@@ -19,7 +19,7 @@ struct FlightAwareAPI {
         let components = NSURLComponents(string: baseURLString)!
         var queryItems = [NSURLQueryItem]()
         
-        let baseParams = ["method": method.rawValue, "format": "json", "nojsoncallback": "1", "api_key": apiKey]
+        let baseParams = ["method": method.rawValue, "format": "json", "nojsoncallback": "1"]
         
         for (key, value) in baseParams {
             let item = NSURLQueryItem(name: key, value: value)
