@@ -10,11 +10,12 @@ import UIKit
 
 class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
+    //MARK: Flight information variables
     @IBOutlet weak var tailNumber: UITextField!
     @IBOutlet weak var aircraftType: UITextField!
     @IBOutlet weak var airportCode: UITextField!
     
-    // Setup date picker for arrivalTime
+    //MARK: Setup date picker for arrivalTime
     @IBOutlet weak var arrivalTime: UITextField!
     @IBAction func arrivalTimeDatePicker(sender: UITextField) {
         let datePickerView : UIDatePicker = UIDatePicker()
@@ -29,7 +30,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         arrivalTime.text = dateFormatter.stringFromDate(sender.date)
     }
 
-    // Setup date picker for departureTime
+    //MARK: Setup date picker for departureTime
     @IBOutlet weak var departureTime: UITextField!
     @IBAction func departureTimeDatePicker(sender: UITextField) {
         let datePickerView : UIDatePicker = UIDatePicker()
@@ -44,17 +45,18 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         departureTime.text = dateFormatter.stringFromDate(sender.date)
     }
     
-    // Dismiss keyboard on tap
+    //MARK: Dismiss keyboard on tap
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
     
-    // Dismiss keyboard on pressing return
+    //MARK: Dismiss keyboard on pressing return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
+    //MARK: View controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }

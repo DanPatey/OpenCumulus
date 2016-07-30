@@ -10,23 +10,25 @@ import UIKit
 
 class RegistrationViewController: UIViewController, UITextFieldDelegate {
     
+    //MARK: Registration variables
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var company: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var email: UITextField!
     
-    // Dismiss keyboard on tap
+    //MARK: Dismiss keyboard on tap
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
     
-    // Dismiss keyboard on pressing return
+    //MARK: Dismiss keyboard on pressing return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
+    //MARK: View controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }

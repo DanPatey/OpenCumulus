@@ -15,6 +15,7 @@ class ReservationCell: UITableViewCell {
     @IBOutlet var aircraftTypeLabel: UILabel!
     @IBOutlet var etaLabel: UILabel!
     
+    //MARK set label attributes
     func updateLabels() {
         let bodyFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         tailNumberLabel.font = bodyFont

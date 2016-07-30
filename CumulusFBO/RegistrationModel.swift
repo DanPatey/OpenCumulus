@@ -10,20 +10,21 @@ import Foundation
 
 class RegistrationsModel {
     
-    // Registration Information
+    //MARK: Registration Information
     var firstName: String?
     var lastName: String?
     var company: String?
     var phoneNumber: String?
     var email: String?
     
-    // Flight Information
+    //MARK: Flight Information
     var tailNumber: String?
     var aircraftType: String?
     var airportCode: String?
     var arrivalTime: String?
     var departureTime: String?
     
+    //MARK: Aggregate data for summary
     func generateSummary() -> String {
         
         let registrationInfo = "First Name: \(self.firstName ?? "")\nLast Name: \(self.lastName ?? "")\nCompany: \(self.company ?? "")\nPhone Number: \(self.phoneNumber ?? "")\nEmail: \(self.email ?? "")"

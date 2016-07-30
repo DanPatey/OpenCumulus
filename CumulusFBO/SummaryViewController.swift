@@ -18,6 +18,7 @@ class SummaryViewController: UIViewController {
         }
     }
     
+    //MARK: Save information to Reservation
     @IBAction func SaveRegistration(sender: UIBarButtonItem) {
         let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
         let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
@@ -28,6 +29,7 @@ class SummaryViewController: UIViewController {
         dump(reservationStore.allReservations)
     }
     
+    //MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }

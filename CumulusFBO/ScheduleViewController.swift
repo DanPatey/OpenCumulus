@@ -14,7 +14,6 @@ class ScheduleViewController: UITableViewController {
     var timer: NSTimer!
     
     //MARK: UI Updates
-    
     func fireCellsUpdate() {
         let notification = NSNotification(name: "ReservationCell", object: nil)
         NSNotificationCenter.defaultCenter().postNotification(notification)
@@ -25,7 +24,6 @@ class ScheduleViewController: UITableViewController {
     }
     
     //MARK: UITableView Data Source
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ReservationCell", forIndexPath: indexPath) as! ReservationCell
         cell.updateLabels()
@@ -61,7 +59,6 @@ class ScheduleViewController: UITableViewController {
     }
     
     //MARK: View Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
