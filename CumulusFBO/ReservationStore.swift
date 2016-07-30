@@ -18,8 +18,8 @@ class ReservationStore {
         return NSURLSession(configuration: config)
     }()
     
-    func createReservation(tailNumber: String, aircraftType: String, arrivalTime: String, eta: String) -> Reservation {
-        let newReservation = Reservation(tailNumber: tailNumber, aircraftType: aircraftType, arrivalTime: arrivalTime, eta: eta)
+    func createReservation(tailNumber: String, aircraftType: String, arrivalTime: String) -> Reservation {
+        let newReservation = Reservation(tailNumber: tailNumber, aircraftType: aircraftType, arrivalTime: arrivalTime)
         allReservations.append(newReservation)
         return newReservation
     }
@@ -41,7 +41,9 @@ class ReservationStore {
         if let dict = keys {
             let flightawareUser = dict["flightawareUser"] as? String
             let flightawareKey = dict["flightawareApiKey"] as? String
-            let urlPath = "https://" + flightawareUser! + ":" + flightawareKey! + "@flightxml.flightaware.com/json/FlightXML2/InFlightInfo?ident=AAL1726"
+//            Real Call
+//            let urlPath = "https://" + flightawareUser! + ":" + flightawareKey! + "@flightxml.flightaware.com/json/FlightXML2/InFlightInfo?ident=AAL1726"
+            let urlPath = "https://" + flightawareUser! + ":" + flightawareKey! + "@flightxml.flightaware.com/json/FlightXML2/SetMaximumResultSize?max_size=10"
             let endpoint = NSURL(string: urlPath)
             let request = NSMutableURLRequest(URL: endpoint!)
             let session = NSURLSession.sharedSession()

@@ -14,14 +14,12 @@ class Reservation: NSObject {
     var tailNumber: String
     var aircraftType: String
     var arrivalTime: String
-    var eta: String
     
     //MARK: Initalize model
-    init(tailNumber: String, aircraftType: String, arrivalTime: String, eta: String) {
+    init(tailNumber: String, aircraftType: String, arrivalTime: String) {
         self.tailNumber = tailNumber
         self.aircraftType = aircraftType
         self.arrivalTime = arrivalTime
-        self.eta = eta
         
         super.init()
     }

@@ -11,13 +11,6 @@ import UIKit
 class ScheduleViewController: UITableViewController {
     
     var store: ReservationStore!
-    var timer: NSTimer!
-    
-    //MARK: UI Updates
-    func fireCellsUpdate() {
-        let notification = NSNotification(name: "ReservationCell", object: nil)
-        NSNotificationCenter.defaultCenter().postNotification(notification)
-    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reservationStore.allReservations.count
@@ -33,7 +26,7 @@ class ScheduleViewController: UITableViewController {
         cell.tailNumberLabel.text = reservation.tailNumber
         cell.aircraftTypeLabel.text = reservation.aircraftType
         cell.arrivalTimeLabel.text = reservation.arrivalTime
-        cell.etaLabel.text = reservation.eta
+        cell.etaLabel.text = RegistrationsManager.sharedManager.activeReservation.arrivalTime
         
         return cell
     }
@@ -70,7 +63,7 @@ class ScheduleViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
     }
-    
+        
     override func viewWillAppear(animated: Bool) {
         self.tableView.reloadData()
     }
