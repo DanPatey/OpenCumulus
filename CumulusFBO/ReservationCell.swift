@@ -15,6 +15,8 @@ class ReservationCell: UITableViewCell {
     @IBOutlet var aircraftTypeLabel: UILabel!
     @IBOutlet var etaLabel: UILabel!
     
+    var count = 10
+    
     //MARK set label attributes
     func updateLabels() {
         let bodyFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
@@ -23,5 +25,13 @@ class ReservationCell: UITableViewCell {
         
         let caption1Font = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption1)
         arrivalTimeLabel.font = caption1Font
+        
+        _ = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: #selector(ReservationCell.updateCountdown), userInfo: nil, repeats: true)
+    }
+    
+    func updateCountdown() {
+        if(count > 0) {
+            etaLabel.text = String(count--)
+        }
     }
 }

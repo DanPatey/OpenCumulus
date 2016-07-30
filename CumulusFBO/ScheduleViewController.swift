@@ -11,13 +11,7 @@ import UIKit
 class ScheduleViewController: UITableViewController {
     
     var store: ReservationStore!
-    var timer: NSTimer!
-    
-    //MARK: UI Updates
-    func fireCellsUpdate() {
-        let notification = NSNotification(name: "ReservationCell", object: nil)
-        NSNotificationCenter.defaultCenter().postNotification(notification)
-    }
+    var count = 10
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reservationStore.allReservations.count
@@ -70,7 +64,7 @@ class ScheduleViewController: UITableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
     }
-    
+        
     override func viewWillAppear(animated: Bool) {
         self.tableView.reloadData()
     }
