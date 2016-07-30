@@ -12,20 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var keys: NSDictionary?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.setupAppearance()
-        
-        if let path = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
-            keys = NSDictionary(contentsOfFile: path)
-        }
-        if let dict = keys {
-            let applicationId = dict["flightawareUser"] as? String
-            let clientKey = dict["flightawareApiKey"] as? String
-        }
-        // Initalize FlightAwareAPI here
-        
         return true
     }
 
