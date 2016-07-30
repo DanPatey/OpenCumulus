@@ -10,7 +10,7 @@ import UIKit
 
 class ReservationStore {
 
-    // Store all our schedules
+    //MARK: Store our schedules
     var allReservations = [Reservation]()
 
     let session: NSURLSession = {
@@ -18,11 +18,9 @@ class ReservationStore {
         return NSURLSession(configuration: config)
     }()
     
-    func createReservation(tailNumber: String, aircraftType: String, arrivalTime: String) -> Reservation {
-        let newReservation = Reservation(tailNumber: tailNumber, aircraftType: aircraftType, arrivalTime: arrivalTime)
-        
+    func createReservation(tailNumber: String, aircraftType: String, arrivalTime: String, eta: String) -> Reservation {
+        let newReservation = Reservation(tailNumber: tailNumber, aircraftType: aircraftType, arrivalTime: arrivalTime, eta: eta)
         allReservations.append(newReservation)
-        
         return newReservation
     }
 
@@ -32,6 +30,7 @@ class ReservationStore {
         }
     }
     
+    //MARK: API Call to FlightAware
     func retrieveInFlightInfo() {
         var keys: NSDictionary?
 

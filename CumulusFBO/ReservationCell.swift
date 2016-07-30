@@ -13,7 +13,7 @@ class ReservationCell: UITableViewCell {
     @IBOutlet var tailNumberLabel: UILabel!
     @IBOutlet var arrivalTimeLabel: UILabel!
     @IBOutlet var aircraftTypeLabel: UILabel!
-    //    @IBOutlet var etaLabel: UILabel!
+    @IBOutlet var etaLabel: UILabel!
     
     func updateLabels() {
         let bodyFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)

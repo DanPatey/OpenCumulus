@@ -11,26 +11,20 @@ import UIKit
 class ScheduleViewController: UITableViewController {
     
     var store: ReservationStore!
+    var timer: NSTimer!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let barViewControllers = self.tabBarController?.viewControllers
-        let svc = barViewControllers![1] as! ScheduleViewController
-        svc.store = ReservationStore()
-        
-        store.retrieveInFlightInfo()     // Testing FlightAware API
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 65
-    }
-        
-    override func viewWillAppear(animated: Bool) {
-        self.tableView.reloadData()
+    //MARK: UI Updates
+    
+    func fireCellsUpdate() {
+        let notification = NSNotification(name: "ReservationCell", object: nil)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reservationStore.allReservations.count
     }
+    
+    //MARK: UITableView Data Source
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ReservationCell", forIndexPath: indexPath) as! ReservationCell
@@ -41,6 +35,7 @@ class ScheduleViewController: UITableViewController {
         cell.tailNumberLabel.text = reservation.tailNumber
         cell.aircraftTypeLabel.text = reservation.aircraftType
         cell.arrivalTimeLabel.text = reservation.arrivalTime
+        cell.etaLabel.text = reservation.eta
         
         return cell
     }
@@ -63,5 +58,23 @@ class ScheduleViewController: UITableViewController {
             
             presentViewController(ac, animated: true, completion: nil)
         }
+    }
+    
+    //MARK: View Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let barViewControllers = self.tabBarController?.viewControllers
+        let svc = barViewControllers![1] as! ScheduleViewController
+        svc.store = ReservationStore()
+        
+        store.retrieveInFlightInfo()     // Testing FlightAware API
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 65
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
     }
 }
