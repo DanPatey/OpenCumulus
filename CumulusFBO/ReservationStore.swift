@@ -41,7 +41,9 @@ class ReservationStore {
         if let dict = keys {
             let flightawareUser = dict["flightawareUser"] as? String
             let flightawareKey = dict["flightawareApiKey"] as? String
-            let urlPath = "https://" + flightawareUser! + ":" + flightawareKey! + "@flightxml.flightaware.com/json/FlightXML2/InFlightInfo?ident=AAL1726"
+//            Real Call
+//            let urlPath = "https://" + flightawareUser! + ":" + flightawareKey! + "@flightxml.flightaware.com/json/FlightXML2/InFlightInfo?ident=AAL1726"
+            let urlPath = "https://" + flightawareUser! + ":" + flightawareKey! + "@flightxml.flightaware.com/json/FlightXML2/SetMaximumResultSize?max_size=10"
             let endpoint = NSURL(string: urlPath)
             let request = NSMutableURLRequest(URL: endpoint!)
             let session = NSURLSession.sharedSession()
