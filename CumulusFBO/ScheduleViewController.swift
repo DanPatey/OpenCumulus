@@ -22,6 +22,7 @@ class ScheduleViewController: UITableViewController {
         cell.updateLabels()
         
         let reservation = reservationStore.allReservations[indexPath.row]
+        let eta = reservation.arrivalTime
         
         cell.tailNumberLabel.text = reservation.tailNumber
         cell.aircraftTypeLabel.text = reservation.aircraftType

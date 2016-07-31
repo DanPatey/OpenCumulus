@@ -23,9 +23,8 @@ class SummaryViewController: UIViewController {
         let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
         let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
         let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
-        let departureTime = RegistrationsManager.sharedManager.activeReservation.departureTime
         
-        reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!, departureTime: departureTime!)
+        reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
         
         // Debug our reservation array
         dump(reservationStore.allReservations)
