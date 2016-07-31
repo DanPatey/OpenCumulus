@@ -15,7 +15,7 @@ class ReservationCell: UITableViewCell {
     @IBOutlet var aircraftTypeLabel: UILabel!
     @IBOutlet var etaLabel: UILabel!
         
-    //MARK set label attributes
+    //MARK: Set label attributes
     func updateLabels() {
         let bodyFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         tailNumberLabel.font = bodyFont
@@ -27,7 +27,7 @@ class ReservationCell: UITableViewCell {
         _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ReservationCell.updateCountdown), userInfo: nil, repeats: true)
     }
     
-    //MARK Countdown to ETA
+    //MARK: Countdown to ETA
     func updateCountdown() {
         // Setup the format for our countdown
         let dateFormatter: NSDateFormatter = NSDateFormatter()
@@ -47,6 +47,7 @@ class ReservationCell: UITableViewCell {
         
         // Convert back to string and drop into the custom cell for ETA
         let etaString = formatter.stringFromTimeInterval(etaNSDate)
-        etaLabel.text = etaString
+        let etaArr = etaString?.componentsSeparatedByString("-")
+        etaLabel.text = etaArr?[1]
     }
 }
