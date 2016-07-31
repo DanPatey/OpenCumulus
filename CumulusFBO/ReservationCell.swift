@@ -25,6 +25,7 @@ class ReservationCell: UITableViewCell {
         arrivalTimeLabel.font = caption1Font
         
         _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ReservationCell.updateCountdown), userInfo: nil, repeats: true)
+        etaLabel.font = caption1Font
     }
     
     //MARK: Countdown to ETA
