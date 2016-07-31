@@ -27,22 +27,21 @@ class ReservationCell: UITableViewCell {
         _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ReservationCell.updateCountdown), userInfo: nil, repeats: true)
     }
     
+    //MARK Countdown to ETA
     func updateCountdown() {
+        // Setup the format for our countdown
         let dateFormatter: NSDateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MMMM dd yyyy HH:mmZZ"
-        
-        let fullReservation = RegistrationsManager.sharedManager.activeReservation.arrivalTime
-        print("Reservation Time")
-        print(fullReservation! + "\n")
-        
-        print("ETA IS")
-        let fullReservationString = dateFormatter.dateFromString(fullReservation!)
-        print (fullReservationString)
-        
-        let eta = NSDate().timeIntervalSinceDate(fullReservationString!)
+        // Grab our reservation and convert to NSDate for comparison to current time
+        let fullReservation = RegistrationsManager.sharedManager.activeReservation.arrivalTime //CHANGE FOR CELL
+        let fullReservationNSDate = dateFormatter.dateFromString(fullReservation!)
+        // Compare the current time to our arrival date
+        let etaNSDate = NSDate().timeIntervalSinceDate(fullReservationNSDate!)
+        // Format the output of our ETA
         let formatter = NSDateComponentsFormatter()
         formatter.unitsStyle = .Abbreviated
-        formatter.stringFromTimeInterval(eta)
-        print(eta)
+        // Convert back to string and drop into the custom cell for ETA
+        let etaString = formatter.stringFromTimeInterval(etaNSDate)
+        etaLabel.text = etaString
     }
 }
