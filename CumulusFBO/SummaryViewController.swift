@@ -18,16 +18,19 @@ class SummaryViewController: UIViewController {
         }
     }
     
+    //MARK: Save information to Reservation
     @IBAction func SaveRegistration(sender: UIBarButtonItem) {
         let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
         let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
         let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
-//        let eta = the flightaware API call on tailnumber
         
         reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
+        
+        // Debug our reservation array
         dump(reservationStore.allReservations)
     }
     
+    //MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }

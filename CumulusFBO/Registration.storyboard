@@ -79,6 +79,7 @@
                                 <connections>
                                     <outlet property="aircraftTypeLabel" destination="hMh-FI-URs" id="jYJ-C6-59K"/>
                                     <outlet property="arrivalTimeLabel" destination="7WZ-B8-mGH" id="2TB-vs-ngr"/>
+                                    <outlet property="etaLabel" destination="jYD-u1-E2q" id="boZ-Wf-x9H"/>
                                     <outlet property="tailNumberLabel" destination="CCe-nD-Sd5" id="bPF-JG-fkH"/>
                                 </connections>
                             </tableViewCell>
