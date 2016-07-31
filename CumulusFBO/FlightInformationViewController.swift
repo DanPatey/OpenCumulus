@@ -26,7 +26,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
     func handleArrivalDatePicker(sender: UIDatePicker) {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MMMM dd yyyy hh:mmZZ"
+        dateFormatter.dateFormat = "MMMM dd yyyy HH:mmZZ"
         arrivalTime.text = dateFormatter.stringFromDate(sender.date)
     }
 
@@ -41,7 +41,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
     func handleDepartureDatePicker(sender: UIDatePicker) {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "MMMM dd yyyy hh:mmZZ"
+        dateFormatter.dateFormat = "MMMM dd yyyy HH:mmZZ"
         departureTime.text = dateFormatter.stringFromDate(sender.date)
     }
     

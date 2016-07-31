@@ -28,6 +28,22 @@ class ReservationCell: UITableViewCell {
     }
     
     func updateCountdown() {
-        print(RegistrationsManager.sharedManager.activeReservation.arrivalTime)
+        let todaysDate: NSDate = NSDate()
+        let dateFormatter: NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let currentTime: String = dateFormatter.stringFromDate(todaysDate)
+        print("Current Time")
+        print(currentTime)
+        
+        let fullReservation = RegistrationsManager.sharedManager.activeReservation.arrivalTime
+        let fullReservationArr = fullReservation?.componentsSeparatedByString(" ")
+        let reservationTimeArr = fullReservationArr![3].componentsSeparatedByString("-")
+        let reservationTime: String = reservationTimeArr[0]
+        print("Reservation Time")
+        print(reservationTime)
+        
+        let eta = Int(reservationTime)! - Int(currentTime)!
+        print("ETA IS:")
+        print(eta)
     }
 }
