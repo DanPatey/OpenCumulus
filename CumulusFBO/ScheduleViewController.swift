@@ -11,7 +11,6 @@ import UIKit
 class ScheduleViewController: UITableViewController {
     
     var store: ReservationStore!
-    var count = 10
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reservationStore.allReservations.count
@@ -27,7 +26,7 @@ class ScheduleViewController: UITableViewController {
         cell.tailNumberLabel.text = reservation.tailNumber
         cell.aircraftTypeLabel.text = reservation.aircraftType
         cell.arrivalTimeLabel.text = reservation.arrivalTime
-        cell.etaLabel.text = reservation.eta
+        cell.etaLabel.text = RegistrationsManager.sharedManager.activeReservation.arrivalTime
         
         return cell
     }
