@@ -18,10 +18,27 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     //MARK: Setup date picker for arrivalTime
     @IBOutlet weak var arrivalTime: UITextField!
     @IBAction func arrivalTimeDatePicker(sender: UITextField) {
+        // Create the date picker
         let datePickerView : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
         datePickerView.addTarget(self, action: #selector(FlightInformationViewController.handleArrivalDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        
+        // Create the UIToolbar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .Default
+        toolBar.translucent = true
+        toolBar.sizeToFit()
+        
+        // Add the buttons
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(FlightInformationViewController.cancelClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        // Add datepicker and toolbar to view
         sender.inputView = datePickerView
+        sender.inputAccessoryView = toolBar
     }
     
     func handleArrivalDatePicker(sender: UIDatePicker) {
@@ -36,13 +53,38 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         let datePickerView : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
         datePickerView.addTarget(self, action: #selector(FlightInformationViewController.handleDepartureDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        
+        // Create the UIToolbar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .Default
+        toolBar.translucent = true
+        toolBar.sizeToFit()
+        
+        // Add the buttons
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(FlightInformationViewController.cancelClick))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneClick))
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        // Add datepicker and toolbar to view
         sender.inputView = datePickerView
+        sender.inputAccessoryView = toolBar
     }
     
     func handleDepartureDatePicker(sender: UIDatePicker) {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MMMM dd yyyy HH:mmZZ"
         departureTime.text = dateFormatter.stringFromDate(sender.date)
+    }
+    
+    //MARK: Datepicker Toolbar functions
+    func doneClick() {
+        view.endEditing(true)
+    }
+    
+    func cancelClick() {
+        view.endEditing(true)
     }
     
     //MARK: Dismiss keyboard on tap
