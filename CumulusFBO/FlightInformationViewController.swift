@@ -82,7 +82,8 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Datepicker Toolbar functions
     func previousButton() {
-        view.endEditing(true)
+        let currentField = self.view.viewWithTag as! UITextField
+        print (currentField)
     }
     
     func nextButton() {
