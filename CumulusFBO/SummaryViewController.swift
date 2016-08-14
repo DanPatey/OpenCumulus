@@ -40,4 +40,9 @@ class SummaryViewController: UIViewController {
             print(textfield)
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destination = segue.destinationViewController as! ScheduleViewController
+//        destination
+    }
 }

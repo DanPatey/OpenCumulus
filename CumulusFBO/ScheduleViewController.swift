@@ -59,7 +59,7 @@ class ScheduleViewController: UITableViewController {
         let svc = barViewControllers![1] as! ScheduleViewController
         svc.store = ReservationStore()
         
-        store.retrieveInFlightInfo()     // Testing FlightAware API
+//        store.retrieveInFlightInfo()     // Testing FlightAware API
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
     }
