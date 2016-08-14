@@ -20,14 +20,6 @@ class SummaryViewController: UIViewController {
     
     //MARK: Save information to Reservation
     @IBAction func SaveRegistration(sender: UIBarButtonItem) {
-        let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
-        let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
-        let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
-        
-        reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
-        
-        // Debug our reservation array
-        dump(reservationStore.allReservations)
     }
     
     //MARK: View lifecycle
@@ -42,7 +34,17 @@ class SummaryViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let destination = segue.destinationViewController as! ScheduleViewController
-//        destination
+        let segue = segue.destinationViewController as! ScheduleViewController
+
+        let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
+        let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
+        let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
+        
+        reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
+        
+        // Debug our reservation array
+        dump(reservationStore.allReservations)
+        
+        
     }
 }
