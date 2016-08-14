@@ -34,17 +34,13 @@ class SummaryViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let segue = segue.destinationViewController as! ScheduleViewController
-
         let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
         let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
         let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
         
         reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
         
-        // Debug our reservation array
-        dump(reservationStore.allReservations)
-        
+       
         
     }
 }

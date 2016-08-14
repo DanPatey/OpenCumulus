@@ -12,6 +12,9 @@ class ScheduleViewController: UITableViewController {
     
     var store: ReservationStore!
     
+    let removeRegistrationInfo = RegistrationViewController()
+    let removeFlightInfo = FlightInformationViewController()
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reservationStore.allReservations.count
     }
@@ -54,6 +57,12 @@ class ScheduleViewController: UITableViewController {
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        removeFlightInfo.tailNumber.clearsOnInsertion = true
+        removeFlightInfo.aircraftType.clearsOnInsertion = true
+        removeFlightInfo.airportCode.clearsOnInsertion = true
+        removeFlightInfo.departureTime.clearsOnInsertion = true
+        removeFlightInfo.arrivalTime.clearsOnInsertion = true
         
         let barViewControllers = self.tabBarController?.viewControllers
         let svc = barViewControllers![1] as! ScheduleViewController
