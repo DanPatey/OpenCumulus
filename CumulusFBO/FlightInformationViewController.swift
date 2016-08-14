@@ -105,41 +105,30 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Datepicker Toolbar functions
     func nextButton(textField: UITextField) {
-        
-            if taps == tailNumber.tag {
-                print(tailNumber.tag)
-            }
-            if taps == aircraftType.tag {
-                
-                print(aircraftType.tag)
-            }
-            if taps == airportCode.tag {
-                
-                print(airportCode.tag)
-            }
-            if taps == arrivalTime.tag {
-                print("4")
-            }
-            if taps == departureTime.tag {
-                print("5")
-            }
-            self.taps += 1
+        if tailNumber.editing == true {
+            aircraftType.becomeFirstResponder()
+        } else if aircraftType.editing == true {
+            airportCode.becomeFirstResponder()
+        } else if airportCode.editing == true {
+            arrivalTime.becomeFirstResponder()
+        } else if arrivalTime.editing == true {
+            departureTime.becomeFirstResponder()
+        } else if departureTime.editing == true {
+            tailNumber.becomeFirstResponder()
+        }
     }
     
     func previousButton(textField: UITextField) {
-        
-        let nextTag = textField.tag - 1
-        // Try to find next responder
-        let nextResponder = textField.superview?.viewWithTag(nextTag) as UIResponder!
-        
-        if (nextResponder != nil){
-            // Found next responder, so set it.
-            nextResponder?.becomeFirstResponder()
-        }
-        else
-        {
-            // Not found, so remove keyboard
-            textField.resignFirstResponder()
+        if tailNumber.editing == true {
+            departureTime.becomeFirstResponder()
+        } else if aircraftType.editing == true {
+            tailNumber.becomeFirstResponder()
+        } else if airportCode.editing == true {
+            aircraftType.becomeFirstResponder()
+        } else if arrivalTime.editing == true {
+            airportCode.becomeFirstResponder()
+        } else if departureTime.editing == true {
+            arrivalTime.becomeFirstResponder()
         }
     }
 
