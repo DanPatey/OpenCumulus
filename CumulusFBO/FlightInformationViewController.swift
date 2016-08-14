@@ -10,7 +10,7 @@ import UIKit
 
 class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
-    var taps: Int?
+    var taps = 0
     
     //MARK: Flight information variables
     @IBOutlet weak var tailNumber: UITextField!
@@ -107,15 +107,21 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     func nextButton(textField: UITextField) {
         
             if taps == tailNumber.tag {
-                print("1")
-            } else if textField.tag == aircraftType.tag {
-                print(textField.tag)
-            } else if textField.tag == airportCode.tag {
-                print(textField.tag)
-            } else if textField.tag == arrivalTime.tag {
-                print(textField.tag)
-            } else if textField.tag == departureTime.tag {
-                print(textField.tag)
+                print(tailNumber.tag)
+            }
+            if taps == aircraftType.tag {
+                
+                print(aircraftType.tag)
+            }
+            if taps == airportCode.tag {
+                
+                print(airportCode.tag)
+            }
+            if taps == arrivalTime.tag {
+                print("4")
+            }
+            if taps == departureTime.tag {
+                print("5")
             }
             self.taps += 1
     }
