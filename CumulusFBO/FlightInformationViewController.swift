@@ -30,10 +30,11 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         toolBar.sizeToFit()
         
         // Add the buttons
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(FlightInformationViewController.cancelClick))
+        let previousButton = UIBarButtonItem(title: "Previous", style: .Plain, target: self, action: #selector(FlightInformationViewController.previousButton))
+        let nextButton = UIBarButtonItem(title: "Next", style: .Plain, target: self, action: #selector(FlightInformationViewController.nextButton))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneClick))
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneButton))
+        toolBar.setItems([previousButton, nextButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
         
         // Add datepicker and toolbar to view
@@ -61,10 +62,11 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         toolBar.sizeToFit()
         
         // Add the buttons
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(FlightInformationViewController.cancelClick))
+        let previousButton = UIBarButtonItem(title: "Previous", style: .Plain, target: self, action: #selector(FlightInformationViewController.previousButton))
+        let nextButton = UIBarButtonItem(title: "Next", style: .Plain, target: self, action: #selector(FlightInformationViewController.nextButton))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneClick))
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneButton))
+        toolBar.setItems([previousButton, nextButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
         
         // Add datepicker and toolbar to view
@@ -79,11 +81,15 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: Datepicker Toolbar functions
-    func doneClick() {
+    func previousButton() {
         view.endEditing(true)
     }
     
-    func cancelClick() {
+    func nextButton() {
+        view.endEditing(true)
+    }
+
+    func doneButton() {
         view.endEditing(true)
     }
     
