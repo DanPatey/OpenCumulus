@@ -10,6 +10,8 @@ import UIKit
 
 class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
+    var taps: Int?
+    
     //MARK: Flight information variables
     @IBOutlet weak var tailNumber: UITextField!
     @IBOutlet weak var aircraftType: UITextField!
@@ -80,15 +82,62 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         departureTime.text = dateFormatter.stringFromDate(sender.date)
     }
     
-    //MARK: Datepicker Toolbar functions
-    func previousButton() {
-        let currentField = self.view.viewWithTag as! UITextField
-        print (currentField)
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        // Create the UIToolbar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .Default
+        toolBar.translucent = true
+        toolBar.sizeToFit()
+        
+        // Add the buttons
+        let previousButton = UIBarButtonItem(title: "Previous", style: .Plain, target: self, action: #selector(FlightInformationViewController.previousButton))
+        let nextButton = UIBarButtonItem(title: "Next", style: .Plain, target: self, action: #selector(FlightInformationViewController.nextButton))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneButton))
+        toolBar.setItems([previousButton, nextButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        // Add datepicker and toolbar to view
+        textField.inputAccessoryView = toolBar
+       
+        return true
     }
     
-    func nextButton() {
-        view.endEditing(true)
+    //MARK: Datepicker Toolbar functions
+    func nextButton(textField: UITextField) {
+        
+            if taps == tailNumber.tag {
+                print("1")
+            } else if textField.tag == aircraftType.tag {
+                print(textField.tag)
+            } else if textField.tag == airportCode.tag {
+                print(textField.tag)
+            } else if textField.tag == arrivalTime.tag {
+                print(textField.tag)
+            } else if textField.tag == departureTime.tag {
+                print(textField.tag)
+            }
+            self.taps += 1
     }
+    
+    func previousButton(textField: UITextField) {
+        
+        let nextTag = textField.tag - 1
+        // Try to find next responder
+        let nextResponder = textField.superview?.viewWithTag(nextTag) as UIResponder!
+        
+        if (nextResponder != nil){
+            // Found next responder, so set it.
+            nextResponder?.becomeFirstResponder()
+        }
+        else
+        {
+            // Not found, so remove keyboard
+            textField.resignFirstResponder()
+        }
+    }
+
+
 
     func doneButton() {
         view.endEditing(true)
