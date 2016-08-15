@@ -164,6 +164,15 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         departureTime.placeholder = "Departure Time."
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        tailNumber.text = ""
+        aircraftType.text = ""
+        airportCode.text = ""
+        departureTime.text = ""
+        arrivalTime.text = ""
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         RegistrationsManager.sharedManager.activeReservation.tailNumber = tailNumber.text
         RegistrationsManager.sharedManager.activeReservation.aircraftType = aircraftType.text

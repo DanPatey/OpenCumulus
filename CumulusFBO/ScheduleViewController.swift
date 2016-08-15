@@ -56,15 +56,6 @@ class ScheduleViewController: UITableViewController {
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-            let removeRegistrationInfo = RegistrationViewController()
-            let removeFlightInfo = FlightInformationViewController()
-        
-//        print(removeFlightInfo.tailNumber.text)
-//        removeFlightInfo.tailNumber.text = " "
-//        removeFlightInfo.aircraftType.text = " "
-//        removeFlightInfo.airportCode.text = " "
-//        removeFlightInfo.departureTime.text = " "
-//        removeFlightInfo.arrivalTime.text = " "
         
         let barViewControllers = self.tabBarController?.viewControllers
         let svc = barViewControllers![1] as! ScheduleViewController
@@ -76,6 +67,20 @@ class ScheduleViewController: UITableViewController {
     }
         
     override func viewWillAppear(animated: Bool) {
+        
+        
         self.tableView.reloadData()
+    }
+    
+    func pilotAlert() {
+        // Fire UIAlertController
+        let alertController = UIAlertController(title: "landing in...", message: "landing soon", preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+            print("action")
+        }
+        alertController.addAction(alertAction)
+        
+        // Present the AlertController
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }
