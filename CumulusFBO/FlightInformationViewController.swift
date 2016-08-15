@@ -10,7 +10,7 @@ import UIKit
 
 class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
-    var taps = 0
+    @IBOutlet weak var textFieldScroll: UIScrollView!
     
     //MARK: Flight information variables
     @IBOutlet weak var tailNumber: UITextField!
@@ -99,6 +99,9 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         
         // Add datepicker and toolbar to view
         textField.inputAccessoryView = toolBar
+        
+        //Scrolling TextField
+        textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
        
         return true
     }
@@ -144,12 +147,21 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     //MARK: Dismiss keyboard on pressing return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        
+        //Scrolling TextField
+        textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
         return true
     }
     
     //MARK: View controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tailNumber.placeholder = "Tail Number"
+        aircraftType.placeholder = "Aircraft Type"
+        airportCode.placeholder = "Airport Code"
+        arrivalTime.placeholder = "Arrival Time"
+        departureTime.placeholder = "Departure Time"
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

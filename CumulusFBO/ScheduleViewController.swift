@@ -12,16 +12,15 @@ class ScheduleViewController: UITableViewController {
     
     var store: ReservationStore!
     
-    let removeRegistrationInfo = RegistrationViewController()
-    let removeFlightInfo = FlightInformationViewController()
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reservationStore.allReservations.count
     }
     
     //MARK: UITableView Data Source
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("ReservationCell", forIndexPath: indexPath) as! ReservationCell
+        
         cell.updateLabels()
         
         let reservation = reservationStore.allReservations[indexPath.row]
@@ -57,12 +56,15 @@ class ScheduleViewController: UITableViewController {
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        removeFlightInfo.tailNumber.clearsOnInsertion = true
-        removeFlightInfo.aircraftType.clearsOnInsertion = true
-        removeFlightInfo.airportCode.clearsOnInsertion = true
-        removeFlightInfo.departureTime.clearsOnInsertion = true
-        removeFlightInfo.arrivalTime.clearsOnInsertion = true
+            let removeRegistrationInfo = RegistrationViewController()
+            let removeFlightInfo = FlightInformationViewController()
+        
+//        print(removeFlightInfo.tailNumber.text)
+//        removeFlightInfo.tailNumber.text = " "
+//        removeFlightInfo.aircraftType.text = " "
+//        removeFlightInfo.airportCode.text = " "
+//        removeFlightInfo.departureTime.text = " "
+//        removeFlightInfo.arrivalTime.text = " "
         
         let barViewControllers = self.tabBarController?.viewControllers
         let svc = barViewControllers![1] as! ScheduleViewController

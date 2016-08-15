@@ -654,6 +654,7 @@
                         <outlet property="arrivalTime" destination="yZV-fU-cpa" id="QIJ-1z-sWy"/>
                         <outlet property="departureTime" destination="Sbz-4M-gDt" id="B9m-74-fmk"/>
                         <outlet property="tailNumber" destination="rlF-cI-AvG" id="Ilb-MG-UhQ"/>
+                        <outlet property="textFieldScroll" destination="jaQ-jd-jwj" id="fip-pX-w6B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PPj-KE-xyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
