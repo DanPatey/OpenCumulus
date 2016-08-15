@@ -161,7 +161,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         aircraftType.placeholder = "Aircraft Type"
         airportCode.placeholder = "Airport Code"
         arrivalTime.placeholder = "Arrival Time"
-        departureTime.placeholder = "Departure Time"
+        departureTime.placeholder = "Departure Time."
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
