@@ -101,7 +101,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         textField.inputAccessoryView = toolBar
         
         //Scrolling TextField
-        textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
+        textFieldScroll.setContentOffset(CGPointMake(0, 125), animated: true)
        
         return true
     }

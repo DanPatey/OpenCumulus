@@ -75,17 +75,14 @@
 			isa = PBXGroup;
 			children = (
 				5734C8691CAB67820031B000 /* AppDelegate.swift */,
-				5734C86B1CAB67820031B000 /* RegistrationViewController.swift */,
-				57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */,
-				5734C8851CAB766A0031B000 /* SummaryViewController.swift */,
+				997AC12D1D61F80D008FA2A5 /* ViewControllers */,
 				572828831CC43F170005A6EA /* RegistrationModel.swift */,
 				572828851CC44B470005A6EA /* RegistrationManager.swift */,
-				5734C8701CAB67820031B000 /* Assets.xcassets */,
 				573124431D39F736008ABC40 /* FlightAwareAPI.swift */,
-				57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */,
 				57CDA70D1D31F297005DD618 /* ReservationStore.swift */,
-				5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */,
 				57CDA70B1D31EE1D005DD618 /* Reservation.swift */,
+				5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */,
+				5734C8701CAB67820031B000 /* Assets.xcassets */,
 				5742FDEE1D42A19000CB0DDB /* Registration.storyboard */,
 				5734C8721CAB67820031B000 /* LaunchScreen.storyboard */,
 				5734C8751CAB67820031B000 /* Info.plist */,
@@ -93,6 +90,17 @@
 			);
 			name = CumlusFBO;
 			path = CumulusFBO;
+			sourceTree = "<group>";
+		};
+		997AC12D1D61F80D008FA2A5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */,
+				5734C86B1CAB67820031B000 /* RegistrationViewController.swift */,
+				5734C8851CAB766A0031B000 /* SummaryViewController.swift */,
+				57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
