@@ -10,6 +10,8 @@ import UIKit
 
 class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var textFieldScroll: UIScrollView!
+    
     //MARK: Flight information variables
     @IBOutlet weak var tailNumber: UITextField!
     @IBOutlet weak var aircraftType: UITextField!
@@ -30,10 +32,11 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         toolBar.sizeToFit()
         
         // Add the buttons
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(FlightInformationViewController.cancelClick))
+        let previousButton = UIBarButtonItem(title: "Previous", style: .Plain, target: self, action: #selector(FlightInformationViewController.previousButton))
+        let nextButton = UIBarButtonItem(title: "Next", style: .Plain, target: self, action: #selector(FlightInformationViewController.nextButton))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneClick))
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneButton))
+        toolBar.setItems([previousButton, nextButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
         
         // Add datepicker and toolbar to view
@@ -61,10 +64,11 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         toolBar.sizeToFit()
         
         // Add the buttons
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(FlightInformationViewController.cancelClick))
+        let previousButton = UIBarButtonItem(title: "Previous", style: .Plain, target: self, action: #selector(FlightInformationViewController.previousButton))
+        let nextButton = UIBarButtonItem(title: "Next", style: .Plain, target: self, action: #selector(FlightInformationViewController.nextButton))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
-        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneClick))
-        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneButton))
+        toolBar.setItems([previousButton, nextButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
         
         // Add datepicker and toolbar to view
@@ -78,12 +82,60 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         departureTime.text = dateFormatter.stringFromDate(sender.date)
     }
     
-    //MARK: Datepicker Toolbar functions
-    func doneClick() {
-        view.endEditing(true)
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        // Create the UIToolbar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .Default
+        toolBar.translucent = true
+        toolBar.sizeToFit()
+        
+        // Add the buttons
+        let previousButton = UIBarButtonItem(title: "Previous", style: .Plain, target: self, action: #selector(FlightInformationViewController.previousButton))
+        let nextButton = UIBarButtonItem(title: "Next", style: .Plain, target: self, action: #selector(FlightInformationViewController.nextButton))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(FlightInformationViewController.doneButton))
+        toolBar.setItems([previousButton, nextButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        // Add datepicker and toolbar to view
+        textField.inputAccessoryView = toolBar
+        
+        //Scrolling TextField
+        textFieldScroll.setContentOffset(CGPointMake(0, 125), animated: true)
+       
+        return true
     }
     
-    func cancelClick() {
+    //MARK: Datepicker Toolbar functions
+    func nextButton(textField: UITextField) {
+        if tailNumber.editing == true {
+            aircraftType.becomeFirstResponder()
+        } else if aircraftType.editing == true {
+            airportCode.becomeFirstResponder()
+        } else if airportCode.editing == true {
+            arrivalTime.becomeFirstResponder()
+        } else if arrivalTime.editing == true {
+            departureTime.becomeFirstResponder()
+        } else if departureTime.editing == true {
+            tailNumber.becomeFirstResponder()
+        }
+    }
+    
+    func previousButton(textField: UITextField) {
+        if tailNumber.editing == true {
+            departureTime.becomeFirstResponder()
+        } else if aircraftType.editing == true {
+            tailNumber.becomeFirstResponder()
+        } else if airportCode.editing == true {
+            aircraftType.becomeFirstResponder()
+        } else if arrivalTime.editing == true {
+            airportCode.becomeFirstResponder()
+        } else if departureTime.editing == true {
+            arrivalTime.becomeFirstResponder()
+        }
+    }
+
+    func doneButton() {
         view.endEditing(true)
     }
     
@@ -95,12 +147,30 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     //MARK: Dismiss keyboard on pressing return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        
+        //Scrolling TextField
+        textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
         return true
     }
     
     //MARK: View controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tailNumber.placeholder = "Tail Number"
+        aircraftType.placeholder = "Aircraft Type"
+        airportCode.placeholder = "Airport Code"
+        arrivalTime.placeholder = "Arrival Time"
+        departureTime.placeholder = "Departure Time."
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        tailNumber.text = ""
+        aircraftType.text = ""
+        airportCode.text = ""
+        departureTime.text = ""
+        arrivalTime.text = ""
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

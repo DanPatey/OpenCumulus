@@ -24,6 +24,7 @@ class ReservationCell: UITableViewCell {
         let caption1Font = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption1)
         arrivalTimeLabel.font = caption1Font
         
+        // Calls the timer for pilots
         _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ReservationCell.updateCountdown), userInfo: nil, repeats: true)
         etaLabel.font = caption1Font
     }
@@ -50,5 +51,7 @@ class ReservationCell: UITableViewCell {
         let etaString = formatter.stringFromTimeInterval(etaNSDate)
         let etaArr = etaString?.componentsSeparatedByString("-")
         etaLabel.text = etaArr?[1]
+        
+      
     }
 }

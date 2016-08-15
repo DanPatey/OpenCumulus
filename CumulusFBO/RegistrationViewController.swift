@@ -33,6 +33,11 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         RegistrationsManager.sharedManager.activeReservation.firstName = firstName.text
         RegistrationsManager.sharedManager.activeReservation.lastName = lastName.text
