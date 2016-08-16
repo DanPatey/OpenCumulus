@@ -43,6 +43,8 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         // Add datepicker and toolbar to view
         sender.inputView = datePickerView
         sender.inputAccessoryView = toolBar
+        
+        
     }
     
     func handleArrivalDatePicker(sender: UIDatePicker) {
@@ -75,6 +77,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         // Add datepicker and toolbar to view
         sender.inputView = datePickerView
         sender.inputAccessoryView = toolBar
+        
     }
     
     func handleDepartureDatePicker(sender: UIDatePicker) {
@@ -142,7 +145,9 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         //Scrolling TextField
         if textField == aircraftType {
         textFieldScroll.setContentOffset(CGPointMake(0, 70), animated: true)
-        } else if textField == aircraftType {
+        } else if textField == airportCode {
+        textFieldScroll.setContentOffset(CGPointMake(0, 70), animated: true)
+        } else if textField == arrivalTime {
         textFieldScroll.setContentOffset(CGPointMake(0, 70), animated: true)
         }
     }
@@ -152,7 +157,9 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         //Scrolling TextField
         if textField == aircraftType {
         textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
-        } else if textField == aircraftType {
+        } else if textField == airportCode {
+        textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
+        } else if textField == arrivalTime {
         textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
         }
     }

@@ -68,7 +68,6 @@ class ScheduleViewController: UITableViewController {
         
     override func viewWillAppear(animated: Bool) {
         
-        
         self.tableView.reloadData()
     }
     

@@ -20,6 +20,25 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     // MARK: ScrollView
     @IBOutlet weak var scrollView: UIScrollView!
     
+    //MARK: View controller life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // This is a surprise delegate problem for some reason
+        self.firstName.delegate = self
+        self.lastName.delegate = self
+        self.company.delegate = self
+        self.phoneNumber.delegate = self
+        self.email.delegate = self
+        
+        // Empty TextFields
+        self.firstName.placeholder = "First Name"
+        self.lastName.placeholder = "Last Name"
+        self.company.placeholder = "Company"
+        self.phoneNumber.placeholder = "Phone Number"
+        self.email.placeholder = "Email"
+    }
+    
     //MARK: Dismiss keyboard on tap
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -28,23 +47,95 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     //MARK: Dismiss keyboard on pressing return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        
         return true
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        // Create the UIToolbar
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .Default
+        toolBar.translucent = true
+        toolBar.sizeToFit()
+        
+        // Add the buttons
+        let previousButton = UIBarButtonItem(title: "Previous", style: .Plain, target: self, action: #selector(RegistrationViewController.previousButton))
+        let nextButton = UIBarButtonItem(title: "Next", style: .Plain, target: self, action: #selector(RegistrationViewController.nextButton))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(RegistrationViewController.doneButton))
+        toolBar.setItems([previousButton, nextButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        // Add datepicker and toolbar to view
+        textField.inputAccessoryView = toolBar
+        
+        return true
+    }
+    
+    //MARK: Datepicker Toolbar functions
+    func nextButton(textField: UITextField) {
+        if firstName.editing == true {
+            lastName.becomeFirstResponder()
+        } else if lastName.editing == true {
+            company.becomeFirstResponder()
+        } else if company.editing == true {
+            phoneNumber.becomeFirstResponder()
+        } else if phoneNumber.editing == true {
+            email.becomeFirstResponder()
+        } else if email.editing == true {
+            firstName.becomeFirstResponder()
+        }
+    }
+    
+    func previousButton(textField: UITextField) {
+        if firstName.editing == true {
+            email.becomeFirstResponder()
+        } else if lastName.editing == true {
+            firstName.becomeFirstResponder()
+        } else if company.editing == true {
+            lastName.becomeFirstResponder()
+        } else if phoneNumber.editing == true {
+            company.becomeFirstResponder()
+        } else if email.editing == true {
+            phoneNumber.becomeFirstResponder()
+        }
+    }
+    
+    func doneButton() {
+        view.endEditing(true)
     }
     
     //MARK: ScrollView
     func textFieldDidBeginEditing(textField: UITextField) {
         
-        scrollView.setContentOffset(CGPointMake(0, 105), animated: true)
+         if textField == lastName {
+            scrollView.setContentOffset(CGPointMake(0, 70), animated: true)
+        } else if textField == company {
+            scrollView.setContentOffset(CGPointMake(0, 70), animated: true)
+        } else if textField == phoneNumber {
+            scrollView.setContentOffset(CGPointMake(0, 170), animated: true)
+        } else if textField == email {
+            scrollView.setContentOffset(CGPointMake(0, 170), animated: true)
+        }
+        
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        
+        if textField == firstName {
+            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        } else if textField == lastName {
+            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        } else if textField == company {
+            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        } else if textField == phoneNumber {
+            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        } else if textField == email {
+            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
+        }
+        
     }
     
-    //MARK: View controller life cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
