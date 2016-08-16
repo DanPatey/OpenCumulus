@@ -280,6 +280,7 @@
                         <outlet property="firstName" destination="tDk-hB-Wft" id="wV3-G9-Eig"/>
                         <outlet property="lastName" destination="BSd-TL-uUe" id="pdT-eX-gnX"/>
                         <outlet property="phoneNumber" destination="TIB-FB-NJm" id="pGB-df-tfe"/>
+                        <outlet property="scrollView" destination="mia-Gb-3OW" id="GGj-aO-Nk4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="26K-vj-DIM" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -20,6 +20,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     //MARK: Setup date picker for arrivalTime
     @IBOutlet weak var arrivalTime: UITextField!
     @IBAction func arrivalTimeDatePicker(sender: UITextField) {
+        
         // Create the date picker
         let datePickerView : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
@@ -139,12 +140,21 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidBeginEditing(textField: UITextField) {
         
         //Scrolling TextField
-        textFieldScroll.setContentOffset(CGPointMake(0, 105), animated: true)
+        if textField == aircraftType {
+        textFieldScroll.setContentOffset(CGPointMake(0, 70), animated: true)
+        } else if textField == aircraftType {
+        textFieldScroll.setContentOffset(CGPointMake(0, 70), animated: true)
+        }
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
+        
         //Scrolling TextField
+        if textField == aircraftType {
         textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
+        } else if textField == aircraftType {
+        textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
+        }
     }
     
     //MARK: Dismiss keyboard on tap

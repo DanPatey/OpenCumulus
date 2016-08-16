@@ -17,6 +17,9 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var email: UITextField!
     
+    // MARK: ScrollView
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     //MARK: Dismiss keyboard on tap
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -26,6 +29,16 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    //MARK: ScrollView
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        scrollView.setContentOffset(CGPointMake(0, 105), animated: true)
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
     }
     
     //MARK: View controller life cycle
