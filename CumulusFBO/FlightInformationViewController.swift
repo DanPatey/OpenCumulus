@@ -99,9 +99,6 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         
         // Add datepicker and toolbar to view
         textField.inputAccessoryView = toolBar
-        
-        //Scrolling TextField
-        textFieldScroll.setContentOffset(CGPointMake(0, 125), animated: true)
        
         return true
     }
@@ -139,6 +136,17 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        //Scrolling TextField
+        textFieldScroll.setContentOffset(CGPointMake(0, 105), animated: true)
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        //Scrolling TextField
+        textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
+    }
+    
     //MARK: Dismiss keyboard on tap
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -148,8 +156,6 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
-        //Scrolling TextField
-        textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
         return true
     }
     
