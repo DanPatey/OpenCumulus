@@ -17,6 +17,7 @@
 		5734C8861CAB766A0031B000 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C8851CAB766A0031B000 /* SummaryViewController.swift */; };
 		5742FDEF1D42A19000CB0DDB /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5742FDEE1D42A19000CB0DDB /* Registration.storyboard */; };
 		5784646D1D35DF4B00E5E6BF /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */; };
+		57C288601D62ABAA008F9960 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C2885F1D62ABAA008F9960 /* Default-568h@2x.png */; };
 		57CDA7081D31BACE005DD618 /* FlightInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */; };
 		57CDA70A1D31EDF0005DD618 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */; };
 		57CDA70C1D31EE1D005DD618 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA70B1D31EE1D005DD618 /* Reservation.swift */; };
@@ -37,6 +38,7 @@
 		5734C8851CAB766A0031B000 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		5742FDEE1D42A19000CB0DDB /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
+		57C2885F1D62ABAA008F9960 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInformationViewController.swift; sourceTree = "<group>"; };
 		57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		57CDA70B1D31EE1D005DD618 /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		5734C85D1CAB67820031B000 = {
 			isa = PBXGroup;
 			children = (
+				57C2885F1D62ABAA008F9960 /* Default-568h@2x.png */,
 				5734C8681CAB67820031B000 /* CumlusFBO */,
 				5734C8671CAB67820031B000 /* Products */,
 			);
@@ -165,6 +168,7 @@
 				99D7550F1D600FD100714EC4 /* Keys.plist in Resources */,
 				5734C8741CAB67820031B000 /* LaunchScreen.storyboard in Resources */,
 				5734C8711CAB67820031B000 /* Assets.xcassets in Resources */,
+				57C288601D62ABAA008F9960 /* Default-568h@2x.png in Resources */,
 				5742FDEF1D42A19000CB0DDB /* Registration.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
