@@ -774,11 +774,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="qpR-b3-bcI">
                             <connections>
                                 <action selector="SaveRegistration:" destination="Dde-ui-la1" id="eEU-BH-hU7"/>
-<<<<<<< HEAD
-                                <segue destination="Gr7-Tg-8xQ" kind="show" identifier="summarySegue" id="WSg-bD-6y7"/>
-=======
                                 <segue destination="Gr7-Tg-8xQ" kind="show" id="1KN-2M-b79"/>
->>>>>>> clearFieldsOnSubmit
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -832,10 +828,6 @@
         <image name="Logo" width="333" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>
-<<<<<<< HEAD
-        <segue reference="WSg-bD-6y7"/>
-=======
         <segue reference="1KN-2M-b79"/>
->>>>>>> clearFieldsOnSubmit
     </inferredMetricsTieBreakers>
 </document>
