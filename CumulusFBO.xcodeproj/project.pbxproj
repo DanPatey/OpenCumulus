@@ -98,8 +98,8 @@
 		997AC12D1D61F80D008FA2A5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */,
 				5734C86B1CAB67820031B000 /* RegistrationViewController.swift */,
+				57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */,
 				5734C8851CAB766A0031B000 /* SummaryViewController.swift */,
 				57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */,
 			);
