@@ -114,6 +114,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         } else if aircraftType.editing == true {
             airportCode.becomeFirstResponder()
         } else if airportCode.editing == true {
+            textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
             arrivalTime.becomeFirstResponder()
         } else if arrivalTime.editing == true {
             textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
@@ -130,6 +131,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         } else if aircraftType.editing == true {
             tailNumber.becomeFirstResponder()
         } else if airportCode.editing == true {
+            textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
             aircraftType.becomeFirstResponder()
         } else if arrivalTime.editing == true {
             textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
