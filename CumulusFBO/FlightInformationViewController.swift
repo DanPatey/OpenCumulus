@@ -114,10 +114,13 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         } else if aircraftType.editing == true {
             airportCode.becomeFirstResponder()
         } else if airportCode.editing == true {
+            textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
             arrivalTime.becomeFirstResponder()
         } else if arrivalTime.editing == true {
+            textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
             departureTime.becomeFirstResponder()
         } else if departureTime.editing == true {
+            textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
             tailNumber.becomeFirstResponder()
         }
     }
@@ -128,10 +131,13 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         } else if aircraftType.editing == true {
             tailNumber.becomeFirstResponder()
         } else if airportCode.editing == true {
+            textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
             aircraftType.becomeFirstResponder()
         } else if arrivalTime.editing == true {
+            textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
             airportCode.becomeFirstResponder()
         } else if departureTime.editing == true {
+            textFieldScroll.setContentOffset(CGPointMake(0, 100), animated: true)
             arrivalTime.becomeFirstResponder()
         }
     }
@@ -166,13 +172,14 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Dismiss keyboard on tap
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
+        textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
         view.endEditing(true)
     }
     
     //MARK: Dismiss keyboard on pressing return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
         textField.resignFirstResponder()
-        
         return true
     }
     
