@@ -14,19 +14,28 @@ class ReservationCell: UITableViewCell {
     @IBOutlet var arrivalTimeLabel: UILabel!
     @IBOutlet var aircraftTypeLabel: UILabel!
     @IBOutlet var etaLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
-    //MARK: Set label attributes
-    func updateLabels() {
+        //MARK: Set label attributes
         let bodyFont = UIFont.preferredFontForTextStyle(UIFontTextStyleBody)
         tailNumberLabel.font = bodyFont
         aircraftTypeLabel.font = bodyFont
         
         let caption1Font = UIFont.preferredFontForTextStyle(UIFontTextStyleCaption1)
         arrivalTimeLabel.font = caption1Font
-        
-        // Calls the timer for pilots
-        _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ReservationCell.updateCountdown), userInfo: nil, repeats: true)
         etaLabel.font = caption1Font
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    // Calls the timer for pilots
+    func startTimerLabel() {
+        
+        _ = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ReservationCell.updateCountdown), userInfo: nil, repeats: true)
     }
     
     //MARK: Countdown to ETA
@@ -49,8 +58,8 @@ class ReservationCell: UITableViewCell {
         
         // Convert back to string and drop into the custom cell for ETA
         let etaString = formatter.stringFromTimeInterval(etaNSDate)
-        let etaArr = etaString?.componentsSeparatedByString("-")
-        etaLabel.text = etaArr?[1]
+        let etaArr = etaString?.componentsSeparatedByString("") //Problem: Keeps the first Element
+        etaLabel.text = etaString
         
       
     }

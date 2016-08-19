@@ -11,6 +11,7 @@ import UIKit
 class ScheduleViewController: UITableViewController {
     
     var store: ReservationStore!
+    var cell = ReservationCell()
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reservationStore.allReservations.count
@@ -21,8 +22,7 @@ class ScheduleViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("ReservationCell", forIndexPath: indexPath) as! ReservationCell
         
-        cell.updateLabels()
-        
+        cell.startTimerLabel()
         let reservation = reservationStore.allReservations[indexPath.row]
         
         cell.tailNumberLabel.text = reservation.tailNumber
@@ -52,6 +52,7 @@ class ScheduleViewController: UITableViewController {
             presentViewController(ac, animated: true, completion: nil)
         }
     }
+    
     
     //MARK: View Lifecycle
     override func viewDidLoad() {
