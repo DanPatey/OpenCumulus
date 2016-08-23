@@ -10,35 +10,30 @@ import UIKit
 
 class ServicesTableViewController: UITableViewController {
 
-    @IBOutlet weak var antiIceSwitch: UISwitch!
-    @IBOutlet weak var baggageCart: UISwitch!
-    @IBOutlet weak var gpuCart: UISwitch!
-    @IBOutlet weak var marshallerSwitch: UISwitch!
-    @IBOutlet weak var lavService: UISwitch!
-    @IBOutlet weak var cateringSwitch: UISwitch!
-    @IBOutlet weak var crewCarSwitch: UISwitch!
-    @IBOutlet weak var rentalCarSwitch: UISwitch!
+    @IBOutlet weak var crewCars: UILabel!
+    @IBOutlet weak var rentals: UILabel!
     
+    let carsCount = 0
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    
     }
-    
-    
-    @IBAction func antiIce(sender: UISwitch) {
-        if sender.on {
-            print("on")
+
+    @IBAction func crewCarsCount(sender: UIStepper) {
+        if sender.maximumValue {
+            
         }
+        
     }
-
+    
+    
     // MARK: - Navigation
-
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
     }
 
 }

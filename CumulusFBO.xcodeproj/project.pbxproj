@@ -23,6 +23,7 @@
 		57CDA70C1D31EE1D005DD618 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA70B1D31EE1D005DD618 /* Reservation.swift */; };
 		57CDA70E1D31F297005DD618 /* ReservationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA70D1D31F297005DD618 /* ReservationStore.swift */; };
 		991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
+		9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
 		99D7550F1D600FD100714EC4 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99D7550E1D600FD100714EC4 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		57CDA70B1D31EE1D005DD618 /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		57CDA70D1D31F297005DD618 /* ReservationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationStore.swift; sourceTree = "<group>"; };
 		991B63621D67954200922085 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
+		9944486B1D6C25D3002F68F5 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		99D7550E1D600FD100714EC4 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				57CDA70D1D31F297005DD618 /* ReservationStore.swift */,
 				57CDA70B1D31EE1D005DD618 /* Reservation.swift */,
 				5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */,
+				9944486B1D6C25D3002F68F5 /* ServiceCell.swift */,
 				5734C8701CAB67820031B000 /* Assets.xcassets */,
 				5742FDEE1D42A19000CB0DDB /* Registration.storyboard */,
 				5734C8721CAB67820031B000 /* LaunchScreen.storyboard */,
@@ -195,6 +198,7 @@
 				5734C86C1CAB67820031B000 /* RegistrationViewController.swift in Sources */,
 				5734C86A1CAB67820031B000 /* AppDelegate.swift in Sources */,
 				57CDA70C1D31EE1D005DD618 /* Reservation.swift in Sources */,
+				9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
