@@ -13,8 +13,6 @@ class ServicesTableViewController: UITableViewController {
     @IBOutlet weak var crewCars: UILabel!
     @IBOutlet weak var rentals: UILabel!
     
-    var carsCount = 0.0
-    var rentalCount = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,17 +23,11 @@ class ServicesTableViewController: UITableViewController {
     }
 
     @IBAction func crewCarsCount(sender: UIStepper) {
-        carsCount += 1.0
-
-        sender.stepValue = carsCount
-        print(carsCount)
+        self.crewCars.text = "\(sender.value)"
     }
     
     @IBAction func rentalCarsStepper(sender: UIStepper) {
-        
-        sender.maximumValue += rentalCount
-        sender.minimumValue -= rentalCount
-        rentals.text = String(rentalCount)
+        self.rentals.text = "\(sender.value)"
     }
     
     
