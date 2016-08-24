@@ -10,8 +10,6 @@ import UIKit
 
 class ServiceCell: UITableViewCell {
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         

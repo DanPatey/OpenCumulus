@@ -610,7 +610,7 @@
                                                         <action selector="crewCarsCount:" destination="XTv-BC-zhu" eventType="valueChanged" id="j5A-aA-x13"/>
                                                     </connections>
                                                 </stepper>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-yi-7gw">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-yi-7gw">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="aw7-Ee-bJG"/>
@@ -704,7 +704,7 @@
                                                         <action selector="rentalCarsStepper:" destination="XTv-BC-zhu" eventType="valueChanged" id="Nnj-l4-6u5"/>
                                                     </connections>
                                                 </stepper>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAe-OQ-Ohs">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAe-OQ-Ohs">
                                                     <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="gaX-z0-Vyp"/>
@@ -795,13 +795,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="antiIceSwitch" destination="OoJ-yV-C9E" id="GnM-nR-O2p"/>
+                        <outlet property="baggageCart" destination="m1m-eg-k3H" id="FlZ-XU-dWz"/>
+                        <outlet property="catering" destination="lej-Is-rDo" id="IIH-mV-rRD"/>
                         <outlet property="crewCars" destination="gFb-yi-7gw" id="AuQ-2K-UQi"/>
+                        <outlet property="gpuCart" destination="cUV-Ds-py0" id="rpv-s2-RoT"/>
+                        <outlet property="lavService" destination="arG-3T-HOd" id="68Q-iJ-pde"/>
+                        <outlet property="marshaller" destination="2Sw-cr-LW1" id="VzE-Gl-Jxe"/>
                         <outlet property="rentals" destination="QAe-OQ-Ohs" id="k8b-j0-CLP"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ShC-Vm-64I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2958" y="-416"/>
+            <point key="canvasLocation" x="2848.5" y="-423"/>
         </scene>
         <!--Registration-->
         <scene sceneID="VnI-Q8-zzn">

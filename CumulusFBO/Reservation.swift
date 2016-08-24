@@ -21,6 +21,7 @@ class Reservation: NSObject {
         self.aircraftType = aircraftType
         self.arrivalTime = arrivalTime
         
+        
         super.init()
     }
 }
