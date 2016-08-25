@@ -12,16 +12,13 @@ Create a Keys.plist in your cumulus repo that includes your: flightawareUser: {u
 Cocoapods must be install on your machine [https://cocoapods.org/]
 ```
 $ sudo gem install cocoapods
-
 ```
 Once it is install on your machine. Open up the file that the project it is in then run
 
 ```
 $ pod install
-
 ```
 After it is installed open up .xcworkspace. This is where the project will live.
-
 ```
 $ open .xcworkspace
 ```
