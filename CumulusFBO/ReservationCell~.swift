@@ -66,8 +66,6 @@ class ReservationCell: UITableViewCell {
 //        
 //    }
     
-    func updateCountdown() {
-        print(timer)
     }
 }
 
