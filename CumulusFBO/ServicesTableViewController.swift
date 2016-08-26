@@ -48,15 +48,3 @@ class ServicesTableViewController: UITableViewController {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-

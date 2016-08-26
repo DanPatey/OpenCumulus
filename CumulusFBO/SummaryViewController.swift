@@ -39,8 +39,5 @@ class SummaryViewController: UIViewController {
         let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
         
         reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
-        
-       
-        
     }
 }

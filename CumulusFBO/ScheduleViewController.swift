@@ -53,7 +53,6 @@ class ScheduleViewController: UITableViewController {
         }
     }
     
-    
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +67,6 @@ class ScheduleViewController: UITableViewController {
     }
         
     override func viewWillAppear(animated: Bool) {
-        
         self.tableView.reloadData()
     }
     

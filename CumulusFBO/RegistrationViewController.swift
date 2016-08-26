@@ -135,8 +135,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
-    
-    
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
     }
