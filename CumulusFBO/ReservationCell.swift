@@ -59,8 +59,6 @@ class ReservationCell: UITableViewCell {
         // Convert back to string and drop into the custom cell for ETA
         let etaString = formatter.stringFromTimeInterval(etaNSDate)
         let etaArr = etaString?.componentsSeparatedByString("") //Problem: Keeps the first Element
-        etaLabel.text = etaString
-        
-      
+        etaLabel.text = String(etaString)
     }
 }
