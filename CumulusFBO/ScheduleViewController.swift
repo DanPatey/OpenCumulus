@@ -28,7 +28,7 @@ class ScheduleViewController: UITableViewController {
         cell.tailNumberLabel.text = reservation.tailNumber
         cell.aircraftTypeLabel.text = reservation.aircraftType
         cell.arrivalTimeLabel.text = reservation.arrivalTime
-        cell.etaLabel.text = RegistrationsManager.sharedManager.activeReservation.arrivalTime
+        cell.etaLabel.text = reservation.arrivalTime
         
         return cell
     }
