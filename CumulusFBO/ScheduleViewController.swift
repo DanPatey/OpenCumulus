@@ -60,30 +60,16 @@ class ScheduleViewController: UITableViewController {
         let svc = barViewControllers![1] as! ScheduleViewController
         svc.store = ReservationStore()
         
-//        store.retrieveInFlightInfo()     // Testing FlightAware API
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
         
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(updateEtaLabel), userInfo: nil, repeats: true)
     }
     
+    override func viewWillAppear(animated: Bool) {
+    }
+    
     func updateEtaLabel() {
         self.tableView.reloadData()
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        self.tableView.reloadData()
-    }
-    
-    func pilotAlert() {
-        // Fire UIAlertController
-        let alertController = UIAlertController(title: "landing in...", message: "landing soon", preferredStyle: .Alert)
-        let alertAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
-            print("action")
-        }
-        alertController.addAction(alertAction)
-        
-        // Present the AlertController
-        self.presentViewController(alertController, animated: true, completion: nil)
-    }    
 }

@@ -57,5 +57,18 @@ class Reservation: NSObject {
         // Convert back to string and drop into the custom cell for ETA
         let etaString = formatter.stringFromTimeInterval(etaNSDate)
         self.eta = etaString!
+        print (etaString)
+    }
+    
+    func pilotAlert() {
+        // Fire UIAlertController
+        let alertController = UIAlertController(title: "landing in...", message: "landing soon", preferredStyle: .Alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+            print("action")
+        }
+        alertController.addAction(alertAction)
+        
+        // Present the AlertController
+//        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }
