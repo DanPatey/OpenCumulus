@@ -79,25 +79,19 @@ class ScheduleViewController: UITableViewController {
             let currentETA = reservationStore.allReservations[i].eta
             
             if currentETA == "-30m" {
-                print("A flight is landing soon")
+                planeLandingSoonAlert()
             } else if currentETA == "0s" {
-                print("A flight has landed")
+                planeLandedAlert()
             }
         }
-    }
-
-    func planeLandedTest() {
-        return print("Plane has landed")
     }
     
     func planeLandingSoonAlert() {
         // Create the alert
         let alert = UIAlertController(title: "A Reservation", message: "is landing in 30 minutes", preferredStyle: .Alert)
-        
         // Add the buttons
         alert.addAction(UIAlertAction(title: "Take me to the reservation details", style: UIAlertActionStyle.Default, handler: nil))
         alert.addAction(UIAlertAction(title: "Hide", style: UIAlertActionStyle.Cancel, handler: nil))
-        
         // Present the AlertController
         presentViewController(alert, animated: true, completion: nil)
     }
@@ -105,11 +99,9 @@ class ScheduleViewController: UITableViewController {
     func planeLandedAlert() {
         // Create the alert
         let alert = UIAlertController(title: "A Reservation", message: "has just landed", preferredStyle: .Alert)
-        
         // Add the buttons
         alert.addAction(UIAlertAction(title: "Take me to the reservation details", style: UIAlertActionStyle.Default, handler: nil))
         alert.addAction(UIAlertAction(title: "Hide", style: UIAlertActionStyle.Cancel, handler: nil))
-        
         // Present the AlertController
         presentViewController(alert, animated: true, completion: nil)
     }
