@@ -21,14 +21,13 @@ class ScheduleViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("ReservationCell", forIndexPath: indexPath) as! ReservationCell
-        
-        cell.startTimerLabel()
         let reservation = reservationStore.allReservations[indexPath.row]
         
         cell.tailNumberLabel.text = reservation.tailNumber
         cell.aircraftTypeLabel.text = reservation.aircraftType
         cell.arrivalTimeLabel.text = reservation.arrivalTime
-        cell.etaLabel.text = RegistrationsManager.sharedManager.activeReservation.arrivalTime
+        cell.etaLabel.text = reservation.getEta()
+        reservation.startTimerLabel(reservation)
         
         return cell
     }
@@ -53,7 +52,6 @@ class ScheduleViewController: UITableViewController {
         }
     }
     
-    
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,10 +63,15 @@ class ScheduleViewController: UITableViewController {
 //        store.retrieveInFlightInfo()     // Testing FlightAware API
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
+        
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(updateEtaLabel), userInfo: nil, repeats: true)
     }
-        
+    
+    func updateEtaLabel() {
+        self.tableView.reloadData()
+    }
+    
     override func viewWillAppear(animated: Bool) {
-        
         self.tableView.reloadData()
     }
     
@@ -82,5 +85,5 @@ class ScheduleViewController: UITableViewController {
         
         // Present the AlertController
         self.presentViewController(alertController, animated: true, completion: nil)
-    }
+    }    
 }
