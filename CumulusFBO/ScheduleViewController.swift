@@ -66,8 +66,14 @@ class ScheduleViewController: UITableViewController {
 //        store.retrieveInFlightInfo()     // Testing FlightAware API
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
-    }
         
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(updateEtaLabel), userInfo: nil, repeats: true)
+    }
+    
+    func updateEtaLabel() {
+        self.tableView.reloadData()
+    }
+    
     override func viewWillAppear(animated: Bool) {
         self.tableView.reloadData()
     }
