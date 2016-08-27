@@ -50,19 +50,19 @@ class Reservation: NSObject {
         // Compare the current time to our arrival date
         let etaNSDate = NSDate().timeIntervalSinceDate(fullReservationNSDate!)
         
-        // Fire one alert if etaNSDate is < 0 and another if it is < 1750 otherwise just return the ETA
-        switch etaNSDate {
-            case let etaNSDate where etaNSDate == 0.0:
-                print("A flight has landed")
-            case let etaNSDate where etaNSDate == 1750.0:
-                print("A flight is landing soon")
-            default:
-                print("none")
-        }
-        
         // Format the output of our ETA
         let formatter = NSDateComponentsFormatter()
         formatter.unitsStyle = .Abbreviated
+        
+        // Fire one alert if etaNSDate is < 0 and another if it is < -1800 otherwise just return the ETA
+        switch etaNSDate {
+            case let etaNSDate where etaNSDate > -1.0 && etaNSDate < 0.0:
+                print("A flight has landed")
+            case let etaNSDate where etaNSDate > -1800.0 && etaNSDate < -1799.0:
+                print("A flight is landing soon")
+            default:
+                ()
+        }
         
         // Convert back to string and drop into the custom cell for ETA
         let etaString = formatter.stringFromTimeInterval(etaNSDate)
