@@ -23,13 +23,10 @@ class ScheduleViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("ReservationCell", forIndexPath: indexPath) as! ReservationCell
         let reservation = reservationStore.allReservations[indexPath.row]
         
-        reservation.updateETA()
-        
         cell.tailNumberLabel.text = reservation.tailNumber
         cell.aircraftTypeLabel.text = reservation.aircraftType
         cell.arrivalTimeLabel.text = reservation.arrivalTime
         cell.etaLabel.text = reservation.getEta()
-        
         reservation.startTimerLabel(reservation)
         
         return cell

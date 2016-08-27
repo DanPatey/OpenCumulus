@@ -31,12 +31,12 @@ class Reservation: NSObject {
         return self.eta
     }
     
-    // Calls the timer for pilots
+    //MARK: Countdown to ETA
     func startTimerLabel(reservation: Reservation) {
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(Reservation.updateETA), userInfo: nil, repeats: true)
     }
     
-    //MARK: Countdown to ETA
+    // Calculate the time from arrival to the current time
     func updateETA() {
         // Setup the format for our countdown
         let dateFormatter: NSDateFormatter = NSDateFormatter()
@@ -56,7 +56,6 @@ class Reservation: NSObject {
         
         // Convert back to string and drop into the custom cell for ETA
         let etaString = formatter.stringFromTimeInterval(etaNSDate)
-//        let etaArr = etaString?.componentsSeparatedByString("") //Problem: Keeps the first Element
         self.eta = etaString!
     }
 }
