@@ -30,9 +30,5 @@ class ReservationCell: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }
-            
-//    func updateCountdown() {
-//        print(timer)
-//    }
+    }            
 }

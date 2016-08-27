@@ -30,7 +30,8 @@ class ScheduleViewController: UITableViewController {
         cell.arrivalTimeLabel.text = reservation.arrivalTime
         cell.etaLabel.text = reservation.getEta()
         
-        self.startTimerLabel(reservation)
+        reservation.startTimerLabel(reservation)
+        
         return cell
     }
     
@@ -81,10 +82,5 @@ class ScheduleViewController: UITableViewController {
         
         // Present the AlertController
         self.presentViewController(alertController, animated: true, completion: nil)
-    }
-    
-    // Calls the timer for pilots
-    func startTimerLabel(reservation: Reservation) {
-        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(reservation.updateETA), userInfo: nil, repeats: true)
-    }
+    }    
 }
