@@ -52,10 +52,10 @@ class Reservation: NSObject {
         
         // Fire one alert if etaNSDate is < 0 and another if it is < 1750 otherwise just return the ETA
         switch etaNSDate {
-            case let etaNSDate where etaNSDate < 0.0:
-                print("incoming flight")
-            case let etaNSDate where etaNSDate < 1750.0:
-                print("flight has landed")
+            case let etaNSDate where etaNSDate == 0.0:
+                print("A flight has landed")
+            case let etaNSDate where etaNSDate == 1750.0:
+                print("A flight is landing soon")
             default:
                 print("none")
         }
@@ -67,17 +67,5 @@ class Reservation: NSObject {
         // Convert back to string and drop into the custom cell for ETA
         let etaString = formatter.stringFromTimeInterval(etaNSDate)
         self.eta = etaString!
-    }
-    
-    func pilotAlert() {
-        // Fire UIAlertController
-        let alertController = UIAlertController(title: "landing in...", message: "landing soon", preferredStyle: .Alert)
-        let alertAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
-            print("action")
-        }
-        alertController.addAction(alertAction)
-        
-        // Present the AlertController
-//        self.presentViewController(alertController, animated: true, completion: nil)
     }
 }
