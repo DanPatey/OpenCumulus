@@ -15,7 +15,6 @@ class ReservationCell: UITableViewCell {
     @IBOutlet var aircraftTypeLabel: UILabel!
     @IBOutlet var etaLabel: UILabel!
     
-    var timer = NSTimer()
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -32,46 +31,8 @@ class ReservationCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
-    // Calls the timer for pilots
-    func startTimerLabel() {
-        
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ReservationCell.updateCountdown), userInfo: nil, repeats: true)
-    }
-    
-    //MARK: Countdown to ETA
+            
 //    func updateCountdown() {
-//        // Setup the format for our countdown
-//        let dateFormatter: NSDateFormatter = NSDateFormatter()
-//        dateFormatter.dateFormat = "MMMM dd yyyy HH:mmZZ"
-//        print("dateFormater: \(dateFormatter)")
-//        
-//        // Grab our reservation and convert to NSDate for comparison to current time
-//        // CHANGE THIS FOR EACH CELL
-//        let fullReservation = RegistrationsManager.sharedManager.activeReservation.arrivalTime
-//        print("fullReservation: \(fullReservation)")
-//        let fullReservationNSDate = dateFormatter.dateFromString(fullReservation!)
-//        
-//        // Compare the current time to our arrival date
-//        let etaNSDate = NSDate().timeIntervalSinceDate(fullReservationNSDate!)
-//        
-//        // Format the output of our ETA
-//        let formatter = NSDateComponentsFormatter()
-//        formatter.unitsStyle = .Abbreviated
-//        
-//        // Convert back to string and drop into the custom cell for ETA
-//        let etaString = formatter.stringFromTimeInterval(etaNSDate)
-//        let etaArr = etaString?.componentsSeparatedByString("") //Problem: Keeps the first Element
-//        etaLabel.text = etaString
-//        
+//        print(timer)
 //    }
-    
-    func updateCountdown() {
-        print(timer)
-    }
 }
-
-
-
-
-

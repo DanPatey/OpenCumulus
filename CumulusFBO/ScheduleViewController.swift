@@ -21,14 +21,16 @@ class ScheduleViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("ReservationCell", forIndexPath: indexPath) as! ReservationCell
-        
-        cell.startTimerLabel()
         let reservation = reservationStore.allReservations[indexPath.row]
+        
+        reservation.updateETA()
         
         cell.tailNumberLabel.text = reservation.tailNumber
         cell.aircraftTypeLabel.text = reservation.aircraftType
         cell.arrivalTimeLabel.text = reservation.arrivalTime
+        cell.etaLabel.text = reservation.getEta()
         
+        self.startTimerLabel(reservation)
         return cell
     }
     
@@ -79,5 +81,10 @@ class ScheduleViewController: UITableViewController {
         
         // Present the AlertController
         self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    // Calls the timer for pilots
+    func startTimerLabel(reservation: Reservation) {
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(reservation.updateETA), userInfo: nil, repeats: true)
     }
 }
