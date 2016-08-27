@@ -64,6 +64,7 @@ class ScheduleViewController: UITableViewController {
         tableView.estimatedRowHeight = 65
         
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(updateEtaLabel), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(checkNotifications), userInfo: nil, repeats: true)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -73,6 +74,18 @@ class ScheduleViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    func checkNotifications() {
+        for i in 0 ..< reservationStore.allReservations.count {
+            let currentETA = reservationStore.allReservations[i].eta
+            
+            if currentETA == "-30m" {
+                print("A flight is landing soon")
+            } else if currentETA == "0s" {
+                print("A flight has landed")
+            }
+        }
+    }
+
     func planeLandedTest() {
         return print("Plane has landed")
     }
