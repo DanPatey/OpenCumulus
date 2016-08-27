@@ -28,7 +28,7 @@ class ScheduleViewController: UITableViewController {
         cell.arrivalTimeLabel.text = reservation.arrivalTime
         cell.etaLabel.text = reservation.getEta()
         reservation.startTimerLabel(reservation)
-        
+                
         return cell
     }
     
@@ -60,30 +60,49 @@ class ScheduleViewController: UITableViewController {
         let svc = barViewControllers![1] as! ScheduleViewController
         svc.store = ReservationStore()
         
-//        store.retrieveInFlightInfo()     // Testing FlightAware API
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
         
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(updateEtaLabel), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(checkNotifications), userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
     }
     
     func updateEtaLabel() {
         self.tableView.reloadData()
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.tableView.reloadData()
+    func checkNotifications() {
+        for i in 0 ..< reservationStore.allReservations.count {
+            let currentETA = reservationStore.allReservations[i].eta
+            
+            if currentETA == "-30m" {
+                planeLandingSoonAlert()
+            } else if currentETA == "0s" {
+                planeLandedAlert()
+            }
+        }
     }
     
-    func pilotAlert() {
-        // Fire UIAlertController
-        let alertController = UIAlertController(title: "landing in...", message: "landing soon", preferredStyle: .Alert)
-        let alertAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
-            print("action")
-        }
-        alertController.addAction(alertAction)
-        
+    func planeLandingSoonAlert() {
+        // Create the alert
+        let alert = UIAlertController(title: "Aircraft 30 minutes out", message: "A reserved aircraft will be landing in 30 minutes", preferredStyle: .Alert)
+        // Add the buttons
+        alert.addAction(UIAlertAction(title: "Goto Reservation Details", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Hide Alert", style: UIAlertActionStyle.Cancel, handler: nil))
         // Present the AlertController
-        self.presentViewController(alertController, animated: true, completion: nil)
-    }    
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func planeLandedAlert() {
+        // Create the alert
+        let alert = UIAlertController(title: "Aircraft Landed", message: "A reserved aircraft has landed and is in taxi to your location", preferredStyle: .Alert)
+        // Add the buttons
+        alert.addAction(UIAlertAction(title: "Goto Reservation Details", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Hide", style: UIAlertActionStyle.Cancel, handler: nil))
+        // Present the AlertController
+        presentViewController(alert, animated: true, completion: nil)
+    }
 }

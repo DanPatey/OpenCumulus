@@ -53,7 +53,7 @@ class Reservation: NSObject {
         // Format the output of our ETA
         let formatter = NSDateComponentsFormatter()
         formatter.unitsStyle = .Abbreviated
-        
+                
         // Convert back to string and drop into the custom cell for ETA
         let etaString = formatter.stringFromTimeInterval(etaNSDate)
         self.eta = etaString!
