@@ -28,7 +28,7 @@ class ScheduleViewController: UITableViewController {
         cell.arrivalTimeLabel.text = reservation.arrivalTime
         cell.etaLabel.text = reservation.getEta()
         reservation.startTimerLabel(reservation)
-        
+                
         return cell
     }
     
@@ -88,19 +88,19 @@ class ScheduleViewController: UITableViewController {
     
     func planeLandingSoonAlert() {
         // Create the alert
-        let alert = UIAlertController(title: "A Reservation", message: "is landing in 30 minutes", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Aircraft 30 minutes out", message: "A reserved aircraft will be landing in 30 minutes", preferredStyle: .Alert)
         // Add the buttons
-        alert.addAction(UIAlertAction(title: "Take me to the reservation details", style: UIAlertActionStyle.Default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Hide", style: UIAlertActionStyle.Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Goto Reservation Details", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Hide Alert", style: UIAlertActionStyle.Cancel, handler: nil))
         // Present the AlertController
         presentViewController(alert, animated: true, completion: nil)
     }
     
     func planeLandedAlert() {
         // Create the alert
-        let alert = UIAlertController(title: "A Reservation", message: "has just landed", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Aircraft Landed", message: "A reserved aircraft has landed and is in taxi to your location", preferredStyle: .Alert)
         // Add the buttons
-        alert.addAction(UIAlertAction(title: "Take me to the reservation details", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Goto Reservation Details", style: UIAlertActionStyle.Default, handler: nil))
         alert.addAction(UIAlertAction(title: "Hide", style: UIAlertActionStyle.Cancel, handler: nil))
         // Present the AlertController
         presentViewController(alert, animated: true, completion: nil)
