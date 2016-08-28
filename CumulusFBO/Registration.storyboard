@@ -746,12 +746,12 @@
                                                     <exclude reference="QAe-OQ-Ohs"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <exclude reference="AtV-3M-uyX"/>
-                                                    <exclude reference="KX4-Zp-Van"/>
-                                                    <exclude reference="awR-XR-RUH"/>
                                                     <exclude reference="UkB-Ie-pJw"/>
                                                     <exclude reference="YTI-Jj-ali"/>
                                                     <exclude reference="s2e-4r-NHh"/>
+                                                    <exclude reference="AtV-3M-uyX"/>
+                                                    <exclude reference="KX4-Zp-Van"/>
+                                                    <exclude reference="awR-XR-RUH"/>
                                                     <exclude reference="LAR-np-Ci7"/>
                                                     <exclude reference="g9k-uT-A1w"/>
                                                     <exclude reference="snd-iM-2Oy"/>
@@ -765,12 +765,12 @@
                                                     <include reference="QAe-OQ-Ohs"/>
                                                 </mask>
                                                 <mask key="constraints">
-                                                    <include reference="AtV-3M-uyX"/>
-                                                    <include reference="KX4-Zp-Van"/>
-                                                    <include reference="awR-XR-RUH"/>
                                                     <include reference="UkB-Ie-pJw"/>
                                                     <include reference="YTI-Jj-ali"/>
                                                     <include reference="s2e-4r-NHh"/>
+                                                    <include reference="AtV-3M-uyX"/>
+                                                    <include reference="KX4-Zp-Van"/>
+                                                    <include reference="awR-XR-RUH"/>
                                                     <include reference="LAR-np-Ci7"/>
                                                     <include reference="g9k-uT-A1w"/>
                                                     <include reference="snd-iM-2Oy"/>

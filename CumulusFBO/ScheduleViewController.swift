@@ -21,14 +21,14 @@ class ScheduleViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("ReservationCell", forIndexPath: indexPath) as! ReservationCell
-        
-        cell.startTimerLabel()
         let reservation = reservationStore.allReservations[indexPath.row]
         
         cell.tailNumberLabel.text = reservation.tailNumber
         cell.aircraftTypeLabel.text = reservation.aircraftType
         cell.arrivalTimeLabel.text = reservation.arrivalTime
-        cell.etaLabel.text = RegistrationsManager.sharedManager.activeReservation.arrivalTime
+        cell.etaLabel.text = reservation.getEta()
+        
+        reservation.startTimerLabel(reservation)
         
         return cell
     }
@@ -53,7 +53,6 @@ class ScheduleViewController: UITableViewController {
         }
     }
     
-    
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,22 +64,29 @@ class ScheduleViewController: UITableViewController {
 //        store.retrieveInFlightInfo()     // Testing FlightAware API
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
+        
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(updateEtaLabel), userInfo: nil, repeats: true)
+        pilotAlert()
     }
-        
-    override func viewWillAppear(animated: Bool) {
-        
+    
+    func updateEtaLabel() {
         self.tableView.reloadData()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
+    //MARK: Fire UIAlertController
     func pilotAlert() {
-        // Fire UIAlertController
+        
         let alertController = UIAlertController(title: "landing in...", message: "landing soon", preferredStyle: .Alert)
         let alertAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
-            print("action")
+          
         }
         alertController.addAction(alertAction)
         
         // Present the AlertController
         self.presentViewController(alertController, animated: true, completion: nil)
-    }
+    }    
 }

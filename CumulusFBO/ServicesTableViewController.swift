@@ -46,17 +46,4 @@ class ServicesTableViewController: UITableViewController {
         RegistrationsManager.sharedManager.activeReservation.crewCars = crewCars.text
         RegistrationsManager.sharedManager.activeReservation.rentals = rentals.text
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-

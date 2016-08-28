@@ -204,10 +204,18 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        RegistrationsManager.sharedManager.activeReservation.tailNumber = tailNumber.text
-        RegistrationsManager.sharedManager.activeReservation.aircraftType = aircraftType.text
-        RegistrationsManager.sharedManager.activeReservation.airportCode = airportCode.text
-        RegistrationsManager.sharedManager.activeReservation.arrivalTime = arrivalTime.text
-        RegistrationsManager.sharedManager.activeReservation.departureTime = departureTime.text
+        
+        if tailNumber.text != "" && aircraftType.text != "" && airportCode.text != "" && aircraftType.text != "" && departureTime.text != "" {
+                RegistrationsManager.sharedManager.activeReservation.tailNumber = tailNumber.text
+                RegistrationsManager.sharedManager.activeReservation.aircraftType = aircraftType.text
+                RegistrationsManager.sharedManager.activeReservation.airportCode = airportCode.text
+                RegistrationsManager.sharedManager.activeReservation.arrivalTime = arrivalTime.text
+                RegistrationsManager.sharedManager.activeReservation.departureTime = departureTime.text
+        } else {
+            // Don't segue
+            
+        }
     }
 }
+
+

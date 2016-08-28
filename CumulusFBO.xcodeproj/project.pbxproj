@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		572828841CC43F170005A6EA /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572828831CC43F170005A6EA /* RegistrationModel.swift */; };
 		572828861CC44B470005A6EA /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572828851CC44B470005A6EA /* RegistrationManager.swift */; };
-		573124441D39F736008ABC40 /* FlightAwareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573124431D39F736008ABC40 /* FlightAwareAPI.swift */; };
 		5734C86A1CAB67820031B000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C8691CAB67820031B000 /* AppDelegate.swift */; };
 		5734C86C1CAB67820031B000 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C86B1CAB67820031B000 /* RegistrationViewController.swift */; };
 		5734C8711CAB67820031B000 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5734C8701CAB67820031B000 /* Assets.xcassets */; };
@@ -17,7 +16,6 @@
 		5734C8861CAB766A0031B000 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C8851CAB766A0031B000 /* SummaryViewController.swift */; };
 		5742FDEF1D42A19000CB0DDB /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5742FDEE1D42A19000CB0DDB /* Registration.storyboard */; };
 		5784646D1D35DF4B00E5E6BF /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */; };
-		57C288601D62ABAA008F9960 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57C2885F1D62ABAA008F9960 /* Default-568h@2x.png */; };
 		57CDA7081D31BACE005DD618 /* FlightInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */; };
 		57CDA70A1D31EDF0005DD618 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */; };
 		57CDA70C1D31EE1D005DD618 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA70B1D31EE1D005DD618 /* Reservation.swift */; };
@@ -25,7 +23,7 @@
 		8E0BD2BD6707B272AC6BB06E /* Pods_CumulusFBO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6AADB7493C4876FC5AA5D2 /* Pods_CumulusFBO.framework */; };
 		991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
 		9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
-		998F916B1D6EB1A800F4B4EF /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 998F916A1D6EB1A800F4B4EF /* GoogleService-Info (2).plist */; };
+		998F916B1D6EB1A800F4B4EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */; };
 		99D7550F1D600FD100714EC4 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99D7550E1D600FD100714EC4 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +32,6 @@
 		3C842A7000A9CE341A943F5F /* Pods-CumulusFBO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.release.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.release.xcconfig"; sourceTree = "<group>"; };
 		572828831CC43F170005A6EA /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegistrationModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		572828851CC44B470005A6EA /* RegistrationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationManager.swift; sourceTree = "<group>"; };
-		573124431D39F736008ABC40 /* FlightAwareAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightAwareAPI.swift; sourceTree = "<group>"; };
 		5734C8661CAB67820031B000 /* CumulusFBO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CumulusFBO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5734C8691CAB67820031B000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5734C86B1CAB67820031B000 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegistrationViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -44,14 +41,13 @@
 		5734C8851CAB766A0031B000 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		5742FDEE1D42A19000CB0DDB /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
-		57C2885F1D62ABAA008F9960 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInformationViewController.swift; sourceTree = "<group>"; };
 		57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		57CDA70B1D31EE1D005DD618 /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		57CDA70D1D31F297005DD618 /* ReservationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationStore.swift; sourceTree = "<group>"; };
 		991B63621D67954200922085 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		9944486B1D6C25D3002F68F5 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
-		998F916A1D6EB1A800F4B4EF /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
+		998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99D7550E1D600FD100714EC4 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		DE6AADB7493C4876FC5AA5D2 /* Pods_CumulusFBO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CumulusFBO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,7 +67,6 @@
 		5734C85D1CAB67820031B000 = {
 			isa = PBXGroup;
 			children = (
-				57C2885F1D62ABAA008F9960 /* Default-568h@2x.png */,
 				5734C8681CAB67820031B000 /* CumlusFBO */,
 				5734C8671CAB67820031B000 /* Products */,
 				BEE2E59C7BD8F2D401AA9CF2 /* Pods */,
@@ -94,7 +89,6 @@
 				997AC12D1D61F80D008FA2A5 /* ViewControllers */,
 				572828831CC43F170005A6EA /* RegistrationModel.swift */,
 				572828851CC44B470005A6EA /* RegistrationManager.swift */,
-				573124431D39F736008ABC40 /* FlightAwareAPI.swift */,
 				57CDA70D1D31F297005DD618 /* ReservationStore.swift */,
 				57CDA70B1D31EE1D005DD618 /* Reservation.swift */,
 				5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */,
@@ -123,9 +117,9 @@
 		998F91691D6EAA8200F4B4EF /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */,
 				5734C8751CAB67820031B000 /* Info.plist */,
 				99D7550E1D600FD100714EC4 /* Keys.plist */,
-				998F916A1D6EB1A800F4B4EF /* GoogleService-Info (2).plist */,
 			);
 			name = Plist;
 			sourceTree = "<group>";
@@ -212,9 +206,9 @@
 				99D7550F1D600FD100714EC4 /* Keys.plist in Resources */,
 				5734C8741CAB67820031B000 /* LaunchScreen.storyboard in Resources */,
 				5734C8711CAB67820031B000 /* Assets.xcassets in Resources */,
-				57C288601D62ABAA008F9960 /* Default-568h@2x.png in Resources */,
 				5742FDEF1D42A19000CB0DDB /* Registration.storyboard in Resources */,
-				998F916B1D6EB1A800F4B4EF /* GoogleService-Info (2).plist in Resources */,
+				998F916B1D6EB1A800F4B4EF /* GoogleService-Info.plist in Resources */,
+				5742FDEF1D42A19000CB0DDB /* Registration.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +273,6 @@
 				57CDA7081D31BACE005DD618 /* FlightInformationViewController.swift in Sources */,
 				5784646D1D35DF4B00E5E6BF /* ReservationCell.swift in Sources */,
 				57CDA70A1D31EDF0005DD618 /* ScheduleViewController.swift in Sources */,
-				573124441D39F736008ABC40 /* FlightAwareAPI.swift in Sources */,
 				572828861CC44B470005A6EA /* RegistrationManager.swift in Sources */,
 				5734C8861CAB766A0031B000 /* SummaryViewController.swift in Sources */,
 				5734C86C1CAB67820031B000 /* RegistrationViewController.swift in Sources */,
