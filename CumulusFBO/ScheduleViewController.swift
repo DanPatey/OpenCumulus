@@ -65,11 +65,8 @@ class ScheduleViewController: UITableViewController {
         tableView.estimatedRowHeight = 65
         
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(updateEtaLabel), userInfo: nil, repeats: true)
-<<<<<<< HEAD
-        pilotAlert()
-=======
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(checkNotifications), userInfo: nil, repeats: true)
->>>>>>> c850e58f750fda7ceaa10b2447615722b0cd3142
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -79,14 +76,8 @@ class ScheduleViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-<<<<<<< HEAD
     //MARK: Fire UIAlertController
-    func pilotAlert() {
-        
-        let alertController = UIAlertController(title: "landing in...", message: "landing soon", preferredStyle: .Alert)
-        let alertAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
-          
-=======
+
     func checkNotifications() {
         for i in 0 ..< reservationStore.allReservations.count {
             let currentETA = reservationStore.allReservations[i].eta
@@ -96,7 +87,6 @@ class ScheduleViewController: UITableViewController {
             } else if currentETA == "0s" {
                 planeLandedAlert()
             }
->>>>>>> c850e58f750fda7ceaa10b2447615722b0cd3142
         }
     }
     
