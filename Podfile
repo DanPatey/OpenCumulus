@@ -5,5 +5,6 @@
 
 target 'CumulusFBO' do
 pod 'Firebase'
+pod 'Firebase/Messaging'
 end
 
