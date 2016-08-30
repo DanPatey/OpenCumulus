@@ -27,6 +27,7 @@ class ScheduleViewController: UITableViewController {
         cell.aircraftTypeLabel.text = reservation.aircraftType
         cell.arrivalTimeLabel.text = reservation.arrivalTime
         cell.etaLabel.text = reservation.getEta()
+        
         reservation.startTimerLabel(reservation)
                 
         return cell
@@ -65,6 +66,7 @@ class ScheduleViewController: UITableViewController {
         
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(updateEtaLabel), userInfo: nil, repeats: true)
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(checkNotifications), userInfo: nil, repeats: true)
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -74,6 +76,8 @@ class ScheduleViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    //MARK: Fire UIAlertController
+
     func checkNotifications() {
         for i in 0 ..< reservationStore.allReservations.count {
             let currentETA = reservationStore.allReservations[i].eta

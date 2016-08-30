@@ -45,6 +45,7 @@ class Reservation: NSObject {
         // Grab our reservation and convert to NSDate for comparison to current time
         // CHANGE THIS FOR EACH CELL
         let fullReservation = self.arrivalTime
+        
         let fullReservationNSDate = dateFormatter.dateFromString(fullReservation)
         
         // Compare the current time to our arrival date
@@ -57,5 +58,6 @@ class Reservation: NSObject {
         // Convert back to string and drop into the custom cell for ETA
         let etaString = formatter.stringFromTimeInterval(etaNSDate)
         self.eta = etaString!
+        
     }
 }

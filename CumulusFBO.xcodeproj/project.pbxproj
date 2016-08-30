@@ -23,7 +23,7 @@
 		8E0BD2BD6707B272AC6BB06E /* Pods_CumulusFBO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6AADB7493C4876FC5AA5D2 /* Pods_CumulusFBO.framework */; };
 		991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
 		9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
-		998F91681D6EAA7900F4B4EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 998F91671D6EAA7900F4B4EF /* GoogleService-Info.plist */; };
+		998F916B1D6EB1A800F4B4EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */; };
 		99D7550F1D600FD100714EC4 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99D7550E1D600FD100714EC4 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,7 @@
 		57CDA70D1D31F297005DD618 /* ReservationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationStore.swift; sourceTree = "<group>"; };
 		991B63621D67954200922085 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		9944486B1D6C25D3002F68F5 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
-		998F91671D6EAA7900F4B4EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99D7550E1D600FD100714EC4 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		DE6AADB7493C4876FC5AA5D2 /* Pods_CumulusFBO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CumulusFBO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,7 +117,7 @@
 		998F91691D6EAA8200F4B4EF /* Plist */ = {
 			isa = PBXGroup;
 			children = (
-				998F91671D6EAA7900F4B4EF /* GoogleService-Info.plist */,
+				998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */,
 				5734C8751CAB67820031B000 /* Info.plist */,
 				99D7550E1D600FD100714EC4 /* Keys.plist */,
 			);
@@ -207,7 +207,8 @@
 				5734C8741CAB67820031B000 /* LaunchScreen.storyboard in Resources */,
 				5734C8711CAB67820031B000 /* Assets.xcassets in Resources */,
 				5742FDEF1D42A19000CB0DDB /* Registration.storyboard in Resources */,
-				998F91681D6EAA7900F4B4EF /* GoogleService-Info.plist in Resources */,
+				998F916B1D6EB1A800F4B4EF /* GoogleService-Info.plist in Resources */,
+				5742FDEF1D42A19000CB0DDB /* Registration.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

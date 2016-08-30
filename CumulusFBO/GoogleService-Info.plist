@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>492858481152-n1lrb3ju4or8h0qqd6riffg0blm4u33o.apps.googleusercontent.com</string>
+	<string>351306697371-02go5pq2o21qajf05lr5bkit1gghh33s.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.492858481152-n1lrb3ju4or8h0qqd6riffg0blm4u33o</string>
+	<string>com.googleusercontent.apps.351306697371-02go5pq2o21qajf05lr5bkit1gghh33s</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA5Y1AlgawJuZiHUMk6Y3CWN25a6GDKw7g</string>
+	<string>AIzaSyCIMKHzEZZgL66AZYL_vRDLNfRZdfpEmto</string>
 	<key>GCM_SENDER_ID</key>
-	<string>492858481152</string>
+	<string>351306697371</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.danpatey.CumulusFBO</string>
 	<key>PROJECT_ID</key>
-	<string>cumulusfbo-75652</string>
+	<string>cumulusfbo-67ba9</string>
 	<key>STORAGE_BUCKET</key>
-	<string>cumulusfbo-75652.appspot.com</string>
+	<string>cumulusfbo-67ba9.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:492858481152:ios:853723bd22d1accf</string>
+	<string>1:351306697371:ios:853723bd22d1accf</string>
 	<key>DATABASE_URL</key>
-	<string>https://cumulusfbo-75652.firebaseio.com</string>
+	<string>https://cumulusfbo-67ba9.firebaseio.com</string>
 </dict>
 </plist>
