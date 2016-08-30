@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import Firebase
+import JSQMessagesViewController
 
-class ChatViewController: UIViewController {
+class ChatViewController: JSQMessagesViewController {
     
 }

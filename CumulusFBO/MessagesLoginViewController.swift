@@ -27,11 +27,11 @@ class MessagesLoginViewController: UIViewController {
         }
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        super.prepareForSegue(segue, sender: sender)
-//        let navigationViewController = segue.destinationViewController as! UINavigationController
-//        let chatViewController = navigationViewController.viewControllers.first as! ChatViewController
-//        chatViewController.senderId = "SomeUserId"
-//        chatViewController.senderDisplayName = "Some User"
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        let navigationViewController = segue.destinationViewController as! UINavigationController
+        let chatViewController = navigationViewController.viewControllers.first as! ChatViewController
+        chatViewController.senderId = "SomeUserId"
+        chatViewController.senderDisplayName = "Some User"
+    }
 }

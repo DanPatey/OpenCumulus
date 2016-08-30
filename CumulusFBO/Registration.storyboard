@@ -105,33 +105,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yil-my-umh">
-                                <rect key="frame" x="270" y="370" width="60" height="31"/>
+                                <rect key="frame" x="281" y="285" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginDidTouch:" destination="xNl-gg-rMZ" eventType="touchUpInside" id="JfJ-s3-TiI"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instant Message Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJQ-0L-PZh">
-                                <rect key="frame" x="214" y="96" width="172" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yil-my-umh" firstAttribute="top" secondItem="uWk-gr-cOe" secondAttribute="bottom" constant="350" id="7kf-jk-Yuh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yil-my-umh" secondAttribute="trailing" constant="250" id="DpU-jG-UI3"/>
                             <constraint firstItem="Etr-sd-wei" firstAttribute="top" secondItem="yil-my-umh" secondAttribute="bottom" constant="150" id="Hgi-6N-El0"/>
-                            <constraint firstItem="qJQ-0L-PZh" firstAttribute="centerX" secondItem="yil-my-umh" secondAttribute="centerX" id="Tzu-fd-sno"/>
-                            <constraint firstItem="qJQ-0L-PZh" firstAttribute="top" secondItem="uWk-gr-cOe" secondAttribute="bottom" constant="76" id="ujJ-st-TvO"/>
+                            <constraint firstItem="yil-my-umh" firstAttribute="centerY" secondItem="YTf-Nl-EtH" secondAttribute="centerY" id="ZHE-xV-ir1"/>
+                            <constraint firstItem="yil-my-umh" firstAttribute="centerX" secondItem="YTf-Nl-EtH" secondAttribute="centerX" id="qY8-62-jk9"/>
                             <constraint firstItem="yil-my-umh" firstAttribute="leading" secondItem="YTf-Nl-EtH" secondAttribute="leadingMargin" constant="250" id="v2d-49-0fw"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7kf-jk-Yuh"/>
+                                <exclude reference="DpU-jG-UI3"/>
+                                <exclude reference="v2d-49-0fw"/>
+                                <exclude reference="Hgi-6N-El0"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="b6Q-dQ-wkT" userLabel="Messages"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="Vxf-W2-Xz7" kind="presentation" id="YpY-JJ-1c8"/>
+                        <segue destination="Vxf-W2-Xz7" kind="presentation" identifier="LoginToChat" id="YpY-JJ-1c8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gW-aM-zqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
