@@ -21,6 +21,7 @@
 		57CDA70E1D31F297005DD618 /* ReservationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA70D1D31F297005DD618 /* ReservationStore.swift */; };
 		57EE9CA21D75201B00E1A57F /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5742FDEE1D42A19000CB0DDB /* Registration.storyboard */; };
 		57EE9CA41D75220400E1A57F /* MessagesLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EE9CA31D75220400E1A57F /* MessagesLoginViewController.swift */; };
+		57EE9CA61D75260200E1A57F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EE9CA51D75260200E1A57F /* ChatViewController.swift */; };
 		91CD89B85D4A4D5F99886820 /* Pods_CumulusFBO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411362B1E61BA4637CC091BE /* Pods_CumulusFBO.framework */; };
 		991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
 		9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
@@ -46,6 +47,7 @@
 		57CDA70B1D31EE1D005DD618 /* Reservation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reservation.swift; sourceTree = "<group>"; };
 		57CDA70D1D31F297005DD618 /* ReservationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReservationStore.swift; sourceTree = "<group>"; };
 		57EE9CA31D75220400E1A57F /* MessagesLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesLoginViewController.swift; sourceTree = "<group>"; };
+		57EE9CA51D75260200E1A57F /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		991B63621D67954200922085 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		9944486B1D6C25D3002F68F5 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				5734C8851CAB766A0031B000 /* SummaryViewController.swift */,
 				57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */,
 				57EE9CA31D75220400E1A57F /* MessagesLoginViewController.swift */,
+				57EE9CA51D75260200E1A57F /* ChatViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 				572828861CC44B470005A6EA /* RegistrationManager.swift in Sources */,
 				5734C8861CAB766A0031B000 /* SummaryViewController.swift in Sources */,
 				5734C86C1CAB67820031B000 /* RegistrationViewController.swift in Sources */,
+				57EE9CA61D75260200E1A57F /* ChatViewController.swift in Sources */,
 				5734C86A1CAB67820031B000 /* AppDelegate.swift in Sources */,
 				57CDA70C1D31EE1D005DD618 /* Reservation.swift in Sources */,
 				9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */,
