@@ -12,4 +12,9 @@ import JSQMessagesViewController
 
 class ChatViewController: JSQMessagesViewController {
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }
