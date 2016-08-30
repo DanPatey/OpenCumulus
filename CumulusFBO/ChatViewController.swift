@@ -20,6 +20,19 @@ class ChatViewController: JSQMessagesViewController {
     let rootRef = FIRDatabase.database().referenceFromURL("https://cumulusfbo-67ba9.firebaseio.com")
     var messageRef: FIRDatabaseReference!
     
+    // Attributes for if the user is typing
+    var usersTypingQuery: FIRDatabaseQuery!
+
+    var userIsTypingRef: FIRDatabaseReference!
+    private var localTyping = false
+    var isTyping: Bool {
+        get {
+            return localTyping
+        } set {
+            localTyping = newValue
+            userIsTypingRef.setValue(newValue)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ChatChat"
@@ -34,6 +47,7 @@ class ChatViewController: JSQMessagesViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         observeMessages()
+        observeTyping()
     }
     
     override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
@@ -43,6 +57,7 @@ class ChatViewController: JSQMessagesViewController {
         
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         finishSendingMessage()
+        isTyping = false
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
@@ -105,5 +120,29 @@ class ChatViewController: JSQMessagesViewController {
             self.addMessage(id, text: text)
             self.finishReceivingMessage()
         }
+    }
+    
+    // Indicator if the user is typing or not
+    override func textViewDidChange(textView: UITextView) {
+        super.textViewDidChange(textView)
+        // If text is not empty, the user is typing
+        isTyping = textView.text != ""
+    }
+    
+    // Create a reference to /typingIndicator and remove after user logs out
+    private func observeTyping() {
+        let typingIndicatorRef = rootRef.child("TypingIndicator")
+        userIsTypingRef = typingIndicatorRef.child(senderId)
+        userIsTypingRef.onDisconnectRemoveValue()
+        
+        usersTypingQuery = typingIndicatorRef.queryOrderedByValue().queryEqualToValue(true)
+        usersTypingQuery.observeEventType(.Value, withBlock: { snapshot in
+            // You're the only one typing
+            if snapshot.childrenCount == 1 && self.isTyping { return }
+            
+            // Are there others typing?
+            self.showTypingIndicator = snapshot.childrenCount > 0
+            self.scrollToBottomAnimated(true)
+        })
     }
 }
