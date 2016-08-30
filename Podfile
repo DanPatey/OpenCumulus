@@ -5,8 +5,8 @@
 
 target 'CumulusFBO' do
 pod 'Firebase'
-pod 'Firebase/Core'
-pod 'Firebase/Messaging'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
 pod 'JSQMessagesViewController'
 end
 
