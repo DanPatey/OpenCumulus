@@ -7,18 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class MessagesLoginViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func loginDidTouch(sender: AnyObject) {
-        ref.signInAnonymouslyWithCompletion { (users, error) in
+        FIRAuth.auth()?.signInAnonymouslyWithCompletion {( user, error) in
             if error != nil { print(error!.description); return }
-        
-        print(self.ref.currentUser?.displayName)
         self.performSegueWithIdentifier("LoginToChat", sender: self)
         }
     }
