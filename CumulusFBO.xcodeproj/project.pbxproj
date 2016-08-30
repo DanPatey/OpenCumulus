@@ -20,7 +20,7 @@
 		57CDA70A1D31EDF0005DD618 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */; };
 		57CDA70C1D31EE1D005DD618 /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA70B1D31EE1D005DD618 /* Reservation.swift */; };
 		57CDA70E1D31F297005DD618 /* ReservationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA70D1D31F297005DD618 /* ReservationStore.swift */; };
-		8E0BD2BD6707B272AC6BB06E /* Pods_CumulusFBO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6AADB7493C4876FC5AA5D2 /* Pods_CumulusFBO.framework */; };
+		91CD89B85D4A4D5F99886820 /* Pods_CumulusFBO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411362B1E61BA4637CC091BE /* Pods_CumulusFBO.framework */; };
 		991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
 		9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
 		998F916B1D6EB1A800F4B4EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */; };
@@ -28,8 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		212FC73A713850BD413DFF2E /* Pods-CumulusFBO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.debug.xcconfig"; sourceTree = "<group>"; };
-		3C842A7000A9CE341A943F5F /* Pods-CumulusFBO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.release.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.release.xcconfig"; sourceTree = "<group>"; };
+		411362B1E61BA4637CC091BE /* Pods_CumulusFBO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CumulusFBO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		572828831CC43F170005A6EA /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegistrationModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		572828851CC44B470005A6EA /* RegistrationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationManager.swift; sourceTree = "<group>"; };
 		5734C8661CAB67820031B000 /* CumulusFBO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CumulusFBO.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,7 +48,8 @@
 		9944486B1D6C25D3002F68F5 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99D7550E1D600FD100714EC4 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
-		DE6AADB7493C4876FC5AA5D2 /* Pods_CumulusFBO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CumulusFBO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE457445BE6BF3D90677A3E /* Pods-CumulusFBO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.release.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.release.xcconfig"; sourceTree = "<group>"; };
+		E26A9082861F5B45E1ED21E5 /* Pods-CumulusFBO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E0BD2BD6707B272AC6BB06E /* Pods_CumulusFBO.framework in Frameworks */,
+				91CD89B85D4A4D5F99886820 /* Pods_CumulusFBO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,8 +69,8 @@
 			children = (
 				5734C8681CAB67820031B000 /* CumlusFBO */,
 				5734C8671CAB67820031B000 /* Products */,
-				BEE2E59C7BD8F2D401AA9CF2 /* Pods */,
-				EBDC294B2B1618D9B1A05B65 /* Frameworks */,
+				7B083106E6F3A85DD6E69866 /* Pods */,
+				7D43CF5E55CCD8512A142461 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +102,23 @@
 			path = CumulusFBO;
 			sourceTree = "<group>";
 		};
+		7B083106E6F3A85DD6E69866 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E26A9082861F5B45E1ED21E5 /* Pods-CumulusFBO.debug.xcconfig */,
+				ACE457445BE6BF3D90677A3E /* Pods-CumulusFBO.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D43CF5E55CCD8512A142461 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				411362B1E61BA4637CC091BE /* Pods_CumulusFBO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		997AC12D1D61F80D008FA2A5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,23 +141,6 @@
 			name = Plist;
 			sourceTree = "<group>";
 		};
-		BEE2E59C7BD8F2D401AA9CF2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				212FC73A713850BD413DFF2E /* Pods-CumulusFBO.debug.xcconfig */,
-				3C842A7000A9CE341A943F5F /* Pods-CumulusFBO.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		EBDC294B2B1618D9B1A05B65 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DE6AADB7493C4876FC5AA5D2 /* Pods_CumulusFBO.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,12 +148,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5734C8781CAB67820031B000 /* Build configuration list for PBXNativeTarget "CumulusFBO" */;
 			buildPhases = (
-				CE0387AA02DB20035400B00C /* Check Pods Manifest.lock */,
+				A9D6D32B775CD665D3C64C4A /* [CP] Check Pods Manifest.lock */,
 				5734C8621CAB67820031B000 /* Sources */,
 				5734C8631CAB67820031B000 /* Frameworks */,
 				5734C8641CAB67820031B000 /* Resources */,
-				7FD8992A8A2CDDC12661D776 /* Embed Pods Frameworks */,
-				EE2FC1BD3417156BDBA66717 /* Copy Pods Resources */,
+				D61D72BAA84E6AB86D511073 /* [CP] Embed Pods Frameworks */,
+				F22B407C4B1FF55E7DB27628 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,29 +215,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7FD8992A8A2CDDC12661D776 /* Embed Pods Frameworks */ = {
+		A9D6D32B775CD665D3C64C4A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CE0387AA02DB20035400B00C /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,14 +230,29 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EE2FC1BD3417156BDBA66717 /* Copy Pods Resources */ = {
+		D61D72BAA84E6AB86D511073 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F22B407C4B1FF55E7DB27628 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,7 +383,7 @@
 		};
 		5734C8791CAB67820031B000 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 212FC73A713850BD413DFF2E /* Pods-CumulusFBO.debug.xcconfig */;
+			baseConfigurationReference = E26A9082861F5B45E1ED21E5 /* Pods-CumulusFBO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CumulusFBO/Info.plist;
@@ -395,7 +395,7 @@
 		};
 		5734C87A1CAB67820031B000 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C842A7000A9CE341A943F5F /* Pods-CumulusFBO.release.xcconfig */;
+			baseConfigurationReference = ACE457445BE6BF3D90677A3E /* Pods-CumulusFBO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CumulusFBO/Info.plist;
