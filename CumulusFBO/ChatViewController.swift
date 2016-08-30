@@ -17,6 +17,9 @@ class ChatViewController: JSQMessagesViewController {
     var outgoingBubbleImageView: JSQMessagesBubbleImage!
     var incomingBubbleImageView: JSQMessagesBubbleImage!
     
+    let rootRef = FIRDatabase.database().referenceFromURL("https://cumulusfbo-67ba9.firebaseio.com")
+    var messageRef: FIRDatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ChatChat"
@@ -24,6 +27,8 @@ class ChatViewController: JSQMessagesViewController {
         // Remove avatars
         collectionView!.collectionViewLayout.incomingAvatarViewSize = CGSizeZero
         collectionView!.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero
+        // Initalize messageRef
+        messageRef = rootRef.child("messages")
     }
     
     override func viewWillAppear(animated: Bool) {
