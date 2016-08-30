@@ -31,15 +31,18 @@ class ChatViewController: JSQMessagesViewController {
         messageRef = rootRef.child("messages")
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        // messages from someone else
-        addMessage("foo", text: "Hey Person")
-        // messages sent from local sender
-        addMessage(senderId, text: "Yo")
-        addMessage(senderId, text: "I like turtles!")
-        // animates the receiving of a new message on the view
-        finishReceivingMessage()
+        observeMessages()
+    }
+    
+    override func didPressSendButton(button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: NSDate!) {
+        let itemRef = messageRef.childByAutoId()
+        let messageItem = ["text": text, "senderId": senderId]
+        itemRef.setValue(messageItem)
+        
+        JSQSystemSoundPlayer.jsq_playMessageSentSound()
+        finishSendingMessage()
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageData! {
@@ -50,12 +53,14 @@ class ChatViewController: JSQMessagesViewController {
         return messages.count
     }
     
+    // Set bubble attributes
     private func setupBubbles() {
         let factory = JSQMessagesBubbleImageFactory()
         outgoingBubbleImageView = factory.outgoingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleBlueColor())
         incomingBubbleImageView = factory.incomingMessagesBubbleImageWithColor(UIColor.jsq_messageBubbleLightGrayColor())
     }
     
+    // Determine the attribute of the bubble based on where it's coming from
     override func collectionView(collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageBubbleImageDataSource! {
         let message = messages[indexPath.item]
         if message.senderId == senderId {
@@ -65,6 +70,7 @@ class ChatViewController: JSQMessagesViewController {
         }
     }
     
+    // Set local bubble attributes
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = super.collectionView(collectionView, cellForItemAtIndexPath: indexPath) as! JSQMessagesCollectionViewCell
         
@@ -79,6 +85,7 @@ class ChatViewController: JSQMessagesViewController {
         return cell
     }
     
+    // Remove avatars
     override func collectionView(collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAtIndexPath indexPath: NSIndexPath!) -> JSQMessageAvatarImageDataSource! {
         return nil
     }
@@ -86,5 +93,17 @@ class ChatViewController: JSQMessagesViewController {
     func addMessage(id: String, text: String) {
         let message = JSQMessage(senderId: id, displayName: "", text: text)
         messages.append(message)
+    }
+    
+    // Query the DB to display the last twenty five messages
+    private func observeMessages() {
+        let messagesQuery = messageRef.queryLimitedToLast(25)
+        messagesQuery.observeEventType(.ChildAdded) { (snapshot: FIRDataSnapshot!) in
+            let id = snapshot.value!["senderId"] as! String
+            let text = snapshot.value!["text"] as! String
+            
+            self.addMessage(id, text: text)
+            self.finishReceivingMessage()
+        }
     }
 }
