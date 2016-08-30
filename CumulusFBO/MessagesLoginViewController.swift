@@ -7,15 +7,11 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class MessagesLoginViewController: UIViewController {
     
-    var ref: FIRAuth!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = FIRAuth.auth()
     }
     
     @IBAction func loginDidTouch(sender: AnyObject) {
