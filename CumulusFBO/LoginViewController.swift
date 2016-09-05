@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loginButton.layer.opacity = 0.80
+        loginButton.titleLabel?.textColor = UIColor.whiteColor()
         startButton.layer.opacity = 0.80
         startButton.titleLabel?.textColor = UIColor.whiteColor()
         
