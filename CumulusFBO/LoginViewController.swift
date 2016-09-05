@@ -16,8 +16,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startButton.layer.cornerRadius = 2.0
-        startButton.layer.backgroundColor = UIColor.whiteColor().CGColor
+        
+        startButton.layer.opacity = 0.80
+        startButton.titleLabel?.textColor = UIColor.whiteColor()
         
     }
 }
