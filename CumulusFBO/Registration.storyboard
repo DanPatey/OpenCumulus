@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hmf-vr-zFc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Adc-xn-Lvp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -1573,6 +1574,69 @@
             </objects>
             <point key="canvasLocation" x="3733.5" y="-416"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="wcW-Oo-K4o">
+            <objects>
+                <viewController id="Adc-xn-Lvp" customClass="LoginViewController" customModule="CumulusFBO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5bm-Lc-7hD"/>
+                        <viewControllerLayoutGuide type="bottom" id="oDY-s9-bvl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFill" id="L1a-dZ-B9I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroungImage" translatesAutoresizingMaskIntoConstraints="NO" id="UF1-zB-OYA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYO-Xe-Q4h">
+                                <rect key="frame" x="82" y="520" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RYO-Xe-Q4h" secondAttribute="height" multiplier="23:15" id="Tax-g8-wOo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-Ch-92v">
+                                <rect key="frame" x="474" y="520" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Keu-Ch-92v" secondAttribute="height" multiplier="23:15" id="O52-34-WVf"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH AND GO WITH FBO’S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPa-HP-vAU">
+                                <rect key="frame" x="184" y="109" width="233" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="233" id="K1M-Pa-XIn"/>
+                                    <constraint firstAttribute="width" secondItem="UPa-HP-vAU" secondAttribute="height" multiplier="233:21" id="LsQ-84-ig8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Keu-Ch-92v" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="500" id="HyT-qM-aqP"/>
+                            <constraint firstItem="UPa-HP-vAU" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="89" id="KHs-cy-VDd"/>
+                            <constraint firstItem="RYO-Xe-Q4h" firstAttribute="baseline" secondItem="Keu-Ch-92v" secondAttribute="baseline" id="KPc-7Q-YMg"/>
+                            <constraint firstItem="UPa-HP-vAU" firstAttribute="centerX" secondItem="UF1-zB-OYA" secondAttribute="centerX" id="N1G-yZ-Jar"/>
+                            <constraint firstItem="UPa-HP-vAU" firstAttribute="centerX" secondItem="L1a-dZ-B9I" secondAttribute="centerX" id="NBa-da-4Ni"/>
+                            <constraint firstItem="UF1-zB-OYA" firstAttribute="bottom" secondItem="oDY-s9-bvl" secondAttribute="top" id="PvO-vQ-qrw"/>
+                            <constraint firstItem="UF1-zB-OYA" firstAttribute="leading" secondItem="L1a-dZ-B9I" secondAttribute="leading" id="eGM-gu-8TA"/>
+                            <constraint firstItem="RYO-Xe-Q4h" firstAttribute="leading" secondItem="L1a-dZ-B9I" secondAttribute="leadingMargin" constant="62" id="uXS-nT-2un"/>
+                            <constraint firstItem="UF1-zB-OYA" firstAttribute="top" secondItem="L1a-dZ-B9I" secondAttribute="top" id="v6n-bN-h9q"/>
+                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="UF1-zB-OYA" secondAttribute="trailing" constant="-126" id="ypZ-Pz-dLC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="Keu-Ch-92v" id="oxE-Hs-KNY"/>
+                        <outlet property="startButton" destination="RYO-Xe-Q4h" id="Qgr-bl-r0d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F0M-0f-5Q7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1054" y="-100"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sTN-oi-jXf">
             <objects>
@@ -1631,6 +1695,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BackgroungImage" width="375" height="662"/>
         <image name="Logo" width="333" height="52"/>
     </resources>
     <inferredMetricsTieBreakers>

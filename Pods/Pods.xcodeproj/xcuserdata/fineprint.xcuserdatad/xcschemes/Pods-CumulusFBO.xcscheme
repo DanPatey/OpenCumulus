@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1A4FDA7A0C5376B871B3285C'
+               BlueprintIdentifier = '13D5D4660EC7B7980A5FE62D'
                BlueprintName = 'Pods-CumulusFBO'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_CumulusFBO.framework'>
