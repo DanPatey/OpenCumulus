@@ -27,6 +27,8 @@
 		9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
 		99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* LoginViewController.swift */; };
 		998F916B1D6EB1A800F4B4EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */; };
+		99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */; };
+		99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */; };
 		99D7550F1D600FD100714EC4 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99D7550E1D600FD100714EC4 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		9944486B1D6C25D3002F68F5 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceCell.swift; path = CumulusFBO/ServiceCell.swift; sourceTree = "<group>"; };
 		99694BE71D7D238D007FACBF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBOSelectorViewController.swift; sourceTree = "<group>"; };
+		99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FboSelectorCell.swift; sourceTree = "<group>"; };
 		99D7550E1D600FD100714EC4 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		ACE457445BE6BF3D90677A3E /* Pods-CumulusFBO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.release.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.release.xcconfig"; sourceTree = "<group>"; };
 		E26A9082861F5B45E1ED21E5 /* Pods-CumulusFBO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,7 +97,8 @@
 			children = (
 				5734C8691CAB67820031B000 /* AppDelegate.swift */,
 				997AC12D1D61F80D008FA2A5 /* ViewControllers */,
-				57EE9CA71D7527D200E1A57F /* ModelsAndControllers */,
+				99B30CAA1D7F243300A1736C /* Views */,
+				57EE9CA71D7527D200E1A57F /* Models */,
 				57EE9CA81D7527E700E1A57F /* Layouts */,
 				998F91691D6EAA8200F4B4EF /* Plist */,
 			);
@@ -101,17 +106,15 @@
 			path = CumulusFBO;
 			sourceTree = "<group>";
 		};
-		57EE9CA71D7527D200E1A57F /* ModelsAndControllers */ = {
+		57EE9CA71D7527D200E1A57F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				572828831CC43F170005A6EA /* RegistrationModel.swift */,
 				572828851CC44B470005A6EA /* RegistrationManager.swift */,
 				57CDA70D1D31F297005DD618 /* ReservationStore.swift */,
 				57CDA70B1D31EE1D005DD618 /* Reservation.swift */,
-				5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */,
-				9944486B1D6C25D3002F68F5 /* ServiceCell.swift */,
 			);
-			name = ModelsAndControllers;
+			name = Models;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -151,6 +154,7 @@
 				991B63621D67954200922085 /* ServicesTableViewController.swift */,
 				5734C8851CAB766A0031B000 /* SummaryViewController.swift */,
 				57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */,
+				99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */,
 				99694BE71D7D238D007FACBF /* LoginViewController.swift */,
 				57EE9CA31D75220400E1A57F /* MessagesLoginViewController.swift */,
 				57EE9CA51D75260200E1A57F /* ChatViewController.swift */,
@@ -166,6 +170,17 @@
 				99D7550E1D600FD100714EC4 /* Keys.plist */,
 			);
 			name = Plist;
+			sourceTree = "<group>";
+		};
+		99B30CAA1D7F243300A1736C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */,
+				5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */,
+				9944486B1D6C25D3002F68F5 /* ServiceCell.swift */,
+			);
+			name = Views;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,9 +325,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				57CDA70E1D31F297005DD618 /* ReservationStore.swift in Sources */,
+				99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */,
 				991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */,
 				572828841CC43F170005A6EA /* RegistrationModel.swift in Sources */,
 				99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */,
+				99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */,
 				57CDA7081D31BACE005DD618 /* FlightInformationViewController.swift in Sources */,
 				5784646D1D35DF4B00E5E6BF /* ReservationCell.swift in Sources */,
 				57EE9CA41D75220400E1A57F /* MessagesLoginViewController.swift in Sources */,
