@@ -59,6 +59,7 @@
 		411362B1E61BA4637CC091BE /* Pods_CumulusFBO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CumulusFBO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57171B3D1D7FBFE200F2C7FA /* CumulusFBO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CumulusFBO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57171B3E1D7FBFE200F2C7FA /* CumulusFBO.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = CumulusFBO.plist; path = /Users/danpatey/Documents/Code/CumulusFBO/CumulusFBO.plist; sourceTree = "<absolute>"; };
+		57171B3F1D7FC15900F2C7FA /* FBOGo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FBOGo.entitlements; sourceTree = "<group>"; };
 		572828831CC43F170005A6EA /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = RegistrationModel.swift; path = CumulusFBO/RegistrationModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		572828851CC44B470005A6EA /* RegistrationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationManager.swift; path = CumulusFBO/RegistrationManager.swift; sourceTree = "<group>"; };
 		5734C8661CAB67820031B000 /* FBOGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBOGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +111,7 @@
 		5734C85D1CAB67820031B000 = {
 			isa = PBXGroup;
 			children = (
+				57171B3F1D7FC15900F2C7FA /* FBOGo.entitlements */,
 				5734C8681CAB67820031B000 /* CumlusFBO */,
 				5734C8671CAB67820031B000 /* Products */,
 				7B083106E6F3A85DD6E69866 /* Pods */,
@@ -287,6 +289,9 @@
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
 							};
 						};
 					};
@@ -639,6 +644,7 @@
 			baseConfigurationReference = E26A9082861F5B45E1ED21E5 /* Pods-CumulusFBO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FBOGo.entitlements;
 				INFOPLIST_FILE = "$(SRCROOT)/CumulusFBO/FBOGo.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danpatey.FBOGo;
@@ -651,6 +657,7 @@
 			baseConfigurationReference = ACE457445BE6BF3D90677A3E /* Pods-CumulusFBO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FBOGo.entitlements;
 				INFOPLIST_FILE = "$(SRCROOT)/CumulusFBO/FBOGo.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danpatey.FBOGo;

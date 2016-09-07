@@ -1714,16 +1714,9 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Beach, California, USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zh7-aq-7zZ">
-                                <rect key="frame" x="207" y="65" width="373" height="31"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONG BEACH / Daugherty Field KLGB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlL-Zj-FZ8">
-                                <rect key="frame" x="207" y="104" width="373" height="21"/>
+                                <rect key="frame" x="207" y="65" width="373" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="373" id="uc1-tz-yQp"/>
-                                    <constraint firstAttribute="height" constant="21" id="x2c-Hr-tBB"/>
+                                    <constraint firstAttribute="height" constant="35" id="w2u-YZ-BmO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1811,19 +1804,43 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONG BEACH / Daugherty Field KLGB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlL-Zj-FZ8">
+                                <rect key="frame" x="204" y="109" width="300" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="NXW-6Q-70F"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="eYf-Sh-mIx"/>
+                                    <constraint firstAttribute="height" constant="20" id="f0R-wx-Vo3"/>
+                                    <constraint firstAttribute="width" constant="373" id="uc1-tz-yQp"/>
+                                    <constraint firstAttribute="width" constant="300" id="wr0-HM-ZL5"/>
+                                    <constraint firstAttribute="height" constant="21" id="x2c-Hr-tBB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="NXW-6Q-70F"/>
+                                        <exclude reference="eYf-Sh-mIx"/>
+                                        <exclude reference="uc1-tz-yQp"/>
+                                        <exclude reference="x2c-Hr-tBB"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3JQ-Dx-CaV" firstAttribute="top" secondItem="pkE-VL-EOS" secondAttribute="bottom" constant="10" id="7TH-7J-sJy"/>
                             <constraint firstItem="rlL-Zj-FZ8" firstAttribute="top" secondItem="f68-iA-qmL" secondAttribute="bottom" constant="84" id="Ddm-BZ-0Tt"/>
-                            <constraint firstItem="rlL-Zj-FZ8" firstAttribute="leading" secondItem="d4e-Iw-hld" secondAttribute="trailing" constant="8" id="ELK-2c-UOe"/>
+                            <constraint firstItem="rlL-Zj-FZ8" firstAttribute="leading" secondItem="d4e-Iw-hld" secondAttribute="trailing" id="ELK-2c-UOe"/>
                             <constraint firstItem="Zh7-aq-7zZ" firstAttribute="top" secondItem="3JQ-Dx-CaV" secondAttribute="bottom" constant="5" id="HMB-9D-W8a"/>
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="top" secondItem="f68-iA-qmL" secondAttribute="bottom" constant="259" id="Hj6-Wg-UT9"/>
                             <constraint firstItem="3JQ-Dx-CaV" firstAttribute="leading" secondItem="M6e-sE-uTc" secondAttribute="leadingMargin" id="IAd-S8-MEg"/>
+                            <constraint firstItem="RnX-Zz-JkN" firstAttribute="top" secondItem="rlL-Zj-FZ8" secondAttribute="bottom" constant="150" id="LhV-p8-8Nl"/>
                             <constraint firstItem="rlL-Zj-FZ8" firstAttribute="top" secondItem="Zh7-aq-7zZ" secondAttribute="bottom" constant="8" id="NtG-yH-Qyc"/>
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="top" secondItem="d4e-Iw-hld" secondAttribute="bottom" constant="43" id="O8c-4c-pkJ"/>
                             <constraint firstItem="pkE-VL-EOS" firstAttribute="trailing" secondItem="M6e-sE-uTc" secondAttribute="trailingMargin" id="PRT-yo-C20"/>
                             <constraint firstItem="pkE-VL-EOS" firstAttribute="leading" secondItem="M6e-sE-uTc" secondAttribute="leadingMargin" id="Pti-Na-76h"/>
+                            <constraint firstItem="rlL-Zj-FZ8" firstAttribute="leading" secondItem="d4e-Iw-hld" secondAttribute="trailing" constant="5" id="Rch-9M-UIG"/>
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="width" secondItem="M6e-sE-uTc" secondAttribute="height" multiplier="14:15" id="T4O-XV-ga2"/>
                             <constraint firstItem="pkE-VL-EOS" firstAttribute="top" secondItem="M6e-sE-uTc" secondAttribute="topMargin" constant="5" id="U2M-I8-OrA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlL-Zj-FZ8" secondAttribute="trailing" id="YhB-Qc-ZKs"/>
@@ -1832,12 +1849,18 @@
                             <constraint firstItem="3JQ-Dx-CaV" firstAttribute="top" secondItem="pkE-VL-EOS" secondAttribute="bottom" constant="5" id="ef6-Vm-nRe"/>
                             <constraint firstItem="pkE-VL-EOS" firstAttribute="leading" secondItem="M6e-sE-uTc" secondAttribute="leadingMargin" id="hD0-f4-Zh7"/>
                             <constraint firstAttribute="leadingMargin" secondItem="RnX-Zz-JkN" secondAttribute="leading" id="iKx-fC-yZX"/>
+                            <constraint firstItem="rlL-Zj-FZ8" firstAttribute="top" secondItem="Zh7-aq-7zZ" secondAttribute="bottom" constant="10" id="mLk-ig-suR"/>
                             <constraint firstAttribute="leadingMargin" secondItem="d4e-Iw-hld" secondAttribute="leading" id="qta-I8-tEF"/>
                             <constraint firstItem="Zh7-aq-7zZ" firstAttribute="leading" secondItem="d4e-Iw-hld" secondAttribute="trailing" constant="8" id="x89-68-oMt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="7TH-7J-sJy"/>
+                                <exclude reference="Ddm-BZ-0Tt"/>
+                                <exclude reference="ELK-2c-UOe"/>
+                                <exclude reference="NtG-yH-Qyc"/>
+                                <exclude reference="YhB-Qc-ZKs"/>
+                                <exclude reference="mLk-ig-suR"/>
                             </mask>
                         </variation>
                     </view>
