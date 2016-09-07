@@ -211,7 +211,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
                 RegistrationsManager.sharedManager.activeReservation.arrivalTime = arrivalTime.text
                 RegistrationsManager.sharedManager.activeReservation.departureTime = departureTime.text
         } else {
-            let alert = UIAlertController(title: "", message: "Thanks", preferredStyle: .Alert)
+            let alert = UIAlertController(title: "", message: "You Must Fill In All Required Information", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler: nil))
             // Present the AlertController
             presentViewController(alert, animated: true, completion: nil)
