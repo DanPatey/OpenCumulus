@@ -1687,13 +1687,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3JQ-Dx-CaV">
-                                <rect key="frame" x="20" y="37" width="372" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3JQ-Dx-CaV">
+                                <rect key="frame" x="20" y="30" width="370" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="370" id="18J-fa-uMe"/>
+                                    <constraint firstAttribute="height" constant="30" id="zdD-ar-gkL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Where are you flying?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkE-VL-EOS">
-                                <rect key="frame" x="20" y="8" width="560" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where are you flying?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkE-VL-EOS">
+                                <rect key="frame" x="20" y="5" width="560" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="MTe-ag-ZUT"/>
+                                    <constraint firstAttribute="width" constant="560" id="ZfZ-UN-KnW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1706,7 +1714,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Beach, California, USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zh7-aq-7zZ">
-                                <rect key="frame" x="207" y="75" width="373" height="21"/>
+                                <rect key="frame" x="207" y="65" width="373" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1806,20 +1814,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3JQ-Dx-CaV" firstAttribute="top" secondItem="pkE-VL-EOS" secondAttribute="bottom" constant="10" id="7TH-7J-sJy"/>
                             <constraint firstItem="rlL-Zj-FZ8" firstAttribute="top" secondItem="f68-iA-qmL" secondAttribute="bottom" constant="84" id="Ddm-BZ-0Tt"/>
                             <constraint firstItem="rlL-Zj-FZ8" firstAttribute="leading" secondItem="d4e-Iw-hld" secondAttribute="trailing" constant="8" id="ELK-2c-UOe"/>
+                            <constraint firstItem="Zh7-aq-7zZ" firstAttribute="top" secondItem="3JQ-Dx-CaV" secondAttribute="bottom" constant="5" id="HMB-9D-W8a"/>
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="top" secondItem="f68-iA-qmL" secondAttribute="bottom" constant="259" id="Hj6-Wg-UT9"/>
+                            <constraint firstItem="3JQ-Dx-CaV" firstAttribute="leading" secondItem="M6e-sE-uTc" secondAttribute="leadingMargin" id="IAd-S8-MEg"/>
                             <constraint firstItem="rlL-Zj-FZ8" firstAttribute="top" secondItem="Zh7-aq-7zZ" secondAttribute="bottom" constant="8" id="NtG-yH-Qyc"/>
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="top" secondItem="d4e-Iw-hld" secondAttribute="bottom" constant="43" id="O8c-4c-pkJ"/>
+                            <constraint firstItem="pkE-VL-EOS" firstAttribute="trailing" secondItem="M6e-sE-uTc" secondAttribute="trailingMargin" id="PRT-yo-C20"/>
+                            <constraint firstItem="pkE-VL-EOS" firstAttribute="leading" secondItem="M6e-sE-uTc" secondAttribute="leadingMargin" id="Pti-Na-76h"/>
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="width" secondItem="M6e-sE-uTc" secondAttribute="height" multiplier="14:15" id="T4O-XV-ga2"/>
+                            <constraint firstItem="pkE-VL-EOS" firstAttribute="top" secondItem="M6e-sE-uTc" secondAttribute="topMargin" constant="5" id="U2M-I8-OrA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlL-Zj-FZ8" secondAttribute="trailing" id="YhB-Qc-ZKs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zh7-aq-7zZ" secondAttribute="trailing" id="acS-mA-jRp"/>
                             <constraint firstItem="pkE-VL-EOS" firstAttribute="trailing" secondItem="M6e-sE-uTc" secondAttribute="trailingMargin" id="ef5-mF-uSl"/>
+                            <constraint firstItem="3JQ-Dx-CaV" firstAttribute="top" secondItem="pkE-VL-EOS" secondAttribute="bottom" constant="5" id="ef6-Vm-nRe"/>
                             <constraint firstItem="pkE-VL-EOS" firstAttribute="leading" secondItem="M6e-sE-uTc" secondAttribute="leadingMargin" id="hD0-f4-Zh7"/>
                             <constraint firstAttribute="leadingMargin" secondItem="RnX-Zz-JkN" secondAttribute="leading" id="iKx-fC-yZX"/>
                             <constraint firstAttribute="leadingMargin" secondItem="d4e-Iw-hld" secondAttribute="leading" id="qta-I8-tEF"/>
                             <constraint firstItem="Zh7-aq-7zZ" firstAttribute="leading" secondItem="d4e-Iw-hld" secondAttribute="trailing" constant="8" id="x89-68-oMt"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7TH-7J-sJy"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="fboCollectionView" destination="RnX-Zz-JkN" id="OuN-Vn-Rfo"/>
