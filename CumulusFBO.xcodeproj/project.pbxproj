@@ -26,6 +26,7 @@
 		991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
 		9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
 		99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* LoginViewController.swift */; };
+		998D146B1D802AD5008FCEBD /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998D146A1D802AD5008FCEBD /* AutoCompleteTextField.swift */; };
 		998F916B1D6EB1A800F4B4EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */; };
 		99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */; };
 		99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */; };
@@ -54,6 +55,7 @@
 		991B63621D67954200922085 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		9944486B1D6C25D3002F68F5 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceCell.swift; path = CumulusFBO/ServiceCell.swift; sourceTree = "<group>"; };
 		99694BE71D7D238D007FACBF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		998D146A1D802AD5008FCEBD /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
 		998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBOSelectorViewController.swift; sourceTree = "<group>"; };
 		99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FboSelectorCell.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		57EE9CA71D7527D200E1A57F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				998D146A1D802AD5008FCEBD /* AutoCompleteTextField.swift */,
 				572828831CC43F170005A6EA /* RegistrationModel.swift */,
 				572828851CC44B470005A6EA /* RegistrationManager.swift */,
 				57CDA70D1D31F297005DD618 /* ReservationStore.swift */,
@@ -327,6 +330,7 @@
 				57CDA70E1D31F297005DD618 /* ReservationStore.swift in Sources */,
 				99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */,
 				991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */,
+				998D146B1D802AD5008FCEBD /* AutoCompleteTextField.swift in Sources */,
 				572828841CC43F170005A6EA /* RegistrationModel.swift in Sources */,
 				99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */,
 				99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */,

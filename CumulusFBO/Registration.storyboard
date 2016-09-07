@@ -1589,7 +1589,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroungImage" translatesAutoresizingMaskIntoConstraints="NO" id="UF1-zB-OYA">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TOUCH AND GO WITH FBO’S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPa-HP-vAU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH AND GO WITH FBO’S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPa-HP-vAU">
                                 <rect key="frame" x="184" y="187" width="233" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="233" id="K1M-Pa-XIn"/>
@@ -1599,7 +1599,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Enjoy seamless communication with your flight destination." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCT-qs-qYV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy seamless communication with your flight destination." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCT-qs-qYV">
                                 <rect key="frame" x="180" y="226" width="241" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FCT-qs-qYV" secondAttribute="height" multiplier="241:49" id="0OK-eS-e9J"/>
@@ -1608,7 +1608,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CumulusLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jNl-cf-oiH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CumulusLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jNl-cf-oiH">
                                 <rect key="frame" x="152" y="84" width="297" height="86"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jNl-cf-oiH" secondAttribute="height" multiplier="297:86" id="CIa-VJ-IM2"/>
@@ -1647,7 +1647,7 @@
                             <constraint firstItem="UF1-zB-OYA" firstAttribute="top" secondItem="FCT-qs-qYV" secondAttribute="bottom" constant="-275" id="5Os-oa-5rO"/>
                             <constraint firstItem="FCT-qs-qYV" firstAttribute="top" secondItem="UPa-HP-vAU" secondAttribute="bottom" constant="18" id="9jw-SV-3Nl"/>
                             <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="UF1-zB-OYA" secondAttribute="trailing" constant="-188" id="Cec-K1-WVs"/>
-                            <constraint firstItem="UPa-HP-vAU" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="167" id="KHs-cy-VDd"/>
+                            <constraint firstItem="UPa-HP-vAU" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="123" id="KHs-cy-VDd"/>
                             <constraint firstItem="RYO-Xe-Q4h" firstAttribute="top" secondItem="UF1-zB-OYA" secondAttribute="bottom" constant="-106" id="Ksd-Oe-gFk"/>
                             <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="224" id="MqV-MK-0tr"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="centerX" secondItem="UF1-zB-OYA" secondAttribute="centerX" id="N1G-yZ-Jar"/>
@@ -1656,7 +1656,7 @@
                             <constraint firstItem="UF1-zB-OYA" firstAttribute="bottom" secondItem="oDY-s9-bvl" secondAttribute="top" id="PvO-vQ-qrw"/>
                             <constraint firstItem="Keu-Ch-92v" firstAttribute="top" secondItem="UF1-zB-OYA" secondAttribute="bottom" constant="-106" id="Xtd-xv-h4C"/>
                             <constraint firstItem="UF1-zB-OYA" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="-188" id="dhd-uf-Dbs"/>
-                            <constraint firstItem="jNl-cf-oiH" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="64" id="dxl-WB-Pox"/>
+                            <constraint firstItem="jNl-cf-oiH" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="20" id="dxl-WB-Pox"/>
                             <constraint firstItem="UF1-zB-OYA" firstAttribute="leading" secondItem="L1a-dZ-B9I" secondAttribute="leading" id="eGM-gu-8TA"/>
                             <constraint firstItem="FCT-qs-qYV" firstAttribute="centerX" secondItem="UF1-zB-OYA" secondAttribute="centerX" id="gEc-7i-0Fi"/>
                             <constraint firstItem="jNl-cf-oiH" firstAttribute="centerX" secondItem="UPa-HP-vAU" secondAttribute="centerX" id="tYr-4R-0aD"/>
@@ -1838,6 +1838,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="destinationTextField" destination="3JQ-Dx-CaV" id="HEB-jQ-TSX"/>
                         <outlet property="fboCollectionView" destination="RnX-Zz-JkN" id="OuN-Vn-Rfo"/>
                     </connections>
                 </viewController>

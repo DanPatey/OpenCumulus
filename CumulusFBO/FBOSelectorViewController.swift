@@ -8,17 +8,21 @@
 
 import UIKit
 
-class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var fboCollectionView: UICollectionView!
+    @IBOutlet weak var destinationTextField: AutoCompleteTextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBarHidden = false
         self.navigationItem.titleView = UIImageView(image: UIImage(named: "Cumulus"))
+        
         fboCollectionView.delegate = self
         fboCollectionView.dataSource = self
+        destinationTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,6 +46,14 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         return cell
     }
     
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        return true
+    }
  
     
     /*
