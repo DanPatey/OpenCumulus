@@ -15,13 +15,14 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBarHidden = false
+        self.navigationItem.titleView = UIImageView(image: UIImage(named: "Cumulus"))
         fboCollectionView.delegate = self
         fboCollectionView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - UICollectionViewDataSource

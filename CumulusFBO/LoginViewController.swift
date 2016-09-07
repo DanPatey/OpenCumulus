@@ -16,11 +16,16 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.navigationBarHidden = true 
         loginButton.layer.opacity = 0.80
         loginButton.titleLabel?.textColor = UIColor.whiteColor()
         startButton.layer.opacity = 0.80
         startButton.titleLabel?.textColor = UIColor.whiteColor()
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(false)
+        navigationController?.navigationBarHidden = true 
     }
 }
