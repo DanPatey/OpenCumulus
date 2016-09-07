@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57171B1E1D7FBFE200F2C7FA /* ReservationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA70D1D31F297005DD618 /* ReservationStore.swift */; };
+		57171B1F1D7FBFE200F2C7FA /* FBOSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */; };
+		57171B201D7FBFE200F2C7FA /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
+		57171B211D7FBFE200F2C7FA /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572828831CC43F170005A6EA /* RegistrationModel.swift */; };
+		57171B221D7FBFE200F2C7FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* LoginViewController.swift */; };
+		57171B231D7FBFE200F2C7FA /* FboSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */; };
+		57171B241D7FBFE200F2C7FA /* FlightInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */; };
+		57171B251D7FBFE200F2C7FA /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */; };
+		57171B261D7FBFE200F2C7FA /* MessagesLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EE9CA31D75220400E1A57F /* MessagesLoginViewController.swift */; };
+		57171B271D7FBFE200F2C7FA /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */; };
+		57171B281D7FBFE200F2C7FA /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572828851CC44B470005A6EA /* RegistrationManager.swift */; };
+		57171B291D7FBFE200F2C7FA /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C8851CAB766A0031B000 /* SummaryViewController.swift */; };
+		57171B2A1D7FBFE200F2C7FA /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C86B1CAB67820031B000 /* RegistrationViewController.swift */; };
+		57171B2B1D7FBFE200F2C7FA /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EE9CA51D75260200E1A57F /* ChatViewController.swift */; };
+		57171B2C1D7FBFE200F2C7FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C8691CAB67820031B000 /* AppDelegate.swift */; };
+		57171B2D1D7FBFE200F2C7FA /* Reservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA70B1D31EE1D005DD618 /* Reservation.swift */; };
+		57171B2E1D7FBFE200F2C7FA /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
+		57171B301D7FBFE200F2C7FA /* Pods_CumulusFBO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411362B1E61BA4637CC091BE /* Pods_CumulusFBO.framework */; };
+		57171B321D7FBFE200F2C7FA /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99D7550E1D600FD100714EC4 /* Keys.plist */; };
+		57171B331D7FBFE200F2C7FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5734C8721CAB67820031B000 /* LaunchScreen.storyboard */; };
+		57171B341D7FBFE200F2C7FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5734C8701CAB67820031B000 /* Assets.xcassets */; };
+		57171B351D7FBFE200F2C7FA /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5742FDEE1D42A19000CB0DDB /* Registration.storyboard */; };
+		57171B361D7FBFE200F2C7FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */; };
 		572828841CC43F170005A6EA /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572828831CC43F170005A6EA /* RegistrationModel.swift */; };
 		572828861CC44B470005A6EA /* RegistrationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572828851CC44B470005A6EA /* RegistrationManager.swift */; };
 		5734C86A1CAB67820031B000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734C8691CAB67820031B000 /* AppDelegate.swift */; };
@@ -34,14 +57,16 @@
 
 /* Begin PBXFileReference section */
 		411362B1E61BA4637CC091BE /* Pods_CumulusFBO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CumulusFBO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		57171B3D1D7FBFE200F2C7FA /* CumulusFBO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CumulusFBO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57171B3E1D7FBFE200F2C7FA /* CumulusFBO.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = CumulusFBO.plist; path = /Users/danpatey/Documents/Code/CumulusFBO/CumulusFBO.plist; sourceTree = "<absolute>"; };
 		572828831CC43F170005A6EA /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = RegistrationModel.swift; path = CumulusFBO/RegistrationModel.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		572828851CC44B470005A6EA /* RegistrationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegistrationManager.swift; path = CumulusFBO/RegistrationManager.swift; sourceTree = "<group>"; };
-		5734C8661CAB67820031B000 /* CumulusFBO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CumulusFBO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5734C8661CAB67820031B000 /* FBOGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBOGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5734C8691CAB67820031B000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5734C86B1CAB67820031B000 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RegistrationViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		5734C8701CAB67820031B000 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = CumulusFBO/Assets.xcassets; sourceTree = "<group>"; };
 		5734C8731CAB67820031B000 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5734C8751CAB67820031B000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5734C8751CAB67820031B000 /* FBOGo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FBOGo.plist; sourceTree = "<group>"; };
 		5734C8851CAB766A0031B000 /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		5742FDEE1D42A19000CB0DDB /* Registration.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Registration.storyboard; path = CumulusFBO/Registration.storyboard; sourceTree = "<group>"; };
 		5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservationCell.swift; path = CumulusFBO/ReservationCell.swift; sourceTree = "<group>"; };
@@ -63,6 +88,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		57171B2F1D7FBFE200F2C7FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57171B301D7FBFE200F2C7FA /* Pods_CumulusFBO.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5734C8631CAB67820031B000 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,7 +120,8 @@
 		5734C8671CAB67820031B000 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5734C8661CAB67820031B000 /* CumulusFBO.app */,
+				5734C8661CAB67820031B000 /* FBOGo.app */,
+				57171B3D1D7FBFE200F2C7FA /* CumulusFBO.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,7 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */,
-				5734C8751CAB67820031B000 /* Info.plist */,
+				57171B3E1D7FBFE200F2C7FA /* CumulusFBO.plist */,
+				5734C8751CAB67820031B000 /* FBOGo.plist */,
 				99D7550E1D600FD100714EC4 /* Keys.plist */,
 			);
 			name = Plist;
@@ -186,9 +221,30 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5734C8651CAB67820031B000 /* CumulusFBO */ = {
+		57171B1B1D7FBFE200F2C7FA /* CumulusFBO */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5734C8781CAB67820031B000 /* Build configuration list for PBXNativeTarget "CumulusFBO" */;
+			buildConfigurationList = 57171B3A1D7FBFE200F2C7FA /* Build configuration list for PBXNativeTarget "CumulusFBO" */;
+			buildPhases = (
+				57171B1C1D7FBFE200F2C7FA /* [CP] Check Pods Manifest.lock */,
+				57171B1D1D7FBFE200F2C7FA /* Sources */,
+				57171B2F1D7FBFE200F2C7FA /* Frameworks */,
+				57171B311D7FBFE200F2C7FA /* Resources */,
+				57171B371D7FBFE200F2C7FA /* [CP] Embed Pods Frameworks */,
+				57171B381D7FBFE200F2C7FA /* [CP] Copy Pods Resources */,
+				57171B391D7FBFE200F2C7FA /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CumulusFBO;
+			productName = CumlusFBO;
+			productReference = 57171B3D1D7FBFE200F2C7FA /* CumulusFBO.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5734C8651CAB67820031B000 /* FBOGo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5734C8781CAB67820031B000 /* Build configuration list for PBXNativeTarget "FBOGo" */;
 			buildPhases = (
 				A9D6D32B775CD665D3C64C4A /* [CP] Check Pods Manifest.lock */,
 				5734C8621CAB67820031B000 /* Sources */,
@@ -202,9 +258,9 @@
 			);
 			dependencies = (
 			);
-			name = CumulusFBO;
+			name = FBOGo;
 			productName = CumlusFBO;
-			productReference = 5734C8661CAB67820031B000 /* CumulusFBO.app */;
+			productReference = 5734C8661CAB67820031B000 /* FBOGo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -217,9 +273,22 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Dan Patey";
 				TargetAttributes = {
+					57171B1B1D7FBFE200F2C7FA = {
+						DevelopmentTeam = U6J9N2F6E2;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
 					5734C8651CAB67820031B000 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = U6J9N2F6E2;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -236,12 +305,25 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5734C8651CAB67820031B000 /* CumulusFBO */,
+				5734C8651CAB67820031B000 /* FBOGo */,
+				57171B1B1D7FBFE200F2C7FA /* CumulusFBO */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		57171B311D7FBFE200F2C7FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57171B321D7FBFE200F2C7FA /* Keys.plist in Resources */,
+				57171B331D7FBFE200F2C7FA /* LaunchScreen.storyboard in Resources */,
+				57171B341D7FBFE200F2C7FA /* Assets.xcassets in Resources */,
+				57171B351D7FBFE200F2C7FA /* Registration.storyboard in Resources */,
+				57171B361D7FBFE200F2C7FA /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5734C8641CAB67820031B000 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -258,6 +340,66 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		04A3A98046C2FAC121881D8B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57171B1C1D7FBFE200F2C7FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57171B371D7FBFE200F2C7FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57171B381D7FBFE200F2C7FA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57171B391D7FBFE200F2C7FA /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,6 +462,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		57171B1D1D7FBFE200F2C7FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57171B1E1D7FBFE200F2C7FA /* ReservationStore.swift in Sources */,
+				57171B1F1D7FBFE200F2C7FA /* FBOSelectorViewController.swift in Sources */,
+				57171B201D7FBFE200F2C7FA /* ServicesTableViewController.swift in Sources */,
+				57171B211D7FBFE200F2C7FA /* RegistrationModel.swift in Sources */,
+				57171B221D7FBFE200F2C7FA /* LoginViewController.swift in Sources */,
+				57171B231D7FBFE200F2C7FA /* FboSelectorCell.swift in Sources */,
+				57171B241D7FBFE200F2C7FA /* FlightInformationViewController.swift in Sources */,
+				57171B251D7FBFE200F2C7FA /* ReservationCell.swift in Sources */,
+				57171B261D7FBFE200F2C7FA /* MessagesLoginViewController.swift in Sources */,
+				57171B271D7FBFE200F2C7FA /* ScheduleViewController.swift in Sources */,
+				57171B281D7FBFE200F2C7FA /* RegistrationManager.swift in Sources */,
+				57171B291D7FBFE200F2C7FA /* SummaryViewController.swift in Sources */,
+				57171B2A1D7FBFE200F2C7FA /* RegistrationViewController.swift in Sources */,
+				57171B2B1D7FBFE200F2C7FA /* ChatViewController.swift in Sources */,
+				57171B2C1D7FBFE200F2C7FA /* AppDelegate.swift in Sources */,
+				57171B2D1D7FBFE200F2C7FA /* Reservation.swift in Sources */,
+				57171B2E1D7FBFE200F2C7FA /* ServiceCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5734C8621CAB67820031B000 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,6 +525,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		57171B3B1D7FBFE200F2C7FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E26A9082861F5B45E1ED21E5 /* Pods-CumulusFBO.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/CumulusFBO.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danpatey.CumulusFBO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		57171B3C1D7FBFE200F2C7FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACE457445BE6BF3D90677A3E /* Pods-CumulusFBO.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/CumulusFBO.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.danpatey.CumulusFBO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		5734C8761CAB67820031B000 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -449,10 +639,10 @@
 			baseConfigurationReference = E26A9082861F5B45E1ED21E5 /* Pods-CumulusFBO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CumulusFBO/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CumulusFBO/FBOGo.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.danpatey.CumulusFBO;
-				PRODUCT_NAME = CumulusFBO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danpatey.FBOGo;
+				PRODUCT_NAME = FBOGo;
 			};
 			name = Debug;
 		};
@@ -461,16 +651,25 @@
 			baseConfigurationReference = ACE457445BE6BF3D90677A3E /* Pods-CumulusFBO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = CumulusFBO/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CumulusFBO/FBOGo.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.danpatey.CumulusFBO;
-				PRODUCT_NAME = CumulusFBO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danpatey.FBOGo;
+				PRODUCT_NAME = FBOGo;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		57171B3A1D7FBFE200F2C7FA /* Build configuration list for PBXNativeTarget "CumulusFBO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57171B3B1D7FBFE200F2C7FA /* Debug */,
+				57171B3C1D7FBFE200F2C7FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5734C8611CAB67820031B000 /* Build configuration list for PBXProject "CumulusFBO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -480,7 +679,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5734C8781CAB67820031B000 /* Build configuration list for PBXNativeTarget "CumulusFBO" */ = {
+		5734C8781CAB67820031B000 /* Build configuration list for PBXNativeTarget "FBOGo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5734C8791CAB67820031B000 /* Debug */,

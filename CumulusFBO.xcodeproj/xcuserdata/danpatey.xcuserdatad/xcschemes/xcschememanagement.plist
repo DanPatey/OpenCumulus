@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CumlusFBO.xcscheme</key>
+		<key>CumulusFBO.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>FBOGo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>57171B1B1D7FBFE200F2C7FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5734C8651CAB67820031B000</key>
 		<dict>
 			<key>primary</key>
