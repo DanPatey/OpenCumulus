@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3D5BD966C8183C3333AE58892E4B7084"
+               BlueprintIdentifier = "98F0C1AE4CA1F4843BE1319918A65C36"
                BuildableName = "Pods_CumulusFBO.framework"
                BlueprintName = "Pods-CumulusFBO"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "3D5BD966C8183C3333AE58892E4B7084"
+            BlueprintIdentifier = "98F0C1AE4CA1F4843BE1319918A65C36"
             BuildableName = "Pods_CumulusFBO.framework"
             BlueprintName = "Pods-CumulusFBO"
             ReferencedContainer = "container:Pods.xcodeproj">
