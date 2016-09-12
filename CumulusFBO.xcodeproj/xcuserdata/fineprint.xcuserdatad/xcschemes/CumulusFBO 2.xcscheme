@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0730"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5734C8651CAB67820031B000"
-               BuildableName = "FBOGo.app"
-               BlueprintName = "FBOGo"
+               BlueprintIdentifier = "57171B1B1D7FBFE200F2C7FA"
+               BuildableName = "CumulusFBO.app"
+               BlueprintName = "CumulusFBO"
                ReferencedContainer = "container:CumulusFBO.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5734C8651CAB67820031B000"
-            BuildableName = "FBOGo.app"
-            BlueprintName = "FBOGo"
+            BlueprintIdentifier = "57171B1B1D7FBFE200F2C7FA"
+            BuildableName = "CumulusFBO.app"
+            BlueprintName = "CumulusFBO"
             ReferencedContainer = "container:CumulusFBO.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5734C8651CAB67820031B000"
-            BuildableName = "FBOGo.app"
-            BlueprintName = "FBOGo"
+            BlueprintIdentifier = "57171B1B1D7FBFE200F2C7FA"
+            BuildableName = "CumulusFBO.app"
+            BlueprintName = "CumulusFBO"
             ReferencedContainer = "container:CumulusFBO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -74,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5734C8651CAB67820031B000"
-            BuildableName = "FBOGo.app"
-            BlueprintName = "FBOGo"
+            BlueprintIdentifier = "57171B1B1D7FBFE200F2C7FA"
+            BuildableName = "CumulusFBO.app"
+            BlueprintName = "CumulusFBO"
             ReferencedContainer = "container:CumulusFBO.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
