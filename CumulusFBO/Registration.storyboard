@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -1528,9 +1529,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="BackgroungImage" translatesAutoresizingMaskIntoConstraints="NO" id="UF1-zB-OYA">
-                                <frame key="frameInset" width="600" height="600"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroungImage" translatesAutoresizingMaskIntoConstraints="NO" id="UF1-zB-OYA"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOUCH AND GO WITH FBO’S" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPa-HP-vAU">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="233" id="K1M-Pa-XIn"/>
@@ -1553,13 +1552,10 @@
                                     <constraint firstAttribute="width" secondItem="jNl-cf-oiH" secondAttribute="height" multiplier="297:86" id="CIa-VJ-IM2"/>
                                 </constraints>
                             </imageView>
-                            <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYO-Xe-Q4h">
-                                <frame key="frameInset" minX="20" minY="494" width="168" height="57"/>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYO-Xe-Q4h">
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="RYO-Xe-Q4h" secondAttribute="height" multiplier="56:19" id="JO7-aA-dZu"/>
-                                    <constraint firstAttribute="width" constant="168" id="rch-eH-0Cf"/>
-                                    <constraint firstAttribute="height" constant="57" id="tpn-ZE-6cX"/>
+                                    <constraint firstAttribute="width" constant="100" id="rch-eH-0Cf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <state key="normal" title="Start">
@@ -1569,13 +1565,11 @@
                                     <segue destination="fEQ-bq-yGJ" kind="show" id="HaX-RU-j7v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-Ch-92v">
-                                <frame key="frameInset" minX="412" minY="494" width="168" height="57"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-Ch-92v">
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="PGb-EW-dgd"/>
-                                    <constraint firstAttribute="width" secondItem="Keu-Ch-92v" secondAttribute="height" multiplier="56:19" id="YFu-M8-hO4"/>
-                                    <constraint firstAttribute="height" constant="57" id="bpo-bW-Epz"/>
+                                    <constraint firstAttribute="height" constant="55" id="bpo-bW-Epz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <state key="normal" title="Button">
@@ -1585,24 +1579,25 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="30" id="0tc-2u-AEp"/>
+                            <constraint firstItem="Keu-Ch-92v" firstAttribute="baseline" secondItem="RYO-Xe-Q4h" secondAttribute="firstBaseline" id="5K7-9D-4LB"/>
                             <constraint firstItem="UF1-zB-OYA" firstAttribute="top" secondItem="FCT-qs-qYV" secondAttribute="bottom" constant="-275" id="5Os-oa-5rO"/>
-                            <constraint firstItem="RYO-Xe-Q4h" firstAttribute="top" secondItem="UF1-zB-OYA" secondAttribute="bottom" constant="-106" id="7ti-VP-qrz"/>
                             <constraint firstItem="FCT-qs-qYV" firstAttribute="top" secondItem="UPa-HP-vAU" secondAttribute="bottom" constant="18" id="9jw-SV-3Nl"/>
-                            <constraint firstItem="RYO-Xe-Q4h" firstAttribute="top" secondItem="Keu-Ch-92v" secondAttribute="bottom" constant="-57" id="9vg-lq-baM"/>
-                            <constraint firstItem="Keu-Ch-92v" firstAttribute="top" secondItem="UF1-zB-OYA" secondAttribute="bottom" constant="-106" id="B5Q-CQ-Ccr"/>
-                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="UF1-zB-OYA" secondAttribute="trailing" constant="-188" id="DBN-a7-gMB"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="167" id="KHs-cy-VDd"/>
+                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="30" id="M2s-5W-PyH"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="centerX" secondItem="UF1-zB-OYA" secondAttribute="centerX" id="N1G-yZ-Jar"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="centerX" secondItem="L1a-dZ-B9I" secondAttribute="centerX" id="NBa-da-4Ni"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="top" secondItem="jNl-cf-oiH" secondAttribute="bottom" constant="17" id="Pll-FE-t9s"/>
                             <constraint firstItem="UF1-zB-OYA" firstAttribute="bottom" secondItem="oDY-s9-bvl" secondAttribute="top" id="PvO-vQ-qrw"/>
-                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="224" id="Uj1-ai-Vig"/>
-                            <constraint firstItem="UF1-zB-OYA" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="-188" id="aPZ-lC-u6j"/>
+                            <constraint firstItem="Keu-Ch-92v" firstAttribute="firstBaseline" secondItem="RYO-Xe-Q4h" secondAttribute="baseline" id="Xuv-lj-YAp"/>
                             <constraint firstItem="jNl-cf-oiH" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="64" id="dxl-WB-Pox"/>
-                            <constraint firstItem="UF1-zB-OYA" firstAttribute="leading" secondItem="L1a-dZ-B9I" secondAttribute="leading" id="eGM-gu-8TA"/>
                             <constraint firstItem="FCT-qs-qYV" firstAttribute="centerX" secondItem="UF1-zB-OYA" secondAttribute="centerX" id="gEc-7i-0Fi"/>
+                            <constraint firstItem="Keu-Ch-92v" firstAttribute="centerY" secondItem="RYO-Xe-Q4h" secondAttribute="centerY" id="jId-LF-LH9"/>
+                            <constraint firstItem="oDY-s9-bvl" firstAttribute="top" secondItem="RYO-Xe-Q4h" secondAttribute="bottom" constant="105" id="qnL-Lh-B4G"/>
                             <constraint firstItem="jNl-cf-oiH" firstAttribute="centerX" secondItem="UPa-HP-vAU" secondAttribute="centerX" id="tYr-4R-0aD"/>
                             <constraint firstItem="UF1-zB-OYA" firstAttribute="top" secondItem="L1a-dZ-B9I" secondAttribute="top" id="v6n-bN-h9q"/>
+                            <constraint firstItem="RYO-Xe-Q4h" firstAttribute="leading" secondItem="UF1-zB-OYA" secondAttribute="leading" id="xK5-NM-MFt"/>
+                            <constraint firstItem="RYO-Xe-Q4h" firstAttribute="top" secondItem="FCT-qs-qYV" secondAttribute="bottom" constant="225" id="xK6-Bx-rgG"/>
                         </constraints>
                     </view>
                     <connections>
