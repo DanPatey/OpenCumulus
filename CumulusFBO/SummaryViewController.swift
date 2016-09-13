@@ -10,12 +10,22 @@ import UIKit
 
 let reservationStore = ReservationStore()
 
-class SummaryViewController: UIViewController {
+class SummaryViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var summary: UITextView! {
         didSet {
             self.summary.text = RegistrationsManager.sharedManager.activeReservation.generateSummary()
+            //Add text for each cell
         }
+    }
+    @IBAction func editButton(sender: UIBarButtonItem) {
+        self.summary.editable = true
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.delegate = self
+        textField.resignFirstResponder()
+        return true
     }
     
     //MARK: Save information to Reservation
@@ -25,6 +35,8 @@ class SummaryViewController: UIViewController {
     //MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    
     }
     
     func addItemsToSummary(textFields: [UITextField]) {

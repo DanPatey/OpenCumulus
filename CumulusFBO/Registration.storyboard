@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Adc-xn-Lvp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hmf-vr-zFc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -1502,6 +1502,11 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Summary" id="oYz-3S-LRj">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="kvk-Sj-jyQ">
+                            <connections>
+                                <action selector="editButton:" destination="Dde-ui-la1" id="Z2Q-y8-z3u"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="qpR-b3-bcI">
                             <connections>
                                 <action selector="SaveRegistration:" destination="Dde-ui-la1" id="eEU-BH-hU7"/>
@@ -1515,7 +1520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hmg-6C-Ia5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4252" y="-423.23838080959524"/>
+            <point key="canvasLocation" x="4346" y="-423"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="wcW-Oo-K4o">
@@ -1565,7 +1570,8 @@
                                     <segue destination="noQ-tU-28B" kind="show" id="HaX-RU-j7v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-Ch-92v">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-Ch-92v">
+                                <frame key="frameInset" minX="130" minY="503.5" width="168" height="55"/>
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="PGb-EW-dgd"/>
@@ -1869,7 +1875,6 @@
         <!--Registration-->
         <scene sceneID="BRh-b0-pDu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NBV-ej-vFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PZK-8J-8hA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Registration" image="PlaneIcon" selectedImage="PlaneIcon" id="s7O-gZ-ro3"/>
                     <toolbarItems/>
@@ -1882,6 +1887,7 @@
                         <segue destination="NMH-YB-pHG" kind="relationship" relationship="rootViewController" id="pSY-Lp-qHV"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NBV-ej-vFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1447" y="-423"/>
         </scene>
@@ -1931,6 +1937,6 @@
         <image name="PlaneIcon" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UGa-f8-XS8"/>
+        <segue reference="1KN-2M-b79"/>
     </inferredMetricsTieBreakers>
 </document>
