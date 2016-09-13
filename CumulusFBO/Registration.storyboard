@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.14901960780000001" green="0.28627450980000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="wSB-NW-fCn">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                            <rect key="frame" x="0.0" y="64" width="375" height="128"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="dOP-Dq-dWc"/>
@@ -34,7 +34,7 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReservationCell" rowHeight="65" id="yDr-jZ-HbE" customClass="ReservationCell" customModule="CumulusFBO" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="156" width="375" height="65"/>
+                                <rect key="frame" x="0.0" y="220" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yDr-jZ-HbE" id="gXo-Ry-Or7">
                                     <frame key="frameInset" width="375" height="64"/>
@@ -1609,6 +1609,24 @@
             </objects>
             <point key="canvasLocation" x="-1682" y="-92"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="QWD-wj-ZRm">
+            <objects>
+                <viewController id="yuF-h9-EJq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b9P-Ra-5vh"/>
+                        <viewControllerLayoutGuide type="bottom" id="PDK-t0-Lb8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lle-JA-0Ro">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNs-hh-QDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="98" y="-763"/>
+        </scene>
         <!--Selector View Controller-->
         <scene sceneID="au2-1w-012">
             <objects>
@@ -1676,6 +1694,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Sc-8U-Rrf">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="hmf-vr-zFc" kind="show" id="eP2-WF-4GP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtX-fb-8ZY">
                                 <state key="normal" title="Button"/>
@@ -1811,7 +1832,13 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="SgA-Xs-nm7"/>
+                    <navigationItem key="navigationItem" id="SgA-Xs-nm7">
+                        <barButtonItem key="leftBarButtonItem" title="Login" id="KXD-ac-yPB">
+                            <connections>
+                                <segue destination="yuF-h9-EJq" kind="show" id="rxx-C0-V82"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="fboCollectionView" destination="RnX-Zz-JkN" id="OuN-Vn-Rfo"/>
                     </connections>
@@ -1842,6 +1869,7 @@
         <!--Registration-->
         <scene sceneID="BRh-b0-pDu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NBV-ej-vFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PZK-8J-8hA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Registration" image="PlaneIcon" selectedImage="PlaneIcon" id="s7O-gZ-ro3"/>
                     <toolbarItems/>
@@ -1854,9 +1882,8 @@
                         <segue destination="NMH-YB-pHG" kind="relationship" relationship="rootViewController" id="pSY-Lp-qHV"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NBV-ej-vFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384.8" y="-423.23838080959524"/>
+            <point key="canvasLocation" x="1447" y="-423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vJX-Go-nqG">

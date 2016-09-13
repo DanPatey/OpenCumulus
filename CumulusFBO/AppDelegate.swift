@@ -47,7 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //MARK: Appearance attributes
     func setupAppearance() {
-        UINavigationBar.appearance().barTintColor = UIColor(red:0.16, green:0.29, blue:0.34, alpha:1.00)
+        
+//        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "Cumulus")!.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 0, 0, 0), resizingMode: .Stretch), forBarMetrics: .Default)
+        
+        UINavigationBar.appearance().barTintColor = UIColor.blackColor()
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
