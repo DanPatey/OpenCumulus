@@ -12,18 +12,34 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
 
     @IBOutlet weak var fboCollectionView: UICollectionView!
     
+    @IBOutlet weak var autoCompleteTextField: AutoCompleteTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.titleView = UIImageView.init(image: UIImage(named: "Cumulus"))
         fboCollectionView.delegate = self
         fboCollectionView.dataSource = self
+        
+        handleTextFieldInterfaces()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    private func handleTextFieldInterfaces() {
+        autoCompleteTextField.onTextChange = {[weak self] text in
+            if !text.isEmpty {
+//                self!.autoCompleteField.autoCompleteStrings = [String] Waiting on
+            }
+        }
+        
+        autoCompleteTextField.onSelect = {[weak self] text, indexpath in
+           //
+        }
+    }
+    
     
     // MARK: - UICollectionViewDataSource
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {

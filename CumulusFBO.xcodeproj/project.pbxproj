@@ -46,6 +46,8 @@
 		57EE9CA41D75220400E1A57F /* MessagesLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EE9CA31D75220400E1A57F /* MessagesLoginViewController.swift */; };
 		57EE9CA61D75260200E1A57F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57EE9CA51D75260200E1A57F /* ChatViewController.swift */; };
 		91CD89B85D4A4D5F99886820 /* Pods_CumulusFBO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411362B1E61BA4637CC091BE /* Pods_CumulusFBO.framework */; };
+		990897231D89B506008BAE27 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990897221D89B506008BAE27 /* AutoCompleteTextField.swift */; };
+		990897241D89B506008BAE27 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990897221D89B506008BAE27 /* AutoCompleteTextField.swift */; };
 		991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
 		9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
 		99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* LoginViewController.swift */; };
@@ -76,6 +78,7 @@
 		57CDA70D1D31F297005DD618 /* ReservationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReservationStore.swift; path = CumulusFBO/ReservationStore.swift; sourceTree = "<group>"; };
 		57EE9CA31D75220400E1A57F /* MessagesLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesLoginViewController.swift; sourceTree = "<group>"; };
 		57EE9CA51D75260200E1A57F /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		990897221D89B506008BAE27 /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
 		991B63621D67954200922085 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		9944486B1D6C25D3002F68F5 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceCell.swift; path = CumulusFBO/ServiceCell.swift; sourceTree = "<group>"; };
 		99694BE71D7D238D007FACBF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 		57EE9CA71D7527D200E1A57F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				990897221D89B506008BAE27 /* AutoCompleteTextField.swift */,
 				572828831CC43F170005A6EA /* RegistrationModel.swift */,
 				572828851CC44B470005A6EA /* RegistrationManager.swift */,
 				57CDA70D1D31F297005DD618 /* ReservationStore.swift */,
@@ -473,6 +477,7 @@
 				57171B1E1D7FBFE200F2C7FA /* ReservationStore.swift in Sources */,
 				57171B1F1D7FBFE200F2C7FA /* FBOSelectorViewController.swift in Sources */,
 				57171B201D7FBFE200F2C7FA /* ServicesTableViewController.swift in Sources */,
+				990897241D89B506008BAE27 /* AutoCompleteTextField.swift in Sources */,
 				57171B211D7FBFE200F2C7FA /* RegistrationModel.swift in Sources */,
 				57171B221D7FBFE200F2C7FA /* LoginViewController.swift in Sources */,
 				57171B231D7FBFE200F2C7FA /* FboSelectorCell.swift in Sources */,
@@ -497,6 +502,7 @@
 				57CDA70E1D31F297005DD618 /* ReservationStore.swift in Sources */,
 				99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */,
 				991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */,
+				990897231D89B506008BAE27 /* AutoCompleteTextField.swift in Sources */,
 				572828841CC43F170005A6EA /* RegistrationModel.swift in Sources */,
 				99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */,
 				99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */,
