@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5AB49ABCF50A20DE172AF6DE407797441792990E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3B36F7734E8FB9B855ECD2FF2665BB6138E47894" : 9223372036854775807,
+    "5AB49ABCF50A20DE172AF6DE407797441792990E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "ECF3186C-0455-4002-B319-FF22DFCD4938",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3B36F7734E8FB9B855ECD2FF2665BB6138E47894" : "..\/Downloads\/UXMPDFKit",
+    "5AB49ABCF50A20DE172AF6DE407797441792990E" : "OpenCumulus\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CumulusFBO",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CumulusFBO.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/uxmstudio\/UXMPDFKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3B36F7734E8FB9B855ECD2FF2665BB6138E47894"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/DanPatey\/OpenCumulus.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5AB49ABCF50A20DE172AF6DE407797441792990E"
+    }
+  ]
+}
