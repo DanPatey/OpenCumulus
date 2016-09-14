@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="txz-jk-VrW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Adc-xn-Lvp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -1600,10 +1600,21 @@
                                     <constraint firstAttribute="width" secondItem="jNl-cf-oiH" secondAttribute="height" multiplier="297:86" id="CIa-VJ-IM2"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-Ch-92v">
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="PGb-EW-dgd"/>
+                                    <constraint firstAttribute="height" constant="57" id="bpo-bW-Epz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYO-Xe-Q4h">
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="rch-eH-0Cf"/>
+                                    <constraint firstAttribute="width" constant="168" id="rch-eH-0Cf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <state key="normal" title="Start">
@@ -1613,27 +1624,15 @@
                                     <segue destination="noQ-tU-28B" kind="show" id="HaX-RU-j7v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-Ch-92v">
-                                <frame key="frameInset" minX="130" minY="503.5" width="168" height="55"/>
-                                <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="168" id="PGb-EW-dgd"/>
-                                    <constraint firstAttribute="height" constant="55" id="bpo-bW-Epz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="30" id="0tc-2u-AEp"/>
+                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="8" id="0tc-2u-AEp"/>
                             <constraint firstItem="Keu-Ch-92v" firstAttribute="baseline" secondItem="RYO-Xe-Q4h" secondAttribute="firstBaseline" id="5K7-9D-4LB"/>
                             <constraint firstItem="UF1-zB-OYA" firstAttribute="top" secondItem="FCT-qs-qYV" secondAttribute="bottom" constant="-275" id="5Os-oa-5rO"/>
                             <constraint firstItem="FCT-qs-qYV" firstAttribute="top" secondItem="UPa-HP-vAU" secondAttribute="bottom" constant="10" id="9jw-SV-3Nl"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="175" id="KHs-cy-VDd"/>
-                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="30" id="M2s-5W-PyH"/>
+                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="8" id="M2s-5W-PyH"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="centerX" secondItem="UF1-zB-OYA" secondAttribute="centerX" id="N1G-yZ-Jar"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="centerX" secondItem="L1a-dZ-B9I" secondAttribute="centerX" id="NBa-da-4Ni"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="top" secondItem="jNl-cf-oiH" secondAttribute="bottom" constant="20" id="Pll-FE-t9s"/>
@@ -1642,10 +1641,10 @@
                             <constraint firstItem="jNl-cf-oiH" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="65" id="dxl-WB-Pox"/>
                             <constraint firstItem="FCT-qs-qYV" firstAttribute="centerX" secondItem="UF1-zB-OYA" secondAttribute="centerX" id="gEc-7i-0Fi"/>
                             <constraint firstItem="Keu-Ch-92v" firstAttribute="centerY" secondItem="RYO-Xe-Q4h" secondAttribute="centerY" id="jId-LF-LH9"/>
-                            <constraint firstItem="oDY-s9-bvl" firstAttribute="top" secondItem="RYO-Xe-Q4h" secondAttribute="bottom" constant="105" id="qnL-Lh-B4G"/>
+                            <constraint firstItem="oDY-s9-bvl" firstAttribute="top" secondItem="RYO-Xe-Q4h" secondAttribute="bottom" constant="110" id="qnL-Lh-B4G"/>
                             <constraint firstItem="jNl-cf-oiH" firstAttribute="centerX" secondItem="UPa-HP-vAU" secondAttribute="centerX" id="tYr-4R-0aD"/>
                             <constraint firstItem="UF1-zB-OYA" firstAttribute="top" secondItem="L1a-dZ-B9I" secondAttribute="top" id="v6n-bN-h9q"/>
-                            <constraint firstItem="RYO-Xe-Q4h" firstAttribute="leading" secondItem="UF1-zB-OYA" secondAttribute="leading" id="xK5-NM-MFt"/>
+                            <constraint firstItem="RYO-Xe-Q4h" firstAttribute="leading" secondItem="UF1-zB-OYA" secondAttribute="leading" constant="15" id="xK5-NM-MFt"/>
                             <constraint firstItem="RYO-Xe-Q4h" firstAttribute="top" secondItem="FCT-qs-qYV" secondAttribute="bottom" constant="225" id="xK6-Bx-rgG"/>
                         </constraints>
                     </view>
