@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class FBOSelectorViewController: UIViewController, UICollectionViewDelegate {
 
     @IBOutlet weak var fboCollectionView: UICollectionView!
     
@@ -17,30 +17,29 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.titleView = UIImageView.init(image: UIImage(named: "Cumulus"))
-        fboCollectionView.delegate = self
-        fboCollectionView.dataSource = self
+//        self.navigationItem.titleView = UIImageView.init(image: UIImage(named: "Cumulus"))
+//        fboCollectionView.delegate = self
+//        fboCollectionView.dataSource = self
         
-        handleTextFieldInterfaces()
+//        handleTextFieldInterfaces()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    private func handleTextFieldInterfaces() {
-        autoCompleteTextField.onTextChange = {[weak self] text in
-            if !text.isEmpty {
+    
+//    private func handleTextFieldInterfaces() {
+//        autoCompleteTextField.onTextChange = {[weak self] text in
+//            if !text.isEmpty {
 //                self!.autoCompleteField.autoCompleteStrings = [String] Waiting on
-            }
+//            }
         }
         
-        autoCompleteTextField.onSelect = {[weak self] text, indexpath in
-           //
-        }
-    }
-    
-    
+//        autoCompleteTextField.onSelect = {[weak self] text, indexpath in
+//        }
+//    }
+
     // MARK: - UICollectionViewDataSource
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
@@ -69,5 +68,3 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         // Pass the selected object to the new view controller.
     }
     */
-
-}
