@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<<<<<<< HEAD
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Adc-xn-Lvp">
-=======
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="txz-jk-VrW">
->>>>>>> implemented pdf on webview
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Adc-xn-Lvp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -91,9 +87,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsi-fo-J7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="1446" y="364"/>
-=======
             <point key="canvasLocation" x="2322.4000000000001" y="363.86806596701655"/>
         </scene>
         <!--View Controller-->
@@ -138,7 +131,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="et9-Dm-UyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-548" y="724.58770614692662"/>
->>>>>>> implemented pdf on webview
         </scene>
         <!--Messages-->
         <scene sceneID="ocS-AS-fLG">
@@ -185,11 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gW-aM-zqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="676" y="1057"/>
-=======
             <point key="canvasLocation" x="1384.8" y="1056.5217391304348"/>
->>>>>>> implemented pdf on webview
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="SD0-Cg-vyh">
@@ -208,11 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gZ-0E-C0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="2196" y="1057"/>
-=======
             <point key="canvasLocation" x="2994.4000000000001" y="1057.4212893553224"/>
->>>>>>> implemented pdf on webview
         </scene>
         <!--Services Table View Controller-->
         <scene sceneID="bTj-rh-0cg">
@@ -1616,39 +1600,47 @@
                                     <constraint firstAttribute="width" secondItem="jNl-cf-oiH" secondAttribute="height" multiplier="297:86" id="CIa-VJ-IM2"/>
                                 </constraints>
                             </imageView>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYO-Xe-Q4h">
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-Ch-92v">
                                 <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="rch-eH-0Cf"/>
+                                    <constraint firstAttribute="width" constant="168" id="PGb-EW-dgd"/>
+                                    <constraint firstAttribute="height" constant="57" id="bpo-bW-Epz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+<<<<<<< HEAD
+                                <connections>
+                                    <segue destination="hmf-vr-zFc" kind="show" id="YdB-JJ-nSk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-Ch-92v">
+=======
+                            </button>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYO-Xe-Q4h">
+>>>>>>> fixed button constraint
+                                <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="rch-eH-0Cf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="hmf-vr-zFc" kind="show" id="YdB-JJ-nSk"/>
+                                    <segue destination="noQ-tU-28B" kind="show" id="HaX-RU-j7v"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keu-Ch-92v">
-                                <color key="backgroundColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="168" id="PGb-EW-dgd"/>
-                                    <constraint firstAttribute="height" constant="55" id="bpo-bW-Epz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="30" id="0tc-2u-AEp"/>
+                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="8" id="0tc-2u-AEp"/>
                             <constraint firstItem="Keu-Ch-92v" firstAttribute="baseline" secondItem="RYO-Xe-Q4h" secondAttribute="firstBaseline" id="5K7-9D-4LB"/>
                             <constraint firstItem="UF1-zB-OYA" firstAttribute="top" secondItem="FCT-qs-qYV" secondAttribute="bottom" constant="-275" id="5Os-oa-5rO"/>
                             <constraint firstItem="FCT-qs-qYV" firstAttribute="top" secondItem="UPa-HP-vAU" secondAttribute="bottom" constant="10" id="9jw-SV-3Nl"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="175" id="KHs-cy-VDd"/>
-                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="30" id="M2s-5W-PyH"/>
+                            <constraint firstItem="Keu-Ch-92v" firstAttribute="leading" secondItem="RYO-Xe-Q4h" secondAttribute="trailing" constant="8" id="M2s-5W-PyH"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="centerX" secondItem="UF1-zB-OYA" secondAttribute="centerX" id="N1G-yZ-Jar"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="centerX" secondItem="L1a-dZ-B9I" secondAttribute="centerX" id="NBa-da-4Ni"/>
                             <constraint firstItem="UPa-HP-vAU" firstAttribute="top" secondItem="jNl-cf-oiH" secondAttribute="bottom" constant="20" id="Pll-FE-t9s"/>
@@ -1657,10 +1649,10 @@
                             <constraint firstItem="jNl-cf-oiH" firstAttribute="top" secondItem="5bm-Lc-7hD" secondAttribute="bottom" constant="65" id="dxl-WB-Pox"/>
                             <constraint firstItem="FCT-qs-qYV" firstAttribute="centerX" secondItem="UF1-zB-OYA" secondAttribute="centerX" id="gEc-7i-0Fi"/>
                             <constraint firstItem="Keu-Ch-92v" firstAttribute="centerY" secondItem="RYO-Xe-Q4h" secondAttribute="centerY" id="jId-LF-LH9"/>
-                            <constraint firstItem="oDY-s9-bvl" firstAttribute="top" secondItem="RYO-Xe-Q4h" secondAttribute="bottom" constant="105" id="qnL-Lh-B4G"/>
+                            <constraint firstItem="oDY-s9-bvl" firstAttribute="top" secondItem="RYO-Xe-Q4h" secondAttribute="bottom" constant="110" id="qnL-Lh-B4G"/>
                             <constraint firstItem="jNl-cf-oiH" firstAttribute="centerX" secondItem="UPa-HP-vAU" secondAttribute="centerX" id="tYr-4R-0aD"/>
                             <constraint firstItem="UF1-zB-OYA" firstAttribute="top" secondItem="L1a-dZ-B9I" secondAttribute="top" id="v6n-bN-h9q"/>
-                            <constraint firstItem="RYO-Xe-Q4h" firstAttribute="leading" secondItem="UF1-zB-OYA" secondAttribute="leading" id="xK5-NM-MFt"/>
+                            <constraint firstItem="RYO-Xe-Q4h" firstAttribute="leading" secondItem="UF1-zB-OYA" secondAttribute="leading" constant="15" id="xK5-NM-MFt"/>
                             <constraint firstItem="RYO-Xe-Q4h" firstAttribute="top" secondItem="FCT-qs-qYV" secondAttribute="bottom" constant="225" id="xK6-Bx-rgG"/>
                         </constraints>
                     </view>
@@ -1756,11 +1748,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Em7-Sw-BL7" customClass="FboSelectorCell" customModule="CumulusFBO" customModuleProvider="target">
-<<<<<<< HEAD
-                                        <rect key="frame" x="0.0" y="-21" width="337" height="256"/>
-=======
                                         <rect key="frame" x="0.0" y="0.0" width="337" height="256"/>
->>>>>>> implemented pdf on webview
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="337" height="256"/>
@@ -1942,9 +1930,6 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXI-LT-ezZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-<<<<<<< HEAD
-            <point key="canvasLocation" x="1446" y="1057"/>
-=======
             <point key="canvasLocation" x="2183.1999999999998" y="1057.4212893553224"/>
         </scene>
         <!--Navigation Controller-->
@@ -1964,7 +1949,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqz-pT-UFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-895.20000000000005" y="-92.203898050974516"/>
->>>>>>> implemented pdf on webview
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qth-H2-BqK">
