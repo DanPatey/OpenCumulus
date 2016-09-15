@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="txz-jk-VrW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Adc-xn-Lvp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -130,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="et9-Dm-UyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-548" y="724.58770614692662"/>
+            <point key="canvasLocation" x="-198" y="534"/>
         </scene>
         <!--Messages-->
         <scene sceneID="ocS-AS-fLG">
@@ -908,7 +908,7 @@
                         <viewControllerLayoutGuide type="bottom" id="oMA-lY-ra0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gN2-KE-V38">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZJw-ps-C0R"/>
@@ -1095,7 +1095,7 @@
                         <viewControllerLayoutGuide type="bottom" id="WHH-tk-aQE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gqR-Lj-gPm">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="3MV-5x-Njg"/>
@@ -1456,7 +1456,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bFs-L2-P0c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G7S-qt-U84">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZGf-0W-hgd"/>
@@ -1611,7 +1611,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="txz-jk-VrW" kind="show" id="ObW-61-ZhR"/>
+                                    <segue destination="txz-jk-VrW" kind="show" id="0H6-Mc-hB2"/>
                                 </connections>
                             </button>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYO-Xe-Q4h">
@@ -1624,7 +1624,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="noQ-tU-28B" kind="show" id="HaX-RU-j7v"/>
+                                    <segue destination="hmf-vr-zFc" kind="show" id="xjl-16-rpQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1658,7 +1658,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F0M-0f-5Q7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-70" y="-92"/>
+            <point key="canvasLocation" x="-578" y="-162"/>
         </scene>
         <!--Selector View Controller-->
         <scene sceneID="au2-1w-012">
@@ -1743,7 +1743,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Em7-Sw-BL7" customClass="FboSelectorCell" customModule="CumulusFBO" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="337" height="256"/>
+                                        <rect key="frame" x="0.0" y="3.5" width="337" height="256"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="337" height="256"/>
@@ -1756,21 +1756,21 @@
                                                     </constraints>
                                                     <prototypes>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="hAV-Qh-ZVG" detailTextLabel="XtN-ku-llk" style="IBUITableViewCellStyleValue1" id="AZz-gA-PW9">
-                                                            <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
+                                                            <rect key="frame" x="0.0" y="28" width="329" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AZz-gA-PW9" id="29M-3l-uP9">
-                                                                <frame key="frameInset" width="1000" height="43.5"/>
+                                                                <frame key="frameInset" width="329" height="43.5"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hAV-Qh-ZVG">
-                                                                        <frame key="frameInset" minX="164" minY="12" width="31.5" height="19.5"/>
+                                                                        <frame key="frameInset" minX="15" minY="12" width="31.5" height="19.5"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XtN-ku-llk">
-                                                                        <frame key="frameInset" minX="794.5" minY="12" width="41.5" height="19.5"/>
+                                                                        <frame key="frameInset" minX="272.5" minY="12" width="41.5" height="19.5"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1866,6 +1866,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="autoCompleteTextField" destination="3JQ-Dx-CaV" id="YpS-qe-BTW"/>
+                        <outlet property="fboCollectionView" destination="RnX-Zz-JkN" id="AnK-1b-PF0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kl7-jy-rfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1888,7 +1892,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVj-vd-OcY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="676" y="-92.203898050974516"/>
+            <point key="canvasLocation" x="324" y="-162"/>
         </scene>
         <!--Registration-->
         <scene sceneID="BRh-b0-pDu">
@@ -1907,7 +1911,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBV-ej-vFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="-423"/>
+            <point key="canvasLocation" x="1356" y="-432"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vJX-Go-nqG">
@@ -1928,24 +1932,6 @@
             <point key="canvasLocation" x="2183.1999999999998" y="1057.4212893553224"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="le9-KM-6xJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="noQ-tU-28B" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1NQ-26-uEs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="fEQ-bq-yGJ" kind="relationship" relationship="rootViewController" id="wO0-ca-GuO"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nqz-pT-UFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-895.20000000000005" y="-92.203898050974516"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="qth-H2-BqK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="txz-jk-VrW" sceneMemberID="viewController">
@@ -1961,7 +1947,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5g-rw-jno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1290" y="726"/>
+            <point key="canvasLocation" x="-935" y="534"/>
         </scene>
     </scenes>
     <resources>
@@ -1973,7 +1959,6 @@
         <image name="PlaneIcon" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wO0-ca-GuO"/>
         <segue reference="UGa-f8-XS8"/>
     </inferredMetricsTieBreakers>
 </document>
