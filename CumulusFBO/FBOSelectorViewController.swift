@@ -17,9 +17,9 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.navigationItem.titleView = UIImageView.init(image: UIImage(named: "Cumulus"))
-//        fboCollectionView.delegate = self
-//        fboCollectionView.dataSource = self
+        self.navigationItem.titleView = UIImageView.init(image: UIImage(named: "Cumulus"))
+        fboCollectionView.delegate = self
+        
         
 //        handleTextFieldInterfaces()
     }
