@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<<<<<<< HEAD
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Adc-xn-Lvp">
+=======
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="txz-jk-VrW">
+>>>>>>> implemented pdf on webview
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -87,6 +91,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsi-fo-J7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="1446" y="364"/>
+=======
             <point key="canvasLocation" x="2322.4000000000001" y="363.86806596701655"/>
         </scene>
         <!--View Controller-->
@@ -131,6 +138,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="et9-Dm-UyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-548" y="724.58770614692662"/>
+>>>>>>> implemented pdf on webview
         </scene>
         <!--Messages-->
         <scene sceneID="ocS-AS-fLG">
@@ -177,7 +185,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gW-aM-zqs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="676" y="1057"/>
+=======
             <point key="canvasLocation" x="1384.8" y="1056.5217391304348"/>
+>>>>>>> implemented pdf on webview
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="SD0-Cg-vyh">
@@ -196,7 +208,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8gZ-0E-C0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="2196" y="1057"/>
+=======
             <point key="canvasLocation" x="2994.4000000000001" y="1057.4212893553224"/>
+>>>>>>> implemented pdf on webview
         </scene>
         <!--Services Table View Controller-->
         <scene sceneID="bTj-rh-0cg">
@@ -1740,7 +1756,11 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Em7-Sw-BL7" customClass="FboSelectorCell" customModule="CumulusFBO" customModuleProvider="target">
+<<<<<<< HEAD
+                                        <rect key="frame" x="0.0" y="-21" width="337" height="256"/>
+=======
                                         <rect key="frame" x="0.0" y="0.0" width="337" height="256"/>
+>>>>>>> implemented pdf on webview
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="337" height="256"/>
@@ -1922,6 +1942,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXI-LT-ezZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="1446" y="1057"/>
+=======
             <point key="canvasLocation" x="2183.1999999999998" y="1057.4212893553224"/>
         </scene>
         <!--Navigation Controller-->
@@ -1941,6 +1964,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqz-pT-UFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-895.20000000000005" y="-92.203898050974516"/>
+>>>>>>> implemented pdf on webview
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qth-H2-BqK">

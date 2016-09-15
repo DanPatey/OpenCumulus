@@ -51,6 +51,13 @@
 		991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
 		9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
 		99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* LoginViewController.swift */; };
+		997904B11D89D8D400E3FEA4 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997904B01D89D8D400E3FEA4 /* PDFViewController.swift */; };
+		997904B71D89E0D800E3FEA4 /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 997904B41D89E0D800E3FEA4 /* sample.pdf */; };
+		997904B81D89E0D800E3FEA4 /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 997904B41D89E0D800E3FEA4 /* sample.pdf */; };
+		997904B91D89E0D800E3FEA4 /* sample2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 997904B51D89E0D800E3FEA4 /* sample2.pdf */; };
+		997904BA1D89E0D800E3FEA4 /* sample2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 997904B51D89E0D800E3FEA4 /* sample2.pdf */; };
+		997904BB1D89E0D800E3FEA4 /* sample3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 997904B61D89E0D800E3FEA4 /* sample3.pdf */; };
+		997904BC1D89E0D800E3FEA4 /* sample3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 997904B61D89E0D800E3FEA4 /* sample3.pdf */; };
 		998F916B1D6EB1A800F4B4EF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */; };
 		99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */; };
 		99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */; };
@@ -82,6 +89,11 @@
 		991B63621D67954200922085 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		9944486B1D6C25D3002F68F5 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceCell.swift; path = CumulusFBO/ServiceCell.swift; sourceTree = "<group>"; };
 		99694BE71D7D238D007FACBF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		997904B01D89D8D400E3FEA4 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFViewController.swift; path = ../PDFViewController.swift; sourceTree = "<group>"; };
+		997904B21D89DD6200E3FEA4 /* UXMPDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UXMPDFKit.framework; path = "../../Library/Developer/Xcode/DerivedData/CumulusFBO-epwznkkzqkbessczgkfyhipvbwnp/Build/Products/Debug-iphonesimulator/UXMPDFKit.framework"; sourceTree = "<group>"; };
+		997904B41D89E0D800E3FEA4 /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = sample.pdf; path = ../../../Downloads/UXMPDFKit/Example/UXMPDFKit/sample.pdf; sourceTree = "<group>"; };
+		997904B51D89E0D800E3FEA4 /* sample2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = sample2.pdf; path = ../../../Downloads/UXMPDFKit/Example/UXMPDFKit/sample2.pdf; sourceTree = "<group>"; };
+		997904B61D89E0D800E3FEA4 /* sample3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = sample3.pdf; path = ../../../Downloads/UXMPDFKit/Example/UXMPDFKit/sample3.pdf; sourceTree = "<group>"; };
 		998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBOSelectorViewController.swift; sourceTree = "<group>"; };
 		99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FboSelectorCell.swift; path = CumulusFBO/FboSelectorCell.swift; sourceTree = "<group>"; };
@@ -179,6 +191,7 @@
 		7D43CF5E55CCD8512A142461 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				997904B21D89DD6200E3FEA4 /* UXMPDFKit.framework */,
 				411362B1E61BA4637CC091BE /* Pods_CumulusFBO.framework */,
 			);
 			name = Frameworks;
@@ -196,6 +209,7 @@
 				99694BE71D7D238D007FACBF /* LoginViewController.swift */,
 				57EE9CA31D75220400E1A57F /* MessagesLoginViewController.swift */,
 				57EE9CA51D75260200E1A57F /* ChatViewController.swift */,
+				997904B01D89D8D400E3FEA4 /* PDFViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -203,6 +217,12 @@
 		998F91691D6EAA8200F4B4EF /* Plist */ = {
 			isa = PBXGroup;
 			children = (
+				997904B41D89E0D800E3FEA4 /* sample.pdf */,
+				997904B51D89E0D800E3FEA4 /* sample2.pdf */,
+				997904B61D89E0D800E3FEA4 /* sample3.pdf */,
+				998F916A1D6EB1A800F4B4EF /* GoogleService-Info.plist */,
+				57171B3E1D7FBFE200F2C7FA /* CumulusFBO.plist */,
+				5734C8751CAB67820031B000 /* FBOGo.plist */,
 				99D7550E1D600FD100714EC4 /* Keys.plist */,
 				5734C8751CAB67820031B000 /* FBOGo.plist */,
 				57171B3E1D7FBFE200F2C7FA /* CumulusFBO.plist */,
@@ -324,8 +344,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				997904BC1D89E0D800E3FEA4 /* sample3.pdf in Resources */,
 				57171B321D7FBFE200F2C7FA /* Keys.plist in Resources */,
 				57171B331D7FBFE200F2C7FA /* LaunchScreen.storyboard in Resources */,
+				997904B81D89E0D800E3FEA4 /* sample.pdf in Resources */,
+				997904BA1D89E0D800E3FEA4 /* sample2.pdf in Resources */,
 				57171B341D7FBFE200F2C7FA /* Assets.xcassets in Resources */,
 				57171B351D7FBFE200F2C7FA /* Registration.storyboard in Resources */,
 				57171B361D7FBFE200F2C7FA /* GoogleService-Info.plist in Resources */,
@@ -336,8 +359,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				997904BB1D89E0D800E3FEA4 /* sample3.pdf in Resources */,
 				99D7550F1D600FD100714EC4 /* Keys.plist in Resources */,
 				5734C8741CAB67820031B000 /* LaunchScreen.storyboard in Resources */,
+				997904B71D89E0D800E3FEA4 /* sample.pdf in Resources */,
+				997904B91D89E0D800E3FEA4 /* sample2.pdf in Resources */,
 				5734C8711CAB67820031B000 /* Assets.xcassets in Resources */,
 				57EE9CA21D75201B00E1A57F /* Registration.storyboard in Resources */,
 				998F916B1D6EB1A800F4B4EF /* GoogleService-Info.plist in Resources */,
@@ -509,6 +535,7 @@
 				57CDA7081D31BACE005DD618 /* FlightInformationViewController.swift in Sources */,
 				5784646D1D35DF4B00E5E6BF /* ReservationCell.swift in Sources */,
 				57EE9CA41D75220400E1A57F /* MessagesLoginViewController.swift in Sources */,
+				997904B11D89D8D400E3FEA4 /* PDFViewController.swift in Sources */,
 				57CDA70A1D31EDF0005DD618 /* ScheduleViewController.swift in Sources */,
 				572828861CC44B470005A6EA /* RegistrationManager.swift in Sources */,
 				5734C8861CAB766A0031B000 /* SummaryViewController.swift in Sources */,
