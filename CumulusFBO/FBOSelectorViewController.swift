@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FBOSelectorViewController: UIViewController, UICollectionViewDelegate {
+class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var fboCollectionView: UICollectionView!
     
@@ -18,8 +18,9 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate {
         super.viewDidLoad()
     
         fboCollectionView.delegate = self
+        fboCollectionView.dataSource = self
         
-//        handleTextFieldInterfaces()
+        handleTextFieldInterfaces()
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,16 +28,18 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-//    private func handleTextFieldInterfaces() {
-//        autoCompleteTextField.onTextChange = {[weak self] text in
-//            if !text.isEmpty {
-//                self!.autoCompleteField.autoCompleteStrings = [String] Waiting on
-//            }
+    private func handleTextFieldInterfaces(){
+        autoCompleteTextField.onTextChange = { text in
+            if !text.isEmpty{
+              print(text)
+            }
         }
         
-//        autoCompleteTextField.onSelect = {[weak self] text, indexpath in
-//        }
-//    }
+        autoCompleteTextField.onSelect = {text, indexpath in
+            print(text)
+        }
+    }
+    
 
     // MARK: - UICollectionViewDataSource
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -66,3 +69,4 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+}
