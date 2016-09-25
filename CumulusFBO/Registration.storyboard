@@ -922,7 +922,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.25098039220000001" green="0.51372549020000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="TIB-FB-NJm" firstAttribute="width" secondItem="tDk-hB-Wft" secondAttribute="width" id="0ZM-6G-2ct"/>
                                             <constraint firstItem="tDk-hB-Wft" firstAttribute="leading" secondItem="BSd-TL-uUe" secondAttribute="leading" id="24T-q5-fMt"/>
@@ -1002,7 +1002,6 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.14901960780000001" green="0.28627450980000002" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="mia-Gb-3OW" firstAttribute="leading" secondItem="gN2-KE-V38" secondAttribute="leadingMargin" constant="20" id="5Yk-FW-ZJc"/>
@@ -1150,7 +1149,7 @@
                                                 </connections>
                                             </textField>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.25098039220000001" green="0.51372549020000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="dml-Zm-E1G" firstAttribute="top" secondItem="b0q-UI-7M6" secondAttribute="bottom" constant="5" id="1AA-pM-BZQ"/>
                                             <constraint firstItem="dml-Zm-E1G" firstAttribute="width" secondItem="rlF-cI-AvG" secondAttribute="width" id="1Xo-7I-czw"/>
@@ -1333,7 +1332,6 @@
                                 </variation>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.15686274510000001" green="0.29411764709999999" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="jaQ-jd-jwj" firstAttribute="top" secondItem="3MV-5x-Njg" secondAttribute="bottom" constant="20" id="9aw-zX-0Ig">
