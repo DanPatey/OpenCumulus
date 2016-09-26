@@ -10,9 +10,8 @@ import UIKit
 
 let reservationStore = ReservationStore()
 
-class SummaryViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+class SummaryViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tailNumberLabel: UILabel! {
         didSet {
          self.tailNumberLabel.text = RegistrationsManager.sharedManager.activeReservation.tailNumber
@@ -62,21 +61,6 @@ class SummaryViewController: UIViewController, UITextFieldDelegate, UITableViewD
     //MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-    }
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        cell.textLabel?.text = "Crew Cars"
-        cell.detailTextLabel?.text = "Blue sedan"
-        return cell
     }
     
     func addItemsToSummary(textFields: [UITextField]) {
