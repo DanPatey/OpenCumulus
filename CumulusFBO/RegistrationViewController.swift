@@ -31,12 +31,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         self.phoneNumber.delegate = self
         self.email.delegate = self
         
-        // Empty TextFields
-        self.firstName.placeholder = "First Name"
-        self.lastName.placeholder = "Last Name"
-        self.company.placeholder = "Company"
-        self.phoneNumber.placeholder = "Phone Number"
-        self.email.placeholder = "Email"
     }
     
     //MARK: Dismiss keyboard on tap
