@@ -19,6 +19,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     
         fboCollectionView.delegate = self
         fboCollectionView.dataSource = self
+        fboCollectionView.pagingEnabled = true
         
         handleTextFieldInterfaces()
     }
@@ -40,7 +41,23 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         }
     }
     
+    @IBAction func leftArrowButton(sender: UIButton) {
 
+    }
+
+    var currentSelection = NSIndexPath()
+    @IBAction func rightArrowButton(sender: UIButton) {
+        
+        if currentSelection == 0 {
+            currentSelection = NSIndexPath(forRow: currentSelection.row+1, inSection: currentSelection.section)
+            
+        } else {
+            currentSelection = NSIndexPath(forRow: 0, inSection: 0)
+        }
+        self.fboCollectionView.selectItemAtIndexPath(currentSelection, animated: true, scrollPosition: .Top)
+        
+    }
+    
     // MARK: - UICollectionViewDataSource
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         
@@ -48,17 +65,18 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 4
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
+
+        currentSelection = indexPath
         
         return cell
     }
     
- 
     
     /*
     // MARK: - Navigation
