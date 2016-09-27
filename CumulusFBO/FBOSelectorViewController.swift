@@ -20,7 +20,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         super.viewDidLoad()
         FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
             
-            print("Successful login! \(user?.uid)")
+            print("Successful login!: \(user?.uid)")
         }
     
         fboCollectionView.delegate = self
@@ -39,7 +39,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     // Firebase implementation to send FBOs to database
     func fetchFbos() {
             
-        let ref = FIRDatabase.database().reference().child("FBOs")
+        let ref = FIRDatabase.database().reference().child("Fbos")
         
         ref.observeEventType(.ChildAdded, withBlock: { (snapshot) in
             print(">>>>>>>>>>>>>>>>>>>>>>>\(snapshot)")
@@ -54,7 +54,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
                 fbos.fboName = dictionary["Longbeach"] as? String
                 
                 self.fbos.append(fbos)
-                print(">>>>>>>>>>>>>>>>>>>>>>>>>\(fbos)")
                 
                 dispatch_async(dispatch_get_main_queue(), {
                     self.fboCollectionView.reloadData()

@@ -53,12 +53,12 @@
 		9942E5A51D8A5CFB0030B551 /* sample3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9942E5A21D8A5CFB0030B551 /* sample3.pdf */; };
 		9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
 		99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* LoginViewController.swift */; };
+		9969BD9F1D9ADACB00639F55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9969BD9E1D9ADACB00639F55 /* GoogleService-Info.plist */; };
 		997904B11D89D8D400E3FEA4 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997904B01D89D8D400E3FEA4 /* PDFViewController.swift */; };
 		99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */; };
 		99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */; };
 		99D7550F1D600FD100714EC4 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99D7550E1D600FD100714EC4 /* Keys.plist */; };
 		99F603BB1D9A26AA00A2EA8E /* FbosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F603BA1D9A26AA00A2EA8E /* FbosModel.swift */; };
-		99F603BF1D9A2EED00A2EA8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99F603BE1D9A2EED00A2EA8E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,13 +89,14 @@
 		9942E5A21D8A5CFB0030B551 /* sample3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample3.pdf; sourceTree = "<group>"; };
 		9944486B1D6C25D3002F68F5 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceCell.swift; path = CumulusFBO/ServiceCell.swift; sourceTree = "<group>"; };
 		99694BE71D7D238D007FACBF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9969BD9E1D9ADACB00639F55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9969BDA01D9ADEB400639F55 /* FBOGo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = FBOGo.entitlements; path = FBOGo/FBOGo.entitlements; sourceTree = "<group>"; };
 		997904B01D89D8D400E3FEA4 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFViewController.swift; path = ../PDFViewController.swift; sourceTree = "<group>"; };
 		997904B21D89DD6200E3FEA4 /* UXMPDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UXMPDFKit.framework; path = "../../Library/Developer/Xcode/DerivedData/CumulusFBO-epwznkkzqkbessczgkfyhipvbwnp/Build/Products/Debug-iphonesimulator/UXMPDFKit.framework"; sourceTree = "<group>"; };
 		99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBOSelectorViewController.swift; sourceTree = "<group>"; };
 		99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FboSelectorCell.swift; path = CumulusFBO/FboSelectorCell.swift; sourceTree = "<group>"; };
 		99D7550E1D600FD100714EC4 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		99F603BA1D9A26AA00A2EA8E /* FbosModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbosModel.swift; sourceTree = "<group>"; };
-		99F603BE1D9A2EED00A2EA8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACE457445BE6BF3D90677A3E /* Pods-CumulusFBO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.release.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.release.xcconfig"; sourceTree = "<group>"; };
 		E26A9082861F5B45E1ED21E5 /* Pods-CumulusFBO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +124,7 @@
 		5734C85D1CAB67820031B000 = {
 			isa = PBXGroup;
 			children = (
+				9969BDA01D9ADEB400639F55 /* FBOGo.entitlements */,
 				5734C8681CAB67820031B000 /* CumlusFBO */,
 				5734C8691CAB67820031B000 /* AppDelegate.swift */,
 				5734C8671CAB67820031B000 /* Products */,
@@ -221,7 +223,7 @@
 			children = (
 				99D7550E1D600FD100714EC4 /* Keys.plist */,
 				5734C8751CAB67820031B000 /* FBOGo.plist */,
-				99F603BE1D9A2EED00A2EA8E /* GoogleService-Info.plist */,
+				9969BD9E1D9ADACB00639F55 /* GoogleService-Info.plist */,
 				57171B3E1D7FBFE200F2C7FA /* CumulusFBO.plist */,
 			);
 			name = Plist;
@@ -306,6 +308,9 @@
 						DevelopmentTeam = U6J9N2F6E2;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -352,13 +357,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9942E5A51D8A5CFB0030B551 /* sample3.pdf in Resources */,
+				9969BD9F1D9ADACB00639F55 /* GoogleService-Info.plist in Resources */,
 				99D7550F1D600FD100714EC4 /* Keys.plist in Resources */,
 				5734C8741CAB67820031B000 /* LaunchScreen.storyboard in Resources */,
 				9942E5A31D8A5CFB0030B551 /* sample.pdf in Resources */,
 				9942E5A41D8A5CFB0030B551 /* sample2.pdf in Resources */,
 				5734C8711CAB67820031B000 /* Assets.xcassets in Resources */,
 				57EE9CA21D75201B00E1A57F /* Registration.storyboard in Resources */,
-				99F603BF1D9A2EED00A2EA8E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,6 +679,8 @@
 			baseConfigurationReference = E26A9082861F5B45E1ED21E5 /* Pods-CumulusFBO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = FBOGo/FBOGo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/CumulusFBO/FBOGo.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danpatey.FBOGo;
@@ -687,6 +694,9 @@
 			baseConfigurationReference = ACE457445BE6BF3D90677A3E /* Pods-CumulusFBO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_ENTITLEMENTS = FBOGo/FBOGo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = "$(SRCROOT)/CumulusFBO/FBOGo.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danpatey.FBOGo;
