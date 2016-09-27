@@ -61,6 +61,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
     //MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Button", style: .Done, target: self, action: nil)
     }
     
     func addItemsToSummary(textFields: [UITextField]) {

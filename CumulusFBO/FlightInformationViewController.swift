@@ -186,12 +186,6 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     //MARK: View controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tailNumber.placeholder = "Tail Number"
-        aircraftType.placeholder = "Aircraft Type"
-        airportCode.placeholder = "Airport Code"
-        arrivalTime.placeholder = "Arrival Time"
-        departureTime.placeholder = "Departure Time."
     }
     
     override func viewWillAppear(animated: Bool) {
