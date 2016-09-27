@@ -36,7 +36,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         // Dispose of any resources that can be recreated.
     }
     
-    // Firebase stuff
+    // Firebase implementation to send FBOs to database
     func fetchFbos() {
             
         let ref = FIRDatabase.database().reference().child("FBOs")

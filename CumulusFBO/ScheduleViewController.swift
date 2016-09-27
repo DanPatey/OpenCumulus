@@ -17,6 +17,12 @@ class ScheduleViewController: UITableViewController {
         return reservationStore.allReservations.count
     }
     
+    //Information from SummaryViewController
+    func summaryInformation(notification: NSNotification) {
+        // This should add a tableviewcell to the tableView with the product that is added
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ScheduleViewController.summaryInformation), name: "summaryInformation", object: nil)
+    }
+    
     //MARK: UITableView Data Source
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         

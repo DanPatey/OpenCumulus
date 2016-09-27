@@ -38,16 +38,6 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBOutlet weak var summary: UITextView! {
-        didSet {
-//            self.summary.text = RegistrationsManager.sharedManager.activeReservation.generateSummary()
-            //Add text for each cell
-        }
-    }
-    @IBAction func editButton(sender: UIBarButtonItem) {
-        self.summary.editable = true
-    }
-    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.delegate = self
         textField.resignFirstResponder()
@@ -61,7 +51,23 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
     //MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Button", style: .Done, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Button", style: .Done, target: self, action: #selector(SummaryViewController.submitButtonWithAlert))
+    }
+    
+    //Sends Notification information to cells in ScheduleViewController
+    func submitButtonWithAlert() {
+        NSNotificationCenter.defaultCenter().postNotificationName("summaryInformation", object: nil)
+        let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
+        let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
+        let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
+        
+        reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
+        
+        let alert = UIAlertController(title: "Thanks for flying with Cumulus", message: "Fbo information will be sent to you shortly", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler: nil))
+        // Present the AlertController
+        presentViewController(alert, animated: true, completion: nil)
+
     }
     
     func addItemsToSummary(textFields: [UITextField]) {
@@ -71,10 +77,5 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
-        let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
-        let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
-        
-        reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
     }
 }
