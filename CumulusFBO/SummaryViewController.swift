@@ -12,6 +12,8 @@ let reservationStore = ReservationStore()
 
 class SummaryViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var checkMarkLabel: UILabel!
+    
     @IBOutlet weak var tailNumberLabel: UILabel! {
         didSet {
          self.tailNumberLabel.text = RegistrationsManager.sharedManager.activeReservation.tailNumber
@@ -38,6 +40,18 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    // Checkbox button that appears and disappear
+    @IBAction func onsiteCheckBox(sender: UIButton) {
+        if checkMarkLabel.hidden == false {
+            checkMarkLabel.hidden = true
+            
+            
+        } else {
+            checkMarkLabel.hidden = false
+            // Don't send user to payment option
+        }
+    }
+
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.delegate = self
         textField.resignFirstResponder()
