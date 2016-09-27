@@ -7,21 +7,28 @@
 //
 
 import UIKit
+import Firebase
 
 class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var fboCollectionView: UICollectionView!
     
     @IBOutlet weak var autoCompleteTextField: AutoCompleteTextField!
+    var fbos = [FBOList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
+            
+            print("Successful login! \(user?.uid)")
+        }
     
         fboCollectionView.delegate = self
         fboCollectionView.dataSource = self
         fboCollectionView.pagingEnabled = true
         
         handleTextFieldInterfaces()
+        fetchFbos()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,6 +36,35 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         // Dispose of any resources that can be recreated.
     }
     
+    // Firebase stuff
+    func fetchFbos() {
+            
+        let ref = FIRDatabase.database().reference().child("FBOs")
+        
+        ref.observeEventType(.ChildAdded, withBlock: { (snapshot) in
+            print(">>>>>>>>>>>>>>>>>>>>>>>\(snapshot)")
+            let fbos = FBOList()
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                fbos.setValuesForKeysWithDictionary(dictionary)
+                
+                fbos.key = snapshot.key
+                
+                fbos.fboName = dictionary["Longbeach"] as? String
+                
+                self.fbos.append(fbos)
+                print(">>>>>>>>>>>>>>>>>>>>>>>>>\(fbos)")
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.fboCollectionView.reloadData()
+                })
+            }
+        })
+
+    }
+    
+    // AutoComplete textfield
     private func handleTextFieldInterfaces(){
         autoCompleteTextField.onTextChange = { text in
             if !text.isEmpty{
