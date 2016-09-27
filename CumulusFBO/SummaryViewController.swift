@@ -51,7 +51,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
     //MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Button", style: .Done, target: self, action: #selector(SummaryViewController.submitButtonWithAlert))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit", style: .Done, target: self, action: #selector(SummaryViewController.submitButtonWithAlert))
     }
     
     //Sends Notification information to cells in ScheduleViewController
