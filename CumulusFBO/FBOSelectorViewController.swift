@@ -60,21 +60,31 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
                 })
             }
         })
-
     }
-    
-    // AutoComplete textfield
-    private func handleTextFieldInterfaces(){
+   
+    /*******************************************************************************************
+    // AutoCompleteTextfield
+    private func handleTextFieldInterfaces() {
+        
         autoCompleteTextField.onTextChange = { text in
-            if !text.isEmpty{
+            if !text.isEmpty {
+                let fbosStuff = [String]()
+                
+                for dictionary in self.fbos  {
+                    self.fbos.append(dictionary)
+                }
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.autoCompleteTextField.autoCompleteStrings = fbosStuff
+                })
+            }
               print(text)
             }
-        }
-        
+    
         autoCompleteTextField.onSelect = {text, indexpath in
             print(text)
         }
     }
+  ******************************************************************************************/
     
     @IBAction func leftArrowButton(sender: UIButton) {
 

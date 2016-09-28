@@ -45,7 +45,6 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         if checkMarkLabel.hidden == false {
             checkMarkLabel.hidden = true
             
-            
         } else {
             checkMarkLabel.hidden = false
             // Don't send user to payment option
