@@ -62,8 +62,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         })
     }
    
-    /*******************************************************************************************
-    // AutoCompleteTextfield
     private func handleTextFieldInterfaces() {
         
         autoCompleteTextField.onTextChange = { text in
@@ -84,8 +82,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
             print(text)
         }
     }
-  ******************************************************************************************/
-    
+ 
     @IBAction func leftArrowButton(sender: UIButton) {
 
     }

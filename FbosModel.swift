@@ -12,5 +12,4 @@ class FBOList: NSObject {
     
     var key: String!
     var fboName: String!
-    
 }
