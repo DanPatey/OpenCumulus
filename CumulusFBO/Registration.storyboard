@@ -1902,15 +1902,9 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtX-fb-8ZY">
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="leftArrowButton:" destination="fEQ-bq-yGJ" eventType="touchUpInside" id="y9v-cs-5xK"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7To-gT-FcD">
                                 <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="rightArrowButton:" destination="fEQ-bq-yGJ" eventType="touchUpInside" id="O6O-hX-Eod"/>
-                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RnX-Zz-JkN">
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hej-YU-Iiu">
@@ -1921,7 +1915,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Em7-Sw-BL7" customClass="FboSelectorCell" customModule="CumulusFBO" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="239"/>
+                                        <rect key="frame" x="0.0" y="2" width="353" height="239"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="353" height="239"/>
@@ -1934,21 +1928,21 @@
                                                     </constraints>
                                                     <prototypes>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="hAV-Qh-ZVG" detailTextLabel="XtN-ku-llk" style="IBUITableViewCellStyleValue1" id="AZz-gA-PW9">
-                                                            <rect key="frame" x="0.0" y="28" width="1000" height="44"/>
+                                                            <rect key="frame" x="0.0" y="28" width="345" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AZz-gA-PW9" id="29M-3l-uP9">
-                                                                <frame key="frameInset" width="1000" height="43"/>
+                                                                <frame key="frameInset" width="345" height="43"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hAV-Qh-ZVG">
-                                                                        <frame key="frameInset" minX="164" minY="12" width="32" height="20"/>
+                                                                        <frame key="frameInset" minX="15" minY="12" width="32" height="20"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XtN-ku-llk">
-                                                                        <frame key="frameInset" minX="794" minY="12" width="42" height="20"/>
+                                                                        <frame key="frameInset" minX="288" minY="12" width="42" height="20"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                         <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1960,9 +1954,17 @@
                                                     </prototypes>
                                                 </tableView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroungImage" translatesAutoresizingMaskIntoConstraints="NO" id="0uU-ao-NtM"/>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONG BEACH / Daugherty Field KLGB" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-QA-Eqc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airport code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-QA-Eqc">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="193" id="ya9-SH-mSj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll5-eo-CcU">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="193" id="p07-fz-qAx"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1972,6 +1974,7 @@
                                         </view>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Ll5-eo-CcU" firstAttribute="top" secondItem="BmS-QA-Eqc" secondAttribute="bottom" constant="14" id="73Z-aR-Nh5"/>
                                             <constraint firstItem="BmS-QA-Eqc" firstAttribute="leading" secondItem="0uU-ao-NtM" secondAttribute="trailing" constant="5" id="8AJ-Fa-Ido"/>
                                             <constraint firstItem="NvB-1X-0iV" firstAttribute="bottom" secondItem="Em7-Sw-BL7" secondAttribute="bottomMargin" id="Hcj-gC-fvW"/>
                                             <constraint firstItem="NvB-1X-0iV" firstAttribute="top" secondItem="0uU-ao-NtM" secondAttribute="bottom" constant="8" id="Vp4-8f-7WR"/>
@@ -1979,11 +1982,14 @@
                                             <constraint firstItem="BmS-QA-Eqc" firstAttribute="top" secondItem="Em7-Sw-BL7" secondAttribute="topMargin" id="nJL-BJ-374"/>
                                             <constraint firstItem="NvB-1X-0iV" firstAttribute="leading" secondItem="Em7-Sw-BL7" secondAttribute="leadingMargin" id="nv6-9B-U57"/>
                                             <constraint firstItem="NvB-1X-0iV" firstAttribute="leading" secondItem="0uU-ao-NtM" secondAttribute="leading" id="sev-zq-S4C"/>
+                                            <constraint firstItem="Ll5-eo-CcU" firstAttribute="leading" secondItem="BmS-QA-Eqc" secondAttribute="leading" id="tga-s8-uRE"/>
                                             <constraint firstAttribute="trailing" secondItem="NvB-1X-0iV" secondAttribute="trailing" id="wrF-7n-naF"/>
                                             <constraint firstItem="BmS-QA-Eqc" firstAttribute="top" secondItem="0uU-ao-NtM" secondAttribute="top" id="y40-4X-c8G"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="airportCodeLabel" destination="BmS-QA-Eqc" id="y5c-Nw-zT3"/>
                                             <outlet property="fboTableView" destination="NvB-1X-0iV" id="8eQ-C2-jf7"/>
+                                            <outlet property="fieldNameLabel" destination="Ll5-eo-CcU" id="Vos-jP-eF9"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

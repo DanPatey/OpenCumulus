@@ -12,9 +12,9 @@ import Firebase
 class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var fboCollectionView: UICollectionView!
-    
     @IBOutlet weak var autoCompleteTextField: AutoCompleteTextField!
-    var fbos = [FBOList]()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,41 +27,15 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         fboCollectionView.dataSource = self
         fboCollectionView.pagingEnabled = true
         
-        handleTextFieldInterfaces()
-        fetchFbos()
+       // handleTextFieldInterfaces()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // Firebase implementation to send FBOs to database
-    func fetchFbos() {
-            
-        let ref = FIRDatabase.database().reference().child("Fbos")
-        
-        ref.observeEventType(.ChildAdded, withBlock: { (snapshot) in
-            print("\(snapshot)")
-            let fbos = FBOList()
-            
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-    
-                fbos.setValuesForKeysWithDictionary(dictionary)
-                
-                fbos.key = snapshot.key
-                
-                fbos.fboName = dictionary["Longbeach"] as? String
-                
-                self.fbos.append(fbos)
-                
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.fboCollectionView.reloadData()
-                })
-            }
-        })
-    }
-   
+
+/*
     private func handleTextFieldInterfaces() {
         
         autoCompleteTextField.onTextChange = { text in
@@ -84,7 +58,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
             print(text)
         }
     }
- 
+ */
     @IBAction func leftArrowButton(sender: UIButton) {
 
     }
@@ -116,6 +90,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
+        
 
         currentSelection = indexPath
         
