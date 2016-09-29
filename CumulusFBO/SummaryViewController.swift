@@ -14,9 +14,57 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var checkMarkLabel: UILabel!
     
+    //MARK: Price Labels
+    @IBOutlet weak var antiIce: UILabel! {
+        didSet {
+            if RegistrationsManager.sharedManager.activeReservation.antiIce == true {
+                //FBO int that gives the price for these services
+                self.antiIce.text = "$10.00"
+            }
+        }
+    }
+    @IBOutlet weak var cateringPrice: UILabel! {
+        didSet {
+            if RegistrationsManager.sharedManager.activeReservation.catering == true {
+                //FBO int that gives the price for these services
+                self.cateringPrice.text = "$10.00"
+            }
+        }
+        
+    }
+    @IBOutlet weak var rentalCarsPrice: UILabel! {
+        didSet {
+            if RegistrationsManager.sharedManager.activeReservation.antiIce == true {
+                //FBO int that gives the price for these services
+                self.rentalCarsPrice.text = "$10.00"
+            }
+        }
+        
+    }
+    @IBOutlet weak var crewCarsPrice: UILabel! {
+        didSet {
+            if RegistrationsManager.sharedManager.activeReservation.crewCars == "1" {
+                //FBO int that gives the price for these services
+                self.crewCarsPrice.text = "$10.00"
+            }
+        }
+        
+    }
+    
+    @IBOutlet weak var fuelPrice: UILabel! {
+        didSet {
+            if RegistrationsManager.sharedManager.activeReservation.rentals == "1" {
+                //FBO int that gives the price for these services
+                self.fuelPrice.text = "$10.00"
+            }
+        }
+        
+    }
+    
+    //MARK: Flight Information
     @IBOutlet weak var tailNumberLabel: UILabel! {
         didSet {
-         self.tailNumberLabel.text = RegistrationsManager.sharedManager.activeReservation.tailNumber
+            self.tailNumberLabel.text = RegistrationsManager.sharedManager.activeReservation.tailNumber
         }
     }
     @IBOutlet weak var aircraftTypeLabel: UILabel! {
@@ -39,8 +87,9 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             self.departureTimeLabel.text = RegistrationsManager.sharedManager.activeReservation.departureTime
         }
     }
+
     
-    // Checkbox button that appears and disappear
+    //MARK: Checkbox button that appears and disappear
     @IBAction func onsiteCheckBox(sender: UIButton) {
         if checkMarkLabel.hidden == false {
             checkMarkLabel.hidden = true
@@ -50,24 +99,31 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             // Don't send user to payment option
         }
     }
-
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.delegate = self
         textField.resignFirstResponder()
         return true
     }
     
-    //MARK: Save information to Reservation
-    @IBAction func SaveRegistration(sender: UIBarButtonItem) {
-    }
     
     //MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit", style: .Done, target: self, action: #selector(SummaryViewController.submitButtonWithAlert))
+        
+        navigationBarButtons()
     }
     
-    //Sends Notification information to cells in ScheduleViewController
+    //MARK: Far Right buttons on the navigation on the bar
+    func navigationBarButtons() {
+        let submitButton = UIBarButtonItem(title: "Submit", style: .Plain, target: self, action: #selector(SummaryViewController.submitButtonWithAlert))
+        let image = UIImage(named: "Edit Button")
+        let editButton = UIBarButtonItem(image: image, style: .Plain, target: self, action: #selector(SummaryViewController.editInformationButton))
+        
+        self.navigationItem.rightBarButtonItems = [submitButton, editButton]
+    }
+    
+    // MARK: Save information to ReservationSends Notification information to cells in ScheduleViewController
     func submitButtonWithAlert() {
         NSNotificationCenter.defaultCenter().postNotificationName("summaryInformation", object: nil)
         let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
@@ -81,6 +137,15 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         // Present the AlertController
         presentViewController(alert, animated: true, completion: nil)
 
+    }
+    
+    func servicesPrices() {
+        
+       
+    }
+    
+    func editInformationButton() {
+        print("works")
     }
     
     func addItemsToSummary(textFields: [UITextField]) {

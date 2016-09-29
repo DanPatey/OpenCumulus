@@ -42,11 +42,11 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         let ref = FIRDatabase.database().reference().child("Fbos")
         
         ref.observeEventType(.ChildAdded, withBlock: { (snapshot) in
-            print(">>>>>>>>>>>>>>>>>>>>>>>\(snapshot)")
+            print("\(snapshot)")
             let fbos = FBOList()
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
-                
+    
                 fbos.setValuesForKeysWithDictionary(dictionary)
                 
                 fbos.key = snapshot.key
@@ -70,11 +70,13 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
                 
                 for dictionary in self.fbos  {
                     self.fbos.append(dictionary)
+                    
                 }
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    self.autoCompleteTextField.autoCompleteStrings = fbosStuff
-                })
-            }
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.autoCompleteTextField.autoCompleteStrings = fbosStuff
+                        
+                    })
+                }
               print(text)
             }
     
@@ -99,6 +101,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         self.fboCollectionView.selectItemAtIndexPath(currentSelection, animated: true, scrollPosition: .Top)
         
     }
+    
     
     // MARK: - UICollectionViewDataSource
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
