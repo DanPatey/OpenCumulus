@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Past Flights-->
+        <!--Flights-->
         <scene sceneID="2h7-SI-APO">
             <objects>
                 <viewController id="Gr7-Tg-8xQ" customClass="ScheduleViewController" customModule="CumulusFBO" customModuleProvider="target" sceneMemberID="viewController">
@@ -83,7 +83,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Past Flights" image="PastFlightsArrows" selectedImage="PastFlightsArrows" id="Khk-Pv-6VD"/>
+                    <tabBarItem key="tabBarItem" title="Flights" image="PastFlightsArrows" selectedImage="PastFlightsArrows" id="Khk-Pv-6VD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsi-fo-J7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1744,11 +1744,15 @@
                         <outlet property="airportCodeLabel" destination="VvK-IE-NME" id="2Hh-Mc-vaL"/>
                         <outlet property="antiIce" destination="05U-hb-XdW" id="SbN-YT-rU7"/>
                         <outlet property="arrivalTimeLabel" destination="bek-Zg-P47" id="n4r-cj-KF7"/>
+                        <outlet property="baggageCartPrice" destination="49G-eE-Zhj" id="9fB-9D-om7"/>
                         <outlet property="cateringPrice" destination="af5-HG-M7E" id="BFe-Kz-lBi"/>
                         <outlet property="checkMarkLabel" destination="eBZ-lP-uhn" id="u9w-DH-qfK"/>
                         <outlet property="crewCarsPrice" destination="C5x-zQ-Koi" id="X0y-JF-TRQ"/>
                         <outlet property="departureTimeLabel" destination="fgM-QL-kWy" id="lrC-an-Dtt"/>
                         <outlet property="fuelPrice" destination="VMn-7R-eBE" id="7Yd-tV-c5z"/>
+                        <outlet property="gpuCartPrice" destination="Zfd-5D-cVq" id="CYG-hV-Btb"/>
+                        <outlet property="lavServicePrice" destination="kvV-1q-Zy2" id="7op-mm-WnU"/>
+                        <outlet property="marshallerPrice" destination="G5G-5F-sEb" id="UgH-Sb-Ws2"/>
                         <outlet property="rentalCarsPrice" destination="lOH-9z-4YT" id="aZC-pM-zxc"/>
                         <outlet property="tailNumberLabel" destination="9GH-TF-ORr" id="wpB-ra-o8o"/>
                     </connections>
@@ -2058,7 +2062,6 @@
                     <connections>
                         <segue destination="PZK-8J-8hA" kind="relationship" relationship="viewControllers" id="h9M-7v-Thr"/>
                         <segue destination="Gr7-Tg-8xQ" kind="relationship" relationship="viewControllers" id="UGa-f8-XS8"/>
-                        <segue destination="xNl-gg-rMZ" kind="relationship" relationship="viewControllers" id="Wep-JT-zpy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVj-vd-OcY" userLabel="First Responder" sceneMemberID="firstResponder"/>

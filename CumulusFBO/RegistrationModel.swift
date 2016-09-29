@@ -38,8 +38,8 @@ class RegistrationsModel {
         let registrationInfo = "First Name: \(self.firstName ?? "")\nLast Name: \(self.lastName ?? "")\nCompany: \(self.company ?? "")\nPhone Number: \(self.phoneNumber ?? "")\nEmail: \(self.email ?? "")"
         let flightInfo = "\nTail Number: \(self.tailNumber ?? "")\nAircraft Type: \(self.aircraftType ?? "")\nAirport Code: \(self.airportCode ?? "")\nArrival Time: \(self.arrivalTime ?? "")\nDeparture Time: \(self.departureTime ?? "")"
         
-        let selected = "\nAnti Ice: \(self.antiIce)\nBaggage Cart: \(self.baggageCart)\nGPUCart: \(self.gpuCart)\nMarshaller: \(self.marshaller)\nLAV Service: \(self.lavService)\nCartering: \(self.catering)\nCrew Cars: \(self.crewCars ?? "")\nRentals: \(self.rentals ?? "")"
+        let services = "\nAnti Ice: \(self.antiIce)\nBaggage Cart: \(self.baggageCart)\nGPUCart: \(self.gpuCart)\nMarshaller: \(self.marshaller)\nLAV Service: \(self.lavService)\nCartering: \(self.catering)\nCrew Cars: \(self.crewCars ?? "")\nRentals: \(self.rentals ?? "")"
         
-        return registrationInfo + flightInfo + selected
+        return registrationInfo + flightInfo + services
     }
 }

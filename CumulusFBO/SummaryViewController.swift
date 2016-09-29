@@ -23,6 +23,42 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    @IBOutlet weak var baggageCartPrice: UILabel! {
+        didSet {
+            if RegistrationsManager.sharedManager.activeReservation.baggageCart == true {
+                //FBO int that gives the price for these services
+                self.baggageCartPrice.text = "$10.00"
+            }
+        }
+    }
+    
+    @IBOutlet weak var gpuCartPrice: UILabel! {
+        didSet {
+            if RegistrationsManager.sharedManager.activeReservation.gpuCart == true {
+                //FBO int that gives the price for these services
+                self.gpuCartPrice.text = "$10.00"
+            }
+        }
+    }
+    
+    @IBOutlet weak var marshallerPrice: UILabel! {
+        didSet {
+            if RegistrationsManager.sharedManager.activeReservation.marshaller == true {
+                //FBO int that gives the price for these services
+                self.marshallerPrice.text = "$10.00"
+            }
+        }
+    }
+    
+    @IBOutlet weak var lavServicePrice: UILabel! {
+        didSet {
+            if RegistrationsManager.sharedManager.activeReservation.lavService == true {
+                //FBO int that gives the price for these services
+                self.lavServicePrice.text = "$10.00"
+            }
+        }
+    }
+    
     @IBOutlet weak var cateringPrice: UILabel! {
         didSet {
             if RegistrationsManager.sharedManager.activeReservation.catering == true {
@@ -34,7 +70,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
     }
     @IBOutlet weak var rentalCarsPrice: UILabel! {
         didSet {
-            if RegistrationsManager.sharedManager.activeReservation.antiIce == true {
+            if RegistrationsManager.sharedManager.activeReservation.rentals == "1" {
                 //FBO int that gives the price for these services
                 self.rentalCarsPrice.text = "$10.00"
             }
@@ -53,10 +89,10 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var fuelPrice: UILabel! {
         didSet {
-            if RegistrationsManager.sharedManager.activeReservation.rentals == "1" {
-                //FBO int that gives the price for these services
-                self.fuelPrice.text = "$10.00"
-            }
+           
+        //FBO int that gives the price for these services
+        self.fuelPrice.text = "$10.00"
+    
         }
         
     }
