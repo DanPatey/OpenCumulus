@@ -14,8 +14,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var fboCollectionView: UICollectionView!
     @IBOutlet weak var autoCompleteTextField: AutoCompleteTextField!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in

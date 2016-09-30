@@ -27,26 +27,22 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
     // Firebase implementation to send FBOs to database
     func fetchFbos() {
         
-        let ref = FIRDatabase.database().reference().child("Destination").child("Airport").child("Long Beach").child("fbos").child("atlantic")
+        let ref = FIRDatabase.database().reference().child("Airport/Long Beach/FBOs/Atlantic")
         
-        ref.observeEventType(.ChildAdded, withBlock: { (snapshot) in
-            print("\(snapshot)")
-            let fbos = FBOList()
+        ref.observeEventType(.Value, withBlock: { (snapshot) in
+            print(">>\(snapshot)")
             
+            let fbo = FBOList()
             if let dictionary = snapshot.value as? [String: AnyObject] {
+                fbo.key = snapshot.key
                 
-                fbos.setValuesForKeysWithDictionary(dictionary)
+                fbo.fboName = dictionary["code"] as? String
+                fbo.fullName = dictionary["fullname"] as? String
+                fbo.freq = dictionary["freq"] as? String
+                fbo.phoneNumber = dictionary["phone number"] as? String
+                fbo.ll = dictionary["100LL"] as? String
                 
-                fbos.key = snapshot.key
-                
-                fbos.fboName = dictionary["code"] as? String
-                fbos.fullName = dictionary["fullname"] as? String
-                fbos.freq = dictionary["freq"] as? String
-                fbos.phoneNumber = dictionary["phone number"] as? String
-                fbos.ll = dictionary["100LL"] as? String
-                
-                
-                self.fbos.append(fbos)
+                self.fbos.append(fbo)
                 
                 dispatch_async(dispatch_get_main_queue(), {
                     self.fboTableView.reloadData()
@@ -62,17 +58,18 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return fbos.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cells", forIndexPath: indexPath)
         
         let fbo = fbos[indexPath.row]
+        print("Fbo: \(fbo.ll)")
         
-        cell.textLabel?.text = fbo.fullName
+        cell.textLabel?.text = fbo.ll
         
         return cell
     }
+    
 }
