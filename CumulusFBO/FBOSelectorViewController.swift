@@ -40,31 +40,31 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         // Dispose of any resources that can be recreated.
     }
 
-
-/*
     private func handleTextFieldInterfaces() {
-        
         autoCompleteTextField.onTextChange = { text in
-            if !text.isEmpty {
-                let fbosStuff = [String]()
-                
-                for dictionary in self.fbos  {
-                    self.fbos.append(dictionary)
+            let ref = FIRDatabase.database().reference().child("Airport")
+            ref.observeEventType(.Value, withBlock: { (snapshot) in
+                print(">>\(snapshot)")
+            
+                if !text.isEmpty {
+                    let fbosStuff = [String]()
                     
-                }
+                    for dictionary in self.fbo  {
+                        print(dictionary)
+                    }
+                    
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         self.autoCompleteTextField.autoCompleteStrings = fbosStuff
-                        
-                    })
-                }
-              print(text)
+                        })
+                    }
+                })
             }
     
         autoCompleteTextField.onSelect = {text, indexpath in
             print(text)
         }
     }
- */
+
     // Firebase implementation to send FBOs to database
     func fetchAirport() {
         
