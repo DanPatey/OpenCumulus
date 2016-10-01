@@ -119,7 +119,6 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    
     //MARK: Checkbox button that appears and disappear
     @IBAction func onsiteCheckBox(sender: UIButton) {
         if checkMarkLabel.hidden == false {
@@ -136,7 +135,6 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
     
     //MARK: View lifecycle
     override func viewDidLoad() {
@@ -161,9 +159,11 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
         let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
         
+        // Create the reservation in our internal schedule array
         reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
-        
-        let alert = UIAlertController(title: "Thanks for flying with Cumulus", message: "Flight information has been sent to the FBO", preferredStyle: .Alert)
+            
+        // Display an alert letting the user information has been sent
+        let alert = UIAlertController(title: "Thank You For Flying With Cumulus", message: "Flight information has been sent to the FBO", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler: nil))
         // Present the AlertController
         presentViewController(alert, animated: true, completion: nil)

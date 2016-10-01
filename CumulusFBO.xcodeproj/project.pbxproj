@@ -152,6 +152,7 @@
 				57EE9CA71D7527D200E1A57F /* Models */,
 				57EE9CA81D7527E700E1A57F /* Layouts */,
 				998F91691D6EAA8200F4B4EF /* Plist */,
+				57420D331D9F8F5D00A7C4EA /* Resources */,
 			);
 			name = CumlusFBO;
 			path = CumulusFBO;
@@ -194,6 +195,17 @@
 			name = PDF;
 			sourceTree = "<group>";
 		};
+		57420D331D9F8F5D00A7C4EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9942E5A01D8A5CFB0030B551 /* sample.pdf */,
+				9942E5A11D8A5CFB0030B551 /* sample2.pdf */,
+				9942E5A21D8A5CFB0030B551 /* sample3.pdf */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		57EE9CA71D7527D200E1A57F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,9 +224,6 @@
 		57EE9CA81D7527E700E1A57F /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
-				9942E5A01D8A5CFB0030B551 /* sample.pdf */,
-				9942E5A11D8A5CFB0030B551 /* sample2.pdf */,
-				9942E5A21D8A5CFB0030B551 /* sample3.pdf */,
 				5734C8701CAB67820031B000 /* Assets.xcassets */,
 				5742FDEE1D42A19000CB0DDB /* Registration.storyboard */,
 				5734C8721CAB67820031B000 /* LaunchScreen.storyboard */,
