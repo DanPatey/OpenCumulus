@@ -212,5 +212,3 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
         }
     }
 }
-
-

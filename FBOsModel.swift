@@ -18,4 +18,3 @@ class FBOList: NSObject {
     var ll : String?
     
 }
-

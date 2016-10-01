@@ -9,7 +9,6 @@
 import UIKit
 
 let reservationStore = ReservationStore()
-
 class SummaryViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var checkMarkLabel: UILabel!
@@ -66,8 +65,8 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
                 self.cateringPrice.text = "$10.00"
             }
         }
-        
     }
+    
     @IBOutlet weak var rentalCarsPrice: UILabel! {
         didSet {
             if RegistrationsManager.sharedManager.activeReservation.rentals == "1" {
@@ -75,8 +74,8 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
                 self.rentalCarsPrice.text = "$10.00"
             }
         }
-        
     }
+    
     @IBOutlet weak var crewCarsPrice: UILabel! {
         didSet {
             if RegistrationsManager.sharedManager.activeReservation.crewCars == "1" {
@@ -84,17 +83,13 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
                 self.crewCarsPrice.text = "$10.00"
             }
         }
-        
     }
     
     @IBOutlet weak var fuelPrice: UILabel! {
         didSet {
-           
         //FBO int that gives the price for these services
         self.fuelPrice.text = "$10.00"
-    
         }
-        
     }
     
     //MARK: Flight Information
@@ -168,16 +163,13 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         
         reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
         
-        let alert = UIAlertController(title: "Thanks for flying with Cumulus", message: "Fbo information will be sent to you shortly", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Thanks for flying with Cumulus", message: "Flight information has been sent to the FBO", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler: nil))
         // Present the AlertController
         presentViewController(alert, animated: true, completion: nil)
-
     }
     
     func servicesPrices() {
-        
-       
     }
     
     func editInformationButton() {

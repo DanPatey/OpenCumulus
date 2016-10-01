@@ -157,6 +157,43 @@
 			path = CumulusFBO;
 			sourceTree = "<group>";
 		};
+		57420D2F1D9F8DD700A7C4EA /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */,
+				5734C86B1CAB67820031B000 /* RegistrationViewController.swift */,
+				57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */,
+				991B63621D67954200922085 /* ServicesTableViewController.swift */,
+				5734C8851CAB766A0031B000 /* SummaryViewController.swift */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		57420D301D9F8DF600A7C4EA /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */,
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		57420D311D9F8E0600A7C4EA /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				57EE9CA31D75220400E1A57F /* MessagesLoginViewController.swift */,
+				57EE9CA51D75260200E1A57F /* ChatViewController.swift */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		57420D321D9F8E1500A7C4EA /* PDF */ = {
+			isa = PBXGroup;
+			children = (
+				997904B01D89D8D400E3FEA4 /* PDFViewController.swift */,
+			);
+			name = PDF;
+			sourceTree = "<group>";
+		};
 		57EE9CA71D7527D200E1A57F /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,16 +244,11 @@
 		997AC12D1D61F80D008FA2A5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5734C86B1CAB67820031B000 /* RegistrationViewController.swift */,
-				57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */,
-				991B63621D67954200922085 /* ServicesTableViewController.swift */,
-				5734C8851CAB766A0031B000 /* SummaryViewController.swift */,
-				57CDA7091D31EDF0005DD618 /* ScheduleViewController.swift */,
-				99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */,
 				99694BE71D7D238D007FACBF /* LoginViewController.swift */,
-				57EE9CA31D75220400E1A57F /* MessagesLoginViewController.swift */,
-				57EE9CA51D75260200E1A57F /* ChatViewController.swift */,
-				997904B01D89D8D400E3FEA4 /* PDFViewController.swift */,
+				57420D2F1D9F8DD700A7C4EA /* Register */,
+				57420D301D9F8DF600A7C4EA /* Schedule */,
+				57420D311D9F8E0600A7C4EA /* Chat */,
+				57420D321D9F8E1500A7C4EA /* PDF */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
