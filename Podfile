@@ -4,9 +4,9 @@
  use_frameworks!
 
 target 'CumulusFBO' do
-pod 'Firebase'
-pod 'SwiftMailgun'
-pod 'Firebase/Auth'
-pod 'Firebase/Database'
-pod 'JSQMessagesViewController'
+  pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'JSQMessagesViewController'
+  pod 'SwiftMailgun'
 end
