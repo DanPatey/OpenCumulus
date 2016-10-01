@@ -1862,7 +1862,7 @@
                                     <constraint firstAttribute="height" constant="161" id="zTW-R7-Hqx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LONG BEACH / Daugherty Field KLGB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlL-Zj-FZ8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlL-Zj-FZ8">
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="NXW-6Q-70F"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="eYf-Sh-mIx"/>
@@ -1883,7 +1883,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Long Beach, California, USA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zh7-aq-7zZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FieldName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zh7-aq-7zZ">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="w2u-YZ-BmO"/>
                                 </constraints>
@@ -1927,24 +1927,24 @@
                                                         <constraint firstAttribute="height" constant="145" id="sf5-pr-nwJ"/>
                                                     </constraints>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cells" textLabel="hAV-Qh-ZVG" detailTextLabel="gpN-oO-Mii" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="AZz-gA-PW9">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cells" textLabel="hAV-Qh-ZVG" detailTextLabel="gpN-oO-Mii" rowHeight="58" style="IBUITableViewCellStyleValue1" id="AZz-gA-PW9">
                                                             <rect key="frame" x="0.0" y="28" width="345" height="58"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AZz-gA-PW9" id="29M-3l-uP9">
-                                                                <frame key="frameInset" width="345" height="57.5"/>
+                                                                <frame key="frameInset" width="345" height="57"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hAV-Qh-ZVG">
-                                                                        <frame key="frameInset" minX="15" minY="12" width="33.5" height="20.5"/>
+                                                                        <frame key="frameInset" minX="15" minY="18" width="34" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gpN-oO-Mii">
-                                                                        <frame key="frameInset" minX="15" minY="32.5" width="44" height="14.5"/>
+                                                                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gpN-oO-Mii">
+                                                                        <frame key="frameInset" minX="271" minY="18" width="59" height="21"/>
                                                                         <autoresizingMask key="autoresizingMask"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -1954,7 +1954,7 @@
                                                     </prototypes>
                                                 </tableView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackgroungImage" translatesAutoresizingMaskIntoConstraints="NO" id="0uU-ao-NtM"/>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airport code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-QA-Eqc">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmS-QA-Eqc">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="193" id="ya9-SH-mSj"/>
                                                     </constraints>
@@ -1962,7 +1962,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll5-eo-CcU">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll5-eo-CcU">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="193" id="p07-fz-qAx"/>
                                                     </constraints>
@@ -1987,16 +1987,25 @@
                                             <constraint firstItem="BmS-QA-Eqc" firstAttribute="top" secondItem="0uU-ao-NtM" secondAttribute="top" id="y40-4X-c8G"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="airportCodeLabel" destination="BmS-QA-Eqc" id="y5c-Nw-zT3"/>
                                             <outlet property="fboTableView" destination="NvB-1X-0iV" id="qsu-O9-hqI"/>
-                                            <outlet property="fieldNameLabel" destination="Ll5-eo-CcU" id="Vos-jP-eF9"/>
+                                            <outlet property="fullNameLabel" destination="BmS-QA-Eqc" id="YZE-lq-luj"/>
+                                            <outlet property="phoneNumberLabel" destination="Ll5-eo-CcU" id="fkz-Yg-MTt"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chf-IO-CWR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="LXM-Fo-6oJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Chf-IO-CWR" firstAttribute="leading" secondItem="Zh7-aq-7zZ" secondAttribute="leading" id="1oG-Xj-2nR"/>
                             <constraint firstItem="wtX-fb-8ZY" firstAttribute="top" secondItem="d4e-Iw-hld" secondAttribute="bottom" constant="3" id="2AM-tH-zEn"/>
                             <constraint firstItem="3JQ-Dx-CaV" firstAttribute="top" secondItem="pkE-VL-EOS" secondAttribute="bottom" constant="10" id="7TH-7J-sJy"/>
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="top" secondItem="wtX-fb-8ZY" secondAttribute="bottom" constant="8" id="9k8-tZ-bl4"/>
@@ -2017,6 +2026,7 @@
                             <constraint firstItem="pkE-VL-EOS" firstAttribute="top" secondItem="M6e-sE-uTc" secondAttribute="topMargin" constant="88" id="U2M-I8-OrA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlL-Zj-FZ8" secondAttribute="trailing" id="YhB-Qc-ZKs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zh7-aq-7zZ" secondAttribute="trailing" id="acS-mA-jRp"/>
+                            <constraint firstItem="Chf-IO-CWR" firstAttribute="centerY" secondItem="d4e-Iw-hld" secondAttribute="centerY" id="aeb-T3-8Ap"/>
                             <constraint firstItem="pkE-VL-EOS" firstAttribute="trailing" secondItem="M6e-sE-uTc" secondAttribute="trailingMargin" id="ef5-mF-uSl"/>
                             <constraint firstItem="3JQ-Dx-CaV" firstAttribute="top" secondItem="pkE-VL-EOS" secondAttribute="bottom" constant="8" id="ef6-Vm-nRe"/>
                             <constraint firstItem="7To-gT-FcD" firstAttribute="leading" secondItem="wtX-fb-8ZY" secondAttribute="trailing" constant="251" id="gXF-U2-LJf"/>
@@ -2024,6 +2034,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="RnX-Zz-JkN" secondAttribute="leading" id="iKx-fC-yZX"/>
                             <constraint firstItem="rlL-Zj-FZ8" firstAttribute="top" secondItem="Zh7-aq-7zZ" secondAttribute="bottom" constant="10" id="mLk-ig-suR"/>
                             <constraint firstAttribute="leadingMargin" secondItem="d4e-Iw-hld" secondAttribute="leading" id="qta-I8-tEF"/>
+                            <constraint firstItem="Chf-IO-CWR" firstAttribute="trailing" secondItem="Zh7-aq-7zZ" secondAttribute="trailing" id="rui-6I-IUd"/>
                             <constraint firstItem="g8D-uA-3oL" firstAttribute="top" secondItem="RnX-Zz-JkN" secondAttribute="bottom" constant="19" id="v8e-Cs-4ff"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7To-gT-FcD" secondAttribute="trailing" id="vDL-an-uZS"/>
                             <constraint firstItem="Zh7-aq-7zZ" firstAttribute="leading" secondItem="d4e-Iw-hld" secondAttribute="trailing" constant="5" id="x89-68-oMt"/>
@@ -2049,7 +2060,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="autoCompleteTextField" destination="3JQ-Dx-CaV" id="YpS-qe-BTW"/>
+                        <outlet property="codeLabel" destination="Chf-IO-CWR" id="6pg-Gr-w9f"/>
                         <outlet property="fboCollectionView" destination="RnX-Zz-JkN" id="AnK-1b-PF0"/>
+                        <outlet property="fieldNameLabel" destination="rlL-Zj-FZ8" id="rJj-uE-8NB"/>
+                        <outlet property="locationLabel" destination="Zh7-aq-7zZ" id="ISs-L3-87H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kl7-jy-rfe" userLabel="First Responder" sceneMemberID="firstResponder"/>

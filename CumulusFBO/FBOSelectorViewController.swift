@@ -11,8 +11,14 @@ import Firebase
 
 class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    @IBOutlet weak var fieldNameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var fboCollectionView: UICollectionView!
     @IBOutlet weak var autoCompleteTextField: AutoCompleteTextField!
+    
+    var fbo = [FBOList]()
+    var airports = [AirportsModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +32,14 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         fboCollectionView.pagingEnabled = true
         
        // handleTextFieldInterfaces()
+        fetchAirport()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 
 /*
     private func handleTextFieldInterfaces() {
@@ -57,6 +65,34 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         }
     }
  */
+    // Firebase implementation to send FBOs to database
+    func fetchAirport() {
+        
+        let ref = FIRDatabase.database().reference().child("Airport/Long Beach")
+        
+        ref.observeEventType(.Value, withBlock: { (snapshot) in
+            print("\(snapshot)>>>")
+            
+            let airport = AirportsModel()
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                airport.airportCode = dictionary["code"] as? String
+                airport.location = dictionary["location"] as? String
+                airport.fieldName = dictionary["fieldname"] as? String
+                
+                self.locationLabel.text = airport.location
+                self.fieldNameLabel.text = airport.fieldName
+                self.codeLabel.text = airport.airportCode
+                self.airports.append(airport)
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.fboCollectionView.reloadData()
+                })
+            }
+        })
+    }
+    
     @IBAction func leftArrowButton(sender: UIButton) {
 
     }
@@ -66,12 +102,10 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         
         if currentSelection == 0 {
             currentSelection = NSIndexPath(forRow: currentSelection.row+1, inSection: currentSelection.section)
-            
         } else {
             currentSelection = NSIndexPath(forRow: 0, inSection: 0)
         }
         self.fboCollectionView.selectItemAtIndexPath(currentSelection, animated: true, scrollPosition: .Top)
-        
     }
     
     
@@ -86,12 +120,9 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
         
-
         currentSelection = indexPath
-        
         return cell
     }
     

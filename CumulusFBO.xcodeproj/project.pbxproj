@@ -47,6 +47,7 @@
 		91CD89B85D4A4D5F99886820 /* Pods_CumulusFBO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411362B1E61BA4637CC091BE /* Pods_CumulusFBO.framework */; };
 		990897231D89B506008BAE27 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990897221D89B506008BAE27 /* AutoCompleteTextField.swift */; };
 		990897241D89B506008BAE27 /* AutoCompleteTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990897221D89B506008BAE27 /* AutoCompleteTextField.swift */; };
+		9915ECE31D9F519C00EF65B0 /* AirportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915ECE21D9F519C00EF65B0 /* AirportsModel.swift */; };
 		991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
 		9942E5A31D8A5CFB0030B551 /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9942E5A01D8A5CFB0030B551 /* sample.pdf */; };
 		9942E5A41D8A5CFB0030B551 /* sample2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9942E5A11D8A5CFB0030B551 /* sample2.pdf */; };
@@ -58,7 +59,7 @@
 		99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */; };
 		99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */; };
 		99D7550F1D600FD100714EC4 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99D7550E1D600FD100714EC4 /* Keys.plist */; };
-		99F603BB1D9A26AA00A2EA8E /* FbosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F603BA1D9A26AA00A2EA8E /* FbosModel.swift */; };
+		99F603BB1D9A26AA00A2EA8E /* FBOsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F603BA1D9A26AA00A2EA8E /* FBOsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		57EE9CA31D75220400E1A57F /* MessagesLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesLoginViewController.swift; sourceTree = "<group>"; };
 		57EE9CA51D75260200E1A57F /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		990897221D89B506008BAE27 /* AutoCompleteTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteTextField.swift; sourceTree = "<group>"; };
+		9915ECE21D9F519C00EF65B0 /* AirportsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportsModel.swift; sourceTree = "<group>"; };
 		991B63621D67954200922085 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		9942E5A01D8A5CFB0030B551 /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
 		9942E5A11D8A5CFB0030B551 /* sample2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample2.pdf; sourceTree = "<group>"; };
@@ -96,7 +98,7 @@
 		99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBOSelectorViewController.swift; sourceTree = "<group>"; };
 		99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FboSelectorCell.swift; path = CumulusFBO/FboSelectorCell.swift; sourceTree = "<group>"; };
 		99D7550E1D600FD100714EC4 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
-		99F603BA1D9A26AA00A2EA8E /* FbosModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbosModel.swift; sourceTree = "<group>"; };
+		99F603BA1D9A26AA00A2EA8E /* FBOsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBOsModel.swift; sourceTree = "<group>"; };
 		ACE457445BE6BF3D90677A3E /* Pods-CumulusFBO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.release.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.release.xcconfig"; sourceTree = "<group>"; };
 		E26A9082861F5B45E1ED21E5 /* Pods-CumulusFBO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,7 +165,8 @@
 				572828851CC44B470005A6EA /* RegistrationManager.swift */,
 				57CDA70D1D31F297005DD618 /* ReservationStore.swift */,
 				57CDA70B1D31EE1D005DD618 /* Reservation.swift */,
-				99F603BA1D9A26AA00A2EA8E /* FbosModel.swift */,
+				99F603BA1D9A26AA00A2EA8E /* FBOsModel.swift */,
+				9915ECE21D9F519C00EF65B0 /* AirportsModel.swift */,
 			);
 			name = Models;
 			path = ..;
@@ -523,13 +526,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				57CDA70E1D31F297005DD618 /* ReservationStore.swift in Sources */,
-				99F603BB1D9A26AA00A2EA8E /* FbosModel.swift in Sources */,
+				99F603BB1D9A26AA00A2EA8E /* FBOsModel.swift in Sources */,
 				99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */,
 				991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */,
 				990897231D89B506008BAE27 /* AutoCompleteTextField.swift in Sources */,
 				572828841CC43F170005A6EA /* RegistrationModel.swift in Sources */,
 				99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */,
 				99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */,
+				9915ECE31D9F519C00EF65B0 /* AirportsModel.swift in Sources */,
 				57CDA7081D31BACE005DD618 /* FlightInformationViewController.swift in Sources */,
 				5784646D1D35DF4B00E5E6BF /* ReservationCell.swift in Sources */,
 				57EE9CA41D75220400E1A57F /* MessagesLoginViewController.swift in Sources */,

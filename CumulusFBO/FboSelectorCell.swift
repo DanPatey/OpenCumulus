@@ -11,19 +11,23 @@ import Firebase
 
 class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var airportCodeLabel: UILabel!
-    @IBOutlet weak var fieldNameLabel: UILabel!
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var fboTableView: UITableView!
+    
     var fbos = [FBOList]()
+    var fboServices = ["JET-A","100LL","Freq"]
+    var fboItems = [String]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         fboTableView.delegate = self
         fboTableView.dataSource = self
         
+
         fetchFbos()
     }
-        
+    
     // Firebase implementation to send FBOs to database
     func fetchFbos() {
         
@@ -42,12 +46,16 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
                 fbo.phoneNumber = dictionary["phone number"] as? String
                 fbo.ll = dictionary["100LL"] as? String
                 
+                self.fullNameLabel.text = fbo.fullName
+                self.phoneNumberLabel.text = fbo.phoneNumber
+                
                 self.fbos.append(fbo)
                 
                 dispatch_async(dispatch_get_main_queue(), {
                     self.fboTableView.reloadData()
                 })
             }
+            
         })
     }
     
@@ -58,18 +66,18 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fbos.count
+        return fboServices.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cells", forIndexPath: indexPath)
         
-        let fbo = fbos[indexPath.row]
-        print("Fbo: \(fbo.ll)")
-        
-        cell.textLabel?.text = fbo.ll
-        
+        cell.textLabel?.text = self.fboServices[indexPath.row]
+//        cell.detailTextLabel?.text = self.fboItems[indexPath.row]
         return cell
     }
     
+    func details(string: String) {
+    
+    }
 }
