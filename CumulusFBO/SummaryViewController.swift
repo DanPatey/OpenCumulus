@@ -161,7 +161,38 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         
         // Create the reservation in our internal schedule array
         reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
+        
+        // Email the FBO with desired information
+        var keys: NSDictionary?
+        
+        if let path = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
+            keys = NSDictionary(contentsOfFile: path)
+        }
+        
+        if let dict = keys {
+            let mailgunAPIPath = dict["mailgunAPIPath"] as? String
+            let emailRecipient = "bar@foo.com"
+            let emailMessage = "Testing%20email%20sender%20variables"
+            let session = NSURLSession.sharedSession()
+            let request = NSMutableURLRequest(URL: NSURL(string: mailgunAPIPath! + "from=FBOGo%20Reservation%20%3Cscheduler@mg.cumulusfbo.com%3E&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A%20New%20Reservation%21&text=\(emailMessage)")!)
             
+            request.HTTPMethod = "POST"
+            
+            let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
+                if let error = error {
+                    print(error)
+                }
+                
+                if let response = response {
+                    print("url = \(response.URL!)")
+                    print("response = \(response)")
+                    let httpResponse = response as! NSHTTPURLResponse
+                    print("response code = \(httpResponse.statusCode)")
+                }
+            })
+            task.resume()
+        }
+        
         // Display an alert letting the user information has been sent
         let alert = UIAlertController(title: "Thank You For Flying With Cumulus", message: "Flight information has been sent to the FBO", preferredStyle: .Alert)
         alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler: nil))
