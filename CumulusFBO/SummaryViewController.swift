@@ -171,7 +171,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         
         if let dict = keys {
             let mailgunAPIPath = dict["mailgunAPIPath"] as? String
-            let emailRecipient = "bar@foo.com"
+            let emailRecipient = "cumulusfbo@gmail.com"
             let emailMessage = "Testing%20email%20sender%20variables"
             let session = NSURLSession.sharedSession()
             let request = NSMutableURLRequest(URL: NSURL(string: mailgunAPIPath! + "from=FBOGo%20Reservation%20%3Cscheduler@mg.cumulusfbo.com%3E&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A%20New%20Reservation%21&text=\(emailMessage)")!)

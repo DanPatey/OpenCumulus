@@ -34,7 +34,6 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
         let ref = FIRDatabase.database().reference().child("Airport/Long Beach/FBOs/Atlantic")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-            print(">>\(snapshot)")
             
             let fbo = FBOList()
             if let dictionary = snapshot.value as? [String: AnyObject] {
@@ -50,6 +49,7 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
                 self.phoneNumberLabel.text = fbo.phoneNumber
                 
                 self.fbos.append(fbo)
+                
                 
                 dispatch_async(dispatch_get_main_queue(), {
                     self.fboTableView.reloadData()
