@@ -163,6 +163,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
         
         // Email the FBO with desired information
+        // Parse our Keys.plist so we can use our path
         var keys: NSDictionary?
         
         if let path = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
@@ -170,14 +171,17 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         }
         
         if let dict = keys {
+            // variablize our https path with API key, recipient and message text
             let mailgunAPIPath = dict["mailgunAPIPath"] as? String
-            let emailRecipient = "cumulusfbo@gmail.com"
+            let emailRecipient = "bar@foo.com"
             let emailMessage = "Testing%20email%20sender%20variables"
+            
+            // Create a session and fill it with our request
             let session = NSURLSession.sharedSession()
             let request = NSMutableURLRequest(URL: NSURL(string: mailgunAPIPath! + "from=FBOGo%20Reservation%20%3Cscheduler@mg.cumulusfbo.com%3E&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A%20New%20Reservation%21&text=\(emailMessage)")!)
             
+            // POST and report back with any errors and response codes
             request.HTTPMethod = "POST"
-            
             let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
                 if let error = error {
                     print(error)
