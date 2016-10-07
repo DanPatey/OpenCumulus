@@ -62,23 +62,25 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
                 
         self.autoCompleteTextField.onTextChange = {[weak self] text in
             
+             let stuff = [String]()
                 if !text.isEmpty {
                     if let snaps = snapshot.value as? [String : AnyObject] {
-                        var fboStuff = [String]()
                         for (key, _) in snaps {
-                            fboStuff.append(key)
-                            print("<>\(fboStuff)<>")
-                            dispatch_async(dispatch_get_main_queue(), {
-                                self!.autoCompleteTextField.autoCompleteStrings = fboStuff
-                            })
+                            // Needs to find out if the "text" is equal to the key characters
+                            print(key) // Prints names of FBO's
                         }
                     }
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self!.autoCompleteTextField.autoCompleteStrings = stuff
+                    })
                 }
             }
-                self.autoCompleteTextField.onSelect =  {[weak self] text, indexpath in
-                    self?.autoCompleteTextField.text = text
-            }
+         
         })
+        
+        self.autoCompleteTextField.onSelect =  {[weak self] text, indexpath in
+            self?.autoCompleteTextField.text = text
+        }
     }
 
     // Firebase implementation to send FBOs to database
@@ -91,7 +93,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
             let airport = AirportsModel()
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
-                
                 airport.airportCode = dictionary["code"] as? String
                 airport.location = dictionary["location"] as? String
                 airport.fieldName = dictionary["fieldname"] as? String
