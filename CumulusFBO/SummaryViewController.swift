@@ -212,7 +212,14 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             
             // Create a session and fill it with our request
             let session = NSURLSession.sharedSession()
-            let urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(servicesMessage)\(servicesRequested)\(footerMessage)"
+            
+            // If no services are requested, disregard all services messges from the email body
+            var urlPath: String
+            if servicesRequested == "" {
+                urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(footerMessage)"
+            } else {
+                urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(servicesMessage)\(servicesRequested)\(footerMessage)"
+            }
             
             // Sanitize our URL
             let url = NSURL(string: urlPath.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
