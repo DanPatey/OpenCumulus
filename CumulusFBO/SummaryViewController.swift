@@ -173,14 +173,23 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         if let dict = keys {
             // variablize our https path with API key, recipient and message text
             let mailgunAPIPath = dict["mailgunAPIPath"] as? String
+            // TODO: fill this with FBO email address
             let emailRecipient = "bar@foo.com"
-            let emailMessage = "Testing%20email%20sender%20variables"
+            let beginningMessage = "You've received a new reservation from an FBOGo user!" + "<br><br>"
+            let tailNumberMessage = "Tail Number: " + tailNumber! + "<br>"
+            let aircraftTypeMessage = "Aircraft Type: " + aircraftType! + "<br>"
+            let arrivalTimeMessge = "Is Arriving at: " + arrivalTime! + "<br><br><br>"
+            let footerMessage = "FBOGo available on iOS in the App Store today!"
+            let emailMessage = (beginningMessage + tailNumberMessage + aircraftTypeMessage + arrivalTimeMessge + footerMessage)
             
-            // Create a session and fill it with our request
+            // create a session and fill it with our request
             let session = NSURLSession.sharedSession()
-            let request = NSMutableURLRequest(URL: NSURL(string: mailgunAPIPath! + "from=FBOGo%20Reservation%20%3Cscheduler@mg.cumulusfbo.com%3E&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A%20New%20Reservation%21&text=\(emailMessage)")!)
+            let urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)"
             
+            // Sanitize our URL
+            let url = NSURL(string: urlPath.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
             // POST and report back with any errors and response codes
+            let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
             let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
                 if let error = error {
