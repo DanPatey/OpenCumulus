@@ -11,6 +11,15 @@ import UIKit
 let reservationStore = ReservationStore()
 class SummaryViewController: UIViewController, UITextFieldDelegate {
     
+    var antiIceStatus: String?
+    var baggageCartStatus: String?
+    var gpuCartStatus: String?
+    var marshallerStatus: String?
+    var lavatoryService: String?
+    var cateringStatus: String?
+    var rentalCarsStatus: String?
+    var crewCarsStatus: String?
+    
     @IBOutlet weak var checkMarkLabel: UILabel!
     
     //MARK: Price Labels
@@ -19,6 +28,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             if RegistrationsManager.sharedManager.activeReservation.antiIce == true {
                 //FBO int that gives the price for these services
                 self.antiIce.text = "$10.00"
+                return antiIceStatus = "Anti-icing"
             }
         }
     }
@@ -27,6 +37,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             if RegistrationsManager.sharedManager.activeReservation.baggageCart == true {
                 //FBO int that gives the price for these services
                 self.baggageCartPrice.text = "$10.00"
+                return baggageCartStatus = "A Baggage Cart"
             }
         }
     }
@@ -36,6 +47,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             if RegistrationsManager.sharedManager.activeReservation.gpuCart == true {
                 //FBO int that gives the price for these services
                 self.gpuCartPrice.text = "$10.00"
+                return gpuCartStatus = "A GPU Cart"
             }
         }
     }
@@ -45,6 +57,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             if RegistrationsManager.sharedManager.activeReservation.marshaller == true {
                 //FBO int that gives the price for these services
                 self.marshallerPrice.text = "$10.00"
+                return marshallerStatus = "A Marshaller"
             }
         }
     }
@@ -54,6 +67,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             if RegistrationsManager.sharedManager.activeReservation.lavService == true {
                 //FBO int that gives the price for these services
                 self.lavServicePrice.text = "$10.00"
+                return lavatoryService = "Lavatory Service"
             }
         }
     }
@@ -63,6 +77,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             if RegistrationsManager.sharedManager.activeReservation.catering == true {
                 //FBO int that gives the price for these services
                 self.cateringPrice.text = "$10.00"
+                return cateringStatus = "Catering"
             }
         }
     }
@@ -72,6 +87,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             if RegistrationsManager.sharedManager.activeReservation.rentals == "1" {
                 //FBO int that gives the price for these services
                 self.rentalCarsPrice.text = "$10.00"
+                return rentalCarsStatus = "A Rental Car"
             }
         }
     }
@@ -81,6 +97,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             if RegistrationsManager.sharedManager.activeReservation.crewCars == "1" {
                 //FBO int that gives the price for these services
                 self.crewCarsPrice.text = "$10.00"
+                return crewCarsStatus = "A Crew Car"
             }
         }
     }
@@ -139,7 +156,6 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
     //MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigationBarButtons()
     }
     
@@ -175,16 +191,28 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             let mailgunAPIPath = dict["mailgunAPIPath"] as? String
             // TODO: fill this with FBO email address
             let emailRecipient = "bar@foo.com"
+            
+            // Create email message body
             let beginningMessage = "You've received a new reservation from an FBOGo user!" + "<br><br>"
             let tailNumberMessage = "Tail Number: " + tailNumber! + "<br>"
             let aircraftTypeMessage = "Aircraft Type: " + aircraftType! + "<br>"
-            let arrivalTimeMessge = "Is Arriving at: " + arrivalTime! + "<br><br><br>"
-            let footerMessage = "FBOGo available on iOS in the App Store today!"
-            let emailMessage = (beginningMessage + tailNumberMessage + aircraftTypeMessage + arrivalTimeMessge + footerMessage)
+            let arrivalTimeMessge = "Is Arriving at: " + arrivalTime! + "<br>"
             
-            // create a session and fill it with our request
+            
+            // Create the required body text
+            let emailMessage = (beginningMessage + tailNumberMessage + aircraftTypeMessage + arrivalTimeMessge)
+            // Add the services requested
+            let servicesMessage = "<br>Extra Services Requested: <br>"
+            var servicesRequested = ""
+            
+            servicesRequested = [antiIceStatus, baggageCartStatus, gpuCartStatus, marshallerStatus, lavatoryService, cateringStatus, crewCarsStatus, rentalCarsStatus].flatMap{$0}.joinWithSeparator("<br>")
+            
+            // Add our footer message
+            let footerMessage = "<br><br>" + "FBOGo available on iOS in the App Store today!"
+            
+            // Create a session and fill it with our request
             let session = NSURLSession.sharedSession()
-            let urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)"
+            let urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(servicesMessage)\(servicesRequested)\(footerMessage)"
             
             // Sanitize our URL
             let url = NSURL(string: urlPath.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
