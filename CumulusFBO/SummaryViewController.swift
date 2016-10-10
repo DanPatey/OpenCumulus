@@ -209,15 +209,18 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             let emailMessage = (beginningMessage + tailNumberMessage + aircraftTypeMessage + arrivalTimeMessge)
             
             // Add optional personal info
-            var personalInfo: String = ""
+            var personalInfoArray = [
+                                     "First Name: " + RegistrationsManager.sharedManager.activeReservation.firstName!,
+                                     "Last Name: " + RegistrationsManager.sharedManager.activeReservation.lastName!,
+                                     "Company: " + RegistrationsManager.sharedManager.activeReservation.company!,
+                                     "Phone Number: " + RegistrationsManager.sharedManager.activeReservation.phoneNumber!,
+                                     "Email: " + RegistrationsManager.sharedManager.activeReservation.email!]
+            // Filter out fields not used
+            personalInfoArray = personalInfoArray.filter { $0.hasPrefix(": ") == false }
+            print(personalInfoArray)
             
-            firstName = RegistrationsManager.sharedManager.activeReservation.firstName
-            lastName = RegistrationsManager.sharedManager.activeReservation.lastName
-            company = RegistrationsManager.sharedManager.activeReservation.company
-            phoneNumber = RegistrationsManager.sharedManager.activeReservation.phoneNumber
-            email = RegistrationsManager.sharedManager.activeReservation.email
-            
-            personalInfo = [firstName, lastName, company, phoneNumber, email, personalInfo].flatMap{$0}.joinWithSeparator("<br>")
+            // Combine used fields with a break for HTML formatting
+            let personalInfo = personalInfoArray.flatMap{$0}.joinWithSeparator("<br>")
             print(personalInfo)
             
             // Add optional services requested
@@ -250,16 +253,17 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
             let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
-                if let error = error {
-                    print(error)
-                }
+                // Debug info
+//                if let error = error {
+//                    print(error)
+//                }
                 
-                if let response = response {
-                    print("url = \(response.URL!)")
-                    print("response = \(response)")
-                    let httpResponse = response as! NSHTTPURLResponse
-                    print("response code = \(httpResponse.statusCode)")
-                }
+//                if let response = response {
+//                    print("url = \(response.URL!)")
+//                    print("response = \(response)")
+//                    let httpResponse = response as! NSHTTPURLResponse
+//                    print("response code = \(httpResponse.statusCode)")
+//                }
             })
             task.resume()
         }
