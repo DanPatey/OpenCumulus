@@ -135,8 +135,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if email.text == "" && phoneNumber.text == "" {
-            let alert = UIAlertController(title: "", message: "You Must Fill In All Required Information", preferredStyle: .Alert)
+        if phoneNumber.text == "" {
+            let alert = UIAlertController(title: "", message: "FBO Requires Phone Number For Reservations", preferredStyle: .Alert)
             alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler: nil))
             // Present the AlertController
             presentViewController(alert, animated: true, completion: nil)
