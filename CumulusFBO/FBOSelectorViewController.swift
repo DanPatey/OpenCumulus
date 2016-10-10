@@ -19,7 +19,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     
     var fbo = [FBOList]()
     var airports = [AirportsModel]()
-    var selectedContact : [String : AnyObject]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,19 +63,18 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
              var stuff = [String]()
                 if !text.isEmpty {
                     if let snaps = snapshot.value as? [String : AnyObject] {
+                        
                         for (key, _) in snaps {
                             // Need to find out if the "text" is equal to the key characters prints names of FBO's
                             stuff.append(key)
-                            let objects = stuff
+//                            let objects = stuff
+                            print("<<\(stuff[0])>>")
+                            dispatch_async(dispatch_get_main_queue(), {
+                                self!.autoCompleteTextField.autoCompleteStrings = stuff
+                            })
                         }
-                        
-                        for character in stuff {
-                        }
+
                     }
-                    print("<<\(stuff[0])>>")
-                    dispatch_async(dispatch_get_main_queue(), {
-                        self!.autoCompleteTextField.autoCompleteStrings = stuff
-                    })
                 }
             }
          
