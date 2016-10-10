@@ -11,6 +11,12 @@ import UIKit
 let reservationStore = ReservationStore()
 class SummaryViewController: UIViewController, UITextFieldDelegate {
     
+    var firstName: String? = ""
+    var lastName: String? = ""
+    var company: String? = ""
+    var phoneNumber: String? = ""
+    var email: String? = ""
+    
     var antiIceStatus: String?
     var baggageCartStatus: String?
     var gpuCartStatus: String?
@@ -178,6 +184,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         // Create the reservation in our internal schedule array
         reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
         
+        // MARK: Email template creation
         // Email the FBO with desired information
         // Parse our Keys.plist so we can use our path
         var keys: NSDictionary?
@@ -198,10 +205,25 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             let aircraftTypeMessage = "Aircraft Type: " + aircraftType! + "<br>"
             let arrivalTimeMessge = "Is Arriving at: " + arrivalTime! + "<br>"
             
-            
             // Create the required body text
             let emailMessage = (beginningMessage + tailNumberMessage + aircraftTypeMessage + arrivalTimeMessge)
-            // Add the services requested
+            
+            // Add optional personal info
+            var personalInfoArray = [
+                                     "First Name: " + RegistrationsManager.sharedManager.activeReservation.firstName!,
+                                     "Last Name: " + RegistrationsManager.sharedManager.activeReservation.lastName!,
+                                     "Company: " + RegistrationsManager.sharedManager.activeReservation.company!,
+                                     "Phone Number: " + RegistrationsManager.sharedManager.activeReservation.phoneNumber!,
+                                     "Email: " + RegistrationsManager.sharedManager.activeReservation.email!]
+            // Filter out fields not used
+            personalInfoArray = personalInfoArray.filter { $0.hasPrefix(": ") == false }
+            print(personalInfoArray)
+            
+            // Combine used fields with a break for HTML formatting
+            let personalInfo = personalInfoArray.flatMap{$0}.joinWithSeparator("<br>")
+            print(personalInfo)
+            
+            // Add optional services requested
             let servicesMessage = "<br>Extra Services Requested: <br>"
             var servicesRequested = ""
             
@@ -215,10 +237,14 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             
             // If no services are requested, disregard all services messges from the email body
             var urlPath: String
-            if servicesRequested == "" {
-                urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(footerMessage)"
-            } else {
+            if servicesRequested != "" && personalInfo != "" {
+                urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(personalInfo)\(servicesMessage)\(servicesRequested)\(footerMessage)"
+            } else if servicesRequested != "" && personalInfo == "" {
                 urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(servicesMessage)\(servicesRequested)\(footerMessage)"
+            } else if servicesRequested == "" && personalInfo != "" {
+                urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(personalInfo)\(footerMessage)"
+            } else {
+                urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(footerMessage)"
             }
             
             // Sanitize our URL
@@ -227,16 +253,17 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
             let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
-                if let error = error {
-                    print(error)
-                }
+                // **DO NOT REMOVE** Session Debug info **TURN ON IF NEEDED**
+//                if let error = error {
+//                    print(error)
+//                }
                 
-                if let response = response {
-                    print("url = \(response.URL!)")
-                    print("response = \(response)")
-                    let httpResponse = response as! NSHTTPURLResponse
-                    print("response code = \(httpResponse.statusCode)")
-                }
+//                if let response = response {
+//                    print("url = \(response.URL!)")
+//                    print("response = \(response)")
+//                    let httpResponse = response as! NSHTTPURLResponse
+//                    print("response code = \(httpResponse.statusCode)")
+//                }
             })
             task.resume()
         }
