@@ -61,15 +61,20 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
             ref.observeEventType(.Value, withBlock: { (snapshot) in
                 
         self.autoCompleteTextField.onTextChange = {[weak self] text in
-            
-             let stuff = [String]()
+             var stuff = [String]()
                 if !text.isEmpty {
                     if let snaps = snapshot.value as? [String : AnyObject] {
                         for (key, _) in snaps {
-                            // Needs to find out if the "text" is equal to the key characters
-                            print(key) // Prints names of FBO's
+                            // Need to find out if the "text" is equal to the key characters prints names of FBO's
+                            stuff.append(key)
+                            let objects = stuff
+                            print()
+                        }
+                        
+                        for character in stuff {
                         }
                     }
+                    print("<<\(stuff[0])>>")
                     dispatch_async(dispatch_get_main_queue(), {
                         self!.autoCompleteTextField.autoCompleteStrings = stuff
                     })

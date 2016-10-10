@@ -135,10 +135,17 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        RegistrationsManager.sharedManager.activeReservation.firstName = firstName.text
-        RegistrationsManager.sharedManager.activeReservation.lastName = lastName.text
-        RegistrationsManager.sharedManager.activeReservation.company = company.text
-        RegistrationsManager.sharedManager.activeReservation.phoneNumber = phoneNumber.text
-        RegistrationsManager.sharedManager.activeReservation.email = email.text
+        if email.text == "" && phoneNumber.text == "" {
+            let alert = UIAlertController(title: "", message: "You Must Fill In All Required Information", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler: nil))
+            // Present the AlertController
+            presentViewController(alert, animated: true, completion: nil)
+        } else {
+            RegistrationsManager.sharedManager.activeReservation.firstName = firstName.text
+            RegistrationsManager.sharedManager.activeReservation.lastName = lastName.text
+            RegistrationsManager.sharedManager.activeReservation.company = company.text
+            RegistrationsManager.sharedManager.activeReservation.phoneNumber = phoneNumber.text
+            RegistrationsManager.sharedManager.activeReservation.email = email.text
+        }
     }
 }
