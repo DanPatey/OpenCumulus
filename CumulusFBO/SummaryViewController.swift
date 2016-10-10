@@ -253,7 +253,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
             request.HTTPMethod = "POST"
             let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
-                // Debug info
+                // **DO NOT REMOVE** Session Debug info **TURN ON IF NEEDED**
 //                if let error = error {
 //                    print(error)
 //                }
