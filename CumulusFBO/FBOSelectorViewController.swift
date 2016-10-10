@@ -68,7 +68,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
                             // Need to find out if the "text" is equal to the key characters prints names of FBO's
                             stuff.append(key)
                             let objects = stuff
-                            print()
                         }
                         
                         for character in stuff {
