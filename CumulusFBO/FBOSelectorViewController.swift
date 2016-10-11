@@ -15,76 +15,31 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var fboCollectionView: UICollectionView!
-    @IBOutlet weak var autoCompleteTextField: AutoCompleteTextField!
     
     var fbo = [FBOList]()
     var airports = [AirportsModel]()
+    var fieldName : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
-            
             print("Successful login!: \(user?.uid)")
         }
-    
+        
+        self.fieldNameLabel.text = fieldName
+        
         fboCollectionView.delegate = self
         fboCollectionView.dataSource = self
         fboCollectionView.pagingEnabled = true
         
-        handleTextFieldInterfaces()
         fetchAirport()
-        configureTextField()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-     func configureTextField() {
-        autoCompleteTextField.autoCompleteTextColor = UIColor(red: 128.0/255.0, green: 128.0/255.0, blue: 128.0/255.0, alpha: 1.0)
-        autoCompleteTextField.autoCompleteTextFont = UIFont(name: "HelveticaNeue-Light", size: 12.0)!
-        autoCompleteTextField.autoCompleteCellHeight = 35.0
-        autoCompleteTextField.maximumAutoCompleteCount = 20
-        autoCompleteTextField.hidesWhenSelected = true
-        autoCompleteTextField.hidesWhenEmpty = true
-        autoCompleteTextField.enableAttributedText = true
-        var attributes = [String:AnyObject]()
-        attributes[NSForegroundColorAttributeName] = UIColor.blackColor()
-        attributes[NSFontAttributeName] = UIFont(name: "HelveticaNeue-Bold", size: 12.0)
-        autoCompleteTextField.autoCompleteAttributes = attributes
-    }
-
-    func handleTextFieldInterfaces() {
-        
-        let ref = FIRDatabase.database().reference().child("Airport")
-            ref.observeEventType(.Value, withBlock: { (snapshot) in
-                
-        self.autoCompleteTextField.onTextChange = {[weak self] text in
-             var stuff = [String]()
-                if !text.isEmpty {
-                    if let snaps = snapshot.value as? [String : AnyObject] {
-                        
-                        for (key, _) in snaps {
-                            // Need to find out if the "text" is equal to the key characters prints names of FBO's
-                            stuff.append(key)
-//                            let objects = stuff
-                            print("<<\(stuff[0])>>")
-                            dispatch_async(dispatch_get_main_queue(), {
-                                self!.autoCompleteTextField.autoCompleteStrings = stuff
-                            })
-                        }
-
-                    }
-                }
-            }
-         
-        })
-        
-        self.autoCompleteTextField.onSelect =  {[weak self] text, indexpath in
-            self?.autoCompleteTextField.text = text
-        }
-    }
-
+    
     // Firebase implementation to send FBOs to database
     func fetchAirport() {
         
@@ -99,8 +54,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
                 airport.location = dictionary["location"] as? String
                 airport.fieldName = dictionary["fieldname"] as? String
                 
-                self.locationLabel.text = airport.location
-                self.fieldNameLabel.text = airport.fieldName
                 self.codeLabel.text = airport.airportCode
                 self.airports.append(airport)
                 

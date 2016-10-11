@@ -50,7 +50,6 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
                 
                 self.fbos.append(fbo)
                 
-                
                 dispatch_async(dispatch_get_main_queue(), {
                     self.fboTableView.reloadData()
                 })

@@ -59,7 +59,6 @@
 		99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */; };
 		99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */; };
 		99B39B161DAB4E5100675128 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B39B151DAB4E5100675128 /* SelectionTableViewController.swift */; };
-		99B39B181DAB67F800675128 /* LocationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B39B171DAB67F800675128 /* LocationsModel.swift */; };
 		99F603BB1D9A26AA00A2EA8E /* FBOsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F603BA1D9A26AA00A2EA8E /* FBOsModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,7 +99,6 @@
 		99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBOSelectorViewController.swift; sourceTree = "<group>"; };
 		99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FboSelectorCell.swift; path = CumulusFBO/FboSelectorCell.swift; sourceTree = "<group>"; };
 		99B39B151DAB4E5100675128 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectionTableViewController.swift; path = ../SelectionTableViewController.swift; sourceTree = "<group>"; };
-		99B39B171DAB67F800675128 /* LocationsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationsModel.swift; path = CumulusFBO/LocationsModel.swift; sourceTree = "<group>"; };
 		99F603BA1D9A26AA00A2EA8E /* FBOsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBOsModel.swift; sourceTree = "<group>"; };
 		ACE457445BE6BF3D90677A3E /* Pods-CumulusFBO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.release.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.release.xcconfig"; sourceTree = "<group>"; };
 		E26A9082861F5B45E1ED21E5 /* Pods-CumulusFBO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CumulusFBO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CumulusFBO/Pods-CumulusFBO.debug.xcconfig"; sourceTree = "<group>"; };
@@ -218,7 +216,6 @@
 				572828851CC44B470005A6EA /* RegistrationManager.swift */,
 				57CDA70D1D31F297005DD618 /* ReservationStore.swift */,
 				57CDA70B1D31EE1D005DD618 /* Reservation.swift */,
-				99B39B171DAB67F800675128 /* LocationsModel.swift */,
 				99F603BA1D9A26AA00A2EA8E /* FBOsModel.swift */,
 				9915ECE21D9F519C00EF65B0 /* AirportsModel.swift */,
 			);
@@ -584,7 +581,6 @@
 				57EE9CA41D75220400E1A57F /* MessagesLoginViewController.swift in Sources */,
 				997904B11D89D8D400E3FEA4 /* PDFViewController.swift in Sources */,
 				57CDA70A1D31EDF0005DD618 /* ScheduleViewController.swift in Sources */,
-				99B39B181DAB67F800675128 /* LocationsModel.swift in Sources */,
 				572828861CC44B470005A6EA /* RegistrationManager.swift in Sources */,
 				5734C8861CAB766A0031B000 /* SummaryViewController.swift in Sources */,
 				5734C86C1CAB67820031B000 /* RegistrationViewController.swift in Sources */,

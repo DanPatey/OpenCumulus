@@ -12,7 +12,7 @@ import Firebase
 class SelectionTableViewController: UITableViewController {
 
     var locations = [String]()
-    var name = [String]()
+    var information: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +38,9 @@ class SelectionTableViewController: UITableViewController {
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 
                 for (key, _) in dictionary {
-                    
+
                     self.locations.append(key)
+                    
                     dispatch_async(dispatch_get_main_queue(), {
                         self.tableView.reloadData()
                     })
@@ -59,28 +60,24 @@ class SelectionTableViewController: UITableViewController {
         return locations.count
     }
     
-    override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+     override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
-//        let reservation = self.locations[indexPath.row]
-//        print(">\(self.location)")
-//
-        cell.textLabel?.text = locations[indexPath.row]
-
-        cell.detailTextLabel?.text = "lll"//name[indexPath.row]
         
+        cell.textLabel?.text = self.locations[indexPath.row]
+        print(cell.textLabel?.text)
+
         return cell
     }
- 
 
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let destination = segue.destinationViewController as! FBOSelectorViewController
+        let path = tableView.indexPathForSelectedRow
+            destination.fieldName = self.locations[(path?.row)!]
     }
-    */
-
 }
+
+
+
