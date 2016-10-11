@@ -24,7 +24,6 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
         fboTableView.delegate = self
         fboTableView.dataSource = self
         
-
         fetchFbos()
     }
     

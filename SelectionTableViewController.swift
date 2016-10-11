@@ -13,6 +13,7 @@ class SelectionTableViewController: UITableViewController {
 
     var locations = [String]()
     var information: String!
+    var fbos = [FBOList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class SelectionTableViewController: UITableViewController {
             print("Successful login!: \(user?.uid)")
         }
         fetchAirport()
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,11 +36,11 @@ class SelectionTableViewController: UITableViewController {
         let ref = FIRDatabase.database().reference().child("Airport")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-            
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                
-                for (key, _) in dictionary {
 
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+               
+                for (key, _) in dictionary {
+                    
                     self.locations.append(key)
                     
                     dispatch_async(dispatch_get_main_queue(), {
@@ -48,6 +50,7 @@ class SelectionTableViewController: UITableViewController {
             }
         })
     }
+
     
     // MARK: - Table view data source
     func numberOfSections(tableView: UITableView) -> Int {
@@ -63,9 +66,7 @@ class SelectionTableViewController: UITableViewController {
      override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
-        
         cell.textLabel?.text = self.locations[indexPath.row]
-        print(cell.textLabel?.text)
 
         return cell
     }
@@ -74,10 +75,35 @@ class SelectionTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let destination = segue.destinationViewController as! FBOSelectorViewController
+        
         let path = tableView.indexPathForSelectedRow
             destination.fieldName = self.locations[(path?.row)!]
+        
+        self.fetchFbos(self.locations[(path?.row)!])
+    }
+    
+    func fetchFbos(fieldName: String) {
+        
+        let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
+        
+        ref.observeEventType(.Value, withBlock: { (snapshot) in
+           
+            let fbo = FBOList()
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+//                fbo.key = snapshot.key
+                
+                fbo.ll = dictionary["100ll"] as? String
+                fbo.email = dictionary["email"] as? String
+                fbo.fullName = dictionary["fullname"] as? String
+                fbo.freq = dictionary["freq"] as? String
+                fbo.phonenumber = dictionary["phonenumber"] as? String
+                fbo.jeta = dictionary["jet-a"] as? String
+                
+                self.fbos.append(fbo)
+               print("FBO: \(self.fbos)")
+                
+            }
+        })
     }
 }
-
-
 

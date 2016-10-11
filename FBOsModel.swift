@@ -12,9 +12,12 @@ class FBOList: NSObject {
     
     var key: String?
     var fboName: String?
-    var fullName: String?
-    var freq : String?
     var phoneNumber : String?
-    var ll : String?
+    var ll: String!
+    var fullName: String!
+    var email: String!
+    var freq: String!
+    var phonenumber: String!
+    var jeta: String!
     
 }

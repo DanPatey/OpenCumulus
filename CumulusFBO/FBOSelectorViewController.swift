@@ -11,7 +11,7 @@ import Firebase
 
 class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    @IBOutlet weak var fieldNameLabel: UILabel!
+    @IBOutlet weak var fieldNameLabel: UILabel! 
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var fboCollectionView: UICollectionView!
