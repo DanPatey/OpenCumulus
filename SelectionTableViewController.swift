@@ -36,7 +36,7 @@ class SelectionTableViewController: UITableViewController {
         let ref = FIRDatabase.database().reference().child("Airport")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-
+    
             if let dictionary = snapshot.value as? [String: AnyObject] {
                
                 for (key, _) in dictionary {
@@ -87,21 +87,16 @@ class SelectionTableViewController: UITableViewController {
         let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-           
-            let fbo = FBOList()
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-//                fbo.key = snapshot.key
-                
-                fbo.ll = dictionary["100ll"] as? String
-                fbo.email = dictionary["email"] as? String
-                fbo.fullName = dictionary["fullname"] as? String
-                fbo.freq = dictionary["freq"] as? String
-                fbo.phonenumber = dictionary["phonenumber"] as? String
-                fbo.jeta = dictionary["jet-a"] as? String
-                
-                self.fbos.append(fbo)
-               print("FBO: \(self.fbos)")
-                
+           print(snapshot)
+        if let dictionary = snapshot.value as? [String: AnyObject] {
+//            RegistrationsManager.sharedManager.activeReservation.firfboName = fieldName
+            RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
+            RegistrationsManager.sharedManager.activeReservation.firll = dictionary["100ll"] as? String
+            RegistrationsManager.sharedManager.activeReservation.firfreq = dictionary["freq"] as? String
+            RegistrationsManager.sharedManager.activeReservation.firjeta = dictionary["jet-a"] as? String
+            RegistrationsManager.sharedManager.activeReservation.firfullName = dictionary["fullname"] as? String
+            RegistrationsManager.sharedManager.activeReservation.firphoneNumber = dictionary["phonenumber"] as? String
+//                self.fbos.append(fbo)
             }
         })
     }

@@ -11,8 +11,8 @@ import Firebase
 
 class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    @IBOutlet weak var fieldNameLabel: UILabel! 
-    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var fieldNameLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel! 
     @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var fboCollectionView: UICollectionView!
     
@@ -27,14 +27,21 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
             print("Successful login!: \(user?.uid)")
         }
         
-        self.fieldNameLabel.text = fieldName
         
         fboCollectionView.delegate = self
         fboCollectionView.dataSource = self
         fboCollectionView.pagingEnabled = true
         
         fetchAirport()
+        firebaseInfo()
     }
+    
+    // FIREBASE STUFF
+    func firebaseInfo() {
+        self.fieldNameLabel.text = fieldName
+        self.locationLabel.text = RegistrationsManager.sharedManager.activeReservation.firfullName
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
