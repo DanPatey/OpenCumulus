@@ -69,6 +69,8 @@ class SelectionTableViewController: UITableViewController {
         
         let path = tableView.indexPathForSelectedRow
         destination.fieldName = self.locations[(path?.row)!]
+        print("DEBUG INFO")
+        print(self.locations)
         
         self.fetchFbos(self.locations[(path?.row)!])
     }
@@ -78,16 +80,14 @@ class SelectionTableViewController: UITableViewController {
         let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-           print(snapshot)
+//           print(snapshot)
         if let dictionary = snapshot.value as? [String: AnyObject] {
-//            RegistrationsManager.sharedManager.activeReservation.firfboName = fieldName
-            RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
             RegistrationsManager.sharedManager.activeReservation.firll = dictionary["100ll"] as? String
             RegistrationsManager.sharedManager.activeReservation.firfreq = dictionary["freq"] as? String
             RegistrationsManager.sharedManager.activeReservation.firjeta = dictionary["jet-a"] as? String
+            RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
             RegistrationsManager.sharedManager.activeReservation.firfullName = dictionary["fullname"] as? String
             RegistrationsManager.sharedManager.activeReservation.firphoneNumber = dictionary["phonenumber"] as? String
-//                self.fbos.append(fbo)
             }
         })
     }

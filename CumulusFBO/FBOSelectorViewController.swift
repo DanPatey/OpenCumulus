@@ -40,16 +40,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         self.locationLabel.text = RegistrationsManager.sharedManager.activeReservation.firfullName
     }
     
-    var currentSelection = NSIndexPath()
-    @IBAction func rightArrowButton(sender: UIButton) {
-        if currentSelection == 0 {
-            currentSelection = NSIndexPath(forRow: currentSelection.row+1, inSection: currentSelection.section)
-        } else {
-            currentSelection = NSIndexPath(forRow: 0, inSection: 0)
-        }
-        self.fboCollectionView.selectItemAtIndexPath(currentSelection, animated: true, scrollPosition: .Top)
-    }
-    
     // MARK: - UICollectionViewDataSource
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -61,7 +51,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
-        currentSelection = indexPath
         return cell
     }
     
