@@ -162,8 +162,8 @@
 		57420D2F1D9F8DD700A7C4EA /* Register */ = {
 			isa = PBXGroup;
 			children = (
-				99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */,
 				99B39B151DAB4E5100675128 /* SelectionTableViewController.swift */,
+				99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */,
 				5734C86B1CAB67820031B000 /* RegistrationViewController.swift */,
 				57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */,
 				991B63621D67954200922085 /* ServicesTableViewController.swift */,
