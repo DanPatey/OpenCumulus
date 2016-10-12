@@ -1931,15 +1931,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where are you flying?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkE-VL-EOS">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="MTe-ag-ZUT"/>
-                                    <constraint firstAttribute="width" constant="343" id="ZfZ-UN-KnW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtX-fb-8ZY">
                                 <state key="normal" title="Button"/>
                             </button>
@@ -2042,13 +2033,22 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAj-KN-pKR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7FL-hX-po3"/>
+                                    <constraint firstAttribute="width" constant="200" id="T8V-ae-AZL"/>
+                                </constraints>
+                                <state key="normal" title="Touch Here To Select Airport"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Chf-IO-CWR" firstAttribute="leading" secondItem="Zh7-aq-7zZ" secondAttribute="leading" id="1oG-Xj-2nR"/>
                             <constraint firstItem="wtX-fb-8ZY" firstAttribute="top" secondItem="d4e-Iw-hld" secondAttribute="bottom" constant="3" id="2AM-tH-zEn"/>
+                            <constraint firstItem="lAj-KN-pKR" firstAttribute="top" secondItem="f68-iA-qmL" secondAttribute="bottom" constant="25" id="2TM-Cq-1qS"/>
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="top" secondItem="wtX-fb-8ZY" secondAttribute="bottom" constant="8" id="9k8-tZ-bl4"/>
                             <constraint firstItem="rlL-Zj-FZ8" firstAttribute="top" secondItem="f68-iA-qmL" secondAttribute="bottom" constant="84" id="Ddm-BZ-0Tt"/>
+                            <constraint firstItem="lAj-KN-pKR" firstAttribute="centerX" secondItem="M6e-sE-uTc" secondAttribute="centerX" id="Dut-55-B3x"/>
                             <constraint firstItem="rlL-Zj-FZ8" firstAttribute="leading" secondItem="d4e-Iw-hld" secondAttribute="trailing" id="ELK-2c-UOe"/>
                             <constraint firstItem="7To-gT-FcD" firstAttribute="top" secondItem="Zh7-aq-7zZ" secondAttribute="bottom" constant="101" id="Faa-XC-Mfw"/>
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="top" secondItem="f68-iA-qmL" secondAttribute="bottom" constant="292" id="Hj6-Wg-UT9"/>
@@ -2056,18 +2056,14 @@
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="top" secondItem="7To-gT-FcD" secondAttribute="bottom" constant="8" id="MzU-bP-64Y"/>
                             <constraint firstItem="rlL-Zj-FZ8" firstAttribute="top" secondItem="Zh7-aq-7zZ" secondAttribute="bottom" constant="8" id="NtG-yH-Qyc"/>
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="top" secondItem="d4e-Iw-hld" secondAttribute="bottom" constant="41" id="O8c-4c-pkJ"/>
-                            <constraint firstItem="pkE-VL-EOS" firstAttribute="trailing" secondItem="M6e-sE-uTc" secondAttribute="trailingMargin" id="PRT-yo-C20"/>
-                            <constraint firstItem="pkE-VL-EOS" firstAttribute="leading" secondItem="M6e-sE-uTc" secondAttribute="leadingMargin" id="Pti-Na-76h"/>
                             <constraint firstItem="rlL-Zj-FZ8" firstAttribute="leading" secondItem="d4e-Iw-hld" secondAttribute="trailing" constant="5" id="Rch-9M-UIG"/>
                             <constraint firstItem="RnX-Zz-JkN" firstAttribute="width" secondItem="M6e-sE-uTc" secondAttribute="height" multiplier="14:15" constant="-279.5333333333333" id="T4O-XV-ga2"/>
-                            <constraint firstItem="pkE-VL-EOS" firstAttribute="top" secondItem="M6e-sE-uTc" secondAttribute="topMargin" constant="88" id="U2M-I8-OrA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlL-Zj-FZ8" secondAttribute="trailing" id="YhB-Qc-ZKs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zh7-aq-7zZ" secondAttribute="trailing" id="acS-mA-jRp"/>
                             <constraint firstItem="Chf-IO-CWR" firstAttribute="centerY" secondItem="d4e-Iw-hld" secondAttribute="centerY" id="aeb-T3-8Ap"/>
-                            <constraint firstItem="pkE-VL-EOS" firstAttribute="trailing" secondItem="M6e-sE-uTc" secondAttribute="trailingMargin" id="ef5-mF-uSl"/>
                             <constraint firstItem="7To-gT-FcD" firstAttribute="leading" secondItem="wtX-fb-8ZY" secondAttribute="trailing" constant="251" id="gXF-U2-LJf"/>
-                            <constraint firstItem="pkE-VL-EOS" firstAttribute="leading" secondItem="M6e-sE-uTc" secondAttribute="leadingMargin" id="hD0-f4-Zh7"/>
                             <constraint firstAttribute="leadingMargin" secondItem="RnX-Zz-JkN" secondAttribute="leading" id="iKx-fC-yZX"/>
+                            <constraint firstItem="rlL-Zj-FZ8" firstAttribute="top" secondItem="lAj-KN-pKR" secondAttribute="bottom" constant="35" id="knd-cK-Hxi"/>
                             <constraint firstItem="rlL-Zj-FZ8" firstAttribute="top" secondItem="Zh7-aq-7zZ" secondAttribute="bottom" constant="10" id="mLk-ig-suR"/>
                             <constraint firstAttribute="leadingMargin" secondItem="d4e-Iw-hld" secondAttribute="leading" id="qta-I8-tEF"/>
                             <constraint firstItem="Chf-IO-CWR" firstAttribute="trailing" secondItem="Zh7-aq-7zZ" secondAttribute="trailing" id="rui-6I-IUd"/>
@@ -2102,7 +2098,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kl7-jy-rfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2767" y="-432"/>
+            <point key="canvasLocation" x="2765.5999999999999" y="-432.23388305847078"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sTN-oi-jXf">
