@@ -21,10 +21,6 @@ class SelectionTableViewController: UITableViewController {
         }
         fetchAirport()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     // MARK: JSON parsing
     // Grab the list of airports by stepping through JSON
@@ -39,6 +35,23 @@ class SelectionTableViewController: UITableViewController {
                         self.tableView.reloadData()
                     })
                 }
+            }
+        })
+    }
+    
+    // Using the fieldname selected pass the rest of the information to FBOSelector
+    func fetchFbos(fieldName: String) {
+        let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
+        
+        ref.observeEventType(.Value, withBlock: { (snapshot) in
+            //           print(snapshot)
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                RegistrationsManager.sharedManager.activeReservation.firll = dictionary["100ll"] as? String
+                RegistrationsManager.sharedManager.activeReservation.firfreq = dictionary["freq"] as? String
+                RegistrationsManager.sharedManager.activeReservation.firjeta = dictionary["jet-a"] as? String
+                RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
+                RegistrationsManager.sharedManager.activeReservation.firfullName = dictionary["fullname"] as? String
+                RegistrationsManager.sharedManager.activeReservation.firphoneNumber = dictionary["phonenumber"] as? String
             }
         })
     }
@@ -79,20 +92,7 @@ class SelectionTableViewController: UITableViewController {
         self.fetchFbos(self.locations[(path?.row)!])
     }
     
-    // Using the fieldname selected pass the rest of the information to FBOSelector
-    func fetchFbos(fieldName: String) {
-        let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
-        
-        ref.observeEventType(.Value, withBlock: { (snapshot) in
-//           print(snapshot)
-        if let dictionary = snapshot.value as? [String: AnyObject] {
-            RegistrationsManager.sharedManager.activeReservation.firll = dictionary["100ll"] as? String
-            RegistrationsManager.sharedManager.activeReservation.firfreq = dictionary["freq"] as? String
-            RegistrationsManager.sharedManager.activeReservation.firjeta = dictionary["jet-a"] as? String
-            RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
-            RegistrationsManager.sharedManager.activeReservation.firfullName = dictionary["fullname"] as? String
-            RegistrationsManager.sharedManager.activeReservation.firphoneNumber = dictionary["phonenumber"] as? String
-            }
-        })
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 }
