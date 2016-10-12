@@ -28,7 +28,8 @@ class SelectionTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
     
-    // Firebase implementation to send FBOs to database
+    // MARK: JSON parsing
+    // Grab the list of airports by stepping through JSON
     func fetchAirport() {
         let ref = FIRDatabase.database().reference().child("Airport")
         ref.observeEventType(.Value, withBlock: { (snapshot) in
@@ -49,17 +50,20 @@ class SelectionTableViewController: UITableViewController {
         return 1
     }
     
+    // Set the number of rows by number of locations parsed from JSON
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return locations.count
     }
     
-     override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    // Fill our cells with locations
+    override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         cell.textLabel?.text = self.locations[indexPath.row]
         return cell
     }
 
-    // MARK: - Navigation
+    // MARK: - Send information to the FBOSelector
+    // Send the fieldName the user selects
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destination = segue.destinationViewController as! FBOSelectorViewController
         let path = tableView.indexPathForSelectedRow
@@ -67,11 +71,12 @@ class SelectionTableViewController: UITableViewController {
         self.fetchFbos(self.locations[(path?.row)!])
     }
     
+    // Using the fieldname selected pass the rest of the information to FBOSelector
     func fetchFbos(fieldName: String) {
         let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-//           print(snapshot)
+           print(snapshot)
         if let dictionary = snapshot.value as? [String: AnyObject] {
 //            RegistrationsManager.sharedManager.activeReservation.firfboName = fieldName
             RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String

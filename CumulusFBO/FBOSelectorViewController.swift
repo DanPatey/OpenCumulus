@@ -17,8 +17,8 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var fboCollectionView: UICollectionView!
 
     var fbo = [FBOList]()
-    var airports = [AirportsModel]()
     var fieldName : String!
+    var airports = [AirportsModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,8 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         firebaseInfo()
     }
     
-    // MARK: Firebase
+    // MARK: Setting labels
+    // Grab the information from SelectorTableView and place in the labels
     func firebaseInfo() {
         self.fieldNameLabel.text = fieldName
         self.locationLabel.text = RegistrationsManager.sharedManager.activeReservation.firfullName
