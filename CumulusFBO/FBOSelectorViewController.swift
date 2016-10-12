@@ -30,7 +30,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         fboCollectionView.dataSource = self
         fboCollectionView.pagingEnabled = true
         
-        fetchAirport()
         firebaseInfo()
     }
     
@@ -43,28 +42,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    // Firebase implementation to send FBOs to database
-    func fetchAirport() {
-        
-        let ref = FIRDatabase.database().reference().child("Airport/Long Beach")
-        
-        ref.observeEventType(.Value, withBlock: { (snapshot) in
-            let airport = AirportsModel()
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                airport.airportCode = dictionary["code"] as? String
-                airport.location = dictionary["location"] as? String
-                airport.fieldName = dictionary["fieldname"] as? String
-                
-                self.codeLabel.text = airport.airportCode
-                self.airports.append(airport)
-                
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.fboCollectionView.reloadData()
-                })
-            }
-        })
     }
     
     var currentSelection = NSIndexPath()
