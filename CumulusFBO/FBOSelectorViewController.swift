@@ -10,12 +10,12 @@ import UIKit
 import Firebase
 
 class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-
+    
     @IBOutlet weak var fieldNameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel! 
     @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var fboCollectionView: UICollectionView!
-    
+
     var fbo = [FBOList]()
     var airports = [AirportsModel]()
     var fieldName : String!
@@ -26,8 +26,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
             print("Successful login!: \(user?.uid)")
         }
-        
-        
         fboCollectionView.delegate = self
         fboCollectionView.dataSource = self
         fboCollectionView.pagingEnabled = true
@@ -36,7 +34,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         firebaseInfo()
     }
     
-    // FIREBASE STUFF
+    // MARK: Firebase
     func firebaseInfo() {
         self.fieldNameLabel.text = fieldName
         self.locationLabel.text = RegistrationsManager.sharedManager.activeReservation.firfullName
@@ -53,9 +51,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         let ref = FIRDatabase.database().reference().child("Airport/Long Beach")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-            
             let airport = AirportsModel()
-            
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 airport.airportCode = dictionary["code"] as? String
                 airport.location = dictionary["location"] as? String
@@ -71,13 +67,8 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         })
     }
     
-    @IBAction func leftArrowButton(sender: UIButton) {
-
-    }
-
     var currentSelection = NSIndexPath()
     @IBAction func rightArrowButton(sender: UIButton) {
-        
         if currentSelection == 0 {
             currentSelection = NSIndexPath(forRow: currentSelection.row+1, inSection: currentSelection.section)
         } else {
@@ -89,7 +80,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     
     // MARK: - UICollectionViewDataSource
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        
         return 1
     }
     
@@ -99,7 +89,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
-        
         currentSelection = indexPath
         return cell
     }
@@ -107,7 +96,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.

@@ -19,9 +19,8 @@ class SelectionTableViewController: UITableViewController {
         super.viewDidLoad()
 
         FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
-            print("Successful login!: \(user?.uid)")
+//            print("Successful login!: \(user?.uid)")
         }
-        
         fetchAirport()
     }
 
@@ -35,11 +34,8 @@ class SelectionTableViewController: UITableViewController {
         let ref = FIRDatabase.database().reference().child("Airport")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-    
             if let dictionary = snapshot.value as? [String: AnyObject] {
-               
                 for (key, _) in dictionary {
-                    
                     self.locations.append(key)
                     
                     dispatch_async(dispatch_get_main_queue(), {
@@ -78,7 +74,7 @@ class SelectionTableViewController: UITableViewController {
         let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-           print(snapshot)
+//           print(snapshot)
         if let dictionary = snapshot.value as? [String: AnyObject] {
 //            RegistrationsManager.sharedManager.activeReservation.firfboName = fieldName
             RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
