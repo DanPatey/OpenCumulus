@@ -12,7 +12,6 @@ import Firebase
 class SelectionTableViewController: UITableViewController {
 
     var locations = [String]()
-    var information: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
