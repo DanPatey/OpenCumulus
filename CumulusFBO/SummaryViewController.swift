@@ -176,105 +176,116 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Save information to ReservationSends Notification information to cells in ScheduleViewController
     func submitButtonWithAlert() {
-        NSNotificationCenter.defaultCenter().postNotificationName("summaryInformation", object: nil)
-        let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
-        let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
-        let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
-        
-        // Create the reservation in our internal schedule array
-        reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
-        
-        // MARK: Email template creation
-        // Email the FBO with desired information
-        // Parse our Keys.plist so we can use our path
-        var keys: NSDictionary?
-        
-        if let path = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
-            keys = NSDictionary(contentsOfFile: path)
-        }
-        
-        if let dict = keys {
-            // variablize our https path with API key, recipient and message text
-            let mailgunAPIPath = dict["mailgunAPIPath"] as? String
-            // Load our FBO email address
-            let emailRecipient = "bar@foo.com"
-            // ***Uncomment to send actual emails!***
-//            let emailRecipient = RegistrationsManager.sharedManager.activeReservation.firemail
+        // Create the initial confirmation alert
+        let alertController = UIAlertController(title: "Send Reservation?", message: "Send Reservation To FBO?", preferredStyle: .Alert)
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+            NSNotificationCenter.defaultCenter().postNotificationName("summaryInformation", object: nil)
+            let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
+            let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
+            let arrivalTime = RegistrationsManager.sharedManager.activeReservation.arrivalTime
             
-            // Create email message body
-            let beginningMessage = "You've received a new reservation from an FBOGo user!" + "<br><br>"
-            let tailNumberMessage = "Tail Number: " + tailNumber! + "<br>"
-            let aircraftTypeMessage = "Aircraft Type: " + aircraftType! + "<br>"
-            let arrivalTimeMessge = "Is Arriving at: " + arrivalTime! + "<br>"
+            // Create the reservation in our internal schedule array
+            reservationStore.createReservation(tailNumber!, aircraftType: aircraftType!, arrivalTime: arrivalTime!)
             
-            // Create the required body text
-            let emailMessage = (beginningMessage + tailNumberMessage + aircraftTypeMessage + arrivalTimeMessge)
+            // MARK: Email template creation
+            // Email the FBO with desired information
+            // Parse our Keys.plist so we can use our path
+            var keys: NSDictionary?
             
-            // Add optional personal info
-            var personalInfoArray = [
-                                     "First Name: " + RegistrationsManager.sharedManager.activeReservation.firstName!,
-                                     "Last Name: " + RegistrationsManager.sharedManager.activeReservation.lastName!,
-                                     "Company: " + RegistrationsManager.sharedManager.activeReservation.company!,
-                                     "Phone Number: " + RegistrationsManager.sharedManager.activeReservation.phoneNumber!,
-                                     "Email: " + RegistrationsManager.sharedManager.activeReservation.email!]
-            // Filter out fields not used
-            personalInfoArray = personalInfoArray.filter { $0.hasPrefix(": ") == false }
-            print(personalInfoArray)
-            
-            // Combine used fields with a break for HTML formatting
-            let personalInfo = personalInfoArray.flatMap{$0}.joinWithSeparator("<br>")
-            print(personalInfo)
-            
-            // Add optional services requested
-            let servicesMessage = "<br>Extra Services Requested: <br>"
-            var servicesRequested = ""
-            
-            servicesRequested = [antiIceStatus, baggageCartStatus, gpuCartStatus, marshallerStatus, lavatoryService, cateringStatus, crewCarsStatus, rentalCarsStatus].flatMap{$0}.joinWithSeparator("<br>")
-            
-            // Add our footer message
-            let footerMessage = "<br><br>" + "FBOGo available on iOS in the App Store today!"
-            
-            // Create a session and fill it with our request
-            let session = NSURLSession.sharedSession()
-            
-            // If no services are requested, disregard all services messges from the email body
-            var urlPath: String
-            if servicesRequested != "" && personalInfo != "" {
-                urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(personalInfo)\(servicesMessage)\(servicesRequested)\(footerMessage)"
-            } else if servicesRequested != "" && personalInfo == "" {
-                urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(servicesMessage)\(servicesRequested)\(footerMessage)"
-            } else if servicesRequested == "" && personalInfo != "" {
-                urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(personalInfo)\(footerMessage)"
-            } else {
-                urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(footerMessage)"
+            if let path = NSBundle.mainBundle().pathForResource("Keys", ofType: "plist") {
+                keys = NSDictionary(contentsOfFile: path)
             }
             
-            // Sanitize our URL
-            let url = NSURL(string: urlPath.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
-            // POST and report back with any errors and response codes
-            let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
-            request.HTTPMethod = "POST"
-            let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
-                // **DO NOT REMOVE** Session Debug info **TURN ON IF NEEDED**
-//                if let error = error {
-//                    print(error)
-//                }
+            if let dict = keys {
+                // variablize our https path with API key, recipient and message text
+                let mailgunAPIPath = dict["mailgunAPIPath"] as? String
+                // Load our FBO email address
+                let emailRecipient = "bar@foo.com"
+                // ***Uncomment to send actual emails!***
+                //            let emailRecipient = RegistrationsManager.sharedManager.activeReservation.firemail
                 
-//                if let response = response {
-//                    print("url = \(response.URL!)")
-//                    print("response = \(response)")
-//                    let httpResponse = response as! NSHTTPURLResponse
-//                    print("response code = \(httpResponse.statusCode)")
-//                }
-            })
-            task.resume()
+                // Create email message body
+                let beginningMessage = "You've received a new reservation from an FBOGo user!" + "<br><br>"
+                let tailNumberMessage = "Tail Number: " + tailNumber! + "<br>"
+                let aircraftTypeMessage = "Aircraft Type: " + aircraftType! + "<br>"
+                let arrivalTimeMessge = "Is Arriving at: " + arrivalTime! + "<br>"
+                
+                // Create the required body text
+                let emailMessage = (beginningMessage + tailNumberMessage + aircraftTypeMessage + arrivalTimeMessge)
+                
+                // Add optional personal info
+                var personalInfoArray = [
+                    "First Name: " + RegistrationsManager.sharedManager.activeReservation.firstName!,
+                    "Last Name: " + RegistrationsManager.sharedManager.activeReservation.lastName!,
+                    "Company: " + RegistrationsManager.sharedManager.activeReservation.company!,
+                    "Phone Number: " + RegistrationsManager.sharedManager.activeReservation.phoneNumber!,
+                    "Email: " + RegistrationsManager.sharedManager.activeReservation.email!]
+                // Filter out fields not used
+                personalInfoArray = personalInfoArray.filter { $0.hasPrefix(": ") == false }
+                print(personalInfoArray)
+                
+                // Combine used fields with a break for HTML formatting
+                let personalInfo = personalInfoArray.flatMap{$0}.joinWithSeparator("<br>")
+                print(personalInfo)
+                
+                // Add optional services requested
+                let servicesMessage = "<br>Extra Services Requested: <br>"
+                var servicesRequested = ""
+                
+                servicesRequested = [self.antiIceStatus, self.baggageCartStatus, self.gpuCartStatus, self.marshallerStatus, self.lavatoryService, self.cateringStatus, self.crewCarsStatus, self.rentalCarsStatus].flatMap{$0}.joinWithSeparator("<br>")
+                
+                // Add our footer message
+                let footerMessage = "<br><br>" + "FBOGo available on iOS in the App Store today!"
+                
+                // Create a session and fill it with our request
+                let session = NSURLSession.sharedSession()
+                
+                // If no services are requested, disregard all services messges from the email body
+                var urlPath: String
+                if servicesRequested != "" && personalInfo != "" {
+                    urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(personalInfo)\(servicesMessage)\(servicesRequested)\(footerMessage)"
+                } else if servicesRequested != "" && personalInfo == "" {
+                    urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(servicesMessage)\(servicesRequested)\(footerMessage)"
+                } else if servicesRequested == "" && personalInfo != "" {
+                    urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(personalInfo)\(footerMessage)"
+                } else {
+                    urlPath = mailgunAPIPath! + "from=FBOGo Reservation scheduler@mg.cumulusfbo.com&to=reservations@cumulusfbo.com&to=\(emailRecipient)&subject=A New Reservation!&html=\(emailMessage)\(footerMessage)"
+                }
+                
+                // Sanitize our URL
+                let url = NSURL(string: urlPath.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!)
+                // POST and report back with any errors and response codes
+                let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
+                request.HTTPMethod = "POST"
+                let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
+                    // **DO NOT REMOVE** Session Debug info **TURN ON IF NEEDED**
+                    //                if let error = error {
+                    //                    print(error)
+                    //                }
+                    
+                    //                if let response = response {
+                    //                    print("url = \(response.URL!)")
+                    //                    print("response = \(response)")
+                    //                    let httpResponse = response as! NSHTTPURLResponse
+                    //                    print("response code = \(httpResponse.statusCode)")
+                    //                }
+                })
+                task.resume()
+            }
+            
+            // Display an alert letting the user information has been sent
+            let alert = UIAlertController(title: "Thank You For Flying With Cumulus", message: "Flight information has been sent to the FBO", preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler: nil))
+            // Present the AlertController
+            self.presentViewController(alert, animated: true, completion: nil)
         }
         
-        // Display an alert letting the user information has been sent
-        let alert = UIAlertController(title: "Thank You For Flying With Cumulus", message: "Flight information has been sent to the FBO", preferredStyle: .Alert)
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler: nil))
-        // Present the AlertController
-        presentViewController(alert, animated: true, completion: nil)
+        alertController.addAction(OKAction)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+        }
+        alertController.addAction(cancelAction)
+        presentViewController(alertController, animated: true) {
+        }
     }
     
     func servicesPrices() {
