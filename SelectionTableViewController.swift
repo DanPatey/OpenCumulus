@@ -66,8 +66,10 @@ class SelectionTableViewController: UITableViewController {
     // Send the fieldName the user selects
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destination = segue.destinationViewController as! FBOSelectorViewController
+        
         let path = tableView.indexPathForSelectedRow
-            destination.fieldName = self.locations[(path?.row)!]
+        destination.fieldName = self.locations[(path?.row)!]
+        
         self.fetchFbos(self.locations[(path?.row)!])
     }
     
