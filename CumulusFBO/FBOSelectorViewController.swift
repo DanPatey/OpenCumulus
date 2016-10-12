@@ -24,7 +24,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         super.viewDidLoad()
         
         FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
-            print("Successful login!: \(user?.uid)")
+//            print("Successful login!: \(user?.uid)")
         }
         fboCollectionView.delegate = self
         fboCollectionView.dataSource = self
