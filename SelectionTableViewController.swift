@@ -12,6 +12,10 @@ import Firebase
 class SelectionTableViewController: UITableViewController {
 
     var locations = [String]()
+    var code = [String]()
+    var fieldname = [String]()
+    
+    var thisemail : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +31,17 @@ class SelectionTableViewController: UITableViewController {
     func fetchAirport() {
         let ref = FIRDatabase.database().reference().child("Airport")
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                for (key, _) in dictionary {
-                    self.locations.append(key)
+            
+        if let dictionary = snapshot.value as? [String: AnyObject] {
+            print(dictionary)
+            for (key, value) in dictionary {
+             let codes = value.valueForKey("code") as! String
+//            let fieldnames = value.valueForKey("fieldname") as! String
+                let locations = value.valueForKey("location") as! String // This returns double lines
+            
+                    self.code.append(codes)
+                    self.locations.append(key) //Doesn't match the database names
+                    self.fieldname.append(locations) //Doesn't match the database names
                     
                     dispatch_async(dispatch_get_main_queue(), {
                         self.tableView.reloadData()
@@ -45,17 +57,17 @@ class SelectionTableViewController: UITableViewController {
         let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-            //           print(snapshot)
+    
             if let dictionary = snapshot.value as? [String: AnyObject] {
-                RegistrationsManager.sharedManager.activeReservation.firll = dictionary["100ll"] as? String
-                RegistrationsManager.sharedManager.activeReservation.firfreq = dictionary["freq"] as? String
-                RegistrationsManager.sharedManager.activeReservation.firjeta = dictionary["jet-a"] as? String
-                RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
-                RegistrationsManager.sharedManager.activeReservation.firfullName = dictionary["fullname"] as? String
-                // This will fire after the second 'nil' value in FBOSelector
-                print("DELAYED SETTER")
-                print(RegistrationsManager.sharedManager.activeReservation.firfullName)
-                RegistrationsManager.sharedManager.activeReservation.firphoneNumber = dictionary["phonenumber"] as? String
+              
+        // This will fire after the second 'nil' value in FBOSelector
+            RegistrationsManager.sharedManager.activeReservation.firll = dictionary["100ll"] as? String
+            RegistrationsManager.sharedManager.activeReservation.firfreq = dictionary["freq"] as? String
+            RegistrationsManager.sharedManager.activeReservation.firjeta = dictionary["jet-a"] as? String
+            RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
+            RegistrationsManager.sharedManager.activeReservation.firfullName = dictionary["fullname"] as? String
+            RegistrationsManager.sharedManager.activeReservation.firphoneNumber = dictionary["phonenumber"] as? String
+       
             }
         })
     }
@@ -74,6 +86,7 @@ class SelectionTableViewController: UITableViewController {
     override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         cell.textLabel?.text = self.locations[indexPath.row]
+        cell.detailTextLabel?.text = self.code[indexPath.row]
         return cell
     }
     
@@ -83,9 +96,10 @@ class SelectionTableViewController: UITableViewController {
         let destination = segue.destinationViewController as! FBOSelectorViewController
         
         let path = tableView.indexPathForSelectedRow
-        destination.fieldName = self.locations[(path?.row)!]
+        destination.location = self.locations[(path?.row)!]
+        destination.code = self.code[(path?.row)!]
+        destination.fieldName = self.fieldname[(path?.row)!]
         
-        self.fetchFbos(self.locations[(path?.row)!])
     }
     
     override func didReceiveMemoryWarning() {

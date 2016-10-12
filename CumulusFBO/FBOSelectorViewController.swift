@@ -17,13 +17,12 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var fboCollectionView: UICollectionView!
 
     var fieldName : String!
+    var location: String!
+    var code : String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
-//            print("Successful login!: \(user?.uid)")
-        }
         fboCollectionView.delegate = self
         fboCollectionView.dataSource = self
         fboCollectionView.pagingEnabled = true
@@ -32,14 +31,10 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     // MARK: Setting labels
-    // Grab the information from SelectorTableView and place in the labels
     func firebaseInfo() {
         self.fieldNameLabel.text = fieldName
-        self.locationLabel.text = RegistrationsManager.sharedManager.activeReservation.firfullName
-        //*** BUG IS HERE ***
-        // On first click locationLabel is nil
-//        print("DEBUG INFO")
-        print(RegistrationsManager.sharedManager.activeReservation.firfullName)
+        self.locationLabel.text = location
+        self.codeLabel.text = code
     }
     
     // MARK: - UICollectionViewDataSource

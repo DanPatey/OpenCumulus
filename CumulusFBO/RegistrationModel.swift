@@ -34,15 +34,15 @@ class RegistrationsModel {
     var rentals: String?
     
     //MARK: Firebase Flight information
-    var firkey: String?
-    var firfboName: String?
-    var firphoneNumber: String?
-    var firll: String?
-    var firfullName: String?
-    var firemail: String?
-    var firfreq: String?
-    var firphonenumber: String?
-    var firjeta: String?
+    var firkey: String!
+    var firfboName: String!
+    var firphoneNumber: String!
+    var firll: String!
+    var firfullName: String!
+    var firemail: String!
+    var firfreq: String!
+    var firphonenumber: String!
+    var firjeta: String!
     
     //MARK: Aggregate data for summary
     func generateSummary() -> String {
