@@ -61,6 +61,24 @@ class SelectionTableViewController: UITableViewController {
         cell.textLabel?.text = self.locations[indexPath.row]
         return cell
     }
+    
+    // When the user selects a cell, fill the array with information from that cell
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
+        let ref = FIRDatabase.database().reference().child("Airport/Thermal/FBOs/Signature")
+
+        ref.observeEventType(.Value, withBlock: { (snapshot) in
+            //           print(snapshot)
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                RegistrationsManager.sharedManager.activeReservation.firll = dictionary["100ll"] as? String
+                RegistrationsManager.sharedManager.activeReservation.firfreq = dictionary["freq"] as? String
+                RegistrationsManager.sharedManager.activeReservation.firjeta = dictionary["jet-a"] as? String
+                RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
+                RegistrationsManager.sharedManager.activeReservation.firfullName = dictionary["fullname"] as? String
+                RegistrationsManager.sharedManager.activeReservation.firphoneNumber = dictionary["phonenumber"] as? String
+            }
+        })
+    }
 
     // MARK: - Send information to the FBOSelector
     // Send the fieldName the user selects
@@ -69,8 +87,6 @@ class SelectionTableViewController: UITableViewController {
         
         let path = tableView.indexPathForSelectedRow
         destination.fieldName = self.locations[(path?.row)!]
-        print("DEBUG INFO")
-        print(self.locations)
         
         self.fetchFbos(self.locations[(path?.row)!])
     }

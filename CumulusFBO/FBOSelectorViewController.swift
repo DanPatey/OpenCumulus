@@ -16,9 +16,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var fboCollectionView: UICollectionView!
 
-    var fbo = [FBOList]()
     var fieldName : String!
-    var airports = [AirportsModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +36,10 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     func firebaseInfo() {
         self.fieldNameLabel.text = fieldName
         self.locationLabel.text = RegistrationsManager.sharedManager.activeReservation.firfullName
+        //*** BUG IS HERE ***
+        // On first click locationLabel is nil
+        print("DEBUG INFO")
+        print(RegistrationsManager.sharedManager.activeReservation.firfullName)
     }
     
     // MARK: - UICollectionViewDataSource
