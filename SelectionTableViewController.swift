@@ -19,11 +19,10 @@ class SelectionTableViewController: UITableViewController {
         super.viewDidLoad()
 
         FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
-            
             print("Successful login!: \(user?.uid)")
         }
+        
         fetchAirport()
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,36 +53,28 @@ class SelectionTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     func numberOfSections(tableView: UITableView) -> Int {
-        
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return locations.count
     }
     
      override func tableView( tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        
         cell.textLabel?.text = self.locations[indexPath.row]
-
         return cell
     }
 
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
         let destination = segue.destinationViewController as! FBOSelectorViewController
-        
         let path = tableView.indexPathForSelectedRow
             destination.fieldName = self.locations[(path?.row)!]
-        
         self.fetchFbos(self.locations[(path?.row)!])
     }
     
     func fetchFbos(fieldName: String) {
-        
         let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
@@ -101,4 +92,3 @@ class SelectionTableViewController: UITableViewController {
         })
     }
 }
-

@@ -18,7 +18,7 @@ public class AutoCompleteTextField:UITextField {
     public var onSelect:(String, NSIndexPath)->() = {_,_ in}
     /// Handles textfield's textchanged
     public var onTextChange:(String)->() = {_ in}
-    
+
     /// Font for the text suggestions
     public var autoCompleteTextFont = UIFont.systemFontOfSize(12)
     /// Color of the text suggestions
@@ -52,8 +52,7 @@ public class AutoCompleteTextField:UITextField {
     public var autoCompleteStrings:[String]?{
         didSet{ reload() }
     }
-    
-    
+
     //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
