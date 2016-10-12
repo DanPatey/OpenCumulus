@@ -32,7 +32,6 @@ class SelectionTableViewController: UITableViewController {
     func fetchAirport() {
         
         let ref = FIRDatabase.database().reference().child("Airport")
-        
         ref.observeEventType(.Value, withBlock: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 for (key, _) in dictionary {
@@ -45,7 +44,6 @@ class SelectionTableViewController: UITableViewController {
             }
         })
     }
-
     
     // MARK: - Table view data source
     func numberOfSections(tableView: UITableView) -> Int {
