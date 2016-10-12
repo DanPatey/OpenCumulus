@@ -196,8 +196,10 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         if let dict = keys {
             // variablize our https path with API key, recipient and message text
             let mailgunAPIPath = dict["mailgunAPIPath"] as? String
-            // TODO: fill this with FBO email address
+            // Load our FBO email address
             let emailRecipient = "bar@foo.com"
+            // ***Uncomment to send actual emails!***
+//            let emailRecipient = RegistrationsManager.sharedManager.activeReservation.firemail
             
             // Create email message body
             let beginningMessage = "You've received a new reservation from an FBOGo user!" + "<br><br>"
