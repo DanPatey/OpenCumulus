@@ -39,6 +39,7 @@ class SelectionTableViewController: UITableViewController {
         })
     }
     
+    // This is failing because the values are read in FBOSelector before they are set here
     // Using the fieldname selected pass the rest of the information to FBOSelector
     func fetchFbos(fieldName: String) {
         let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
@@ -51,6 +52,9 @@ class SelectionTableViewController: UITableViewController {
                 RegistrationsManager.sharedManager.activeReservation.firjeta = dictionary["jet-a"] as? String
                 RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
                 RegistrationsManager.sharedManager.activeReservation.firfullName = dictionary["fullname"] as? String
+                // This will fire after the second 'nil' value in FBOSelector
+                print("DELAYED SETTER")
+                print(RegistrationsManager.sharedManager.activeReservation.firfullName)
                 RegistrationsManager.sharedManager.activeReservation.firphoneNumber = dictionary["phonenumber"] as? String
             }
         })
@@ -73,14 +77,6 @@ class SelectionTableViewController: UITableViewController {
         return cell
     }
     
-    // Thought this might be a good way to set variables sooner than in the segue 
-    // I am able to override fetchFbos() with these even though it's called in the segue
-    // Verified by reading the output of fullfieldname in FBOSelector
-    
-    // When the user selects a cell, fill the array with information from that cell
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    }
-
     // MARK: - Send information to the FBOSelector
     // Send the fieldName the user selects
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -38,7 +38,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         self.locationLabel.text = RegistrationsManager.sharedManager.activeReservation.firfullName
         //*** BUG IS HERE ***
         // On first click locationLabel is nil
-        print("DEBUG INFO")
+//        print("DEBUG INFO")
         print(RegistrationsManager.sharedManager.activeReservation.firfullName)
     }
     
