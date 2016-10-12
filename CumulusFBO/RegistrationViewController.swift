@@ -99,37 +99,6 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    //MARK: ScrollView
-    func textFieldDidBeginEditing(textField: UITextField) {
-        
-         if textField == lastName {
-            scrollView.setContentOffset(CGPointMake(0, 70), animated: true)
-        } else if textField == company {
-            scrollView.setContentOffset(CGPointMake(0, 70), animated: true)
-        } else if textField == phoneNumber {
-            scrollView.setContentOffset(CGPointMake(0, 170), animated: true)
-        } else if textField == email {
-            scrollView.setContentOffset(CGPointMake(0, 170), animated: true)
-        }
-        
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        
-        if textField == firstName {
-            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
-        } else if textField == lastName {
-            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
-        } else if textField == company {
-            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
-        } else if textField == phoneNumber {
-            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
-        } else if textField == email {
-            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
-        }
-        
-    }
-
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
     }

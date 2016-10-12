@@ -145,31 +145,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     func doneButton() {
         view.endEditing(true)
     }
-    
-    func textFieldDidBeginEditing(textField: UITextField) {
         
-        //Scrolling TextField
-        if textField == aircraftType {
-        textFieldScroll.setContentOffset(CGPointMake(0, 70), animated: true)
-        } else if textField == airportCode {
-        textFieldScroll.setContentOffset(CGPointMake(0, 70), animated: true)
-        } else if textField == arrivalTime {
-        textFieldScroll.setContentOffset(CGPointMake(0, 70), animated: true)
-        }
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        
-        //Scrolling TextField
-        if textField == aircraftType {
-        textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
-        } else if textField == airportCode {
-        textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
-        } else if textField == arrivalTime {
-        textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
-        }
-    }
-    
     //MARK: Dismiss keyboard on tap
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         textFieldScroll.setContentOffset(CGPointMake(0, 0), animated: true)
