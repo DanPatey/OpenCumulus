@@ -13,7 +13,6 @@ class SelectionTableViewController: UITableViewController {
 
     var locations = [String]()
     var information: String!
-    var fbos = [FBOList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
