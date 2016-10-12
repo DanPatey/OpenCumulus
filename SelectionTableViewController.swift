@@ -30,7 +30,6 @@ class SelectionTableViewController: UITableViewController {
     
     // Firebase implementation to send FBOs to database
     func fetchAirport() {
-        
         let ref = FIRDatabase.database().reference().child("Airport")
         ref.observeEventType(.Value, withBlock: { (snapshot) in
             if let dictionary = snapshot.value as? [String: AnyObject] {
