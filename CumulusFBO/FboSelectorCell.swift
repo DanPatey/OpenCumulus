@@ -19,38 +19,56 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
     var fboServices = ["JET-A","100LL","Freq"]
     var fboItems = [String]()
     var fieldname = [String]()
+    var jeta = [String]()
+    var ll = [String]()
+    var freq = [String]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         fboTableView.delegate = self
         fboTableView.dataSource = self
-
+        fetchInfo()
     }
-
     
-//    func fetchFbos(key: String) {
-//        
-//        let ref = FIRDatabase.database().reference().child("Airport/\(key)/FBOs/Signature")
-//        
-//        ref.observeEventType(.Value, withBlock: { (snapshot) in
-//            
-//            if let dictionary = snapshot.value as? [String: AnyObject] {
-    
-                // This will fire after the second 'nil' value in FBOSelector
-//                RegistrationsManager.sharedManager.activeReservation.firll = dictionary["100ll"] as? String
-//                RegistrationsManager.sharedManager.activeReservation.firfreq = dictionary["freq"] as? String
-//                RegistrationsManager.sharedManager.activeReservation.firjeta = dictionary["jet-a"] as? String
-//                RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
-//                RegistrationsManager.sharedManager.activeReservation.firfullName = dictionary["fullname"] as? String
-//                RegistrationsManager.sharedManager.activeReservation.firphoneNumber = dictionary["phonenumber"] as? String
+    func fetchInfo() {
+        
+        let ref = FIRDatabase.database().reference().child("Airport")
+        
+        ref.observeEventType(.Value, withBlock: { (snapshot) in
             
-//                 dispatch_async(dispatch_get_main_queue(), {
-//                    self.fboTableView.reloadData()
-//                })
-//            }
-//        })
-//    }
-  
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                for (key, _) in dictionary {
+                    
+                    self.fetchFbos(key)
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.fboTableView.reloadData()
+                    })
+                }
+            }
+        })
+    }
+    
+    func fetchFbos(key: String) {
+        
+        let ref = FIRDatabase.database().reference().child("Airport/\(key)/FBOs")
+        
+        ref.observeEventType(.Value, withBlock: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+            for (_, value) in dictionary {
+                
+                let jeta = value.valueForKey("jet-a") as! String
+                let ll = value.valueForKey("100ll") as! String
+                let freq = value.valueForKey("freq") as! String
+                self.jeta.append(jeta)
+                self.ll.append(ll)
+                self.freq.append(freq)
+                }
+            }
+        })
+    }
    
     // MARK: - Datasources
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -58,14 +76,14 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fieldname.count
+        return fboServices.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cells", forIndexPath: indexPath)
         
         cell.textLabel?.text = self.fboServices[indexPath.row]
-//        cell.detailTextLabel?.text = self.fboItems[indexPath.row]
+        cell.detailTextLabel?.text = "kkk"//self.ll[indexPath.row]
         return cell
     }
     

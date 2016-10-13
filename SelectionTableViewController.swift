@@ -26,6 +26,7 @@ class SelectionTableViewController: UITableViewController {
     
     // MARK: JSON parsing
     // Grab the list of airports by stepping through JSON
+    
     func fetchAirport() {
         let ref = FIRDatabase.database().reference().child("Airport")
         ref.observeEventType(.Value, withBlock: { (snapshot) in
