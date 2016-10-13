@@ -24,7 +24,6 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
         super.awakeFromNib()
         fboTableView.delegate = self
         fboTableView.dataSource = self
-        
 
     }
 

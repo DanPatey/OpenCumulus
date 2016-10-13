@@ -31,7 +31,7 @@ class SelectionTableViewController: UITableViewController {
         ref.observeEventType(.Value, withBlock: { (snapshot) in
             
         if let dictionary = snapshot.value as? [String: AnyObject] {
-            print(dictionary)
+
             for (key, value) in dictionary {
              let codes = value.valueForKey("code") as! String
 //            let fieldnames = value.valueForKey("fieldname") as! String

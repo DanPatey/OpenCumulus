@@ -20,6 +20,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     var location: String!
     var code : String!
     var firbaseName = [String]()
+    var firebasephonenumber = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,10 +50,28 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
                 for (key, _) in dictionary {
                     
                     self.firbaseName.append(key)
-
+                    self.fboInfo(key)
                     dispatch_async(dispatch_get_main_queue(), {
                         self.fboCollectionView.reloadData()
                     })
+                }
+            }
+        })
+    }
+    
+    func fboInfo(key: String) {
+        let ref = FIRDatabase.database().reference().child("Airport/\(key)/FBOs")
+        
+        ref.observeEventType(.Value, withBlock: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                for (_, value) in dictionary {
+                    
+                    let values = value.valueForKey("phonenumber") as? String
+                    
+                    self.firbaseName.append(key)
+                    self.firebasephonenumber.append(values!)
                 }
             }
         })
@@ -65,7 +84,6 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        print(firbaseName.count)
         return firbaseName.count
     }
     
@@ -73,6 +91,7 @@ class FBOSelectorViewController: UIViewController, UICollectionViewDelegate, UIC
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! FboSelectorCell
         
         cell.fullNameLabel.text = self.firbaseName[indexPath.row]
+        cell.phoneNumberLabel.text = self.firebasephonenumber[indexPath.row]
         return cell
     }
     
