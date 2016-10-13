@@ -18,53 +18,48 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
     var fbos = [FBOList]()
     var fboServices = ["JET-A","100LL","Freq"]
     var fboItems = [String]()
+    var fieldname = [String]()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         fboTableView.delegate = self
         fboTableView.dataSource = self
         
-        fetchFbos()
+
     }
+
     
-    // Firebase implementation to send FBOs to database
-    func fetchFbos() {
-        
-        let ref = FIRDatabase.database().reference().child("Airport/Long Beach/FBOs/Atlantic")
-        
-        ref.observeEventType(.Value, withBlock: { (snapshot) in
+//    func fetchFbos(key: String) {
+//        
+//        let ref = FIRDatabase.database().reference().child("Airport/\(key)/FBOs/Signature")
+//        
+//        ref.observeEventType(.Value, withBlock: { (snapshot) in
+//            
+//            if let dictionary = snapshot.value as? [String: AnyObject] {
+    
+                // This will fire after the second 'nil' value in FBOSelector
+//                RegistrationsManager.sharedManager.activeReservation.firll = dictionary["100ll"] as? String
+//                RegistrationsManager.sharedManager.activeReservation.firfreq = dictionary["freq"] as? String
+//                RegistrationsManager.sharedManager.activeReservation.firjeta = dictionary["jet-a"] as? String
+//                RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
+//                RegistrationsManager.sharedManager.activeReservation.firfullName = dictionary["fullname"] as? String
+//                RegistrationsManager.sharedManager.activeReservation.firphoneNumber = dictionary["phonenumber"] as? String
             
-            let fbo = FBOList()
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                fbo.key = snapshot.key
-                
-                fbo.fboName = dictionary["code"] as? String
-                fbo.fullName = dictionary["fullname"] as? String
-                fbo.freq = dictionary["freq"] as? String
-                fbo.phoneNumber = dictionary["phone number"] as? String
-                fbo.ll = dictionary["100LL"] as? String
-                
-                self.fullNameLabel.text = fbo.fullName
-                self.phoneNumberLabel.text = fbo.phoneNumber
-                
-                self.fbos.append(fbo)
-                
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.fboTableView.reloadData()
-                })
-            }
-            
-        })
-    }
-    
-    
+//                 dispatch_async(dispatch_get_main_queue(), {
+//                    self.fboTableView.reloadData()
+//                })
+//            }
+//        })
+//    }
+  
+   
     // MARK: - Datasources
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fboServices.count
+        return fieldname.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -75,7 +70,4 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    func details(string: String) {
-    
-    }
 }

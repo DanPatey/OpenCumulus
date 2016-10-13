@@ -1937,7 +1937,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="w2u-YZ-BmO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2031,7 +2031,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="fboTableView" destination="NvB-1X-0iV" id="qsu-O9-hqI"/>
-                                            <outlet property="fullNameLabel" destination="BmS-QA-Eqc" id="YZE-lq-luj"/>
+                                            <outlet property="fullNameLabel" destination="BmS-QA-Eqc" id="U4y-PU-n4h"/>
                                             <outlet property="phoneNumberLabel" destination="Ll5-eo-CcU" id="fkz-Yg-MTt"/>
                                         </connections>
                                     </collectionViewCell>
@@ -2158,6 +2158,6 @@
         <image name="PlaneIcon" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pKM-3A-XPD"/>
+        <segue reference="mkt-0D-h8x"/>
     </inferredMetricsTieBreakers>
 </document>

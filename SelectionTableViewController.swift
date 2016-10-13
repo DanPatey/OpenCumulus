@@ -15,8 +15,6 @@ class SelectionTableViewController: UITableViewController {
     var code = [String]()
     var fieldname = [String]()
     
-    var thisemail : String!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,26 +49,6 @@ class SelectionTableViewController: UITableViewController {
         })
     }
     
-    // This is failing because the values are read in FBOSelector before they are set here
-    // Using the fieldname selected pass the rest of the information to FBOSelector
-    func fetchFbos(fieldName: String) {
-        let ref = FIRDatabase.database().reference().child("Airport/\(fieldName)/FBOs/Signature")
-        
-        ref.observeEventType(.Value, withBlock: { (snapshot) in
-    
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-              
-        // This will fire after the second 'nil' value in FBOSelector
-            RegistrationsManager.sharedManager.activeReservation.firll = dictionary["100ll"] as? String
-            RegistrationsManager.sharedManager.activeReservation.firfreq = dictionary["freq"] as? String
-            RegistrationsManager.sharedManager.activeReservation.firjeta = dictionary["jet-a"] as? String
-            RegistrationsManager.sharedManager.activeReservation.firemail = dictionary["email"] as? String
-            RegistrationsManager.sharedManager.activeReservation.firfullName = dictionary["fullname"] as? String
-            RegistrationsManager.sharedManager.activeReservation.firphoneNumber = dictionary["phonenumber"] as? String
-       
-            }
-        })
-    }
     
     // MARK: - Table view data source
     func numberOfSections(tableView: UITableView) -> Int {
