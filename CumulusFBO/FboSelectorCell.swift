@@ -17,8 +17,10 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
     
     var fbos = [FBOList]()
     var fboServices = ["JET-A","100LL","Freq"]
+    var kjl = ["0.1","23","32"]
     var fboItems = [String]()
     var fieldname = [String]()
+    var keys = String()
     var jeta = [String]()
     var ll = [String]()
     var freq = [String]()
@@ -35,12 +37,13 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
         let ref = FIRDatabase.database().reference().child("Airport")
         
         ref.observeEventType(.Value, withBlock: { (snapshot) in
-            
+            print(snapshot)
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 
                 for (key, _) in dictionary {
                     
                     self.fetchFbos(key)
+                    self.keys = key
                     dispatch_async(dispatch_get_main_queue(), {
                         self.fboTableView.reloadData()
                     })
@@ -70,6 +73,19 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
         })
     }
    
+    func cellstuff() {
+        let ref = FIRDatabase.database().reference().child("Airport/\(self.keys)FBOs/Signature")
+        ref.observeEventType(.Value, withBlock: { (snapshot) in
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                for (key, value) in dictionary {
+                    print(key)
+                    print(value)
+                }
+            }
+        })
+    }
+    
     // MARK: - Datasources
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -83,7 +99,7 @@ class FboSelectorCell: UICollectionViewCell, UITableViewDelegate, UITableViewDat
         let cell = tableView.dequeueReusableCellWithIdentifier("cells", forIndexPath: indexPath)
         
         cell.textLabel?.text = self.fboServices[indexPath.row]
-        cell.detailTextLabel?.text = "kkk"//self.ll[indexPath.row]
+        cell.detailTextLabel?.text = "dd"//self.kjl[indexPath.row]
         return cell
     }
     
