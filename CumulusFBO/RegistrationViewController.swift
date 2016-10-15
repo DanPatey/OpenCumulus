@@ -13,8 +13,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     //MARK: Registration variables
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var company: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var company: UITextField!
     @IBOutlet weak var email: UITextField!
     
     // MARK: ScrollView
@@ -27,8 +27,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         // This is a surprise delegate problem for some reason
         self.firstName.delegate = self
         self.lastName.delegate = self
-        self.company.delegate = self
         self.phoneNumber.delegate = self
+        self.company.delegate = self
         self.email.delegate = self
         
     }
@@ -102,9 +102,9 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
             lastName.becomeFirstResponder()
         } else if lastName.editing == true {
             company.becomeFirstResponder()
-        } else if company.editing == true {
-            phoneNumber.becomeFirstResponder()
         } else if phoneNumber.editing == true {
+            phoneNumber.becomeFirstResponder()
+        } else if company.editing == true {
             email.becomeFirstResponder()
         } else if email.editing == true {
             firstName.becomeFirstResponder()
@@ -116,9 +116,9 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
             email.becomeFirstResponder()
         } else if lastName.editing == true {
             firstName.becomeFirstResponder()
-        } else if company.editing == true {
-            lastName.becomeFirstResponder()
         } else if phoneNumber.editing == true {
+            lastName.becomeFirstResponder()
+        } else if company.editing == true {
             company.becomeFirstResponder()
         } else if email.editing == true {
             phoneNumber.becomeFirstResponder()
@@ -142,8 +142,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         } else {
             RegistrationsManager.sharedManager.activeReservation.firstName = firstName.text
             RegistrationsManager.sharedManager.activeReservation.lastName = lastName.text
-            RegistrationsManager.sharedManager.activeReservation.company = company.text
             RegistrationsManager.sharedManager.activeReservation.phoneNumber = phoneNumber.text
+            RegistrationsManager.sharedManager.activeReservation.company = company.text
             RegistrationsManager.sharedManager.activeReservation.email = email.text
         }
     }
