@@ -166,11 +166,7 @@ class FlightInformationViewController: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        tailNumber.text = ""
-        aircraftType.text = ""
-        airportCode.text = ""
-        departureTime.text = ""
-        arrivalTime.text = ""
+    
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
