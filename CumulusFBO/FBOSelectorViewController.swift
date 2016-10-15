@@ -14,24 +14,47 @@ class FBOSelectorViewController: UIViewController { //, UICollectionViewDelegate
     @IBOutlet weak var fieldNameLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel! 
     @IBOutlet weak var codeLabel: UILabel!
-    @IBOutlet weak var fboCollectionView: UICollectionView!
-
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var fullNameLabel: UILabel!
+    
+//    @IBOutlet weak var fboCollectionView: UICollectionView! // JUMPS THE COLLECTIONVIEW OFF! 
+    
+    //MARK: PRICE LABELS
+    @IBOutlet weak var jetaLabel: UILabel!
+    @IBOutlet weak var llLabel: UILabel!
+    @IBOutlet weak var frequencyLabel: UILabel!
+ 
     var fieldName : String!
     var location: String!
-    var code : String!
-    var firbaseName = [String]()
-    var firebasephonenumber = [String]()
+    var code: String!
+    var firPhoneNumber: String!
+    var firFullname : String!
+    
+    // Variables for price labels
+    var jeta: String!
+    var ll: String!
+    var frequency: String!
+    
+    @IBOutlet weak var selectAirportButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 //        fboCollectionView.delegate = self
 //        fboCollectionView.dataSource = self
-       // fboCollectionView.pagingEnabled = true
+//        fboCollectionView.pagingEnabled = true
         
+        //Firebase Data
         self.fieldNameLabel.text = fieldName
         self.locationLabel.text = location
         self.codeLabel.text = code
+        self.phoneNumberLabel.text = firPhoneNumber
+        self.fullNameLabel.text = firFullname
+        
+        //PRICE Label info
+        self.jetaLabel.text = jeta
+        self.frequencyLabel.text = frequency
+        self.llLabel.text = ll
         
 //        fetchInfo()
     }
@@ -58,7 +81,7 @@ class FBOSelectorViewController: UIViewController { //, UICollectionViewDelegate
 //            }
 //        })
 //    }
-//    
+
 //    func fboInfo(key: String) {
 //        let ref = FIRDatabase.database().reference().child("Airport/\(key)/FBOs")
 //        
