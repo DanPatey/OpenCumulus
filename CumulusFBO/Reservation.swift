@@ -33,6 +33,7 @@ class Reservation: NSObject {
     
     //MARK: Countdown to ETA
     func startTimerLabel(reservation: Reservation) {
+        
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(Reservation.updateETA), userInfo: nil, repeats: true)
     }
     

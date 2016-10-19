@@ -20,12 +20,12 @@ class SelectionTableViewController: UITableViewController {
     var freq = [String]()
     var jeta = [String]()
     
+//    let selections: SelectionModel()
+    
+    //MARK: Load View
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        FIRAuth.auth()?.signInAnonymouslyWithCompletion() { (user, error) in
-//            print("Successful login!: \(user?.uid)")
-        }
+        
         fetchAirport()
     }
     
@@ -36,17 +36,16 @@ class SelectionTableViewController: UITableViewController {
         ref.observeEventType(.Value, withBlock: { (snapshot) in
             
         if let dictionary = snapshot.value as? [String: AnyObject] {
-        
             for (key, value) in dictionary {
-
+                
+             self.fboInfo(key)
              let codes = value.valueForKey("code") as! String
                 let locations = value.valueForKey("location") as! String // This returns double lines
-                
-                    self.fboInfo(key)
-                    self.code.append(codes)
-                    self.locations.append(key) //Doesn't match the database names
-                    self.fieldname.append(locations) //Doesn't match the database names
                     dispatch_async(dispatch_get_main_queue(), {
+                        self.fboInfo(key)
+                        self.code.append(codes)
+                        self.locations.append(key) //Doesn't match the database names
+                        self.fieldname.append(locations) //Doesn't match the database names
                         self.tableView.reloadData()
                     })
                 }
@@ -62,7 +61,6 @@ class SelectionTableViewController: UITableViewController {
             if let dictionary = snapshot.value as? [String: AnyObject] {
 
                 for (_, value) in dictionary {
-                    print(value)
                     let phonenumber = value.valueForKey("phonenumber") as! String
                     let fullname = value.valueForKey("fullname") as! String
                     let jeta = value.valueForKey("jet-a") as! String
@@ -74,6 +72,7 @@ class SelectionTableViewController: UITableViewController {
                     self.freq.append(freq)
                     self.ll.append(ll)
                     self.jeta.append(jeta)
+                    
                 }
             }
         })

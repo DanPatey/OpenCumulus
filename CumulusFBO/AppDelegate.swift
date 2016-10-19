@@ -13,11 +13,15 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var tableView = SelectionTableViewController()
     
     //MARK: App appearance calls
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.setupAppearance()
         FIRApp.configure()
+        
+        // This will kickoff the Firebase Data to the SelectionTableViewController tables
+        self.tableView.fetchAirport()
         
         return true
     }
