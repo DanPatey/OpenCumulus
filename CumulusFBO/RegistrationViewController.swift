@@ -69,17 +69,18 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     //MARK: ScrollView
     func textFieldDidBeginEditing(textField: UITextField) {
 
-         if textField == lastName {
-                scrollView.setContentOffset(CGPointMake(0, 70), animated: true)
-            } else if textField == company {
-                scrollView.setContentOffset(CGPointMake(0, 70), animated: true)
-            } else if textField == phoneNumber {
-                scrollView.setContentOffset(CGPointMake(0, 170), animated: true)
-            } else if textField == email {
-                scrollView.setContentOffset(CGPointMake(0, 170), animated: true)
-            }
-
+     if textField == lastName {
+            scrollView.setContentOffset(CGPointMake(0, 70), animated: true)
+        } else if textField == phoneNumber {
+            scrollView.setContentOffset(CGPointMake(0, 70), animated: true)
+        } else if textField == company {
+            scrollView.setContentOffset(CGPointMake(0, 70), animated: true)
+        } else if textField == email {
+            scrollView.setContentOffset(CGPointMake(0, 170), animated: true)
+        } else if textField == firstName {
+            scrollView.setContentOffset(CGPointMake(0, 0), animated: true)
         }
+    }
 
     func textFieldDidEndEditing(textField: UITextField) {
 
@@ -101,9 +102,9 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         if firstName.editing == true {
             lastName.becomeFirstResponder()
         } else if lastName.editing == true {
-            company.becomeFirstResponder()
-        } else if phoneNumber.editing == true {
             phoneNumber.becomeFirstResponder()
+        } else if phoneNumber.editing == true {
+            company.becomeFirstResponder()
         } else if company.editing == true {
             email.becomeFirstResponder()
         } else if email.editing == true {
@@ -119,9 +120,9 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         } else if phoneNumber.editing == true {
             lastName.becomeFirstResponder()
         } else if company.editing == true {
-            company.becomeFirstResponder()
-        } else if email.editing == true {
             phoneNumber.becomeFirstResponder()
+        } else if email.editing == true {
+            company.becomeFirstResponder()
         }
     }
     
