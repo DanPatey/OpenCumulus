@@ -1089,6 +1089,7 @@
                         <outlet property="lastName" destination="BSd-TL-uUe" id="pdT-eX-gnX"/>
                         <outlet property="phoneNumber" destination="TIB-FB-NJm" id="pGB-df-tfe"/>
                         <outlet property="scrollView" destination="mia-Gb-3OW" id="GGj-aO-Nk4"/>
+                        <outlet property="topView" destination="TMf-oB-z3A" id="5HG-vL-FFD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="26K-vj-DIM" userLabel="First Responder" sceneMemberID="firstResponder"/>

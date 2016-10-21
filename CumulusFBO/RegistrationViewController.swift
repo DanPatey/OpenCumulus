@@ -19,6 +19,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: ScrollView
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var topView: UIView! // View on the surface of scrolView
     
     //MARK: View controller life cycle
     override func viewDidLoad() {
@@ -30,12 +31,17 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
         self.phoneNumber.delegate = self
         self.company.delegate = self
         self.email.delegate = self
-        
     }
     
     //MARK: Dismiss keyboard on tap
     @IBAction func backgroundTapped(sender: UITapGestureRecognizer) {
         view.endEditing(true)
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    scrollView.endEditing(true)
+        topView.endEditing(true)
+        
     }
     
     //MARK: Dismiss keyboard on pressing return

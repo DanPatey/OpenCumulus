@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRApp.configure()
         
         // This will kickoff the Firebase Data to the SelectionTableViewController tables
-        self.tableView.fetchAirport()
+//        self.tableView.fetchAirport()
         
         return true
     }

@@ -178,7 +178,11 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
     func submitButtonWithAlert() {
         // Create the initial confirmation alert
         let alertController = UIAlertController(title: "Send Reservation?", message: "Send Reservation To FBO?", preferredStyle: .Alert)
-        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+        let OKAction = UIAlertAction(title: "OK", style: .Default) { (action :UIAlertAction!) in
+            
+            // Segues back to rootViewController After OKButton is Pressed
+            self.navigationController?.popToRootViewControllerAnimated(true)
+            
             NSNotificationCenter.defaultCenter().postNotificationName("summaryInformation", object: nil)
             let tailNumber = RegistrationsManager.sharedManager.activeReservation.tailNumber
             let aircraftType = RegistrationsManager.sharedManager.activeReservation.aircraftType
@@ -258,17 +262,19 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
                 let request: NSMutableURLRequest = NSMutableURLRequest(URL: url!)
                 request.HTTPMethod = "POST"
                 let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
-                    // **DO NOT REMOVE** Session Debug info **TURN ON IF NEEDED**
-                    //                if let error = error {
-                    //                    print(error)
-                    //                }
                     
-                    //                if let response = response {
-                    //                    print("url = \(response.URL!)")
-                    //                    print("response = \(response)")
-                    //                    let httpResponse = response as! NSHTTPURLResponse
-                    //                    print("response code = \(httpResponse.statusCode)")
-                    //                }
+            // **DO NOT REMOVE** Session Debug info **TURN ON IF NEEDED**
+//                if let error = error {
+//                    print(error)
+//                }
+
+//                if let response = response {
+//                    print("url = \(response.URL!)")
+//                    print("response = \(response)")
+//                    let httpResponse = response as! NSHTTPURLResponse
+//                    print("response code = \(httpResponse.statusCode)")
+//                }
+                    
                 })
                 task.resume()
             }
@@ -278,6 +284,7 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
             alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler: nil))
             // Present the AlertController
             self.presentViewController(alert, animated: true, completion: nil)
+
         }
         
         alertController.addAction(OKAction)
@@ -286,13 +293,11 @@ class SummaryViewController: UIViewController, UITextFieldDelegate {
         alertController.addAction(cancelAction)
         presentViewController(alertController, animated: true) {
         }
-    }
-    
-    func servicesPrices() {
+        
     }
     
     func editInformationButton() {
-        print("works")
+        print("edit information")
     }
     
     func addItemsToSummary(textFields: [UITextField]) {

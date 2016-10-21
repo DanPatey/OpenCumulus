@@ -20,8 +20,6 @@ class SelectionTableViewController: UITableViewController {
     var freq = [String]()
     var jeta = [String]()
     
-//    let selections: SelectionModel()
-    
     //MARK: Load View
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +39,7 @@ class SelectionTableViewController: UITableViewController {
              self.fboInfo(key)
              let codes = value.valueForKey("code") as! String
                 let locations = value.valueForKey("location") as! String // This returns double lines
+                
                     dispatch_async(dispatch_get_main_queue(), {
                         self.fboInfo(key)
                         self.code.append(codes)
