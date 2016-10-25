@@ -59,6 +59,7 @@ class ScheduleViewController: UITableViewController {
         }
     }
     
+    
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,6 +95,15 @@ class ScheduleViewController: UITableViewController {
                 planeLandedAlert()
             }
         }
+    }
+    
+    // MARK: Remove cells after timer
+    func removeLandedFlights() {
+//                let path = tableView.indexPathForSelectedRow
+//                let reservation = reservationStore.allReservations[path!.row]
+//                reservationStore.removeReservation(reservation)
+//                self.tableView.deleteRowsAtIndexPaths([path!], withRowAnimation: .Automatic)
+//                self.tableView.reloadData()
     }
     
     func planeLandingSoonAlert() {

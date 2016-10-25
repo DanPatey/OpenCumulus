@@ -25,6 +25,19 @@ class SelectionTableViewController: UITableViewController {
         super.viewDidLoad()
         
         fetchAirport()
+        navigationLoginButton()
+    }
+    
+    // MARK: NAIGATIONBUTTON
+    func navigationLoginButton() {
+        let loginButton = UIBarButtonItem(title: "Sign Up", style: .Plain, target: self, action: #selector(SelectionTableViewController.userLogin))
+    
+        self.navigationItem.rightBarButtonItem = loginButton
+    }
+    
+    func userLogin() {
+        performSegueWithIdentifier("signup segue", sender: self)
+        
     }
     
     // MARK: JSON parsing

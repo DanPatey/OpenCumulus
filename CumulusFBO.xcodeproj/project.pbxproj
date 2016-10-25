@@ -54,6 +54,8 @@
 		99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* LoginViewController.swift */; };
 		9969BD9F1D9ADACB00639F55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9969BD9E1D9ADACB00639F55 /* GoogleService-Info.plist */; };
 		997904B11D89D8D400E3FEA4 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997904B01D89D8D400E3FEA4 /* PDFViewController.swift */; };
+		99A46EF51DBE989B00629038 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A46EF41DBE989B00629038 /* UserLoginViewController.swift */; };
+		99A46EF81DBEA42100629038 /* CustomersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A46EF71DBEA42100629038 /* CustomersModel.swift */; };
 		99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */; };
 		99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */; };
 		99B39B161DAB4E5100675128 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B39B151DAB4E5100675128 /* SelectionTableViewController.swift */; };
@@ -93,6 +95,8 @@
 		9969BDA01D9ADEB400639F55 /* FBOGo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = FBOGo.entitlements; path = FBOGo/FBOGo.entitlements; sourceTree = "<group>"; };
 		997904B01D89D8D400E3FEA4 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFViewController.swift; path = ../PDFViewController.swift; sourceTree = "<group>"; };
 		997904B21D89DD6200E3FEA4 /* UXMPDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UXMPDFKit.framework; path = "../../Library/Developer/Xcode/DerivedData/CumulusFBO-epwznkkzqkbessczgkfyhipvbwnp/Build/Products/Debug-iphonesimulator/UXMPDFKit.framework"; sourceTree = "<group>"; };
+		99A46EF41DBE989B00629038 /* UserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserLoginViewController.swift; path = ../UserLoginViewController.swift; sourceTree = "<group>"; };
+		99A46EF71DBEA42100629038 /* CustomersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersModel.swift; sourceTree = "<group>"; };
 		99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBOSelectorViewController.swift; sourceTree = "<group>"; };
 		99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FboSelectorCell.swift; path = CumulusFBO/FboSelectorCell.swift; sourceTree = "<group>"; };
 		99B39B151DAB4E5100675128 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectionTableViewController.swift; path = ../SelectionTableViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 				57CDA70D1D31F297005DD618 /* ReservationStore.swift */,
 				57CDA70B1D31EE1D005DD618 /* Reservation.swift */,
 				99F603BA1D9A26AA00A2EA8E /* FBOsModel.swift */,
+				99A46EF71DBEA42100629038 /* CustomersModel.swift */,
 				9915ECE21D9F519C00EF65B0 /* AirportsModel.swift */,
 			);
 			name = Models;
@@ -252,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				99694BE71D7D238D007FACBF /* LoginViewController.swift */,
+				99A46EF61DBE9F3D00629038 /* User Information */,
 				57420D2F1D9F8DD700A7C4EA /* Register */,
 				57420D301D9F8DF600A7C4EA /* Schedule */,
 				57420D311D9F8E0600A7C4EA /* Chat */,
@@ -269,6 +275,14 @@
 				57171B3E1D7FBFE200F2C7FA /* CumulusFBO.plist */,
 			);
 			name = Plist;
+			sourceTree = "<group>";
+		};
+		99A46EF61DBE9F3D00629038 /* User Information */ = {
+			isa = PBXGroup;
+			children = (
+				99A46EF41DBE989B00629038 /* UserLoginViewController.swift */,
+			);
+			name = "User Information";
 			sourceTree = "<group>";
 		};
 		99B30CAA1D7F243300A1736C /* Views */ = {
@@ -563,8 +577,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				57CDA70E1D31F297005DD618 /* ReservationStore.swift in Sources */,
+				99A46EF51DBE989B00629038 /* UserLoginViewController.swift in Sources */,
 				99F603BB1D9A26AA00A2EA8E /* FBOsModel.swift in Sources */,
 				99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */,
+				99A46EF81DBEA42100629038 /* CustomersModel.swift in Sources */,
 				991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */,
 				572828841CC43F170005A6EA /* RegistrationModel.swift in Sources */,
 				99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */,
