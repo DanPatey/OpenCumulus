@@ -54,6 +54,7 @@
 		99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* LoginViewController.swift */; };
 		9969BD9F1D9ADACB00639F55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9969BD9E1D9ADACB00639F55 /* GoogleService-Info.plist */; };
 		997904B11D89D8D400E3FEA4 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997904B01D89D8D400E3FEA4 /* PDFViewController.swift */; };
+		997B3AC31DC0253100AFEA49 /* SignUpInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B3AC21DC0253100AFEA49 /* SignUpInformationViewController.swift */; };
 		99A46EF51DBE989B00629038 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A46EF41DBE989B00629038 /* UserLoginViewController.swift */; };
 		99A46EF81DBEA42100629038 /* CustomersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A46EF71DBEA42100629038 /* CustomersModel.swift */; };
 		99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */; };
@@ -95,6 +96,7 @@
 		9969BDA01D9ADEB400639F55 /* FBOGo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = FBOGo.entitlements; path = FBOGo/FBOGo.entitlements; sourceTree = "<group>"; };
 		997904B01D89D8D400E3FEA4 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFViewController.swift; path = ../PDFViewController.swift; sourceTree = "<group>"; };
 		997904B21D89DD6200E3FEA4 /* UXMPDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UXMPDFKit.framework; path = "../../Library/Developer/Xcode/DerivedData/CumulusFBO-epwznkkzqkbessczgkfyhipvbwnp/Build/Products/Debug-iphonesimulator/UXMPDFKit.framework"; sourceTree = "<group>"; };
+		997B3AC21DC0253100AFEA49 /* SignUpInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpInformationViewController.swift; path = ../SignUpInformationViewController.swift; sourceTree = "<group>"; };
 		99A46EF41DBE989B00629038 /* UserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserLoginViewController.swift; path = ../UserLoginViewController.swift; sourceTree = "<group>"; };
 		99A46EF71DBEA42100629038 /* CustomersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersModel.swift; sourceTree = "<group>"; };
 		99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBOSelectorViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				99A46EF41DBE989B00629038 /* UserLoginViewController.swift */,
+				997B3AC21DC0253100AFEA49 /* SignUpInformationViewController.swift */,
 			);
 			name = "User Information";
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				57CDA70E1D31F297005DD618 /* ReservationStore.swift in Sources */,
 				99A46EF51DBE989B00629038 /* UserLoginViewController.swift in Sources */,
 				99F603BB1D9A26AA00A2EA8E /* FBOsModel.swift in Sources */,
+				997B3AC31DC0253100AFEA49 /* SignUpInformationViewController.swift in Sources */,
 				99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */,
 				99A46EF81DBEA42100629038 /* CustomersModel.swift in Sources */,
 				991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */,

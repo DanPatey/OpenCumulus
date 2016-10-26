@@ -36,7 +36,7 @@ class SelectionTableViewController: UITableViewController {
     }
     
     func userLogin() {
-        performSegueWithIdentifier("signup segue", sender: self)
+        performSegueWithIdentifier("signUp segue", sender: self)
         
     }
     
@@ -111,17 +111,19 @@ class SelectionTableViewController: UITableViewController {
     // MARK: - Send information to the FBOSelector
     // Send the fieldName the user selects
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "tapped cell" {
         let destination = segue.destinationViewController as! FBOSelectorViewController
-        
-        let path = tableView.indexPathForSelectedRow
-        destination.location = self.locations[(path?.row)!]
-        destination.code = self.code[(path?.row)!]
-        destination.fieldName = self.fieldname[(path?.row)!]
-        destination.firPhoneNumber = self.phoneNumber[(path?.row)!]
-        destination.firFullname = self.fullname[(path?.row)!]
-        destination.jeta = self.jeta[(path?.row)!]
-        destination.frequency = self.freq[(path?.row)!]
-        destination.ll = self.ll[(path?.row)!]
+            let path = tableView.indexPathForSelectedRow
+            destination.location = self.locations[(path?.row)!]
+            destination.code = self.code[(path?.row)!]
+            destination.fieldName = self.fieldname[(path?.row)!]
+            destination.firPhoneNumber = self.phoneNumber[(path?.row)!]
+            destination.firFullname = self.fullname[(path?.row)!]
+            destination.jeta = self.jeta[(path?.row)!]
+            destination.frequency = self.freq[(path?.row)!]
+            destination.ll = self.ll[(path?.row)!]
+
+        }
     }
     
     override func didReceiveMemoryWarning() {

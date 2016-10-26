@@ -13,6 +13,7 @@ class UserLoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var reEnterTextField: UITextField!
 
     var customers = CustomersModel()
     
@@ -21,6 +22,7 @@ class UserLoginViewController: UIViewController, UITextFieldDelegate {
       
         userEmail.delegate = self
         passwordTextField.delegate = self
+        reEnterTextField.delegate = self
     }
     
     @IBAction func userLogin(sender: UIButton) {
@@ -39,6 +41,9 @@ class UserLoginViewController: UIViewController, UITextFieldDelegate {
             
             self.customers.uid = user!.uid
             self.customers.email = user!.email
+            
+            // ADD fail message if password doesn't match
+            // Re-Enter Password
             
             if error != nil {
                 print(error)
