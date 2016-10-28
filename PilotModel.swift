@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomersModel: NSObject {
+class PilotModel: NSObject {
     
     var password: String!
     var email: String!

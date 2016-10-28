@@ -9,50 +9,51 @@
 import UIKit
 import Firebase
 
-class UserLoginViewController: UIViewController, UITextFieldDelegate {
+class UserSignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userEmail: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var reEnterTextField: UITextField!
 
-    var customers = CustomersModel()
+    var pilot = PilotModel()
+    var pilotInformation = PilotInformationModel()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
       
         userEmail.delegate = self
         passwordTextField.delegate = self
-        reEnterTextField.delegate = self
+//        reEnterTextField.delegate = self
     }
     
     @IBAction func userLogin(sender: UIButton) {
-        
         addUser()
     }
     
     func addUser() {
         
-        guard let email = self.userEmail.text, password = self.passwordTextField.text else {
+        guard let email = self.userEmail.text, let password = self.passwordTextField.text else {
             print("Invalid form")
             return
         }
         
         FIRAuth.auth()?.createUserWithEmail(email, password:password, completion: { (user: FIRUser?, error) in
             
-            self.customers.uid = user!.uid
-            self.customers.email = user!.email
+            self.pilot.uid = user!.uid
+            self.pilot.email = user!.email
             
-            // ADD fail message if password doesn't match
+            // ADD fail message if password don't match
             // Re-Enter Password
             
             if error != nil {
                 print(error)
                 return
             }
-            let ref = FIRDatabase.database().reference().child("users").child(self.customers.uid)
+            let ref = FIRDatabase.database().reference().child("users").child(self.pilot.uid)
             
-            let values = ["email":self.customers.email, "uid":self.customers.uid]
-            
+            let values = ["Name":RegistrationsManager.sharedManager.userInformation.firstName, "LastName":RegistrationsManager.sharedManager.userInformation.lastName, "email":self.pilot.email, "Company":RegistrationsManager.sharedManager.userInformation.company, "PhoneNumber":RegistrationsManager.sharedManager.userInformation.phoneNumber, "TailNumber":RegistrationsManager.sharedManager.userInformation.tailNumber, "AircraftType":RegistrationsManager.sharedManager.userInformation.aircraftType, "HomeAirport":RegistrationsManager.sharedManager.userInformation.homeAirport, "uid":self.pilot.uid]
+            print(values)
             ref.updateChildValues(values, withCompletionBlock: { (err, ref) in
                 print("Success!!")
                 

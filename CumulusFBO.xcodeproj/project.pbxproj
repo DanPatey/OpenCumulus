@@ -47,6 +47,7 @@
 		9912A03D1DA2C6C200EBBD4C /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9912A03C1DA2C6C200EBBD4C /* Keys.plist */; };
 		9915ECE31D9F519C00EF65B0 /* AirportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915ECE21D9F519C00EF65B0 /* AirportsModel.swift */; };
 		991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
+		993F08991DC1C978001D31CE /* PilotInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F08981DC1C978001D31CE /* PilotInformationModel.swift */; };
 		9942E5A31D8A5CFB0030B551 /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9942E5A01D8A5CFB0030B551 /* sample.pdf */; };
 		9942E5A41D8A5CFB0030B551 /* sample2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9942E5A11D8A5CFB0030B551 /* sample2.pdf */; };
 		9942E5A51D8A5CFB0030B551 /* sample3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9942E5A21D8A5CFB0030B551 /* sample3.pdf */; };
@@ -55,8 +56,8 @@
 		9969BD9F1D9ADACB00639F55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9969BD9E1D9ADACB00639F55 /* GoogleService-Info.plist */; };
 		997904B11D89D8D400E3FEA4 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997904B01D89D8D400E3FEA4 /* PDFViewController.swift */; };
 		997B3AC31DC0253100AFEA49 /* SignUpInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B3AC21DC0253100AFEA49 /* SignUpInformationViewController.swift */; };
-		99A46EF51DBE989B00629038 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A46EF41DBE989B00629038 /* UserLoginViewController.swift */; };
-		99A46EF81DBEA42100629038 /* CustomersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A46EF71DBEA42100629038 /* CustomersModel.swift */; };
+		99A46EF51DBE989B00629038 /* UserSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A46EF41DBE989B00629038 /* UserSignUpViewController.swift */; };
+		99A46EF81DBEA42100629038 /* PilotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A46EF71DBEA42100629038 /* PilotModel.swift */; };
 		99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */; };
 		99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */; };
 		99B39B161DAB4E5100675128 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B39B151DAB4E5100675128 /* SelectionTableViewController.swift */; };
@@ -87,6 +88,7 @@
 		9912A03C1DA2C6C200EBBD4C /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		9915ECE21D9F519C00EF65B0 /* AirportsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportsModel.swift; sourceTree = "<group>"; };
 		991B63621D67954200922085 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
+		993F08981DC1C978001D31CE /* PilotInformationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PilotInformationModel.swift; path = CumulusFBO/PilotInformationModel.swift; sourceTree = "<group>"; };
 		9942E5A01D8A5CFB0030B551 /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
 		9942E5A11D8A5CFB0030B551 /* sample2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample2.pdf; sourceTree = "<group>"; };
 		9942E5A21D8A5CFB0030B551 /* sample3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample3.pdf; sourceTree = "<group>"; };
@@ -97,8 +99,8 @@
 		997904B01D89D8D400E3FEA4 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFViewController.swift; path = ../PDFViewController.swift; sourceTree = "<group>"; };
 		997904B21D89DD6200E3FEA4 /* UXMPDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UXMPDFKit.framework; path = "../../Library/Developer/Xcode/DerivedData/CumulusFBO-epwznkkzqkbessczgkfyhipvbwnp/Build/Products/Debug-iphonesimulator/UXMPDFKit.framework"; sourceTree = "<group>"; };
 		997B3AC21DC0253100AFEA49 /* SignUpInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpInformationViewController.swift; path = ../SignUpInformationViewController.swift; sourceTree = "<group>"; };
-		99A46EF41DBE989B00629038 /* UserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserLoginViewController.swift; path = ../UserLoginViewController.swift; sourceTree = "<group>"; };
-		99A46EF71DBEA42100629038 /* CustomersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomersModel.swift; sourceTree = "<group>"; };
+		99A46EF41DBE989B00629038 /* UserSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserSignUpViewController.swift; path = ../UserSignUpViewController.swift; sourceTree = "<group>"; };
+		99A46EF71DBEA42100629038 /* PilotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PilotModel.swift; sourceTree = "<group>"; };
 		99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBOSelectorViewController.swift; sourceTree = "<group>"; };
 		99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FboSelectorCell.swift; path = CumulusFBO/FboSelectorCell.swift; sourceTree = "<group>"; };
 		99B39B151DAB4E5100675128 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectionTableViewController.swift; path = ../SelectionTableViewController.swift; sourceTree = "<group>"; };
@@ -219,7 +221,8 @@
 				57CDA70D1D31F297005DD618 /* ReservationStore.swift */,
 				57CDA70B1D31EE1D005DD618 /* Reservation.swift */,
 				99F603BA1D9A26AA00A2EA8E /* FBOsModel.swift */,
-				99A46EF71DBEA42100629038 /* CustomersModel.swift */,
+				99A46EF71DBEA42100629038 /* PilotModel.swift */,
+				993F08981DC1C978001D31CE /* PilotInformationModel.swift */,
 				9915ECE21D9F519C00EF65B0 /* AirportsModel.swift */,
 			);
 			name = Models;
@@ -282,7 +285,7 @@
 		99A46EF61DBE9F3D00629038 /* User Information */ = {
 			isa = PBXGroup;
 			children = (
-				99A46EF41DBE989B00629038 /* UserLoginViewController.swift */,
+				99A46EF41DBE989B00629038 /* UserSignUpViewController.swift */,
 				997B3AC21DC0253100AFEA49 /* SignUpInformationViewController.swift */,
 			);
 			name = "User Information";
@@ -580,11 +583,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				57CDA70E1D31F297005DD618 /* ReservationStore.swift in Sources */,
-				99A46EF51DBE989B00629038 /* UserLoginViewController.swift in Sources */,
+				99A46EF51DBE989B00629038 /* UserSignUpViewController.swift in Sources */,
 				99F603BB1D9A26AA00A2EA8E /* FBOsModel.swift in Sources */,
 				997B3AC31DC0253100AFEA49 /* SignUpInformationViewController.swift in Sources */,
 				99B30CA51D7E0F8600A1736C /* FBOSelectorViewController.swift in Sources */,
-				99A46EF81DBEA42100629038 /* CustomersModel.swift in Sources */,
+				99A46EF81DBEA42100629038 /* PilotModel.swift in Sources */,
 				991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */,
 				572828841CC43F170005A6EA /* RegistrationModel.swift in Sources */,
 				99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */,
@@ -592,6 +595,7 @@
 				9915ECE31D9F519C00EF65B0 /* AirportsModel.swift in Sources */,
 				57CDA7081D31BACE005DD618 /* FlightInformationViewController.swift in Sources */,
 				5784646D1D35DF4B00E5E6BF /* ReservationCell.swift in Sources */,
+				993F08991DC1C978001D31CE /* PilotInformationModel.swift in Sources */,
 				57EE9CA41D75220400E1A57F /* MessagesLoginViewController.swift in Sources */,
 				997904B11D89D8D400E3FEA4 /* PDFViewController.swift in Sources */,
 				57CDA70A1D31EDF0005DD618 /* ScheduleViewController.swift in Sources */,

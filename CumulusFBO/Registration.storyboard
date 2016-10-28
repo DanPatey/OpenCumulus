@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="1235" y="341"/>
         </scene>
-        <!--User Login View Controller-->
+        <!--User Sign Up View Controller-->
         <scene sceneID="jPU-jg-dxM">
             <objects>
-                <viewController id="rbE-aV-5Xg" customClass="UserLoginViewController" customModule="FBOGo" sceneMemberID="viewController">
+                <viewController id="rbE-aV-5Xg" customClass="UserSignUpViewController" customModule="FBOGo" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X8C-qx-EGp"/>
                         <viewControllerLayoutGuide type="bottom" id="AeM-Mx-RpL"/>

@@ -9,7 +9,8 @@
 import Foundation
 
 class RegistrationsManager {
-    //MARK: Collect data through the registration process and put in an arry
+    //MARK: Collect data through the registration process and put in an array
     static let sharedManager = RegistrationsManager()
-    let activeReservation = RegistrationsModel()    
+    let activeReservation = RegistrationsModel()
+    let userInformation = PilotInformationModel()
 }
