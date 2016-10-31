@@ -11,7 +11,7 @@
 		57171B1F1D7FBFE200F2C7FA /* FBOSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA41D7E0F8600A1736C /* FBOSelectorViewController.swift */; };
 		57171B201D7FBFE200F2C7FA /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
 		57171B211D7FBFE200F2C7FA /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572828831CC43F170005A6EA /* RegistrationModel.swift */; };
-		57171B221D7FBFE200F2C7FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* LoginViewController.swift */; };
+		57171B221D7FBFE200F2C7FA /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* PresentationViewController.swift */; };
 		57171B231D7FBFE200F2C7FA /* FboSelectorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B30CA61D7F21BC00A1736C /* FboSelectorCell.swift */; };
 		57171B241D7FBFE200F2C7FA /* FlightInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CDA7071D31BACE005DD618 /* FlightInformationViewController.swift */; };
 		57171B251D7FBFE200F2C7FA /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5784646C1D35DF4B00E5E6BF /* ReservationCell.swift */; };
@@ -48,11 +48,12 @@
 		9915ECE31D9F519C00EF65B0 /* AirportsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9915ECE21D9F519C00EF65B0 /* AirportsModel.swift */; };
 		991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991B63621D67954200922085 /* ServicesTableViewController.swift */; };
 		993F08991DC1C978001D31CE /* PilotInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F08981DC1C978001D31CE /* PilotInformationModel.swift */; };
+		993F089B1DC40C59001D31CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F089A1DC40C59001D31CE /* LoginViewController.swift */; };
 		9942E5A31D8A5CFB0030B551 /* sample.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9942E5A01D8A5CFB0030B551 /* sample.pdf */; };
 		9942E5A41D8A5CFB0030B551 /* sample2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9942E5A11D8A5CFB0030B551 /* sample2.pdf */; };
 		9942E5A51D8A5CFB0030B551 /* sample3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9942E5A21D8A5CFB0030B551 /* sample3.pdf */; };
 		9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944486B1D6C25D3002F68F5 /* ServiceCell.swift */; };
-		99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* LoginViewController.swift */; };
+		99694BE81D7D238D007FACBF /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99694BE71D7D238D007FACBF /* PresentationViewController.swift */; };
 		9969BD9F1D9ADACB00639F55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9969BD9E1D9ADACB00639F55 /* GoogleService-Info.plist */; };
 		997904B11D89D8D400E3FEA4 /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997904B01D89D8D400E3FEA4 /* PDFViewController.swift */; };
 		997B3AC31DC0253100AFEA49 /* SignUpInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B3AC21DC0253100AFEA49 /* SignUpInformationViewController.swift */; };
@@ -89,11 +90,12 @@
 		9915ECE21D9F519C00EF65B0 /* AirportsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirportsModel.swift; sourceTree = "<group>"; };
 		991B63621D67954200922085 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		993F08981DC1C978001D31CE /* PilotInformationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PilotInformationModel.swift; path = CumulusFBO/PilotInformationModel.swift; sourceTree = "<group>"; };
+		993F089A1DC40C59001D31CE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9942E5A01D8A5CFB0030B551 /* sample.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample.pdf; sourceTree = "<group>"; };
 		9942E5A11D8A5CFB0030B551 /* sample2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample2.pdf; sourceTree = "<group>"; };
 		9942E5A21D8A5CFB0030B551 /* sample3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = sample3.pdf; sourceTree = "<group>"; };
 		9944486B1D6C25D3002F68F5 /* ServiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceCell.swift; path = CumulusFBO/ServiceCell.swift; sourceTree = "<group>"; };
-		99694BE71D7D238D007FACBF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		99694BE71D7D238D007FACBF /* PresentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
 		9969BD9E1D9ADACB00639F55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9969BDA01D9ADEB400639F55 /* FBOGo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = FBOGo.entitlements; path = FBOGo/FBOGo.entitlements; sourceTree = "<group>"; };
 		997904B01D89D8D400E3FEA4 /* PDFViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFViewController.swift; path = ../PDFViewController.swift; sourceTree = "<group>"; };
@@ -261,7 +263,7 @@
 		997AC12D1D61F80D008FA2A5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				99694BE71D7D238D007FACBF /* LoginViewController.swift */,
+				99694BE71D7D238D007FACBF /* PresentationViewController.swift */,
 				99A46EF61DBE9F3D00629038 /* User Information */,
 				57420D2F1D9F8DD700A7C4EA /* Register */,
 				57420D301D9F8DF600A7C4EA /* Schedule */,
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				99A46EF41DBE989B00629038 /* UserSignUpViewController.swift */,
+				993F089A1DC40C59001D31CE /* LoginViewController.swift */,
 				997B3AC21DC0253100AFEA49 /* SignUpInformationViewController.swift */,
 			);
 			name = "User Information";
@@ -562,7 +565,7 @@
 				57171B1F1D7FBFE200F2C7FA /* FBOSelectorViewController.swift in Sources */,
 				57171B201D7FBFE200F2C7FA /* ServicesTableViewController.swift in Sources */,
 				57171B211D7FBFE200F2C7FA /* RegistrationModel.swift in Sources */,
-				57171B221D7FBFE200F2C7FA /* LoginViewController.swift in Sources */,
+				57171B221D7FBFE200F2C7FA /* PresentationViewController.swift in Sources */,
 				57171B231D7FBFE200F2C7FA /* FboSelectorCell.swift in Sources */,
 				57171B241D7FBFE200F2C7FA /* FlightInformationViewController.swift in Sources */,
 				57171B251D7FBFE200F2C7FA /* ReservationCell.swift in Sources */,
@@ -590,7 +593,7 @@
 				99A46EF81DBEA42100629038 /* PilotModel.swift in Sources */,
 				991B63631D67954200922085 /* ServicesTableViewController.swift in Sources */,
 				572828841CC43F170005A6EA /* RegistrationModel.swift in Sources */,
-				99694BE81D7D238D007FACBF /* LoginViewController.swift in Sources */,
+				99694BE81D7D238D007FACBF /* PresentationViewController.swift in Sources */,
 				99B30CA71D7F21BC00A1736C /* FboSelectorCell.swift in Sources */,
 				9915ECE31D9F519C00EF65B0 /* AirportsModel.swift in Sources */,
 				57CDA7081D31BACE005DD618 /* FlightInformationViewController.swift in Sources */,
@@ -606,6 +609,7 @@
 				5734C86A1CAB67820031B000 /* AppDelegate.swift in Sources */,
 				57CDA70C1D31EE1D005DD618 /* Reservation.swift in Sources */,
 				99B39B161DAB4E5100675128 /* SelectionTableViewController.swift in Sources */,
+				993F089B1DC40C59001D31CE /* LoginViewController.swift in Sources */,
 				9944486C1D6C25D3002F68F5 /* ServiceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
